@@ -393,7 +393,7 @@ export const imageArray = [
       "A not-for-profit organisation which is responsible for the co-creation and design of community-led and community-driven development interventions with governments, the private sector and international development partners.",
   },
   {
-    src: Image3,
+    src: Image5,
     alt: "Image 3",
     title: "",
     description:
@@ -407,7 +407,7 @@ export const imageArray = [
       "We support local governance and, for that matter, decentralization programs",
   },
   {
-    src: Image5,
+    src: Image3,
     alt: "Image 5",
     title: "",
     description:
@@ -421,14 +421,35 @@ export const africaLinks = [
   { href: "/pdaafrica#gallery", label: "Gallery" },
   { href: "/pdaafrica#testimonials", label: "Testimonials" },
   { href: "/pdaafrica#get-involved", label: "Get Involved" },
-  { href: "/pdaafrica/dataanalytics", label: "Impact" },
+  {
+    href: "/pdaafrica/dataanalytics/vsla-dashboard",
+    label: "Impact",
+    // submenu: [
+    // {
+    //   href: "/pdaafrica/dataanalytics/cclp-dashboard",
+    //   label: "CCLP Dashboard ",
+    // },
+    // {
+    //   href: "/pdaafrica/dataanalytics/vsla-dashboard",
+    //   label: "Summary",
+    // },
+    // {
+    //   href: "/pdaafrica/dataanalytics/nclr-dashboard",
+    //   label: "Child Abuse Tracker-Nyonkopa",
+    // },
+    // {
+    //   href: "/pdaafrica/dataanalytics",
+    //   label: "Summary",
+    // },
+    // ],
+  },
   { href: "/pdaafrica#contact-us", label: "Contact Us" },
 ];
 
 export const donateButton = [
   {
     label: "Donate now",
-    link: "https://docs.google.com/forms/d/e/1FAIpQLSeMejX4CP15Iex2bcOJqUK5Uwub8rlTQdyyDLRy204_YzVfYA/viewform?embedded=true",
+    link: "/pdaafrica/donate",
   },
 ];
 

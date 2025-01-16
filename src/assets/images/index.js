@@ -82,10 +82,19 @@ import rand6 from "./rand6.jpg";
 import rand7 from "./rand7.jpg";
 import rand8 from "./rand8.jpg";
 import rand9 from "./rand9.jpg";
+import rand10 from "./rand10.jpg";
+import rand11 from "./rand11.jpg";
+import rand12 from "./rand12.jpg";
+import rand13 from "./rand13.jpg";
+import rand14 from "./rand14.jpg";
+import rand15 from "./rand15.jpg";
+import rand16 from "./rand16.jpg";
+import rand17 from "./rand17.jpg";
+import rand18 from "./rand18.jpg";
 import competition from "./competition.jpg";
 import reading from "./reading.jpg";
 import cluster from "./cluster.jpg";
-import whoweare from "./whoweare.png";
+import whoweare from "./whoweare.jpg";
 import ethical from "./ethical.png";
 import eleanor from "./dr_eleanor_hill 1.png";
 import akosua from "./prof_Akosua 1.png";
@@ -117,6 +126,14 @@ import glasses from "./public.jpg";
 import kodu from "./kodu.jpg";
 import podpic from "./podpic.jpg";
 import nyonk from "./nyonk.jpg";
+import club from "./club.png";
+import asuaold from "./asuaold.jpg";
+import asuanew from "./asuanew.jpg";
+import boatengold from "./boatengold.jpg";
+import boatengnew from "./boatengnew.jpg";
+import lindt from "./lindt.png";
+import nestle from "./nestle.png";
+import sucden from "./sucden.jpg";
 
 export {
   image1,
@@ -194,6 +211,15 @@ export {
   rand7,
   rand8,
   rand9,
+  rand10,
+  rand11,
+  rand12,
+  rand13,
+  rand14,
+  rand15,
+  rand16,
+  rand17,
+  rand18,
   competition,
   reading,
   cluster,
@@ -229,4 +255,12 @@ export {
   kodu,
   podpic,
   nyonk,
+  asuanew,
+  asuaold,
+  boatengold,
+  boatengnew,
+  club,
+  sucden,
+  lindt,
+  nestle,
 };

@@ -3,7 +3,7 @@ import Dashboard from "../components/Dashboard";
 
 const DataAnalytics = () => {
   return (
-    <section id="pdaafrica" className="max-container w-full">
+    <section id="" className="max-container w-auto mt-24 h-auto">
       <div>
         <Dashboard />
       </div>

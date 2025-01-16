@@ -73,22 +73,26 @@ const Teams = () => {
 
       {/* PDA Research Evaluation & Learning Team */}
       <div className="mt-28 flex flex-col ">
-        <div className=" text-left ml-32">
-          <h3 className="text-orange font-bold text-3xl mb-2  ">
+        <div className=" text-left ml-32 max-sm:ml-10 ">
+          <h3 className="text-orange font-bold text-3xl mb-2 max-sm:mb-0 max:sm ">
             PDA RESEARCH EVALUATION & LEARNING
           </h3>
         </div>
         <div className=" flex flex-col md:flex-row gap-8">
           {/* Icon Section */}
-          <div className="bg-orange h-24 w-24 rounded-3xl flex items-center justify-center">
-            <img src={research} alt="Research icon" className="w-16 h-16 " />
+          <div className="bg-orange h-24 w-24 max-sm:h-16 max-sm:w-16 rounded-3xl flex items-center justify-center">
+            <img
+              src={research}
+              alt="Research icon"
+              className="w-16 h-16 max-sm:w-10 max-sm:h-10"
+            />
           </div>
           {/* Text and Image Section */}
           <div className="flex flex-col   bg-zinc-50 shadow-lg  rounded-3xl w-full max-w-4xl max-md:max-w-3xl max-sm:max-w-2xl">
             <img
               src={relteam}
               alt="PDA REL Team"
-              className="w-full object-fill "
+              className="w-full object-fill"
             />
             <p className="text-lg my-10 px-12 font-poppins max-md:text-base max-sm:text-sm max-sm:px-1 max-sm:my-1 leading-7">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

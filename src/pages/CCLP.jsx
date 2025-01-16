@@ -171,11 +171,41 @@
 // export default CCLP;
 
 import React from "react";
+
+import Slider from "react-slick";
 import { FaBook, FaChild, FaSchool, FaChartLine } from "react-icons/fa"; // Icons
 import { FiBox } from "react-icons/fi";
 import { IoIosPeople } from "react-icons/io";
-import { competition, reading, cluster, library } from "../assets/images";
+import { competition, reading, cluster, club } from "../assets/images";
 import QuickStats from "../components/QuickStats";
+import ProjectStatus from "../components/ProjectStatus";
+import { boatengnew, boatengold, asuaold, asuanew } from "../assets/images";
+
+const successStories = [
+  "“Reading interest has improved to the point that some children come to my house to call me for us to have reading sessions. On a scale of 1-10, I would say the reading  improvement is at 7.” – Patron, Asempaneye",
+  "“Since our community received the story books, we have experienced an increase in reading interest at the individual level . Even children who did not know how to read have been inspired to read.” – Patron,Abesewa",
+  "“For children who would not pick a book because they could not read before now  enjoy  reading club session especially to look at the beautiful pictures in the story books. Generally reading interest has improved tremendously.” – Patron, Potrikrom",
+  "“The quiz has given children something to focus on in the short-term. Now they learn and read with expectation.” – Patron, Kunsu",
+  "“Though we had a library, reading  interest was low but now the interest has increased  from 2 to 7 on a scale of 1-10.” – Patron, Asuadei",
+  "“Through this project, I have had the opportunity to mentor some teachers in the community school especially those who have volunteered to support me with facilitating the reading club session.” – Patron, Duntan Nkwanta",
+];
+
+const SuccessStories = () => {
+  const settings = { dots: true, infinite: true, autoplay: true, speed: 500 };
+  return (
+    <section className="py-8 px-8 bg-gray-100 text-center">
+      <Slider {...settings}>
+        {successStories.map((story, index) => (
+          <div key={index} className="p-8">
+            <div className="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
+              <p className="text-orange">{story}</p>
+            </div>
+          </div>
+        ))}
+      </Slider>
+    </section>
+  );
+};
 
 const CCLP = () => {
   return (
@@ -183,24 +213,6 @@ const CCLP = () => {
       id="pdaafrica"
       className="max-container max-w-full w-full min-h-screen bg-white   justify-center"
     >
-      {/* Hero Section */}
-      {/* <div className="mt-28 text-center animate-fade-in">
-        <h1 className="font-poppins font-bold text-4xl text-orange">
-          Cocoa Communities Library Project
-        </h1>
-        <p className="text-gray-700 mt-4 px-4 md:px-12">
-          A 2-year initiative by Participatory Development Associates (PDA) in
-          partnership with Magic Libraries Foundation. It aims to promote
-          reading literacy among children in cocoa-growing communities in Ghana.
-        </p>
-        <div className="mt-8">
-          <img
-            src={reading}
-            alt="Cocoa Communities"
-            className="mx-auto rounded-lg shadow-lg w-11/12 md:w-8/12"
-          />
-        </div>
-      </div> */}
       <div
         className="relative w-full bg-cover bg-center h-screen"
         style={{ backgroundImage: `url(${reading})` }}
@@ -215,8 +227,7 @@ const CCLP = () => {
               Cocoa Communities' Library Project
             </h1>
             <p className="text-xl mt-4 mb-5 font-poppins">
-              Improving reading literacy among children in cocoa growing
-              communities
+              Inspiring creativity through reading
             </p>
           </div>
         </div>
@@ -225,17 +236,17 @@ const CCLP = () => {
       <QuickStats />
 
       {/* Project Components Section */}
-      <div className="pt-5 ">
+      <div className="pt-5 bg-gray-100">
         <h2 className="font-poppins font-semibold text-2xl text-center text-red mb-8 justify-center">
           Project Objectives
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <img
-            src={library}
+            src={club}
             alt="Reading Festival"
             className="mx-auto rounded-lg shadow-lg w-11/12 md:w-8/12 mb-10"
           />
-          <div className="px-4 ml-10 max-lg:ml-20 animate-slide-in max-sm:ml-5 max-lg:mt-10 mb-5">
+          <div className="px-4 ml-0 max-lg:ml-20 animate-slide-in max-sm:ml-5 max-lg:mt-10 mb-5">
             <ul className="list-disc list-inside text-gray-700 leading-relaxed font-poppins">
               <li className="flex items-center">
                 <FaSchool className="mr-2 text-orange" /> Renovation of 2
@@ -267,7 +278,7 @@ const CCLP = () => {
       </div>
 
       {/* Project Goals Section */}
-      <div className="py-12 bg-gray-100">
+      <div className="py-12 bg-white">
         <h2 className="font-poppins font-semibold text-2xl text-center text-red mb-8">
           Rationale for Reading Festival & Competitions
         </h2>
@@ -299,8 +310,11 @@ const CCLP = () => {
         </div>
       </div>
 
+      {/* Project Status Section */}
+      <ProjectStatus />
+
       {/* Reading Competition Flow Section */}
-      <div className="py-12">
+      <div className="py-12  bg-white">
         <h2 className="font-poppins font-semibold text-3xl text-center text-red mb-8 mx-auto">
           Reading Festival & Competitions Structure
         </h2>
@@ -321,18 +335,15 @@ const CCLP = () => {
         </div>
       </div>
 
-      {/* Footer */}
-      {/* <footer className="bg-gray-800 text-white py-4 mt-8">
-        <div className="text-center">
-          <p>© 2024 PDA Ghana | Cocoa Communities Library Project</p>
-          <a
-            href="https://pdaghana.com"
-            className="text-orange hover:underline"
-          >
-            www.pdaghana.com
-          </a>
-        </div>
-      </footer> */}
+      {/* Success Stories Slider */}
+      <section className="py-16 px-8 text-center bg-gray-100">
+        <h2 className="text-3xl font-bold text-red">Stories of Change</h2>
+        <p className="mt-6 text-gray-700">
+          Read about the real impact of our project on the lives of children and
+          families.
+        </p>
+        <SuccessStories />
+      </section>
     </section>
   );
 };

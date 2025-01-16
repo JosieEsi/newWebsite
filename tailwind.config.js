@@ -12,10 +12,12 @@ export default {
       xl: ["20px", "24.38px"],
       "2xl": ["24px", "29.26px"],
       "3xl": ["26px", "50px"],
+      "5xl": ["34px", "50px"],
       "4xl": ["44px", "58px"],
       "6xl": ["55px", "65px"],
       "7xl": ["74px", "80px"],
       "8xl": ["76px", "86px"],
+      "9xl": ["85px", "90px"],
     },
     extend: {
       colors: {

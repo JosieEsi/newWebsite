@@ -1,4 +1,5 @@
 import React from "react";
+import Slider from "react-slick";
 import { modul, obuasi } from "../assets/images";
 import {
   beyond,
@@ -14,7 +15,11 @@ import {
   star,
   sustainable,
   finan,
+  sucden,
+  lindt,
+  nestle,
 } from "../assets/images";
+import Tab from "../components/Tab";
 
 // const ProjectCard = ({ title, description, location, officers }) => (
 //   <div className="border rounded-lg p-6 shadow-md">
@@ -24,6 +29,29 @@ import {
 //     <p className="text-gray-500">Field Officers: {officers}</p>
 //   </div>
 // );
+
+const successStories = [
+  "“Joining the VSLA group has helped me save for my children’s education.” – Cocoa Farmer",
+  "“With the project’s support, I now understand the importance of keeping my children in school.” – Parent",
+  "“The training sessions have changed our approach to child labor.” – Community Leader",
+];
+
+const SuccessStories = () => {
+  const settings = { dots: true, infinite: true, autoplay: true, speed: 500 };
+  return (
+    <section className="py-8 px-8 bg-white text-center">
+      <Slider {...settings}>
+        {successStories.map((story, index) => (
+          <div key={index} className="p-8">
+            <div className="max-w-lg mx-auto bg-gray-100 p-6 rounded-lg shadow-lg">
+              <p className="text-orange">{story}</p>
+            </div>
+          </div>
+        ))}
+      </Slider>
+    </section>
+  );
+};
 
 const ProjectCard = ({ title, description, location, officers, text }) => (
   <div className="flip-card">
@@ -50,14 +78,11 @@ const partners = [
   { imgURL: cocoa, name: "Cocoa" },
   { imgURL: coram, name: "Coram" },
   { imgURL: kokoo, name: "Kokoo" },
-  { imgURL: mastercard, name: "Mastercard" },
   { imgURL: opm, name: "OPM" },
   { imgURL: pandemics, name: "Pandemics" },
-  { imgURL: root, name: "Root" },
-  { imgURL: sabre, name: "Sabre" },
-  { imgURL: schol, name: "Schol" },
-  { imgURL: star, name: "Star" },
-  { imgURL: sustainable, name: "Sustainable" },
+  { imgURL: sucden, name: "Sucden" },
+  { imgURL: lindt, name: "Lindt" },
+  { imgURL: nestle, name: "Nestle" },
 ];
 
 const VSLA = () => {
@@ -86,12 +111,12 @@ const VSLA = () => {
           </div>
         </div>
 
-        <div className="py-16 bg-gray-100 ">
+        <div className="py-16 bg-white ">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4 text-red">Who We Are</h2>
-            <p className="text-lg text-gray-700">
+            <p className="text-base text-gray-700">
               PDA has a proven track record of partnering with communities and
-              other development organizations...
+              other development organizations.
             </p>
             <div className="mt-6 flex justify-center space-x-8">
               <div>
@@ -110,12 +135,12 @@ const VSLA = () => {
           </div>
         </div>
 
-        <div className="py-16 bg-white mx-10">
+        <div className="py-10 bg-gray-100 px-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4 text-red">
               Our VSLA+ Model
             </h2>
-            <p className="text-lg text-gray-700 mb-8">
+            <p className="text-base text-gray-700 mb-8">
               PDA adopts a unique integrated VSLA (VSLA+) model as a
               self-facilitated platform to plug in sustainable development
               interventions. Our diverse and customizable VSLA+ modules and
@@ -129,7 +154,7 @@ const VSLA = () => {
                 alt="VSLA+ Model Infographic"
                 className="mx-auto max-sm:w-auto shadow-lg rounded-lg"
               />
-              <p className="text-gray-600 mt-4">
+              <p className="text-gray-600 mt-4 italic">
                 The VSLA+ model incorporates interventions such as financial
                 literacy, gender sensitivity training, and child labor
                 remediation to create a sustainable impact.
@@ -138,7 +163,7 @@ const VSLA = () => {
           </div>
         </div>
 
-        <div className="py-16 mx-10">
+        <div className="py-6 mx-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4 text-red">
               Our Impact and Partnerships
@@ -150,7 +175,7 @@ const VSLA = () => {
               commodity supply chains and communities over the last 21 years.
             </p>
 
-            <div className="flex overflow-hidden group justify-center">
+            <div className="flex overflow-hidden group justify-center mt-10">
               <div className="flex animate-loop-scroll space-x-10 group-hover:paused relative">
                 {partners.map((partner, index) => (
                   <img
@@ -170,6 +195,12 @@ const VSLA = () => {
                 ))}
               </div>
             </div>
+
+            <a href="https://vsla-dashboards.herokuapp.com/login">
+              <div className="flex justify-center mt-6">
+                <Tab label="Dashboard" />
+              </div>
+            </a>
           </div>
         </div>
 
@@ -225,6 +256,15 @@ const VSLA = () => {
             </div>
           </div>
         </div>
+        {/* Success Stories Slider */}
+        <section className="py-16 px-8 bg-white text-center">
+          <h2 className="text-3xl font-bold text-red">Stories of Change</h2>
+          <p className="mt-6 text-gray-700">
+            Read about the real impact of our project on the lives of children
+            and families.
+          </p>
+          <SuccessStories />
+        </section>
       </div>
     </section>
   );

@@ -35,6 +35,7 @@ const App = () => {
       }
     }
   }, [location]);
+  // console.log("React App Loaded");
 
   return (
     <main className="relative">

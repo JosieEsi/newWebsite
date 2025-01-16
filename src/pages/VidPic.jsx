@@ -82,7 +82,11 @@ const VidPic = () => {
         </div>
 
         <div className="grid grid-cols-4  px-32 mb-5 gap-10 ml-8 mr-20 ">
-          <div className="w-[200px] h-[200px] bg-orange rounded-lg"></div>
+          <div className="w-[200px] h-[200px] bg-orange rounded-lg">
+            <img src="" alt="" />
+            <p>Chris sending off</p>
+            <p>40 views</p>
+          </div>
           <div className="w-[200px] h-[200px] bg-orange rounded-lg"></div>
           <div className="w-[200px] h-[200px] bg-orange rounded-lg"></div>
           <div className="w-[200px] h-[200px] bg-orange rounded-lg"></div>

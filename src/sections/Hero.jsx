@@ -34,14 +34,14 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative flex flex-col justify-end lg:justify-center bg-cover bg-left top-20 h-max"
+      className="relative flex flex-col justify-end lg:justify-center bg-cover bg-left top-20 h-[500px] wide:h-[800px] "
     >
       <video
         loop
         autoPlay
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover -z-10"
+        className="absolute inset-0 w-full h-full object-cover -z-10 "
         poster="/assets/images/hero.png"
       >
         <source src="/assets/video/pdaSlider.mp4" type="video/mp4" />

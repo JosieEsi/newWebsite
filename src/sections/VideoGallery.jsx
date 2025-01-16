@@ -134,7 +134,11 @@ const VideoGallery = () => {
           <h3 className="font-poppins font-bold text-3xl text-ash pb-4">
             Videos
           </h3>
-          <a href="https://www.youtube.com/@pdatv3656/playlists">
+          <a
+            href="https://www.youtube.com/@pdatv3656/playlists"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Tab label="MORE VIDEOS" />
           </a>
         </div>

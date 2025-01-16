@@ -6,7 +6,7 @@ import Button from "../components/Button";
 const OurImpact = () => {
   return (
     <section
-      id="whoweare"
+      id="our-impact"
       className="max-container max-w-full w-full min-h-screen lg:justify-center flex flex-col"
     >
       <div className="mt-14 relative w-full">

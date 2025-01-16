@@ -55,7 +55,7 @@ const CustomerReviews = () => {
       {/* Banner */}
       <div className="flex justify-center mt-10">
         <button
-          className="bg-orange text-white py-4 px-6 rounded-lg hover:bg-red text-lg font-poppins"
+          className="bg-orange text-white py-4 px-6 rounded-lg hover:scale-110 text-lg font-poppins"
           onClick={openModal}
         >
           Leave a review

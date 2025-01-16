@@ -18,7 +18,7 @@ const ServiceCard = ({ imgURL, label, subtext, button, onClick }) => {
       </p>
       <button
         onClick={onClick}
-        className="justify-center items-center rounded-xl px-7 py-4 mt-8 border font-poppins text-lg leading-none bg-orange text-white font-bold border-none max-sm:text-sm max-sm:px-4 max-sm:py-4 "
+        className="justify-center items-center rounded-xl px-7 py-4 mt-8 border font-poppins text-lg leading-none bg-orange text-white font-bold border-none max-sm:text-sm max-sm:px-4 max-sm:py-4 hover:scale-110 "
       >
         {button}
       </button>

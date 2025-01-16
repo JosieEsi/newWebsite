@@ -13,14 +13,16 @@ const ProjectCard = ({ imgURL, label, subtext, button, link }) => {
         <img src={imgURL} alt={label} width={500} height={500} />
       </div>
       <div className="px-10 py-10 ">
-        <h3 className="mt-5 font-poppins text-3xl leading-normal font-bold ">
-          {label}
-        </h3>
+        <a href={link}>
+          <h3 className="mt-5 font-poppins text-3xl leading-normal font-bold hover:text-orange ">
+            {label}
+          </h3>
+        </a>
         <p className="mt-3 break-words font-poppins text-lg leading-normal text-slate-gray">
           {subtext}
         </p>
         <a href={link}>
-          <button className="justify-center items-center rounded-xl px-7 py-4 mt-3 border font-poppins text-lg leading-none bg-orange text-white font-bold border-none max-sm:text-sm max-sm:px-4 max-sm:py-2 ">
+          <button className="justify-center items-center rounded-xl px-7 py-4 mt-3 border font-poppins text-lg leading-none bg-orange text-white font-bold border-none max-sm:text-sm max-sm:px-4 max-sm:py-2 hover:scale-110 ">
             {button}
           </button>
         </a>

@@ -57,7 +57,7 @@ const Nav = () => {
       <div className="h-28"></div>
 
       <div
-        className={`absolute left-0 w-full bg-white bg-opacity-80 transform transition-transform duration-1000 ease-in-out ${
+        className={`absolute left-0 w-full bg-white bg-opacity-90 transform transition-transform duration-1000 ease-in-out ${
           isMenuVisible ? "translate-y-[-0%]" : "translate-y-[-200%]"
         }`}
         style={{
