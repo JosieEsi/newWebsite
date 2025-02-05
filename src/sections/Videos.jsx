@@ -8,7 +8,7 @@ const Videos = () => {
   useEffect(() => {
     const fetchVideos = async () => {
       const channelId = "UC_SePgsyHh7YvekBLSv4XZA";
-      // const apiKey = "AIzaSyB8v-m8cwvsQsP96sBsRHil0ISvvWiNQec";
+      //const apiKey = "AIzaSyB8v-m8cwvsQsP96sBsRHil0ISvvWiNQec";
       const maxResults = 2; // Number of videos to fetch
 
       try {
