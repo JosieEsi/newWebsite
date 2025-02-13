@@ -25,11 +25,14 @@ import Podcast from "./pages/Podcast.jsx";
 import CCLPDashboard from "./pages/CCLPDashboard.jsx";
 import VSLADashboard from "./pages/VSLADashboard.jsx";
 import NCLRDashboard from "./pages/NCLRDashboard.jsx";
+import UnderConstruction from "./components/UnderConstruction.jsx";
+import ErrorFallback from "./components/ErrorFallback.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorFallback />,
     children: [
       {
         path: "/pdaafrica/dataanalytics",
@@ -118,6 +121,10 @@ const router = createBrowserRouter([
       {
         path: "/covid-19",
         element: <Covid19 />,
+      },
+      {
+        path: "*", // Catch-all route for 404 errors
+        element: <UnderConstruction />,
       },
     ],
   },

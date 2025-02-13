@@ -134,6 +134,9 @@ import boatengnew from "./boatengnew.jpg";
 import lindt from "./lindt.png";
 import nestle from "./nestle.png";
 import sucden from "./sucden.jpg";
+import youthhealth from "./youthhealth.jpg";
+import vulnerability from "./vulnerability.jpg";
+import soundwave from "./soundwave.png";
 
 export {
   image1,
@@ -263,4 +266,7 @@ export {
   sucden,
   lindt,
   nestle,
+  youthhealth,
+  vulnerability,
+  soundwave,
 };

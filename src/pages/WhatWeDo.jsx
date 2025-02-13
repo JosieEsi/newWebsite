@@ -2,6 +2,7 @@ import React from "react";
 import { strategic, farmer } from "../assets/images";
 import Button from "../components/Button";
 import { clipboard, bulb } from "../assets/icons";
+import ProjectSlider from "../components/ProjectSlider";
 
 const WhatWeDo = () => {
   return (
@@ -39,7 +40,9 @@ const WhatWeDo = () => {
             </div>
           </div>
           <div className="bg-gray-200 w-2/3 h-auto rounded-lg"></div>
+          <ProjectSlider />
         </div>
+
         <div className=" flex justify-center">
           <Button label="More Projects >>>" />
         </div>

@@ -2,6 +2,9 @@ import React from "react";
 import { pic, micro, vid } from "../assets/icons";
 import { yfutures, business, publication, glasses } from "../assets/images";
 import Button from "../components/Button";
+import BookSlider from "../components/BookSlider";
+import FilterableTable from "../components/FilterableTable";
+//import NewButton from "../components/NewButton";
 
 const Publications = () => {
   return (
@@ -53,6 +56,29 @@ const Publications = () => {
           </div>
         </div>
         <div className="w-[1000px] h-1 bg-orange  mb-5 mt-8"></div>
+      </div>
+
+      <BookSlider />
+      <FilterableTable />
+
+      <div className="w-9/12 h-60 bg-zinc-200 font-poppins self-center mt-3 mb-5 pt-0.5">
+        <div className="grid grid-cols-2 mt-5 mb-5 text-left align-middle ml-10 mr-10">
+          <div>
+            <span className="font-bold">SUBSCRIBE TO OUR NEWSLETTERS</span>
+          </div>
+          <div classname="flex flex-col p-4">
+            <p className="font-bold mb-3">
+              Stay up to date with PDA research, insights and events on your
+              topics of interest
+            </p>
+            <p className="mb-3 ">
+              We only use your email address to send you the newsletter and to
+              see how many people are opening our emails. Please read our full
+              privacy policy
+            </p>
+            <NewButton label="SIGN UP TODAY" className="mb-3" />
+          </div>
+        </div>
       </div>
     </section>
   );

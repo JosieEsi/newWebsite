@@ -1,6 +1,6 @@
 import React from "react";
 import { pic, micro, vid } from "../assets/icons";
-import { podpic } from "../assets/images";
+import { podpic, soundwave } from "../assets/images";
 import NewButton from "../components/NewButton";
 import Button from "../components/Button";
 
@@ -19,16 +19,17 @@ const Podcast = () => {
         <h1 className="font-poppins font-bold text-4xl text-orange">Podcast</h1>
         <div className="gap-5 flex flex-row">
           <div className="w-20 h-20 bg-red justify-center flex items-center">
-            <img src={micro} alt="" className="w-10 h-10" />
+            <img src={pic} alt="" className="w-10 h-10" />
           </div>
           <div className="w-20 h-20 bg-red justify-center flex items-center">
-            <img src={pic} alt="" className="w-10 h-10" />
+            <img src={vid} alt="" className="w-10 h-10" />
           </div>
         </div>
       </div>
-      <div className="w-9/12 h-24 bg-orange self-center mt-3 mb-5 pt-0.5">
+      <div className="w-9/12 h-24 bg-orange self-center mt-3 mb-5 pt-0.5 flex flex-row gap-28">
         {/* <div className="w-20 h-20 bg-white rounded-full  mt-5 justify-center flex items-center"> */}
-        <img src={vid} alt="" className="w-16 h-16 ml-10 mt-5" />
+        <img src={micro} alt="" className="w-16 h-16 ml-10 mt-5" />
+        <img src={soundwave} alt="" className="w-32 h-16  mt-5 " />
       </div>
 
       <div className="w-9/12 h-40 bg-zinc-200 font-poppins self-center mt-3 mb-5 pt-0.5">
