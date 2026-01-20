@@ -111,6 +111,7 @@ import {
 // import { partners } from "../constants";
 
 import React from "react";
+import { motion } from "framer-motion";
 
 const Partners = () => {
   const partners = [
@@ -145,36 +146,52 @@ const Partners = () => {
   return (
     <section
       id="partners"
-      className="flex max-container overflow-hidden justify-center"
+      className="flex max-container overflow-hidden justify-center px-4 sm:px-6 lg:px-8"
     >
-      <div className="bg-white w-full lg:w-2/3 max-sm:w-full flex flex-col justify-center">
-        <div className="bg-white ml-10 max-sm:ml-0 justify-center">
+      <motion.div
+        className="bg-white w-full lg:w-2/3 max-sm:w-full flex flex-col justify-center"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+      >
+        <motion.div
+          className="bg-white ml-10 max-sm:ml-0 justify-center"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
           <h3 className="font-poppins font-bold text-3xl text-ash pb-4">
             Partners
           </h3>
-        </div>
+        </motion.div>
 
-        <div className="flex overflow-hidden group justify-center">
+        <div className="flex overflow-hidden group justify-center py-4">
           <div className="flex animate-loop-scroll space-x-10 group-hover:paused relative">
             {partners.map((partner, index) => (
-              <img
+              <motion.img
                 key={index}
                 src={partner.imgURL}
                 alt={partner.name}
-                className="w-20 h-20"
+                className="w-20 h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"
+                whileHover={{ scale: 1.2, rotate: 5 }}
+                transition={{ duration: 0.2 }}
               />
             ))}
             {partners.map((partner, index) => (
-              <img
+              <motion.img
                 key={index + partners.length}
                 src={partner.imgURL}
                 alt={partner.name}
-                className="w-20 h-20"
+                className="w-20 h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"
+                whileHover={{ scale: 1.2, rotate: 5 }}
+                transition={{ duration: 0.2 }}
               />
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

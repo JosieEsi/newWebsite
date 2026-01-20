@@ -1,22 +1,24 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { pic, micro, vid } from "../assets/icons";
-import { podpic, soundwave } from "../assets/images";
 import NewsletterForm from "../components/NewsletterForm";
-import Button from "../components/Button";
-import { FaApple, FaSpotify, FaSoundcloud, FaGoogle, FaPlayCircle } from "react-icons/fa";
+import { FaYoutube, FaVimeo, FaPlayCircle } from "react-icons/fa";
 
-const Podcast = () => {
-  const platforms = [
-    { name: "Apple Podcasts", icon: FaApple, color: "text-gray-800", link: "https://podcasts.apple.com" },
-    { name: "Spotify", icon: FaSpotify, color: "text-green-500", link: "https://open.spotify.com" },
-    { name: "Soundcloud", icon: FaSoundcloud, color: "text-orange", link: "https://soundcloud.com" },
-    { name: "Google Podcast", icon: FaGoogle, color: "text-blue-500", link: "https://podcasts.google.com" },
+const Vodcast = () => {
+  const vodcastEpisodes = [
+    // Coming soon episodes
   ];
+
+  const platforms = [
+    { name: "YouTube", icon: FaYoutube, color: "text-red-600", link: "https://www.youtube.com/@pdatv3656" },
+    { name: "Vimeo", icon: FaVimeo, color: "text-blue-500", link: "https://vimeo.com" },
+  ];
+
+  // Using a professional video podcast-themed header image
+  const headerImage = "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1920&q=80";
 
   return (
     <section
-      id="podcast"
+      id="vodcast"
       className="max-container max-w-full w-full min-h-screen lg:justify-center flex flex-col font-poppins bg-gradient-to-b from-gray-50 to-white"
     >
       {/* Hero Section */}
@@ -27,11 +29,12 @@ const Podcast = () => {
         transition={{ duration: 0.6 }}
       >
         <img 
-          src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=1920&q=80" 
+          src={headerImage} 
           className="w-full h-[400px] md:h-[500px] object-cover" 
-          alt="Podcast"
+          alt="Vodcast" 
           onError={(e) => {
-            e.target.src = podpic;
+            e.target.style.display = 'none';
+            e.target.parentElement.style.backgroundColor = '#F89823';
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
@@ -41,11 +44,11 @@ const Podcast = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          Podcast
+          Vodcast
         </motion.h1>
       </motion.div>
 
-      {/* Podcast Player Section */}
+      {/* Vodcast Player Section */}
       <motion.div
         className="w-full max-w-6xl mx-auto mt-12 mb-8 px-4 sm:px-6 lg:px-8"
         initial={{ opacity: 0, y: 30 }}
@@ -55,27 +58,28 @@ const Podcast = () => {
       >
         <div className="bg-gradient-to-r from-orange to-red rounded-2xl p-6 md:p-8 shadow-xl">
           <div className="flex flex-col md:flex-row items-center gap-6">
-            <motion.img
-              src={micro}
-              alt="Microphone"
-              className="w-20 h-20 md:w-24 md:h-24"
+            <motion.div
+              className="w-20 h-20 md:w-24 md:h-24 bg-white rounded-full flex items-center justify-center"
               whileHover={{ rotate: 10, scale: 1.1 }}
               transition={{ type: "spring", stiffness: 300 }}
-            />
-            <motion.img
-              src={soundwave}
-              alt="Soundwave"
-              className="flex-1 h-16 md:h-20 object-contain"
+            >
+              <FaPlayCircle className="text-orange text-4xl md:text-5xl" />
+            </motion.div>
+            <motion.div
+              className="flex-1 text-center md:text-left"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-            />
+            >
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">PDA Vodcast</h2>
+              <p className="text-white/90 text-lg">Video podcasts exploring development insights and stories</p>
+            </motion.div>
           </div>
         </div>
       </motion.div>
 
-      {/* Where to Listen Section */}
+      {/* Where to Watch Section */}
       <motion.div
         className="w-full max-w-6xl mx-auto mb-8 px-4 sm:px-6 lg:px-8"
         initial={{ opacity: 0, y: 30 }}
@@ -84,7 +88,7 @@ const Podcast = () => {
         transition={{ duration: 0.6 }}
       >
         <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200">
-          <h3 className="text-sm font-semibold text-gray-700 mb-6">Where to listen</h3>
+          <h3 className="text-sm font-semibold text-gray-700 mb-6">Where to watch</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
             {platforms.map((platform, index) => {
               const Icon = platform.icon;
@@ -106,7 +110,7 @@ const Podcast = () => {
             })}
           </div>
           <p className="text-sm italic text-gray-600 text-center">
-            Or search for us in your usual podcast provider
+            Or search for us in your usual video podcast provider
           </p>
         </div>
       </motion.div>
@@ -148,8 +152,8 @@ const Podcast = () => {
               Coming Soon!
             </h3>
             <p className="text-lg md:text-xl text-gray-600 mb-6 max-w-2xl mx-auto">
-              We're preparing exciting podcast episodes that will share insights, stories, and discussions 
-              about development work. Stay tuned for our first episode!
+              We're working on exciting video podcast content that will explore development insights, 
+              share impactful stories, and bring you closer to our work. Stay tuned!
             </p>
             <motion.div
               className="inline-block px-6 py-3 bg-orange text-white rounded-full font-semibold"
@@ -202,4 +206,4 @@ const Podcast = () => {
   );
 };
 
-export default Podcast;
+export default Vodcast;

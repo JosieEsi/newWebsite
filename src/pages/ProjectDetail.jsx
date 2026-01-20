@@ -1,0 +1,316 @@
+import React from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { projects } from "../components/ProjectsData";
+import { motion } from "framer-motion";
+import { FaArrowLeft, FaMapMarkerAlt, FaCalendarAlt, FaUsers, FaTag } from "react-icons/fa";
+
+const ProjectDetail = () => {
+  const { slug } = useParams();
+  const navigate = useNavigate();
+  
+  // Find the project by slug
+  const project = projects.find((p) => p.slug === slug);
+
+  if (!project) {
+    return (
+      <section className="max-container w-full min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-red mb-4">Project Not Found</h1>
+          <p className="text-gray-600 mb-8">The project you're looking for doesn't exist.</p>
+          <button
+            onClick={() => navigate("/our-projects")}
+            className="bg-orange text-white px-6 py-3 rounded-lg hover:bg-orange/90 transition-colors"
+          >
+            Back to Projects
+          </button>
+        </div>
+      </section>
+    );
+  }
+
+  const getColorClasses = (color) => {
+    if (color === "orange") {
+      return {
+        bg: "bg-orange",
+        text: "text-orange",
+        border: "border-orange",
+      };
+    } else {
+      return {
+        bg: "bg-red",
+        text: "text-red",
+        border: "border-red",
+      };
+    }
+  };
+
+  const colors = getColorClasses(project.color);
+
+  const handleBackClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    navigate("/our-projects", { replace: false });
+  };
+
+  return (
+    <section className="max-container w-full min-h-screen bg-white relative">
+      {/* Back Button */}
+      <div className="fixed top-20 left-6 z-50 lg:left-20">
+        <motion.button
+          onClick={handleBackClick}
+          onMouseDown={(e) => e.preventDefault()}
+          className="flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg text-gray-700 hover:text-orange hover:bg-white transition-all duration-300 cursor-pointer font-poppins font-medium shadow-md hover:shadow-lg border border-gray-200 hover:border-orange"
+          type="button"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          <FaArrowLeft className="text-lg" />
+          <span>Back to Projects</span>
+        </motion.button>
+      </div>
+
+      {/* Hero Section */}
+      <motion.div
+        className="relative w-full h-[60vh] overflow-hidden"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        <img
+          src={project.image}
+          alt={project.title}
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-12">
+          <motion.h1
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-poppins mb-4"
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.2 }}
+          >
+            {project.title}
+          </motion.h1>
+          {project.subtitle && (
+            <motion.p
+              className="text-xl text-white/90 font-poppins"
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.3 }}
+            >
+              {project.subtitle}
+            </motion.p>
+          )}
+        </div>
+      </motion.div>
+
+      {/* Project Metadata */}
+      <div className="px-6 lg:px-20 py-8 bg-gray-50">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {project.partners && (
+            <div className="flex items-start gap-3">
+              <FaUsers className={`text-2xl ${colors.text} mt-1`} />
+              <div>
+                <h3 className="font-semibold text-gray-800 mb-1">Partners</h3>
+                <p className="text-gray-600 text-sm">{project.partners}</p>
+              </div>
+            </div>
+          )}
+          {project.period && (
+            <div className="flex items-start gap-3">
+              <FaCalendarAlt className={`text-2xl ${colors.text} mt-1`} />
+              <div>
+                <h3 className="font-semibold text-gray-800 mb-1">Period</h3>
+                <p className="text-gray-600 text-sm">{project.period}</p>
+              </div>
+            </div>
+          )}
+          {project.location && (
+            <div className="flex items-start gap-3">
+              <FaMapMarkerAlt className={`text-2xl ${colors.text} mt-1`} />
+              <div>
+                <h3 className="font-semibold text-gray-800 mb-1">Location</h3>
+                <p className="text-gray-600 text-sm">{project.location}</p>
+              </div>
+            </div>
+          )}
+          {project.category && (
+            <div className="flex items-start gap-3">
+              <FaTag className={`text-2xl ${colors.text} mt-1`} />
+              <div>
+                <h3 className="font-semibold text-gray-800 mb-1">Category</h3>
+                <p className="text-gray-600 text-sm">{project.category}</p>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="px-6 lg:px-20 py-12">
+        <div className="max-w-4xl mx-auto">
+          {/* Project Snapshot */}
+          {project.snapshot && (
+            <motion.div
+              className="mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+            >
+              <h2 className={`text-3xl font-bold ${colors.text} mb-6 font-poppins`}>
+                Project Snapshot
+              </h2>
+              <div className="prose prose-lg max-w-none">
+                {project.snapshot.split('\n').map((paragraph, index) => (
+                  paragraph.trim() && (
+                    <p key={index} className="text-gray-700 mb-4 leading-relaxed font-poppins">
+                      {paragraph.trim()}
+                    </p>
+                  )
+                ))}
+              </div>
+            </motion.div>
+          )}
+
+          {/* How We Went About It */}
+          {project.howWeWentAboutIt && (
+            <motion.div
+              className="mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+            >
+              <h2 className={`text-3xl font-bold ${colors.text} mb-6 font-poppins`}>
+                How We Went About It
+              </h2>
+              <div className="prose prose-lg max-w-none">
+                {project.howWeWentAboutIt.split('\n').map((paragraph, index) => (
+                  paragraph.trim() && (
+                    <p key={index} className="text-gray-700 mb-4 leading-relaxed font-poppins">
+                      {paragraph.trim()}
+                    </p>
+                  )
+                ))}
+              </div>
+            </motion.div>
+          )}
+
+          {/* Key Objectives */}
+          {project.objectives && project.objectives.length > 0 && (
+            <motion.div
+              className="mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+            >
+              <h2 className={`text-3xl font-bold ${colors.text} mb-6 font-poppins`}>
+                Key Objectives
+              </h2>
+              <ul className="list-disc list-inside space-y-3">
+                {project.objectives.map((objective, index) => (
+                  <li key={index} className="text-gray-700 leading-relaxed font-poppins">
+                    {objective}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          )}
+
+          {/* Key Activities */}
+          {project.activities && project.activities.length > 0 && (
+            <motion.div
+              className="mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7 }}
+            >
+              <h2 className={`text-3xl font-bold ${colors.text} mb-6 font-poppins`}>
+                Key Activities
+              </h2>
+              <ul className="list-disc list-inside space-y-3">
+                {project.activities.map((activity, index) => (
+                  <li key={index} className="text-gray-700 leading-relaxed font-poppins">
+                    {activity}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          )}
+
+          {/* Expected Outcomes */}
+          {project.outcomes && project.outcomes.length > 0 && (
+            <motion.div
+              className="mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
+            >
+              <h2 className={`text-3xl font-bold ${colors.text} mb-6 font-poppins`}>
+                Expected Outcomes
+              </h2>
+              <ul className="list-disc list-inside space-y-3">
+                {project.outcomes.map((outcome, index) => (
+                  <li key={index} className="text-gray-700 leading-relaxed font-poppins">
+                    {outcome}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          )}
+
+          {/* Additional Content Sections */}
+          {project.additionalSections && project.additionalSections.map((section, index) => (
+            <motion.div
+              key={index}
+              className="mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9 + index * 0.1 }}
+            >
+              <h2 className={`text-3xl font-bold ${colors.text} mb-6 font-poppins`}>
+                {section.title}
+              </h2>
+              <div className="prose prose-lg max-w-none">
+                {typeof section.content === 'string' ? (
+                  section.content.split('\n').map((paragraph, pIndex) => (
+                    paragraph.trim() && (
+                      <p key={pIndex} className="text-gray-700 mb-4 leading-relaxed font-poppins">
+                        {paragraph.trim()}
+                      </p>
+                    )
+                  ))
+                ) : (
+                  <ul className="list-disc list-inside space-y-3">
+                    {section.content.map((item, itemIndex) => (
+                      <li key={itemIndex} className="text-gray-700 leading-relaxed font-poppins">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </motion.div>
+          ))}
+
+          {/* Status Badge */}
+          <motion.div
+            className="mt-12 pt-8 border-t border-gray-200"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1 }}
+          >
+            <div className="flex items-center gap-4">
+              <span className="text-gray-600 font-semibold">Status:</span>
+              <span className={`px-4 py-2 rounded-full text-white font-semibold ${colors.bg}`}>
+                {project.status}
+              </span>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ProjectDetail;

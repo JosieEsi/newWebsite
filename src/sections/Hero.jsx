@@ -28,41 +28,89 @@
 
 // export default Hero;
 
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <section
       id="home"
-      className="relative flex flex-col justify-end lg:justify-center bg-cover bg-left top-20 h-[500px] wide:h-[800px] "
+      className="relative flex flex-col justify-end lg:justify-center bg-cover bg-left top-20 h-[500px] wide:h-[800px] overflow-hidden"
     >
       <video
         loop
         autoPlay
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover -z-10 "
+        className="absolute inset-0 w-full h-full object-cover -z-10"
         poster="/assets/images/hero.png"
       >
         <source src="/assets/video/pdaSlider.mp4" type="video/mp4" />
         <source src="/assets/video/pdaSlider.webm" type="video/webm" />
       </video>
-      <div className="lg:grid lg:grid-cols-2 lg:px-2 xl:grid xl:grid-cols-2 xl:px-2 sm:flex sm:flex-col sm:justify-end sm:h-full p-4">
-        <div></div>
-        <div className="p-5 max-sm:pb-10 text-white ">
-          <h1 className="font-poppins font-bold lg:text-7xl max-sm:text-4xl md:text-6xl pl-3 lg:pr-15">
+      <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent -z-10"></div>
+      
+      <motion.div
+        className="flex flex-col items-center justify-center h-full p-4 relative z-10 text-center"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <div className="max-w-4xl mx-auto text-white">
+          <motion.h1
+            className="font-poppins font-bold lg:text-7xl max-sm:text-4xl md:text-6xl mb-6"
+            variants={itemVariants}
+            whileHover={{ scale: 1.02 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
             Everyone Matters
-          </h1>
-          <p className="py-5 lg:pr-[9rem] sm:px-4 text-xl max-sm:text-sm font-poppins">
+          </motion.h1>
+          <motion.p
+            className="py-5 text-xl max-sm:text-base md:text-2xl font-poppins leading-relaxed mb-8 px-4"
+            variants={itemVariants}
+          >
             Participatory Development Associates (PDA), is a social development,
             project management and advisory organisation that is based in Ghana
             and works across Sub-Saharan Africa.
-          </p>
-          <a className="sm:pl-5" href="./">
-            <Button label="READ MORE" />
-          </a>
+          </motion.p>
+          <motion.div
+            className="flex justify-center"
+            variants={itemVariants}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <a href="/who-we-are" onClick={(e) => { e.preventDefault(); navigate("/who-we-are"); }}>
+              <Button label="READ MORE" />
+            </a>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

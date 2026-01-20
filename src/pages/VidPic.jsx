@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { kodu } from "../assets/images";
 import { pic, micro, vid } from "../assets/icons";
 import Button from "../components/Button";
@@ -12,19 +13,11 @@ import {
   rand6,
   rand7,
   rand8,
-  rand9,
-  rand10,
-  rand11,
-  rand12,
-  rand13,
-  rand14,
-  rand15,
-  rand16,
-  rand17,
-  rand18,
 } from "../assets/images";
 
 const VidPic = () => {
+  const [activeTab, setActiveTab] = useState("videos");
+
   const albums = [
     {
       url: "https://photos.app.goo.gl/DeZ3HMJ9Nn5p1XcJ6",
@@ -53,7 +46,7 @@ const VidPic = () => {
     {
       url: "https://photos.app.goo.gl/A8eQU7bW2JrMxBUD9",
       img: rand5,
-      title: "Cocoa Commuinities Library Project",
+      title: "Cocoa Communities Library Project",
       count: 32,
     },
     {
@@ -74,69 +67,6 @@ const VidPic = () => {
       title: "CCLP Quiz Wednesday",
       count: 92,
     },
-    // {
-    //   url: "https://photos.app.goo.gl/yvz4vzEna5fhph3d6",
-    //   img: rand9,
-    //   title: "CCLP ANNUAL READING FESTIVAL 2023",
-    //   count: 116,
-    // },
-    // {
-    //   url: "https://photos.app.goo.gl/TgPZbRx91FNrVoHi6",
-    //   img: rand10,
-    //   title: "CCLP_February 2024 MONITORING",
-    //   count: 121,
-    // },
-    // {
-    //   url: "https://photos.app.goo.gl/gN9Y9xoRqAHsm6TH7",
-    //   img: rand11,
-    //   title: "MANKRANSO SCHOOL B Reading Club launch",
-    //   count: 20,
-    // },
-    // {
-    //   url: "https://photos.app.goo.gl/TFeFg8hEAYtG8GGh6",
-    //   img: rand12,
-    //   title:
-    //     "2nd Cluster Level Reading Competition 2024 (Ahafo Ano South East and West)",
-    //   count: 250,
-    // },
-    // {
-    //   url: "https://photos.app.goo.gl/nFod4YH6L7Kcr4A98",
-    //   img: rand13,
-    //   title: "2nd Annual Reading Festival 2024",
-    //   count: 170,
-    // },
-    // {
-    //   url: "https://photos.app.goo.gl/k7bvevAG8wvhg9ym7",
-    //   img: rand14,
-    //   title: "Cluster Library Day at Asuadei",
-    //   count: 160,
-    // },
-    // {
-    //   url: "https://photos.app.goo.gl/inpesJkwkYNsHFhj7",
-    //   img: rand15,
-    //   title: "Cluster Library Day at Boatengkrom",
-    //   count: 176,
-    // },
-    // {
-    //   url: "https://photos.app.goo.gl/w6H3DR2PY3kdHzpdA",
-    //   img: rand16,
-    //   title: "2nd Cluster Library Day @ Asuadei",
-    //   count: 53,
-    // },
-    // {
-    //   url: "https://photos.app.goo.gl/EFpdQYXkPXEqZ9rq5",
-    //   img: rand17,
-    //   title: "2nd Cluster Library Day @ Boatengkrom",
-    //   count: 116,
-    // },
-    // {
-    //   url: "https://photos.app.goo.gl/cYe3GkajXRf1VfdF8",
-    //   img: rand18,
-    //   title: "Nyonko Pa Child Labour Remediation Project",
-    //   count: 203,
-    // },
-
-    // Add more album links here, following the same structure.
   ];
 
   const videos = [
@@ -144,166 +74,214 @@ const VidPic = () => {
       id: "61QUHKQ4ECc",
       title: "Knowledge Sharing Workshop on Child Protection",
     },
-    { id: "6VhatIeDRpo", title: "Video 2" },
-    { id: "5r9aOmU0mWI", title: "Video 3" },
-    { id: "61QUHKQ4ECc", title: "Video 4" },
-    { id: "5r9aOmU0mWI", title: "Video 5" },
+    { id: "6VhatIeDRpo", title: "Community Development Initiatives" },
+    { id: "5r9aOmU0mWI", title: "VSLA Training Program" },
+    { id: "vE39_togVdE", title: "Introduction of the VLSA/GALS Program" },
+    { id: "iIA6YCYQK7s", title: "Short video on VSLA/GALS project" },
   ];
+
   return (
     <section
       id="vidpic"
-      className="max-container max-w-full w-full min-h-screen justify-center flex flex-col font-poppins"
+      className="max-container max-w-full w-full min-h-screen justify-center flex flex-col font-poppins bg-gradient-to-b from-gray-50 to-white"
     >
-      <div className="relative w-full">
-        <img src={kodu} className="w-full h-[400px]" alt="" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-      </div>
-      <section id="">
-        <div className="flex mt-20 mx-44 justify-between">
-          <h1 className="font-poppins font-bold text-4xl text-orange">
-            Videos
-          </h1>
-          <div className="gap-5 flex flex-row">
-            <div className="w-20 h-20 bg-red justify-center flex items-center">
-              <img src={micro} alt="" className="w-10 h-10" />
-            </div>
-            <div className="w-20 h-20 bg-red justify-center flex items-center">
-              <img src={pic} alt="" className="w-10 h-10" />
-            </div>
-          </div>
-        </div>
-        {/* Orange Video Section */}
-        <div className="w-9/12 h-24 bg-orange mx-auto mt-3 mb-5 flex items-center">
-          <img src={vid} alt="Video Icon" className="w-16 h-16 ml-10" />
-        </div>
+      {/* Hero Section */}
+      <motion.div
+        className="relative w-full"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        <img src={kodu} className="w-full h-[400px] md:h-[500px] object-cover" alt="Videos & Pictures" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+        <motion.h1
+          className="font-poppins font-bold text-4xl md:text-6xl text-white text-center absolute bottom-10 left-0 right-0 px-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+        >
+          Videos & Pictures
+        </motion.h1>
+      </motion.div>
 
-        {/* Video Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 pr-32 pl-44 mb-5">
+      {/* Tab Navigation */}
+      <motion.div
+        className="flex justify-center gap-4 mt-12 mb-8 px-4"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        <button
+          onClick={() => setActiveTab("videos")}
+          className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+            activeTab === "videos"
+              ? "bg-orange text-white shadow-lg scale-105"
+              : "bg-white text-gray-700 hover:bg-gray-100"
+          }`}
+        >
+          Videos
+        </button>
+        <button
+          onClick={() => setActiveTab("pictures")}
+          className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+            activeTab === "pictures"
+              ? "bg-orange text-white shadow-lg scale-105"
+              : "bg-white text-gray-700 hover:bg-gray-100"
+          }`}
+        >
+          Pictures
+        </button>
+      </motion.div>
+
+      {/* Videos Section */}
+      {activeTab === "videos" && (
+        <motion.section
+          className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           {/* Main Video */}
-          <div className="flex flex-col gap-10">
-            <div className="w-[480px] h-[320px] rounded-lg overflow-hidden">
-              <iframe
-                width="100%"
-                height="100%"
-                src={`https://www.youtube.com/embed/${videos[0].id}`}
-                title={videos[0].title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-            {/* <Tab label={videos[0].title} /> */}
-            <div className="justify-center items-center pl-7 pr-0 py-4 font-poppins text-base leading-none bg-orange text-white rounded-xl w-auto ">
-              {videos[0].title}
-            </div>
-          </div>
-          {/* Smaller Videos */}
-          <div className="flex flex-col gap-10">
-            <div className="grid grid-cols-2 grid-rows-2 gap-5 mr-20">
-              {videos.slice(1).map((video) => (
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            <motion.div
+              className="lg:col-span-2"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="w-full aspect-video bg-gray-900 rounded-xl overflow-hidden shadow-2xl">
                 <iframe
-                  key={video.id}
                   width="100%"
                   height="100%"
-                  src={`https://www.youtube.com/embed/${video.id}`}
-                  title={video.title}
-                  className="rounded-lg overflow-hidden"
+                  src={`https://www.youtube.com/embed/${videos[0].id}`}
+                  title={videos[0].title}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
+                  className="rounded-xl"
                 ></iframe>
+              </div>
+              <motion.div
+                className="mt-4 px-4 py-3 bg-orange text-white rounded-xl font-semibold"
+                whileHover={{ scale: 1.02 }}
+              >
+                {videos[0].title}
+              </motion.div>
+            </motion.div>
+
+            {/* Side Videos */}
+            <div className="flex flex-col gap-4">
+              {videos.slice(1, 4).map((video, index) => (
+                <motion.div
+                  key={index}
+                  className="w-full aspect-video bg-gray-900 rounded-lg overflow-hidden shadow-lg cursor-pointer"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  whileHover={{ scale: 1.05, y: -5 }}
+                >
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src={`https://www.youtube.com/embed/${video.id}`}
+                    title={video.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="rounded-lg"
+                  ></iframe>
+                </motion.div>
               ))}
             </div>
+          </div>
 
-            {/* Watch All Videos Button */}
-            <div className="flex justify-end">
-              <a
-                href="https://www.youtube.com/@pdatv3656/playlists"
-                target="_blank"
-                rel="noopener noreferrer"
+          {/* All Videos Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            {videos.map((video, index) => (
+              <motion.div
+                key={index}
+                className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ scale: 1.03, y: -5 }}
               >
-                <Button label="Watch All Videos >>>" className="w-1/3" />
-              </a>
-            </div>
+                <div className="w-full aspect-video bg-gray-900">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src={`https://www.youtube.com/embed/${video.id}`}
+                    title={video.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                <div className="p-4">
+                  <h3 className="font-semibold text-gray-800 text-sm">{video.title}</h3>
+                </div>
+              </motion.div>
+            ))}
           </div>
-        </div>
 
-        <div className="flex-row gap-10 flex justify-center mb-10">
-          <div className="mt-10 flex justify-evenly">
-            <Button label="1" />
-          </div>
-
-          <div className="mt-10 flex justify-evenly">
-            <Button label="2" />
-          </div>
-        </div>
-      </section>
-
-      <section id="">
-        <div className="flex mt-20 mx-44 justify-between">
-          <h1 className="font-poppins font-bold text-4xl text-orange">
-            Pictures
-          </h1>
-          <div className="gap-5 flex flex-row">
-            <div className="w-20 h-20 bg-red justify-center flex items-center">
-              <img src={micro} alt="" className="w-10 h-10" />
-            </div>
-            <div className="w-20 h-20 bg-red justify-center flex items-center">
-              <img src={vid} alt="" className="w-10 h-10" />
-            </div>
-          </div>
-        </div>
-        <div className="w-9/12 h-24 bg-orange ml-40 mt-3 mb-5 pt-1">
-          {/* <div className="w-20 h-20 bg-white rounded-full  mt-5 justify-center flex items-center"> */}
-          <img src={pic} alt="" className="w-16 h-16 ml-10 mt-5 " />
-        </div>
-
-        <div className="grid lg:grid-cols-4 grid-cols-4 max-w-7xl max-sm:grid-cols-1 max-md:grid-cols-2 md:grid-cols-3 px-32 mb-5 gap-10 ml-8 mr-20">
-          {albums.map((album, index) => (
+          {/* Watch All Button */}
+          <motion.div
+            className="flex justify-center"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
             <a
-              key={index}
-              href={album.url}
+              href="https://www.youtube.com/@pdatv3656/playlists"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-center"
             >
-              <img
-                src={album.img}
-                alt={album.title}
-                className="w-full h-48  object-cover rounded-lg"
-              />
-              <p className="mt-2 font-poppins text-[12px] text-left">
-                {album.title}
-              </p>
-              <p className="text-xs text-gray-500 text-left">
-                {album.count} items
-              </p>
+              <Button label="Watch All Videos >>>" />
             </a>
-          ))}
-        </div>
-        {/* <div className="grid grid-cols-4  px-32 mb-5 gap-10 ml-8 mr-20 ">
-          <div className="w-[200px] h-[200px] bg-orange rounded-lg">
-            <img src="" alt="" />
-            <p>Chris sending off</p>
-            <p>40 views</p>
-          </div>
-          <div className="w-[200px] h-[200px] bg-orange rounded-lg"></div>
-          <div className="w-[200px] h-[200px] bg-orange rounded-lg"></div>
-          <div className="w-[200px] h-[200px] bg-orange rounded-lg"></div>
-          <div className="w-[200px] h-[200px] bg-orange rounded-lg"></div>
-          <div className="w-[200px] h-[200px] bg-orange rounded-lg"></div>
-          <div className="w-[200px] h-[200px] bg-orange rounded-lg"></div>
-          <div className="w-[200px] h-[200px] bg-orange rounded-lg"></div>
-        </div> */}
+          </motion.div>
+        </motion.section>
+      )}
 
-        <div className="flex-row gap-10 flex justify-center mb-10">
-          <div className="mt-10 flex justify-evenly">
-            <Button label="1" />
+      {/* Pictures Section */}
+      {activeTab === "pictures" && (
+        <motion.section
+          className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            {albums.map((album, index) => (
+              <motion.a
+                key={index}
+                href={album.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                whileHover={{ scale: 1.05, y: -5 }}
+              >
+                <div className="aspect-square overflow-hidden">
+                  <img
+                    src={album.img}
+                    alt={album.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                    <p className="font-semibold text-sm mb-1">{album.title}</p>
+                    <p className="text-xs text-gray-300">{album.count} items</p>
+                  </div>
+                </div>
+              </motion.a>
+            ))}
           </div>
-
-          <div className="mt-10 flex justify-evenly">
-            <Button label="2" />
-          </div>
-        </div>
-      </section>
+        </motion.section>
+      )}
     </section>
   );
 };

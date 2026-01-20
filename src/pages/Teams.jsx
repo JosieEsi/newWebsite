@@ -1,197 +1,191 @@
-// import React from "react";
-// import { globe } from "../assets/icons";
-// import { research } from "../assets/icons";
-// import { signal } from "../assets/icons";
-// import { finance } from "../assets/icons";
-// import Button from "../components/Button";
-// import { relteam, acuteam, africateam1 } from "../assets/images";
-
-// const Teams = () => {
-//   return (
-//     <section id="teams" className="max-container w-full min-h-screen">
-//       <div className="mt-28">
-//         <div className="bg-orange h-24 w-24 rounded-3xl ml-20 ">
-//           <img
-//             src={globe}
-//             alt=""
-//             className="w-16 h-16 flex justify-center align-middle items-center"
-//           />
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Teams;
-
 import React from "react";
 import { globe, research, signal, finance } from "../assets/icons";
 import Button from "../components/Button";
-import { relteam, acuteam, africateam1 } from "../assets/images";
-import Tab from "../components/Tab";
+import { relteam, acuteam, africateam1, finan, allstaff } from "../assets/images";
+import { useNavigate } from "react-router-dom";
 
 const Teams = () => {
-  return (
-    <section
-      id="teams"
-      className="max-container max-w-full w-full min-h-screen flex justify-center items-center flex-col mb-20"
-    >
-      {/* PDA Africa Team */}
-      <div className="mt-28 flex flex-col ">
-        <div className=" text-left ml-32">
-          <h3 className="text-orange font-bold text-3xl mb-2  ">PDA AFRICA</h3>
-        </div>
-        <div className=" flex flex-col md:flex-row gap-8">
-          {/* Icon Section */}
-          <div className="bg-orange h-24 w-24 rounded-3xl flex items-center justify-center">
-            <img src={globe} alt="Globe icon" className="w-16 h-16 " />
-          </div>
-          {/* Text and Image Section */}
-          <div className="flex flex-col   bg-zinc-50 shadow-lg  rounded-3xl w-full max-w-4xl max-md:max-w-3xl max-sm:max-w-2xl">
-            <img
-              src={africateam1}
-              alt="PDA Africa Team"
-              className="w-full object-fill "
-            />
-            <p className="text-lg my-10 px-12 font-poppins max-md:text-base max-sm:text-sm max-sm:px-1 max-sm:my-1 leading-7">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <a href="/pdaafrica">
-              <div className="mb-10 flex justify-end mr-10">
-                <Button label="Read More" />
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
+  const navigate = useNavigate();
 
-      {/* PDA Research Evaluation & Learning Team */}
-      <div className="mt-28 flex flex-col ">
-        <div className=" text-left ml-32 max-sm:ml-10 ">
-          <h3 className="text-orange font-bold text-3xl mb-2 max-sm:mb-0 max:sm ">
-            PDA RESEARCH EVALUATION & LEARNING
-          </h3>
-        </div>
-        <div className=" flex flex-col md:flex-row gap-8">
-          {/* Icon Section */}
-          <div className="bg-orange h-24 w-24 max-sm:h-16 max-sm:w-16 rounded-3xl flex items-center justify-center">
-            <img
-              src={research}
-              alt="Research icon"
-              className="w-16 h-16 max-sm:w-10 max-sm:h-10"
-            />
-          </div>
-          {/* Text and Image Section */}
-          <div className="flex flex-col   bg-zinc-50 shadow-lg  rounded-3xl w-full max-w-4xl max-md:max-w-3xl max-sm:max-w-2xl">
-            <img
-              src={relteam}
-              alt="PDA REL Team"
-              className="w-full object-fill"
-            />
-            <p className="text-lg my-10 px-12 font-poppins max-md:text-base max-sm:text-sm max-sm:px-1 max-sm:my-1 leading-7">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <a href="">
-              <div className="mb-10 flex justify-end mr-10">
-                <Button label="Read More" />
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
+  const teams = [
+    {
+      id: "pda-africa",
+      name: "PDA AFRICA",
+      icon: globe,
+      image: africateam1,
+      description:
+        "The PDA Africa handles the design, implementation and management of community-led projects and programmes both within PDA and on behalf of partners. Our team works directly with communities across Sub-Saharan Africa to drive sustainable development initiatives.",
+      memberCount: 4,
+      keyAreas: [
+        "Community-led project design and implementation",
+        "Financial inclusion and VSLA programs",
+        "Child labor remediation",
+        "Gender empowerment initiatives",
+        "Community mobilization and training",
+      ],
+      link: "/pdaafrica",
+    },
+    {
+      id: "rel",
+      name: "PDA RESEARCH EVALUATION & LEARNING",
+      icon: research,
+      image: relteam,
+      description:
+        "The REL Unit is a knowledge production hub in PDA and plays a critical role in knowledge development and capacity building. Our team conducts rigorous research, evaluations, and learning activities to inform development practice and policy.",
+      memberCount: 8,
+      keyAreas: [
+        "Research and impact evaluation",
+        "Policy analysis and advocacy",
+        "Quantitative and qualitative research",
+        "Data analysis and reporting",
+        "Capacity building and training",
+        "Methodology development",
+      ],
+      link: "#",
+    },
+    {
+      id: "communications",
+      name: "PDA COMMUNICATIONS & ADVOCACY",
+      icon: signal,
+      image: acuteam,
+      description:
+        "The Advocacy and Communications Unit (ACU) handles PDA's social development initiatives, advocacy projects, and also liaises with other units within the organization. We amplify voices and share knowledge to drive positive change.",
+      memberCount: 1,
+      keyAreas: [
+        "Digital media management",
+        "Event moderation and facilitation",
+        "Content creation and editing",
+        "Advocacy campaigns",
+        "Stakeholder engagement",
+      ],
+      link: "#",
+    },
+    {
+      id: "finance-admin",
+      name: "PDA FINANCE & ADMINISTRATION",
+      icon: finance,
+      image: finan || allstaff,
+      description:
+        "The Finance and Admin Unit at PDA provides logistical and financial support to ensure the effective and efficient delivery of all programs and projects. Our team ensures organizational sustainability and operational excellence.",
+      memberCount: 8,
+      keyAreas: [
+        "Financial management and reporting",
+        "Budget planning and control",
+        "Administrative support",
+        "Logistics and procurement",
+        "Human resources management",
+        "Office administration",
+      ],
+      link: "#",
+    },
+  ];
 
-      {/* PDA Communication & Advocacy Team */}
-      <div className="mt-28 flex flex-col ">
-        <div className=" text-left ml-32">
-          <h3 className="text-orange font-bold text-3xl mb-2  ">
-            PDA COMMUNICATION & ADVOCACY
-          </h3>
-        </div>
-        <div className=" flex flex-col md:flex-row gap-8">
+  const TeamCard = ({ team }) => {
+    return (
+      <div className="mb-20">
+        <div className="flex flex-col lg:flex-row gap-8 items-start">
           {/* Icon Section */}
-          <div className="bg-orange h-24 w-24 rounded-3xl flex items-center justify-center">
-            <img src={signal} alt="Signal icon" className="w-16 h-16 " />
-          </div>
-          {/* Text and Image Section */}
-          <div className="flex flex-col   bg-zinc-50 shadow-lg  rounded-3xl w-full max-w-4xl max-md:max-w-3xl max-sm:max-w-2xl">
+          <div className="bg-orange h-24 w-24 rounded-3xl flex items-center justify-center flex-shrink-0">
             <img
-              src={acuteam}
-              alt="PDA ACU Team"
-              className="w-full object-fill "
+              src={team.icon}
+              alt={`${team.name} icon`}
+              className="w-16 h-16"
             />
-            <p className="text-lg my-10 px-12 font-poppins max-md:text-base max-sm:text-sm max-sm:px-1 max-sm:my-1 leading-7">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <div className="mb-10 flex justify-end mr-10">
-              <Button label="Read More" />
+          </div>
+
+          {/* Content Section */}
+          <div className="flex-1 bg-white shadow-lg rounded-3xl overflow-hidden">
+            <div className="relative">
+              <img
+                src={team.image}
+                alt={team.name}
+                className="w-full h-64 object-cover"
+              />
+              <div className="absolute top-4 right-4 bg-orange text-white px-4 py-2 rounded-lg font-poppins font-semibold">
+                {team.memberCount} {team.memberCount === 1 ? "Member" : "Members"}
+              </div>
+            </div>
+
+            <div className="p-8">
+              <h3 className="text-orange font-bold text-3xl mb-4 font-poppins">
+                {team.name}
+              </h3>
+
+              <p className="text-lg mb-6 font-poppins leading-7 text-gray-700">
+                {team.description}
+              </p>
+
+              <div className="mb-6">
+                <h4 className="font-poppins font-semibold text-xl text-ash mb-3">
+                  Key Areas of Focus:
+                </h4>
+                <ul className="list-disc list-inside space-y-2 font-poppins text-gray-700">
+                  {team.keyAreas.map((area, index) => (
+                    <li key={index} className="text-base">
+                      {area}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-end">
+                <button
+                  onClick={() => navigate("/staff")}
+                  className="bg-orange text-white px-6 py-3 rounded-lg font-poppins font-semibold hover:bg-red transition-colors"
+                >
+                  View Team Members
+                </button>
+                {team.link !== "#" && (
+                  <a href={team.link}>
+                    <Button label="Learn More" />
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         </div>
       </div>
+    );
+  };
 
-      {/* PDA Finance & Administration Team */}
-      <div className="mt-28 flex flex-col ">
-        <div className=" text-left ml-32">
-          <h3 className="text-orange font-bold text-3xl mb-2  ">
-            PDA FINANCE & ADMINISTRATION{" "}
-          </h3>
-        </div>
-        <div className=" flex flex-col md:flex-row gap-8">
-          {/* Icon Section */}
-          <div className="bg-orange h-24 w-24 rounded-3xl flex items-center justify-center">
-            <img src={finance} alt="Globe icon" className="w-16 h-16 " />
-          </div>
-          {/* Text and Image Section */}
-          <div className="flex flex-col   bg-zinc-50 shadow-lg  rounded-3xl w-full max-w-4xl max-md:max-w-3xl max-sm:max-w-2xl">
-            <img
-              src={africateam1}
-              alt="PDA Finance Team"
-              className="w-full object-fill "
-            />
-            <p className="text-lg my-10 px-12 font-poppins max-md:text-base max-sm:text-sm max-sm:px-1 max-sm:my-1 leading-7">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <a href="">
-              <div className="mb-10 flex justify-end mr-10">
-                <Button label="Read More" />
-              </div>
-            </a>
-          </div>
-        </div>
+  return (
+    <section
+      id="teams"
+      className="max-container max-w-full w-full min-h-screen padding"
+    >
+      {/* Header Section */}
+      <div className="mt-28 text-center mb-16">
+        <h1 className="font-poppins font-bold text-5xl text-orange mb-4">
+          OUR TEAMS
+        </h1>
+        <p className="font-poppins text-lg text-gray-600 max-w-3xl mx-auto">
+          PDA is organized into specialized teams, each playing a crucial role in
+          advancing our mission of empowering communities across Sub-Saharan
+          Africa. Learn more about our departments and their areas of expertise.
+        </p>
       </div>
 
-      <div className="flex-row gap-40 flex">
-        <div className="mt-20 flex justify-evenly">
-          <Tab label="Board Profile" />
-        </div>
+      {/* Teams Display */}
+      <div className="space-y-12">
+        {teams.map((team) => (
+          <TeamCard key={team.id} team={team} />
+        ))}
+      </div>
 
-        <div className="mt-20 flex justify-evenly">
-          <Tab label="Staff Profile" />
-        </div>
+      {/* Quick Links Section */}
+      <div className="mt-20 flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <button
+          onClick={() => navigate("/board")}
+          className="bg-gray-200 hover:bg-gray-300 text-ash px-8 py-4 rounded-lg font-poppins font-semibold transition-colors"
+        >
+          Board of Directors
+        </button>
+        <button
+          onClick={() => navigate("/staff")}
+          className="bg-orange hover:bg-red text-white px-8 py-4 rounded-lg font-poppins font-semibold transition-colors"
+        >
+          View All Staff
+        </button>
       </div>
     </section>
   );

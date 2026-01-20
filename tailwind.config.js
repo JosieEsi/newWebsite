@@ -1,5 +1,3 @@
-import { africateam } from "./src/assets/images";
-
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -25,12 +23,10 @@ export default {
         red: "#F75123",
         ash: "#393636",
       },
-
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
         questrial: ["Questrial", "sans-serif"],
       },
-
       boxShadow: {
         "3xl": "0 10px 40px rgba(0, 0, 0, 0.1)",
       },

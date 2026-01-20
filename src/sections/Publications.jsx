@@ -87,6 +87,7 @@
 
 // export default Publications;
 
+import { motion } from "framer-motion";
 import { pdf } from "../assets/icons";
 import Button from "../components/Button";
 import Tab from "../components/Tab";
@@ -162,11 +163,15 @@ const Publications = () => {
             </a>
           </div>
         </div>
-        <div className="flex justify-center mt-6">
-          <a href="./">
+        <motion.div
+          className="flex justify-center mt-6"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <a href="/publications" onClick={(e) => { e.preventDefault(); window.location.href = "/publications"; }}>
             <Tab label="MORE PUBLICATIONS" />
           </a>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

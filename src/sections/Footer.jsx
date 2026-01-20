@@ -53,7 +53,7 @@ const Footer = () => {
 
       <div className="flex mt-10 justify-end">
         <p className="font-poppins text-sm text-white">
-          Copyright 2024. All rights reserved.
+          Copyright 2025. All rights reserved.
         </p>
       </div>
     </footer>

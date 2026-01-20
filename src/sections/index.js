@@ -14,6 +14,7 @@ import Projects from "./Projects";
 import CustomerReviews from "./CustomerReviews";
 import PdaafricaContact from "./PdaafricaContact";
 import VideoGallery from "./VideoGallery";
+import CurrentProjects from "./CurrentProjects";
 
 export {
   Hero,
@@ -32,4 +33,5 @@ export {
   Projects,
   CustomerReviews,
   PdaafricaContact,
+  CurrentProjects,
 };

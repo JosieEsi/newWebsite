@@ -122,9 +122,9 @@ import obuasi from "./obuasi.jpg";
 import publication from "./publication.jpg";
 import business from "./business.jpg";
 import yfutures from "./yfutures.jpg";
-import glasses from "./public.jpg";
+import glasses from "./public.png";
 import kodu from "./kodu.jpg";
-import podpic from "./podpic.jpg";
+import podpic from "./podpic.png";
 import nyonk from "./nyonk.jpg";
 import club from "./club.png";
 import asuaold from "./asuaold.jpg";
@@ -137,6 +137,11 @@ import sucden from "./sucden.jpg";
 import youthhealth from "./youthhealth.jpg";
 import vulnerability from "./vulnerability.jpg";
 import soundwave from "./soundwave.png";
+import allstaff from "./allstaff.jpg";
+
+import ksw from "./ksw.jpg";
+import fvr from "./fvr.jpg";
+import dpw from "./dpw.jpeg";
 
 export {
   image1,
@@ -269,4 +274,8 @@ export {
   youthhealth,
   vulnerability,
   soundwave,
+  allstaff,
+  ksw,
+  fvr,
+  dpw,
 };

@@ -21,18 +21,30 @@ import Covid19 from "./pages/Covid19.jsx";
 import OurImpact from "./pages/OurImpact.jsx";
 import Publications from "./pages/Publications.jsx";
 import VidPic from "./pages/VidPic.jsx";
+import Videos from "./pages/Videos.jsx";
+import Photos from "./pages/Photos.jsx";
 import Podcast from "./pages/Podcast.jsx";
+import Vodcast from "./pages/Vodcast.jsx";
+import BoardOfDirectors from "./pages/BoardOfDirectors.jsx";
 import CCLPDashboard from "./pages/CCLPDashboard.jsx";
 import VSLADashboard from "./pages/VSLADashboard.jsx";
 import NCLRDashboard from "./pages/NCLRDashboard.jsx";
 import UnderConstruction from "./components/UnderConstruction.jsx";
 import ErrorFallback from "./components/ErrorFallback.jsx";
+import LandingPage from "./pages/LandingPage.jsx";
+import ProjectsPage from "./pages/ProjectsPage.jsx";
+import ProjectDetail from "./pages/ProjectDetail.jsx";
+import NewsAndActivities from "./pages/NewsAndActivities.jsx";
+import ScrollToTop from "./components/ScrollToTop";
 
 const router = createBrowserRouter([
+
   {
+    
     path: "/",
     element: <App />,
     errorElement: <ErrorFallback />,
+  
     children: [
       {
         path: "/pdaafrica/dataanalytics",
@@ -79,12 +91,24 @@ const router = createBrowserRouter([
         element: <ThankYouPage />,
       },
       {
+        path: "/landing-page",
+        element: <LandingPage />,
+      },
+      {
         path: "/who-we-are",
         element: <WhoWeAre />,
       },
       {
         path: "/what-we-do",
         element: <WhatWeDo />,
+      },
+      {
+        path: "/our-projects",
+        element: <ProjectsPage />,
+      },
+      {
+        path: "/projects/:slug",
+        element: <ProjectDetail />,
       },
       {
         path: "/our-impact",
@@ -99,12 +123,28 @@ const router = createBrowserRouter([
         element: <VidPic />,
       },
       {
+        path: "/videos",
+        element: <Videos />,
+      },
+      {
+        path: "/photos",
+        element: <Photos />,
+      },
+      {
         path: "/podcast",
         element: <Podcast />,
       },
       {
+        path: "/vodcast",
+        element: <Vodcast />,
+      },
+      {
         path: "/staff",
         element: <Staff />,
+      },
+      {
+        path: "/board",
+        element: <BoardOfDirectors />,
       },
       {
         path: "/teams",
@@ -121,6 +161,10 @@ const router = createBrowserRouter([
       {
         path: "/covid-19",
         element: <Covid19 />,
+      },
+      {
+        path: "/news-and-activities",
+        element: <NewsAndActivities />,
       },
       {
         path: "*", // Catch-all route for 404 errors

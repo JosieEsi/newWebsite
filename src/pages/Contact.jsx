@@ -1,20 +1,385 @@
-import { contactimage } from "../assets/images";
-import { communication } from "../assets/images";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { contactimage, communication } from "../assets/images";
+import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaFax, FaDownload } from "react-icons/fa";
+import Button from "../components/Button";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    organization: "",
+    phone: "",
+    message: "",
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    // Create mailto link with form data
+    const subject = encodeURIComponent(`Contact Form Submission from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Organization: ${formData.organization}\n` +
+      `Phone: ${formData.phone}\n\n` +
+      `Message:\n${formData.message}`
+    );
+
+    // For now, use mailto (can be replaced with backend API later)
+    window.location.href = `mailto:info@pdaghana.com?subject=${subject}&body=${body}`;
+
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setSubmitStatus("success");
+      setFormData({ name: "", email: "", organization: "", phone: "", message: "" });
+    }, 1000);
+  };
+
+  const contactInfo = [
+    {
+      icon: FaMapMarkerAlt,
+      title: "Accra Office",
+      details: [
+        {
+          label: "Physical Address",
+          value: "No. 30, Asafoatse Oman Street (Near Accra Central View Hotel and ATTC), Kokomlemle, Accra",
+        },
+        {
+          label: "Postal Address",
+          value: "P.O. Box AN 18233, Accra North, Ghana",
+        },
+        {
+          label: "GPS Code",
+          value: "GA0472784",
+          link: "https://www.ghanapostgps.com/map/#GA0472784",
+        },
+      ],
+    },
+    {
+      icon: FaMapMarkerAlt,
+      title: "Kumasi Office",
+      details: [
+        {
+          label: "GPS Code",
+          value: "AK-849-3514",
+          link: "https://www.ghanapostgps.com/map/#AK8493514",
+        },
+        {
+          label: "Address",
+          value: "Anwomaso Rd, Kumasi",
+        },
+        {
+          label: "Postal Address",
+          value: "P.O. Box UP 876, K.N.U.S.T, Kumasi, Ghana",
+        },
+      ],
+    },
+  ];
+
+  const unitContacts = [
+    { unit: "Research Evaluation and Learning (REL)", contact: "Alexander Afram", phone: "+233 508 500 351" },
+    { unit: "Advocacy and Communications Unit", contact: "Aseda Mensah", phone: "+233 508 493 316" },
+    { unit: "PDA Africa", contact: "David Eshun", phone: "+233 508 493 223" },
+    { unit: "PDA Admin", contact: "Patricia Zingle", phone: "+233 509 229 218" },
+  ];
+
   return (
     <section
       id="contact"
-      className="flex max-container justify-center min-h-screen"
+      className="max-container w-full min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24"
     >
-      <div className="font-poppins font-bold bg-cover relative ">
-        <img src={contactimage} alt="" className="bg-opacity-100" />
-        <div className="absolute top-32 flex justify-center items-center flex-col gap-3 text-center">
-          <img src={communication} alt="" className="h-20 w-20 " />
-          <span className="text-2xl text-white">
-            <p>Have a project for us?</p>
-          </span>
-          <h3 className="text-white text-4xl">Let's discuss it!</h3>
+      {/* Hero Section */}
+      <motion.div
+        className="relative w-full"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        <img
+          src={contactimage}
+          alt="Contact Us"
+          className="w-full h-[400px] md:h-[500px] object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+          <motion.img
+            src={communication}
+            alt="Communication"
+            className="h-20 w-20 mx-auto mb-4"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+          />
+          <motion.p
+            className="text-2xl md:text-3xl text-white font-poppins mb-2"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+          >
+            Have a project for us?
+          </motion.p>
+          <motion.h3
+            className="text-white text-4xl md:text-5xl font-bold font-poppins"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+          >
+            Let's discuss it!
+          </motion.h3>
+        </div>
+      </motion.div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Contact Form */}
+          <motion.div
+            className="bg-white rounded-2xl shadow-xl p-6 md:p-8"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl font-bold text-orange mb-6 font-poppins">Send Us a Message</h2>
+            <p className="text-gray-600 mb-6 font-poppins">
+              Thank you for your interest in learning more about us. Your contact information will enable us to respond to all your concerns.
+            </p>
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2 font-poppins">
+                  Name *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-orange focus:outline-none transition-colors font-poppins"
+                  placeholder="Your full name"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2 font-poppins">
+                  Email Address *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-orange focus:outline-none transition-colors font-poppins"
+                  placeholder="your.email@example.com"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="organization" className="block text-sm font-semibold text-gray-700 mb-2 font-poppins">
+                  Organization
+                </label>
+                <input
+                  type="text"
+                  id="organization"
+                  name="organization"
+                  value={formData.organization}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-orange focus:outline-none transition-colors font-poppins"
+                  placeholder="Your organization"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2 font-poppins">
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-orange focus:outline-none transition-colors font-poppins"
+                  placeholder="+233 XX XXX XXXX"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2 font-poppins">
+                  Message *
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows="5"
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-orange focus:outline-none transition-colors font-poppins resize-none"
+                  placeholder="Tell us about your project or inquiry..."
+                ></textarea>
+              </div>
+
+              {submitStatus === "success" && (
+                <motion.div
+                  className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                >
+                  Thank you! Your message has been sent. We'll get back to you soon.
+                </motion.div>
+              )}
+
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Button
+                  type="submit"
+                  label={isSubmitting ? "Sending..." : "Submit"}
+                  disabled={isSubmitting}
+                />
+              </motion.div>
+            </form>
+          </motion.div>
+
+          {/* Contact Information */}
+          <motion.div
+            className="space-y-8"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            {/* Office Addresses */}
+            {contactInfo.map((office, index) => {
+              const Icon = office.icon;
+              return (
+                <motion.div
+                  key={index}
+                  className="bg-white rounded-2xl shadow-xl p-6 md:p-8"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  whileHover={{ scale: 1.02 }}
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="bg-orange p-3 rounded-full">
+                      <Icon className="text-white text-xl" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-800 font-poppins">{office.title}</h3>
+                  </div>
+                  <div className="space-y-3">
+                    {office.details.map((detail, idx) => (
+                      <div key={idx}>
+                        <p className="font-semibold text-gray-700 mb-1 font-poppins">{detail.label}</p>
+                        {detail.link ? (
+                          <a
+                            href={detail.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-orange hover:underline font-poppins"
+                          >
+                            {detail.value}
+                          </a>
+                        ) : (
+                          <p className="text-gray-600 font-poppins">{detail.value}</p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              );
+            })}
+
+            {/* Contact Numbers */}
+            <motion.div
+              className="bg-white rounded-2xl shadow-xl p-6 md:p-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-red p-3 rounded-full">
+                  <FaPhone className="text-white text-xl" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-800 font-poppins">Contact Numbers</h3>
+              </div>
+              <div className="space-y-3">
+                <a href="tel:+233508493316" className="block text-gray-600 hover:text-orange transition-colors font-poppins">
+                  +233 (0) 50 849 3316
+                </a>
+                <a href="tel:+233509229218" className="block text-gray-600 hover:text-orange transition-colors font-poppins">
+                  +233 (0) 50 922 9218
+                </a>
+                <p className="text-gray-600 font-poppins">
+                  <span className="font-semibold">Fax:</span> +233 (0) 32 2061092
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Email */}
+            <motion.div
+              className="bg-white rounded-2xl shadow-xl p-6 md:p-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-orange p-3 rounded-full">
+                  <FaEnvelope className="text-white text-xl" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-800 font-poppins">Email</h3>
+              </div>
+              <a
+                href="mailto:info@pdaghana.com"
+                className="text-orange hover:underline font-poppins text-lg"
+              >
+                info@pdaghana.com
+              </a>
+            </motion.div>
+
+            {/* Unit Contacts */}
+            <motion.div
+              className="bg-gradient-to-br from-orange/10 to-red/10 rounded-2xl shadow-xl p-6 md:p-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
+              <h3 className="text-xl font-bold text-gray-800 mb-4 font-poppins">Unit Contacts</h3>
+              <div className="space-y-3">
+                {unitContacts.map((unit, index) => (
+                  <div key={index} className="border-l-4 border-orange pl-4">
+                    <p className="font-semibold text-gray-800 font-poppins">{unit.unit}</p>
+                    <p className="text-gray-600 font-poppins">{unit.contact}</p>
+                    <a
+                      href={`tel:${unit.phone.replace(/\s/g, "")}`}
+                      className="text-orange hover:underline font-poppins"
+                    >
+                      {unit.phone}
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>

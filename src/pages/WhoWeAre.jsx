@@ -1,162 +1,317 @@
-import React from "react";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { whoweare } from "../assets/images";
-import { puzzle } from "../assets/icons";
-import { peak } from "../assets/icons";
-import { dart } from "../assets/icons";
-import { bulb } from "../assets/icons";
+import { puzzle, peak, dart, bulb } from "../assets/icons";
+import { FaCheckCircle, FaUsers, FaNetworkWired, FaHeart, FaLightbulb, FaHandshake, FaAward } from "react-icons/fa";
 
 const WhoWeAre = () => {
+  const [hoveredValue, setHoveredValue] = useState(null);
+
+  const uniqueness = [
+    { icon: FaUsers, title: "Exceptional Client Focus", color: "text-orange" },
+    { icon: FaNetworkWired, title: "Strong Professional Network", color: "text-red" },
+    { icon: FaHeart, title: "Longevity & Resilience", color: "text-orange" },
+    { icon: FaLightbulb, title: "Vision and Ambition", color: "text-red" },
+    { icon: FaHandshake, title: "Innovative and Dynamic", color: "text-orange" },
+    { icon: FaUsers, title: "Inclusive & People-Centred", color: "text-red" },
+    { icon: FaAward, title: "Quality Service Delivery", color: "text-orange" },
+  ];
+
+  const coreValues = [
+    {
+      title: "Quality",
+      description: "We seek out information and/or data that reflects the situation/voice/context of the people concerned/of interest.",
+      icon: "✓",
+    },
+    {
+      title: "Collaboration",
+      description: "We work in partnership with relevant actors / institutions to drive evidence-based solutions and actions.",
+      icon: "🤝",
+    },
+    {
+      title: "Credibility",
+      description: "We are trustworthy and strive for consistency and excellence in everything/what we do.",
+      icon: "⭐",
+    },
+    {
+      title: "Inclusivity",
+      description: "We work with, and support people of all gender identities, races, ethnicities, and abilities.",
+      icon: "🌍",
+    },
+    {
+      title: "Respect",
+      description: "We value the uniqueness of every individual (everyone matters), so we create a safe and supportive environment where the views, opinions and contributions of everyone is encouraged and respected.",
+      icon: "💙",
+    },
+    {
+      title: "Transparency",
+      description: "We are transparent and accountable in our dealings with partners and communities we serve.",
+      icon: "🔍",
+    },
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <section
       id="whoweare"
-      className="max-container max-w-full w-full min-h-screen lg:justify-center flex flex-col"
+      className="max-container max-w-full w-full min-h-screen lg:justify-center flex flex-col font-poppins bg-gradient-to-b from-white to-gray-50"
     >
-      <div className="mt-24 relative w-full">
-        <img src={whoweare} className="w-[100vw] h-auto object-cover" alt="" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-        <h1 className="font-poppins font-bold text-4xl text-white text-center absolute bottom-20 pl-48">
-          Who we are
-        </h1>
-      </div>
-      <div className="flex flex-row w-full padding gap-10 ">
-        <div className="flex w-1/3 lg:ml-60 mt-20 md:ml-10 max-sm:ml-10">
-          <div className=" bg-orange rounded-[50px] w-28 h-28 flex items-center justify-center">
-            <img src={puzzle} alt="" className="w-20 h-20 " />
+      {/* Hero Section */}
+      <motion.div
+        className="mt-24 relative w-full"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        <img src={whoweare} className="w-full h-[400px] md:h-[500px] object-cover" alt="Who We Are" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+        <motion.h1
+          className="font-poppins font-bold text-4xl md:text-6xl text-white text-center absolute bottom-10 left-0 right-0 px-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+        >
+          Who We Are
+        </motion.h1>
+      </motion.div>
+
+      {/* Profile Section */}
+      <motion.section
+        className="flex flex-col w-full padding gap-10 items-center justify-center mt-12"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <motion.div
+          className="flex justify-center"
+          whileHover={{ scale: 1.1, rotate: 5 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
+          <div className="bg-orange rounded-[50px] w-28 h-28 flex items-center justify-center shadow-xl">
+            <img src={puzzle} alt="PDA" className="w-20 h-20" />
           </div>
-        </div>
+        </motion.div>
 
-        <div className="flex-col flex lg:mr-40 md:mr-8 max-sm:mr-8">
-          <p className="font-poppins text-base text-justify">
-            Participatory Development Associates (PDA), is a social development,
-            project management and advisory organisation that is based in Ghana
-            and works across Sub-Saharan Africa. PDA’s work over the last 20
-            years has focused on development research, design of independent and
-            evidence-based process and impact evaluations systems for programme
-            improvement, and project design and management.
+        <motion.div
+          className="flex flex-col max-w-4xl justify-center items-center text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-3xl font-bold text-orange mb-6">Profile</h2>
+          <p className="font-poppins text-base md:text-lg text-center leading-relaxed mb-6">
+            PDA has extensive experience researching and evaluating social phenomena in Ghana and the sub-Saharan Africa region. We apply both experimental and non-experimental approaches, combining participatory techniques for both quantitative and qualitative methods to holistically assess and analyze all facets of projects for both programmatic and policy uptake.
           </p>
+        </motion.div>
+      </motion.section>
 
-          <p className="font-poppins text-base pt-10 text-justify ">
-            PDA has a proven track record in the use of various participatory
-            methodologies and mixed methods (qualitative and quantitative) in
-            the design and implementation of projects across communities,
-            districts and national government systems. The organisation has a
-            pool of experienced research and impact evaluation experts,
-            development consultants and associates who have a wide range of
-            expertise in designing and management of projects; conducting
-            research, impact evaluations and analysing data at different levels
-            and across various sectors.
+      {/* PDA's Uniqueness */}
+      <motion.section
+        className="w-full padding bg-gradient-to-br from-orange/10 via-red/10 to-orange/5 py-16"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <motion.div
+          className="max-w-7xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-orange text-center mb-4">PDA's Uniqueness</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+            {uniqueness.map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <motion.div
+                  key={index}
+                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  onHoverStart={() => setHoveredValue(index)}
+                  onHoverEnd={() => setHoveredValue(null)}
+                >
+                  <div className={`${item.color} mb-4 flex justify-center`}>
+                    <Icon className="text-4xl" />
+                  </div>
+                  <h3 className="font-semibold text-gray-800 text-center">{item.title}</h3>
+                </motion.div>
+              );
+            })}
+          </div>
+        </motion.div>
+      </motion.section>
+
+      {/* Unique Selling Proposition */}
+      <motion.section
+        className="w-full padding py-16"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <motion.div
+          className="max-w-4xl mx-auto bg-gradient-to-r from-orange to-red rounded-2xl p-8 md:p-12 shadow-2xl text-white"
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          whileHover={{ scale: 1.02 }}
+        >
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">PDA's Unique Selling Proposition</h2>
+          <p className="text-lg md:text-xl leading-relaxed text-center">
+            We combine African-led insights with innovative strategies, ensuring exceptional quality and resilience in service delivery while prioritizing inclusivity and adaptability in a dynamic market. Our strong professional network and commitment to customer satisfaction empower us to create lasting partnerships and impactful solutions that transcend borders.
           </p>
-        </div>
-      </div>
-      <section
+        </motion.div>
+      </motion.section>
+
+      {/* Vision Section */}
+      <motion.section
         id="vision"
-        className="bg-gray-200 lg:w-[45rem] max-sm:w-[20rem] md:w-[35rem] rounded-lg h-48 mb-10 lg:ml-[470px] flex flex-row px-10 py-10 max-sm:ml-8 md:ml-32"
+        className="w-full padding"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
       >
-        <div className="flex flex-col w-full">
-          <img src={peak} alt="" className="h-20 w-20" />
+        <motion.div
+          className="max-w-5xl mx-auto bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl p-8 md:p-12 shadow-xl flex flex-col md:flex-row gap-8 items-start"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          whileHover={{ scale: 1.02 }}
+        >
+          <motion.div
+            className="flex-shrink-0"
+            whileHover={{ rotate: 10, scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <img src={peak} alt="Vision" className="h-24 w-24" />
+          </motion.div>
+          <div className="flex-1">
+            <h3 className="text-orange font-poppins font-bold text-2xl md:text-3xl mb-4">OUR VISION</h3>
+            <p className="font-poppins text-base md:text-lg leading-relaxed">
+              Our vision is of an equitable and sustainable world, where lives and systems are improved by policies, programmes, and interventions that are shaped by evidence and the insights of people.
+            </p>
+          </div>
+        </motion.div>
+      </motion.section>
 
-          <h3 className="text-orange font-poppins font-bold text-xl">
-            OUR VISION
-          </h3>
-        </div>
-        <p className="pl-5 font-poppins">
-          Our vision is: of a world where states, communities and organisations
-          provide an enabling environment in which all people, regardless of
-          sex, race, ethnicity, creed, age or disability, can realise their full
-          potential and contribute their best to the common good.
-        </p>
-      </section>
-      <section
+      {/* Mission Section */}
+      <motion.section
         id="mission"
-        className="bg-gray-200 lg:w-[45rem] max-sm:w-[20rem] md:w-[35rem] rounded-lg h-48 mb-10 lg:ml-[470px] flex flex-row px-10 py-10 max-sm:ml-8 md:ml-32"
+        className="w-full padding"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
       >
-        <div className="flex flex-col w-full">
-          <img src={dart} alt="" className="h-20 w-20" />
-
-          <h3 className="text-orange font-poppins font-bold text-xl">
-            OUR MISSION
-          </h3>
-        </div>
-        <p className="pl-5 font-poppins">
-          Our mission is: to work with communities, organisations and government
-          to facilitate the participation of all people towards taking greater
-          control over their own lives and determining their own destiny.
-        </p>
-      </section>
-      <div className="flex w-full padding lg:ml-60 md:ml-32 max-sm:ml-16">
-        <div className="flex flex-row lg:gap-10 md:gap-5 max-sm:gap-2">
-          <div className=" bg-orange rounded-[45px] w-36 h-24 flex items-center justify-center">
-            <img src={bulb} alt="" className="w-20 h-20 " />
+        <motion.div
+          className="max-w-5xl mx-auto bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl p-8 md:p-12 shadow-xl flex flex-col md:flex-row gap-8 items-start"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          whileHover={{ scale: 1.02 }}
+        >
+          <motion.div
+            className="flex-shrink-0"
+            whileHover={{ rotate: -10, scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <img src={dart} alt="Mission" className="h-24 w-24" />
+          </motion.div>
+          <div className="flex-1">
+            <h3 className="text-orange font-poppins font-bold text-2xl md:text-3xl mb-4">OUR MISSION</h3>
+            <p className="font-poppins text-base md:text-lg leading-relaxed mb-4">
+              Our mission is to collaborate locally and globally with communities, state and non-state actors* (multi-national companies, philanthropists, foundations) to generate knowledge, evidence and insights that reflect the voices of individuals, communities, and institutions to advance an equitable and sustainable world.
+            </p>
+            <p className="font-poppins text-sm text-gray-600 italic">
+              *Non-state actors include multi-national companies, philanthropists, and foundations
+            </p>
           </div>
-          <div className="flex flex-col mt-10 ">
-            <h3 className="text-orange font-poppins font-bold text-2xl ">
-              Our Core Values
-            </h3>
+        </motion.div>
+      </motion.section>
 
-            <div className="flex flex-col mt-5 lg:mr-96 md:mr-44 max-sm:mr-20">
-              <p className="font-poppins text-base pt-5 leading-6">
-                We care about:
-              </p>
-              <p className="font-poppins text-base leading-6 ml-2">
-                <span className="font-poppins text-base font-bold">
-                  .Empowerment{" "}
-                </span>{" "}
-                We believe in balance of power – gender, race, age, class. We
-                work to strengthen capacities and give equal opportunity to all.
-              </p>
-
-              <p className="font-poppins text-base pt-5 leading-6 ml-2">
-                <span className="font-poppins text-base font-bold">
-                  . Inclusiveness{" "}
-                </span>{" "}
-                We believe everyone has an active role to play in realising
-                social change. Together we are more and we achieve more.
-              </p>
-
-              <p className="font-poppins text-base pt-5 leading-6 ml-2">
-                <span className="font-poppins text-base font-bold">
-                  . Innovation and Creativity{" "}
-                </span>{" "}
-                We believe we attain resilience and self-reliance by recognising
-                opportunity, adapting and breaking new ground.
-              </p>
-
-              <p className="font-poppins text-base pt-5 leading-6 ml-2">
-                <span className="font-poppins text-base font-bold">
-                  . Quality{" "}
-                </span>{" "}
-                We do what we say we will do, maintaining and improving
-                standards.
-              </p>
-
-              <p className="font-poppins text-base pt-5 leading-6 ml-2">
-                <span className="font-poppins text-base font-bold">
-                  . Efficiency
-                </span>{" "}
-                We strive to make judicious use of resources, including time.
-              </p>
-
-              <p className="font-poppins text-base pt-5 leading-6 ml-2">
-                <span className="font-poppins text-base font-bold">
-                  {" "}
-                  . Effectiveness and Impact{" "}
-                </span>{" "}
-                We strive to excel, exceed expectations and leave a lasting
-                effect.
-              </p>
-
-              <p className="font-poppins text-base pt-5 leading-6 ml-2">
-                <span className="font-poppins text-base font-bold">
-                  {" "}
-                  . Transparency and accountability{" "}
-                </span>
-                We value openness, the building of trust, and being accountable
-                to ourselves, our partners and our clients.
-              </p>
-            </div>
+      {/* Core Values Section */}
+      <motion.section
+        className="w-full padding py-16"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <motion.div
+          className="max-w-7xl mx-auto"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <div className="flex flex-col lg:flex-row items-start gap-10 mb-12">
+            <motion.div
+              className="flex justify-center lg:justify-start"
+              whileHover={{ scale: 1.1, rotate: 5 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <div className="bg-orange rounded-[45px] w-36 h-36 flex items-center justify-center shadow-xl">
+                <img src={bulb} alt="Core Values" className="w-24 h-24" />
+              </div>
+            </motion.div>
+            <motion.div
+              className="flex-1"
+              variants={itemVariants}
+            >
+              <h3 className="text-orange font-poppins font-bold text-3xl md:text-4xl mb-8">Our Core Values</h3>
+            </motion.div>
           </div>
-        </div>
-      </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {coreValues.map((value, index) => (
+              <motion.div
+                key={index}
+                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-orange cursor-pointer group"
+                variants={itemVariants}
+                whileHover={{ scale: 1.05, y: -5, borderColor: "#F77323" }}
+                onHoverStart={() => setHoveredValue(index)}
+                onHoverEnd={() => setHoveredValue(null)}
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <span className="text-4xl group-hover:scale-125 transition-transform duration-300">{value.icon}</span>
+                  <h4 className="font-poppins font-bold text-xl text-orange group-hover:text-red transition-colors duration-300">
+                    {value.title}
+                  </h4>
+                </div>
+                <p className="font-poppins text-sm md:text-base text-gray-700 leading-relaxed">
+                  {value.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </motion.section>
     </section>
   );
 };

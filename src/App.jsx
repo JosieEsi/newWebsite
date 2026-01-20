@@ -15,6 +15,7 @@ import {
   PdaafricaContact,
   AfricaGallery,
   VideoGallery,
+  CurrentProjects,
 } from "./sections";
 import Nav from "./components/Nav";
 import PDAAFRICA from "./pages/PDAAFRICA";
@@ -23,6 +24,8 @@ import PDAAFRICAMenu from "./components/PDAAFRICAMenu";
 import { useEffect } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ScrollToTop from "./components/ScrollToTop";
+
 
 const App = () => {
   const location = useLocation();
@@ -39,6 +42,7 @@ const App = () => {
 
   return (
     <main className="relative">
+      <ScrollToTop />
       <header>
         {location.pathname.startsWith("/pdaafrica") ? (
           <PDAAFRICAMenu /> // Render PDAAFRICA menu
@@ -59,6 +63,9 @@ const App = () => {
           <section className="padding bg-gray-200">
             <Updates />
           </section>
+          {/* <section className="padding">
+            <CurrentProjects />
+          </section> */}
           <section className="padding">
             <Units />
           </section>

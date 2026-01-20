@@ -1,10 +1,14 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import { FaTimes, FaBars } from "react-icons/fa";
 // import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import { pdaLogo } from "../assets/images";
 import Menu from "./Menu";
 
 const Nav = () => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     if (isMenuVisible) {
@@ -21,8 +25,16 @@ const Nav = () => {
   return (
     <header className="w-full h-24 fixed top-0 left-0 z-50">
       <div className="w-full h-3 bg-orange relative z-10"></div>
-      <nav className="w-full shadow-3xl bg-white  flex justify-around items-center relative z-10">
-        <a href="/">
+      <nav className="w-full shadow-3xl bg-white flex justify-around items-center relative z-10 px-4">
+        <motion.a
+          href="/"
+          onClick={(e) => {
+            e.preventDefault();
+            navigate("/");
+          }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
           <img
             className="pt-3 pb-3"
             src={pdaLogo}
@@ -30,28 +42,30 @@ const Nav = () => {
             width={150}
             height={40}
           />
-        </a>
-        <div>
-          <input
-            type="checkbox"
-            className="hidden openSidebarMenu"
-            id="openSidebarMenu"
-          ></input>
-          <label
-            for="openSidebarMenu"
-            className="sidebarIconToggle cursor-pointer absolute top-[22px] lg:right-[300px] w-[35px] h-[35px] z-[99] "
-            onClick={toggleMenu}
-          >
-            <div className="spinner diagonal part-1 w-full h-[3px] bg-black absolute "></div>
-            <div className="spinner horizontal w-full h-[3px] bg-black absolute mt-[10px]"></div>
-            <div className="spinner diagonal part-2 w-full h-[3px] bg-black absolute mt-[10px]"></div>
-            <span>
-              <p className="font-poppins font-medium items-center mt-2 ">
-                {" "}
-                Menu
-              </p>
-            </span>
-          </label>
+        </motion.a>
+        <div className="flex items-center gap-4">
+          <div className="relative">
+            <button
+              onClick={toggleMenu}
+              className="sidebarIconToggle cursor-pointer w-[50px] h-[50px] z-[99] relative flex flex-col items-center justify-center"
+              aria-label="Toggle menu"
+            >
+              {isMenuVisible ? (
+                <motion.div
+                  className="w-full h-full flex items-center justify-center"
+                  initial={{ rotate: 0 }}
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <FaTimes className="text-3xl md:text-4xl text-black font-bold" />
+                </motion.div>
+              ) : (
+                <div className="w-full h-full flex items-center justify-center">
+                  <FaBars className="text-3xl md:text-4xl text-black font-bold" />
+                </div>
+              )}
+            </button>
+          </div>
         </div>
       </nav>
       <div className="h-28"></div>

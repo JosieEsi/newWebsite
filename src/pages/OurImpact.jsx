@@ -1,135 +1,173 @@
-import React from "react";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { obuasi } from "../assets/images";
 import Tab from "../components/Tab";
 import Button from "../components/Button";
 
 const OurImpact = () => {
+  const impactStories = [
+    { 
+      id: "VSvz_fSONdU", 
+      title: "Impact Story 1",
+      description: "Discover how PDA's initiatives are transforming communities and creating lasting positive change."
+    },
+    { 
+      id: "sVqGZfIW5zc", 
+      title: "Impact Story 2",
+      description: "Learn about the meaningful impact of our programs on individuals and communities across Sub-Saharan Africa."
+    },
+  ];
+
+  const webinars = [
+    { 
+      id: "7tQK-p01OUA", 
+      title: "Webinar 1",
+      description: "Join our expert-led webinar sessions covering key topics in development, research, and community empowerment."
+    },
+    { 
+      id: "1jyhbZKsKVY", 
+      title: "Webinar 2",
+      description: "Explore insights and best practices from our development experts through engaging webinar presentations."
+    },
+  ];
+
+  const workshops = [
+    { 
+      id: "CBXOLspFKug", 
+      title: "Workshop Session",
+      description: "Watch our interactive workshop sessions where we share knowledge, methodologies, and practical approaches to development work."
+    },
+  ];
+
+  const VideoCard = ({ video, index }) => (
+    <motion.div
+      className="w-full max-w-[500px] mx-auto"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.2 }}
+      whileHover={{ scale: 1.02 }}
+    >
+      <div className="w-full aspect-video bg-gray-900 rounded-xl overflow-hidden shadow-2xl mb-4">
+        <iframe
+          width="100%"
+          height="100%"
+          src={`https://www.youtube.com/embed/${video.id}`}
+          title={video.title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="rounded-xl"
+        ></iframe>
+      </div>
+      <p className="font-poppins text-gray-700 text-base md:text-lg leading-relaxed px-2">
+        {video.description}
+      </p>
+    </motion.div>
+  );
+
   return (
     <section
       id="our-impact"
-      className="max-container max-w-full w-full min-h-screen lg:justify-center flex flex-col"
+      className="max-container max-w-full w-full min-h-screen lg:justify-center flex flex-col bg-gradient-to-b from-gray-50 to-white"
     >
-      <div className="mt-14 relative w-full">
-        <img src={obuasi} className="w-full h-auto" alt="" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-        <h1 className="font-poppins font-bold text-4xl text-white text-center absolute bottom-20 pl-48">
+      <motion.div
+        className="mt-14 relative w-full"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        <img src={obuasi} className="w-full h-[400px] md:h-[500px] object-cover" alt="Our Impact" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+        <motion.h1
+          className="font-poppins font-bold text-4xl md:text-6xl text-white text-center absolute bottom-10 left-0 right-0 px-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+        >
           Our Impact
-        </h1>
-      </div>
+        </motion.h1>
+      </motion.div>
 
-      <div className="flex flex-col justify-center px-20">
-        <p className="text-lg my-10 px-12 font-poppins max-md:text-base max-sm:text-sm max-sm:px-1 max-sm:my-1 leading-7">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum. Excepteur sint
-          occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum.
+      <motion.div
+        className="flex flex-col justify-center px-4 sm:px-8 md:px-12 lg:px-20 py-12"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <p className="text-lg my-6 font-poppins max-md:text-base max-sm:text-sm leading-7 text-gray-700">
+          At Participatory Development Associates (PDA), we measure our success by the positive impact we create in communities across Sub-Saharan Africa. Through our innovative programs, research initiatives, and collaborative partnerships, we work tirelessly to empower individuals, strengthen communities, and drive sustainable development.
         </p>
-        <p className="text-lg mb-10 px-12 font-poppins max-md:text-base max-sm:text-sm max-sm:px-1 max-sm:my-1 leading-7">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
+        <p className="text-lg mb-6 font-poppins max-md:text-base max-sm:text-sm leading-7 text-gray-700">
+          Our impact extends beyond numbers and statistics—it's reflected in the lives transformed, opportunities created, and communities empowered. Explore our impact stories, webinars, and workshops to see how we're making a difference every day.
         </p>
-      </div>
-      <section id="impact-stories">
-        <div className="flex ml-32 mb-10">
+      </motion.div>
+      {/* Impact Stories Section */}
+      <section id="impact-stories" className="py-16 px-4 sm:px-8 md:px-12 lg:px-20">
+        <motion.div
+          className="flex justify-center md:justify-start mb-12"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
           <Tab label="Impact Stories" />
+        </motion.div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-16">
+          {impactStories.map((video, index) => (
+            <VideoCard key={index} video={video} index={index} />
+          ))}
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2  px-32 mb-10 ">
-          <div className="w-[450px] h-[200px] bg-orange rounded-lg"></div>
-
-          <p className="font-poppins justify-center items-center text-lg pt-14">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
-          </p>
-        </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 px-32 mb-10 ">
-          <div className="w-[450px] h-[200px] bg-orange rounded-lg"></div>
-
-          <p className="font-poppins justify-center items-center text-lg pt-14">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
-          </p>
-        </div>
-        <div className="flex-row gap-10 flex justify-center mb-10">
-          <div className="mt-10 flex justify-evenly">
-            <Button label="1" />
-          </div>
-
-          <div className="mt-10 flex justify-evenly">
-            <Button label="2" />
-          </div>
-        </div>
-        <div className="w-[600px] h-1 bg-orange  ml-96 mb-10"></div>
+        <motion.div
+          className="w-full max-w-4xl h-1 bg-gradient-to-r from-transparent via-orange to-transparent mx-auto mb-16"
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        />
       </section>
-      <section id="documentaries">
-        <div className="flex ml-32 mb-10">
-          <Tab label="Documentary" />
-        </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 px-32 mb-10 ">
-          <div className="w-[450px] h-[200px] bg-orange rounded-lg"></div>
 
-          <p className="font-poppins justify-center items-center text-lg pt-14">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
-          </p>
+      {/* Webinars Section */}
+      <section id="webinars" className="py-16 px-4 sm:px-8 md:px-12 lg:px-20 bg-gray-50">
+        <motion.div
+          className="flex justify-center md:justify-start mb-12"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <Tab label="Webinars" />
+        </motion.div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-16">
+          {webinars.map((video, index) => (
+            <VideoCard key={index} video={video} index={index} />
+          ))}
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 px-32 mb-10 ">
-          <div className="w-[450px] h-[200px] bg-orange rounded-lg"></div>
-
-          <p className="font-poppins justify-center items-center text-lg pt-14">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
-          </p>
-        </div>
-        <div className="flex-row gap-10 flex justify-center mb-10">
-          <div className="mt-10 flex justify-evenly">
-            <Button label="1" />
-          </div>
-
-          <div className="mt-10 flex justify-evenly">
-            <Button label="2" />
-          </div>
-        </div>
-        <div className="w-[600px] h-1 bg-orange  ml-96 mb-10"></div>
+        <motion.div
+          className="w-full max-w-4xl h-1 bg-gradient-to-r from-transparent via-orange to-transparent mx-auto mb-16"
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        />
       </section>
-      <section id="case-studies">
-        <div className="flex ml-32 mb-10">
-          <Tab label="Case Studies" />
-        </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 px-32 mb-10 ">
-          <div className="w-[450px] h-[200px] bg-orange rounded-lg"></div>
 
-          <p className="font-poppins justify-center items-center text-lg pt-14">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
-          </p>
+      {/* Workshops Section */}
+      <section id="workshops" className="py-16 px-4 sm:px-8 md:px-12 lg:px-20">
+        <motion.div
+          className="flex justify-center md:justify-start mb-12"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <Tab label="Workshops" />
+        </motion.div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-16 max-w-4xl mx-auto">
+          {workshops.map((video, index) => (
+            <VideoCard key={index} video={video} index={index} />
+          ))}
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 px-32 mb-10 ">
-          <div className="w-[450px] h-[200px] bg-orange rounded-lg"></div>
-
-          <p className="font-poppins justify-center items-center text-lg pt-14">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
-          </p>
-        </div>
-        <div className="flex-row gap-10 flex justify-center mb-10">
-          <div className="mt-10 flex justify-evenly">
-            <Button label="1" />
-          </div>
-
-          <div className="mt-10 flex justify-evenly">
-            <Button label="2" />
-          </div>
-        </div>
-        <div className="w-[600px] h-1 bg-orange  ml-96 mb-10"></div>
       </section>
     </section>
   );

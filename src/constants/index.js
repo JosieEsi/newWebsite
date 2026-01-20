@@ -67,12 +67,12 @@ import {
 } from "../assets/images";
 
 export const navLinks = [
-  { href: "./", label: "Home" },
+  { href: "/", label: "Home" },
   { href: "/ethical-review-committee", label: "Ethical Review Committee" },
   { href: "/child-abuse-tracker", label: "Child Abuse Tracker" },
   { href: "/covid-19", label: "COVID 19" },
-  { href: "#partners", label: "Partners" },
-  { href: "#events", label: "Events" },
+  { href: "/#partners", label: "Partners" },
+  { href: "/#events", label: "Events" },
 ];
 
 export const navigation = [
@@ -92,21 +92,21 @@ export const navigation = [
     title: "What we do",
     link: "/what-we-do",
     links: [
-      { name: "Strategic Themes", link: "/what-we-do#strategic-themes" },
-      { name: "Our Projects", link: "/what-we-do#our-projects" },
+      { name: "Strategic Objectives", link: "/what-we-do#strategic-objectives" },
+      { name: "Our Projects", link: "/our-projects" },
       { name: "Expertise", link: "/what-we-do#expertise" },
     ],
   },
 
   {
     title: "Resources",
-    link: "#",
+    link: "/publications",
     links: [
       { name: "Publications", link: "/publications" },
       { name: "Podcast", link: "/podcast" },
       { name: "Vodcast", link: "/vodcast" },
-      { name: "Videos", link: "/videos-pictures" },
-      { name: "Photos", link: "/videos-pictures" },
+      { name: "Videos", link: "/videos" },
+      { name: "Photos", link: "/photos" },
     ],
   },
 
@@ -115,8 +115,8 @@ export const navigation = [
     link: "/our-impact",
     links: [
       { name: "Impact Stories", link: "/our-impact#impact-stories" },
-      { name: "Documentaries", link: "/our-impact#documentaries" },
-      { name: "Case Studies", link: "/our-impact#case-studies" },
+      { name: "Webinars", link: "/our-impact#webinars" },
+      { name: "Workshops", link: "/our-impact#workshops" },
     ],
   },
 ];
