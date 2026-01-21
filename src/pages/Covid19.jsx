@@ -3,8 +3,10 @@ import { motion } from "framer-motion";
 import { covid } from "../assets/images";
 import Button from "../components/Button";
 import { FaDownload, FaFilePdf } from "react-icons/fa";
+import { useTranslation } from "../hooks/useTranslation";
 
 const Covid19 = () => {
+  const { t } = useTranslation();
   const publications = [
     {
       date: "12 APRIL, 2022",
@@ -53,7 +55,7 @@ const Covid19 = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          COVID-19 Series
+          {t("covid19.title")}
         </motion.h1>
       </motion.div>
 
@@ -99,7 +101,7 @@ const Covid19 = () => {
                     label={
                       <span className="flex items-center gap-2">
                         <FaDownload />
-                        Download
+                        {t("covid19.download")}
                       </span>
                     }
                   />
@@ -120,14 +122,10 @@ const Covid19 = () => {
       >
         <div className="bg-gradient-to-r from-orange/10 to-red/10 rounded-2xl p-8 md:p-10 border-l-4 border-orange">
           <h2 className="font-bold text-2xl md:text-3xl mb-4 text-gray-800">
-            About the COVID-19 Series
+            {t("covid19.aboutTitle")}
           </h2>
           <p className="text-gray-700 leading-relaxed text-base md:text-lg">
-            Participatory Development Associates (PDA) has been actively researching and documenting 
-            the impact of the COVID-19 pandemic on various aspects of Ghanaian society. Our COVID-19 
-            series includes thought pieces, policy briefs, and research reports that analyze the 
-            pandemic's effects on food security, social protection systems, child welfare, and the 
-            broader political economy of Africa.
+            {t("covid19.aboutText")}
           </p>
         </div>
       </motion.div>

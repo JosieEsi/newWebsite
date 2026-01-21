@@ -4,8 +4,10 @@ import { ethical, tony, akosua, eleanor } from "../assets/images";
 import { arrow, line, line2, paper } from "../assets/icons";
 import Button from "../components/Button";
 import { FaUser, FaDownload, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { useTranslation } from "../hooks/useTranslation";
 
 const EthicalReviewCommittee = () => {
+  const { t } = useTranslation();
   const [expandedBio, setExpandedBio] = useState(null);
 
   const committeeMembers = [
@@ -79,7 +81,7 @@ const EthicalReviewCommittee = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          Ethical Review Committee
+          {t("ethicalReviewCommittee.title")}
         </motion.h1>
       </motion.div>
 
@@ -151,7 +153,7 @@ const EthicalReviewCommittee = () => {
                       onClick={() => setExpandedBio(null)}
                       className="flex items-center gap-2 text-orange font-semibold text-sm hover:text-red transition-colors"
                     >
-                      <span>Read less</span>
+                      <span>{t("common.readLess")}</span>
                       <FaChevronUp />
                     </button>
                   </motion.div>
@@ -160,7 +162,7 @@ const EthicalReviewCommittee = () => {
                     onClick={() => setExpandedBio(index)}
                     className="flex items-center gap-2 text-orange font-semibold text-sm hover:text-red transition-colors w-full justify-center"
                   >
-                    <span>Read more</span>
+                    <span>{t("common.readMore")}</span>
                     <FaChevronDown />
                   </button>
                 )}
@@ -186,7 +188,7 @@ const EthicalReviewCommittee = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              Overview of the ERC
+              {t("ethicalReviewCommittee.overview")}
             </motion.h1>
             <motion.div
               className="space-y-6 text-gray-700 leading-relaxed"
@@ -196,60 +198,15 @@ const EthicalReviewCommittee = () => {
               transition={{ delay: 0.1 }}
             >
               <p className="font-poppins text-base">
-                Ethical and robust research underscores Participatory Development
-                Associates' (PDA's) vision of: "A world where states, communities
-                and organisations provide an enabling environment in which all
-                people, regardless of sex, race, ethnicity, creed, age or
-                disability, can realise their full potential and contribute their
-                best to the common good". It is for this reason that the Ethical
-                Review Committee (ERC) was set up in January 2017 to help ensure
-                that research is carried out to the highest ethical standards. The
-                ERC has been formed to review research proposals in PDA and the
-                general research community. It advises on the research process to
-                ensure that both researchers and participants are adequately
-                protected. The ERC is also interested in ensuring that researchers
-                put adequate measures in place to minimise biases that could arise
-                from both researchers' and participants' prejudices in the research
-                process. The ERC has a multidisciplinary membership of eminent
-                scholars and practitioners in their fields of specialisation.
+                {t("ethicalReviewCommittee.overviewText")}
               </p>
 
               <p className="font-poppins text-base font-semibold text-gray-800 pt-4">
-                Ethical review is aligned with our organisation's Values in the
-                following ways:
+                {t("ethicalReviewCommittee.valuesText")}
               </p>
 
               <div className="space-y-4 pt-4">
-                {[
-                  {
-                    title: "Empowerment",
-                    text: "we believe that research should be an enlightening process for all involved, not simply an extractive exercise undertaken for the benefit of others. Paying attention to how a research process empowers and/or disempowers the people involved is of great importance to its development outcomes. In particular, PDA believes that the dignity, rights, safety and well-being of both participants and researchers is important in any research process that PDA undertakes."
-                  },
-                  {
-                    title: "Inclusiveness",
-                    text: "we believe everyone has an active role to play in realising social change and so it is important that any piece of research has carefully considered which voices are listened to, and why."
-                  },
-                  {
-                    title: "Innovation and creativity",
-                    text: "thoughtful review processes can help any group of people to think more carefully, creatively and deeply."
-                  },
-                  {
-                    title: "Quality",
-                    text: "review can help us, and others, to maintain and improve our research standards. In doing this we can also affect ethical standards in Ghana more widely."
-                  },
-                  {
-                    title: "Efficiency",
-                    text: "review can identify ways in which all can make judicious use of resources, including natural resources and time."
-                  },
-                  {
-                    title: "Effectiveness and Impact",
-                    text: "a well-honed research process is more likely to leave a lasting effect."
-                  },
-                  {
-                    title: "Transparency and accountability",
-                    text: "ethical review helps to make research processes more accountable, to ourselves as researchers, to participants in the research, as well as to those who commission it. PDA is also committed to being a learning organisation. We believe that ethical review processes should provide a framework for those involved to learn together."
-                  }
-                ].map((value, index) => (
+                {t("ethicalReviewCommittee.valuesItems", { returnObjects: true }).map((value, index) => (
                   <motion.div
                     key={index}
                     className="bg-gradient-to-r from-gray-50 to-white rounded-lg p-5 border-l-4 border-orange shadow-sm hover:shadow-md transition-shadow"
@@ -307,7 +264,7 @@ const EthicalReviewCommittee = () => {
                       </p>
                     </div>
                     <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                      <Button label="Download" />
+                      <Button label={t("common.download")} />
                     </motion.div>
                   </div>
                 </motion.div>

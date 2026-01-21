@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { strategic, farmer } from "../assets/images";
 import Button from "../components/Button";
@@ -6,74 +6,53 @@ import { clipboard, bulb } from "../assets/icons";
 import { Link, useNavigate } from "react-router-dom";
 import { FaGlobe, FaHandshake, FaUsers, FaDollarSign, FaChartLine, FaArrowRight } from "react-icons/fa";
 import { projects } from "../components/ProjectsData";
-
-const leftExpertise = [
-  "Processes for community empowerment",
-  "Issues of governance – in education, health and forestry",
-  "Organisation development with civil society organisations",
-  "Working with communities",
-  "Decentralisation",
-  "Policy analysis and advocacy",
-  "Poverty and social assessments",
-  "Child labour",
-  "Reproductive health, including HIV/AIDS",
-  "Gender and development",
-  "Monitoring and evaluation",
-  "Strategic planning",
-];
-
-const rightExpertise = [
-  "Qualitative research, using participatory rapid appraisal (PRA/PLA) approaches among others",
-  "Quantitative research and methodological approaches using advance tools and software's for analysis",
-  "Facilitation, using participatory learning and action approaches to working with communities and organizations",
-  "Facilitation/moderation of workshops and meetings",
-  "Training & Capacity Building, using participatory learning methodologies",
-  "Accompanying facilitators and managers of change processes in organisations and communities",
-  "Organisation development – in particular accompanying NGOs and other civil society organisations",
-  "Managing projects in our areas of work shown above",
-];
-
-const strategicObjectives = [
-  {
-    number: "01",
-    title: "International Recognition & Expansion",
-    description: "To be an internationally recognised development advisory and consultancy firm expanding and sustaining quality services in monitoring, evaluation, research for learning, accountability, and capacity building in at least 5 African countries.",
-    icon: FaGlobe,
-    color: "from-orange to-red",
-  },
-  {
-    number: "02",
-    title: "Partnership Enhancement",
-    description: "Enhancing existing relationships with communities, state institutions, multi-national and philanthropic organizations, while establishing new partnerships to leverage expertise, resources, and opportunities for mutual benefit.",
-    icon: FaHandshake,
-    color: "from-red to-orange",
-  },
-  {
-    number: "03",
-    title: "People-Centered Approach",
-    description: "Foster a people-centered, partner-responsive, and ethical approach across the organization, driving collaboration, co-creation, and continuous learning.",
-    icon: FaUsers,
-    color: "from-orange to-red",
-  },
-  {
-    number: "04",
-    title: "Staff Welfare & Development",
-    description: "To position staff welfare development and wellbeing as a business imperative to foster the growth and sustainability of the organisation.",
-    icon: FaUsers,
-    color: "from-red to-orange",
-  },
-  {
-    number: "05",
-    title: "Financial Resilience",
-    description: "To be a financially resilient organisation with multiple sources of finance operating in different sectors in multiple countries.",
-    icon: FaDollarSign,
-    color: "from-orange to-red",
-  },
-];
+import { useTranslation } from "../hooks/useTranslation";
 
 const WhatWeDo = () => {
   const [hoveredObjective, setHoveredObjective] = useState(null);
   const navigate = useNavigate();
+  const { t } = useTranslation();
+
+  const leftExpertise = useMemo(() => t("whatWeDo.leftExpertise"), [t]);
+  const rightExpertise = useMemo(() => t("whatWeDo.rightExpertise"), [t]);
+
+  const strategicObjectives = useMemo(() => [
+    {
+      number: "01",
+      title: t("whatWeDo.objectives.international.title"),
+      description: t("whatWeDo.objectives.international.description"),
+      icon: FaGlobe,
+      color: "from-orange to-red",
+    },
+    {
+      number: "02",
+      title: t("whatWeDo.objectives.partnership.title"),
+      description: t("whatWeDo.objectives.partnership.description"),
+      icon: FaHandshake,
+      color: "from-red to-orange",
+    },
+    {
+      number: "03",
+      title: t("whatWeDo.objectives.peopleCentered.title"),
+      description: t("whatWeDo.objectives.peopleCentered.description"),
+      icon: FaUsers,
+      color: "from-orange to-red",
+    },
+    {
+      number: "04",
+      title: t("whatWeDo.objectives.staffWelfare.title"),
+      description: t("whatWeDo.objectives.staffWelfare.description"),
+      icon: FaUsers,
+      color: "from-red to-orange",
+    },
+    {
+      number: "05",
+      title: t("whatWeDo.objectives.financial.title"),
+      description: t("whatWeDo.objectives.financial.description"),
+      icon: FaDollarSign,
+      color: "from-orange to-red",
+    },
+  ], [t]);
 
   const handleProjectClick = (project) => {
     if (project.detailLink && project.detailLink !== "#") {
@@ -107,7 +86,7 @@ const WhatWeDo = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
-            Strategic Objectives
+            {t("whatWeDo.title")}
           </motion.h1>
         </motion.div>
 
@@ -179,7 +158,7 @@ const WhatWeDo = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Our Projects
+          {t("whatWeDo.ourProjects")}
         </motion.h1>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -256,7 +235,7 @@ const WhatWeDo = () => {
           whileTap={{ scale: 0.95 }}
         >
           <Link to="/our-projects">
-            <Button label="More Projects >>>" />
+            <Button label={`${t("common.moreProjects")} >>>`} />
           </Link>
         </motion.div>
       </section>
@@ -270,10 +249,10 @@ const WhatWeDo = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-orange text-center mb-3">
-            Our Expertise
+            {t("whatWeDo.expertise")}
           </h2>
           <p className="text-center mt-3 text-gray-600 text-lg mb-12">
-            We work in a wide range of areas including:
+            {t("whatWeDo.expertiseSubtitle")}
           </p>
         </motion.div>
 
@@ -352,7 +331,7 @@ const WhatWeDo = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <Link to="/our-projects">
-                  <Button label="More Projects >>>" />
+                  <Button label={`${t("common.moreProjects")} >>>`} />
                 </Link>
               </motion.div>
             </motion.div>

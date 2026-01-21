@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaDownload, FaFilePdf } from "react-icons/fa";
+import { useTranslation } from "../hooks/useTranslation";
 
 const reports = [
   {
@@ -58,11 +59,30 @@ const reports = [
 ];
 
 const FilterableTable = () => {
+  const { t } = useTranslation();
   const [filters, setFilters] = useState({
     type: "",
     date: "",
     topic: "",
   });
+
+  // Helper function to translate report types
+  const translateType = (type) => {
+    const reportTypes = t("publications.reportTypes");
+    if (reportTypes && typeof reportTypes === "object" && reportTypes[type]) {
+      return reportTypes[type];
+    }
+    return type;
+  };
+
+  // Helper function to translate topics
+  const translateTopic = (topic) => {
+    const topics = t("publications.topics");
+    if (topics && typeof topics === "object" && topics[topic]) {
+      return topics[topic];
+    }
+    return topic;
+  };
 
   const handleFilterChange = (e) => {
     setFilters({ ...filters, [e.target.name]: e.target.value });
@@ -82,17 +102,17 @@ const FilterableTable = () => {
   return (
     <div className="max-w-4xl mx-auto p-4">
       {/* Filter Controls */}
-      <div className="flex flex-wrap gap-4 mb-4">
+      <div className="flex flex-wrap gap-3 sm:gap-4 mb-4">
         <select
           name="type"
           value={filters.type}
           onChange={handleFilterChange}
-          className="border border-gray-300 px-4 py-2 rounded-md bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-orange"
+          className="border border-gray-300 px-3 sm:px-4 py-2 rounded-md bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-orange text-sm sm:text-base flex-1 min-w-[140px] sm:min-w-[160px]"
         >
-          <option value="">REPORT TYPE</option>
+          <option value="">{t("publications.filterReportType")}</option>
           {[...new Set(reports.map((r) => r.type))].map((type) => (
             <option key={type} value={type}>
-              {type}
+              {translateType(type)}
             </option>
           ))}
         </select>
@@ -101,9 +121,9 @@ const FilterableTable = () => {
           name="date"
           value={filters.date}
           onChange={handleFilterChange}
-          className="border border-gray-300 px-4 py-2 rounded-md bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-orange"
+          className="border border-gray-300 px-3 sm:px-4 py-2 rounded-md bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-orange text-sm sm:text-base flex-1 min-w-[140px] sm:min-w-[160px]"
         >
-          <option value="">DATE</option>
+          <option value="">{t("publications.filterDate")}</option>
           {[...new Set(reports.map((r) => r.date))].map((date) => (
             <option key={date} value={date}>
               {date}
@@ -115,23 +135,23 @@ const FilterableTable = () => {
           name="topic"
           value={filters.topic}
           onChange={handleFilterChange}
-          className="border border-gray-300 px-4 py-2 rounded-md bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-orange "
+          className="border border-gray-300 px-3 sm:px-4 py-2 rounded-md bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-orange text-sm sm:text-base flex-1 min-w-[140px] sm:min-w-[160px]"
         >
-          <option value="">TOPIC</option>
+          <option value="">{t("publications.filterTopic")}</option>
           {[...new Set(reports.map((r) => r.topic))].map((topic) => (
             <option key={topic} value={topic}>
-              {topic}
+              {translateTopic(topic)}
             </option>
           ))}
         </select>
 
         <motion.button
           onClick={clearFilters}
-          className="bg-orange text-white px-4 py-2 rounded-md hover:bg-orange/90 transition-colors duration-300"
+          className="bg-orange text-white px-3 sm:px-4 py-2 rounded-md hover:bg-orange/90 transition-colors duration-300 text-sm sm:text-base whitespace-nowrap w-full sm:w-auto"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          CLEAR FILTERS
+          {t("publications.clearFilters")}
         </motion.button>
       </div>
 
@@ -139,7 +159,7 @@ const FilterableTable = () => {
       <div className="border border-gray-200 rounded-lg overflow-hidden">
         {filteredReports.length === 0 ? (
           <div className="p-8 text-center text-gray-500">
-            <p>No reports found matching your filters.</p>
+            <p>{t("publications.noReportsFound")}</p>
           </div>
         ) : (
           filteredReports.map((report, index) => (
@@ -154,13 +174,13 @@ const FilterableTable = () => {
               whileHover={{ x: 5, backgroundColor: "rgba(248, 154, 35, 0.1)" }}
             >
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                <div className="flex-1">
-                  <p className="text-gray-500 text-sm mb-1">{report.date}</p>
-                  <p className="font-semibold text-gray-800 group-hover:text-orange transition-colors duration-300">
+                <div className="flex-1 min-w-0">
+                  <p className="text-gray-500 text-xs sm:text-sm mb-1">{report.date}</p>
+                  <p className="font-semibold text-sm sm:text-base text-gray-800 group-hover:text-orange transition-colors duration-300 break-words">
                     {report.title}
                   </p>
-                  <div className="flex items-center gap-3 mt-2">
-                    <p className="text-gray-600 text-sm">{report.type}</p>
+                  <div className="flex flex-wrap items-center gap-2 sm:gap-3 mt-2">
+                    <p className="text-gray-600 text-xs sm:text-sm">{translateType(report.type)}</p>
                     {report.fileSize && (
                       <span className="text-xs text-gray-400">({report.fileSize})</span>
                     )}
@@ -172,13 +192,13 @@ const FilterableTable = () => {
                     download
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 bg-orange text-white rounded-lg font-semibold text-sm hover:bg-orange/90 transition-colors duration-300 whitespace-nowrap"
+                    className="flex items-center justify-center gap-2 px-3 sm:px-4 py-2 bg-orange text-white rounded-lg font-semibold text-xs sm:text-sm hover:bg-orange/90 transition-colors duration-300 whitespace-nowrap w-full sm:w-auto"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={(e) => e.stopPropagation()}
                   >
                     <FaDownload className="text-xs" />
-                    <span>Download PDF</span>
+                    <span>{t("publications.downloadPDF")}</span>
                   </motion.a>
                 )}
               </div>

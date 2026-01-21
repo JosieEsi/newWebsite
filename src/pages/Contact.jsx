@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { contactimage, communication } from "../assets/images";
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaFax, FaDownload } from "react-icons/fa";
 import Button from "../components/Button";
+import { useTranslation } from "../hooks/useTranslation";
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -48,21 +50,21 @@ const Contact = () => {
     }, 1000);
   };
 
-  const contactInfo = [
+  const contactInfo = useMemo(() => [
     {
       icon: FaMapMarkerAlt,
-      title: "Accra Office",
+      title: t("contact.accraOffice"),
       details: [
         {
-          label: "Physical Address",
+          label: t("contact.physicalAddress"),
           value: "No. 30, Asafoatse Oman Street (Near Accra Central View Hotel and ATTC), Kokomlemle, Accra",
         },
         {
-          label: "Postal Address",
+          label: t("contact.postalAddress"),
           value: "P.O. Box AN 18233, Accra North, Ghana",
         },
         {
-          label: "GPS Code",
+          label: t("contact.gpsCode"),
           value: "GA0472784",
           link: "https://www.ghanapostgps.com/map/#GA0472784",
         },
@@ -70,31 +72,31 @@ const Contact = () => {
     },
     {
       icon: FaMapMarkerAlt,
-      title: "Kumasi Office",
+      title: t("contact.kumasiOffice"),
       details: [
         {
-          label: "GPS Code",
+          label: t("contact.gpsCode"),
           value: "AK-849-3514",
           link: "https://www.ghanapostgps.com/map/#AK8493514",
         },
         {
-          label: "Address",
+          label: t("contact.physicalAddress"),
           value: "Anwomaso Rd, Kumasi",
         },
         {
-          label: "Postal Address",
+          label: t("contact.postalAddress"),
           value: "P.O. Box UP 876, K.N.U.S.T, Kumasi, Ghana",
         },
       ],
     },
-  ];
+  ], [t]);
 
-  const unitContacts = [
-    { unit: "Research Evaluation and Learning (REL)", contact: "Alexander Afram", phone: "+233 508 500 351" },
-    { unit: "Advocacy and Communications Unit", contact: "Aseda Mensah", phone: "+233 508 493 316" },
-    { unit: "PDA Africa", contact: "David Eshun", phone: "+233 508 493 223" },
-    { unit: "PDA Admin", contact: "Patricia Zingle", phone: "+233 509 229 218" },
-  ];
+  const unitContacts = useMemo(() => [
+    { unit: t("contact.units.rel"), contact: "Alexander Afram", phone: "+233 508 500 351" },
+    { unit: t("contact.units.advocacy"), contact: "Aseda Mensah", phone: "+233 508 493 316" },
+    { unit: t("contact.units.pdaAfrica"), contact: "David Eshun", phone: "+233 508 493 223" },
+    { unit: t("contact.units.admin"), contact: "Patricia Zingle", phone: "+233 509 229 218" },
+  ], [t]);
 
   return (
     <section
@@ -152,7 +154,7 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold text-orange mb-6 font-poppins">Send Us a Message</h2>
+            <h2 className="text-3xl font-bold text-orange mb-6 font-poppins">{t("contact.form.title")}</h2>
             <p className="text-gray-600 mb-6 font-poppins">
               Thank you for your interest in learning more about us. Your contact information will enable us to respond to all your concerns.
             </p>
@@ -160,7 +162,7 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2 font-poppins">
-                  Name *
+                  {t("common.name")} *
                 </label>
                 <input
                   type="text"
@@ -170,13 +172,13 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-orange focus:outline-none transition-colors font-poppins"
-                  placeholder="Your full name"
+                  placeholder={t("common.name")}
                 />
               </div>
 
               <div>
                 <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2 font-poppins">
-                  Email Address *
+                  {t("common.email")} *
                 </label>
                 <input
                   type="email"
@@ -186,13 +188,13 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-orange focus:outline-none transition-colors font-poppins"
-                  placeholder="your.email@example.com"
+                  placeholder={t("common.email")}
                 />
               </div>
 
               <div>
                 <label htmlFor="organization" className="block text-sm font-semibold text-gray-700 mb-2 font-poppins">
-                  Organization
+                  {t("common.organization")}
                 </label>
                 <input
                   type="text"
@@ -201,13 +203,13 @@ const Contact = () => {
                   value={formData.organization}
                   onChange={handleChange}
                   className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-orange focus:outline-none transition-colors font-poppins"
-                  placeholder="Your organization"
+                  placeholder={t("common.organization")}
                 />
               </div>
 
               <div>
                 <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2 font-poppins">
-                  Phone Number
+                  {t("common.phone")}
                 </label>
                 <input
                   type="tel"
@@ -222,7 +224,7 @@ const Contact = () => {
 
               <div>
                 <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2 font-poppins">
-                  Message *
+                  {t("common.message")} *
                 </label>
                 <textarea
                   id="message"
@@ -232,7 +234,7 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-orange focus:outline-none transition-colors font-poppins resize-none"
-                  placeholder="Tell us about your project or inquiry..."
+                  placeholder={t("common.message")}
                 ></textarea>
               </div>
 
@@ -242,14 +244,14 @@ const Contact = () => {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                 >
-                  Thank you! Your message has been sent. We'll get back to you soon.
+                  {t("contact.form.success")}
                 </motion.div>
               )}
 
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Button
                   type="submit"
-                  label={isSubmitting ? "Sending..." : "Submit"}
+                  label={isSubmitting ? t("common.loading") : t("contact.form.submit")}
                   disabled={isSubmitting}
                 />
               </motion.div>

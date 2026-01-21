@@ -2,11 +2,13 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import Tab from "../components/Tab";
+import { useTranslation } from "../hooks/useTranslation";
 
 const Videos = () => {
   const [videos, setVideos] = useState([]);
   const [error, setError] = useState(null); // New state to track errors
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   useEffect(() => {
     // Using hardcoded videos as fallback since API key is not available
@@ -68,7 +70,7 @@ const Videos = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            Videos
+            {t("nav.videos")}
           </motion.h3>
 
           <motion.div
@@ -76,7 +78,7 @@ const Videos = () => {
             whileTap={{ scale: 0.95 }}
           >
             <a href="/videos" onClick={(e) => { e.preventDefault(); navigate("/videos"); }}>
-              <Tab label="MORE VIDEOS" />
+              <Tab label={t("common.moreVideos")} />
             </a>
           </motion.div>
         </div>

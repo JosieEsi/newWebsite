@@ -12,8 +12,10 @@ import {
   allstaff,
 } from "../assets/images";
 import { FaUser, FaChevronDown, FaChevronUp, FaBriefcase, FaGraduationCap } from "react-icons/fa";
+import { useTranslation } from "../hooks/useTranslation";
 
 const Staff = () => {
+  const { t } = useTranslation();
   const [expandedStaff, setExpandedStaff] = useState(null);
 
   const toggleExpand = (index) => {
@@ -283,12 +285,12 @@ const Staff = () => {
                     >
                       {isExpanded ? (
                         <>
-                          <span>Read Less</span>
+                          <span>{t("common.readLess")}</span>
                           <FaChevronUp />
                         </>
                       ) : (
                         <>
-                          <span>Read More</span>
+                          <span>{t("common.readMore")}</span>
                           <FaChevronDown />
                         </>
                       )}
@@ -363,7 +365,7 @@ const Staff = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          PDA STAFF
+          {t("staff.title")}
         </motion.h1>
       </motion.div>
 
@@ -385,7 +387,7 @@ const Staff = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         {/* Leadership */}
         <DepartmentSection
-          title="Leadership"
+          title={t("staff.leadership")}
           staff={staffByDepartment.leadership}
           departmentKey="leadership"
           icon={FaUser}
@@ -393,7 +395,7 @@ const Staff = () => {
 
         {/* Research, Evaluation & Learning */}
         <DepartmentSection
-          title="Research, Evaluation & Learning (REL)"
+          title={t("staff.rel")}
           staff={staffByDepartment.rel}
           departmentKey="rel"
           icon={FaGraduationCap}
@@ -401,7 +403,7 @@ const Staff = () => {
 
         {/* Finance & Administration */}
         <DepartmentSection
-          title="Finance & Administration"
+          title={t("staff.finance")}
           staff={staffByDepartment.finance}
           departmentKey="finance"
           icon={FaBriefcase}
@@ -409,7 +411,7 @@ const Staff = () => {
 
         {/* Communications & Advocacy */}
         <DepartmentSection
-          title="Communications & Advocacy"
+          title={t("staff.communications")}
           staff={staffByDepartment.communications}
           departmentKey="communications"
           icon={FaUser}
@@ -417,7 +419,7 @@ const Staff = () => {
 
         {/* PDA Africa */}
         <DepartmentSection
-          title="PDA Africa"
+          title={t("staff.pdaAfrica")}
           staff={staffByDepartment.pdaAfrica}
           departmentKey="pdaAfrica"
           icon={FaUser}
@@ -425,7 +427,7 @@ const Staff = () => {
 
         {/* Administration */}
         <DepartmentSection
-          title="Administration"
+          title={t("staff.administration")}
           staff={staffByDepartment.administration}
           departmentKey="administration"
           icon={FaBriefcase}
@@ -448,7 +450,7 @@ const Staff = () => {
               <FaUser className="text-white text-2xl" />
             </motion.div>
             <h2 className="font-poppins font-bold text-3xl md:text-4xl text-ash">
-              Field Officers
+              {t("staff.fieldOfficers")}
             </h2>
             <span className="text-gray-400 text-lg">
               ({staffByDepartment.fieldOfficers.length})

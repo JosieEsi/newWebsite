@@ -31,9 +31,11 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
+import { useTranslation } from "../hooks/useTranslation";
 
 const Hero = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -89,15 +91,13 @@ const Hero = () => {
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            Everyone Matters
+            {t("hero.title")}
           </motion.h1>
           <motion.p
             className="py-5 text-xl max-sm:text-base md:text-2xl font-poppins leading-relaxed mb-8 px-4"
             variants={itemVariants}
           >
-            Participatory Development Associates (PDA), is a social development,
-            project management and advisory organisation that is based in Ghana
-            and works across Sub-Saharan Africa.
+            {t("hero.description")}
           </motion.p>
           <motion.div
             className="flex justify-center"
@@ -106,7 +106,7 @@ const Hero = () => {
             whileTap={{ scale: 0.95 }}
           >
             <a href="/who-we-are" onClick={(e) => { e.preventDefault(); navigate("/who-we-are"); }}>
-              <Button label="READ MORE" />
+              <Button label={t("hero.readMore")} />
             </a>
           </motion.div>
         </div>

@@ -5,6 +5,7 @@ import { FaTimes, FaBars } from "react-icons/fa";
 // import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import { pdaLogo } from "../assets/images";
 import Menu from "./Menu";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Nav = () => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
@@ -44,6 +45,7 @@ const Nav = () => {
           />
         </motion.a>
         <div className="flex items-center gap-4">
+          <LanguageSwitcher />
           <div className="relative">
             <button
               onClick={toggleMenu}

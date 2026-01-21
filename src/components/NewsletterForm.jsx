@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import NewButton from "./NewButton";
 import { FaEnvelope, FaCheckCircle } from "react-icons/fa";
+import { useTranslation } from "../hooks/useTranslation";
 
 const NewsletterForm = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -26,13 +28,13 @@ const NewsletterForm = () => {
     setSubmitStatus(null);
 
     // Create mailto link with form data
-    const subject = encodeURIComponent("Newsletter Subscription Request");
+    const subject = encodeURIComponent(t("publications.signUpToday"));
     const body = encodeURIComponent(
-      `Newsletter Subscription Request\n\n` +
-      `Name: ${formData.name}\n` +
-      `Email: ${formData.email}\n` +
-      `Organization: ${formData.organization}\n` +
-      `Contact: ${formData.contact}\n\n` +
+      `${t("publications.signUpToday")}\n\n` +
+      `${t("common.name")}: ${formData.name}\n` +
+      `${t("common.email")}: ${formData.email}\n` +
+      `${t("common.organization")}: ${formData.organization}\n` +
+      `${t("common.phone")}: ${formData.contact}\n\n` +
       `Please add this person to the newsletter mailing list.`
     );
 
@@ -58,7 +60,7 @@ const NewsletterForm = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <label htmlFor="newsletter-name" className="block text-sm font-semibold text-gray-700 mb-2 font-poppins">
-            Name *
+            {t("common.name")} *
           </label>
           <input
             type="text"
@@ -68,13 +70,13 @@ const NewsletterForm = () => {
             value={formData.name}
             onChange={handleChange}
             className="w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-orange focus:outline-none transition-colors font-poppins"
-            placeholder="Your name"
+            placeholder={t("common.name")}
           />
         </div>
 
         <div>
           <label htmlFor="newsletter-email" className="block text-sm font-semibold text-gray-700 mb-2 font-poppins">
-            Email Address *
+            {t("common.email")} *
           </label>
           <input
             type="email"
@@ -84,13 +86,13 @@ const NewsletterForm = () => {
             value={formData.email}
             onChange={handleChange}
             className="w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-orange focus:outline-none transition-colors font-poppins"
-            placeholder="your.email@example.com"
+            placeholder={t("common.email")}
           />
         </div>
 
         <div>
           <label htmlFor="newsletter-organization" className="block text-sm font-semibold text-gray-700 mb-2 font-poppins">
-            Organization
+            {t("common.organization")}
           </label>
           <input
             type="text"
@@ -99,13 +101,13 @@ const NewsletterForm = () => {
             value={formData.organization}
             onChange={handleChange}
             className="w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-orange focus:outline-none transition-colors font-poppins"
-            placeholder="Your organization"
+            placeholder={t("common.organization")}
           />
         </div>
 
         <div>
           <label htmlFor="newsletter-contact" className="block text-sm font-semibold text-gray-700 mb-2 font-poppins">
-            Contact Number
+            {t("common.phone")}
           </label>
           <input
             type="tel"
@@ -126,7 +128,7 @@ const NewsletterForm = () => {
           animate={{ opacity: 1, y: 0 }}
         >
           <FaCheckCircle />
-          <span className="font-poppins">Thank you! Your subscription request has been sent.</span>
+          <span className="font-poppins">{t("publications.subscriptionSuccess")}</span>
         </motion.div>
       )}
 
@@ -136,7 +138,7 @@ const NewsletterForm = () => {
           disabled={isSubmitting}
           className="justify-center items-center px-7 py-3 border font-poppins text-base leading-none bg-orange text-white font-bold border-none max-sm:text-sm max-sm:px-4 max-sm:py-2 hover:scale-110 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {isSubmitting ? "Submitting..." : "SIGN UP TODAY"}
+          {isSubmitting ? t("common.loading") : t("publications.signUpToday").toUpperCase()}
         </button>
       </motion.div>
     </motion.form>

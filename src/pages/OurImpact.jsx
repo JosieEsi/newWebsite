@@ -3,18 +3,20 @@ import { motion } from "framer-motion";
 import { obuasi } from "../assets/images";
 import Tab from "../components/Tab";
 import Button from "../components/Button";
+import { useTranslation } from "../hooks/useTranslation";
 
 const OurImpact = () => {
+  const { t } = useTranslation();
   const impactStories = [
     { 
       id: "VSvz_fSONdU", 
       title: "Impact Story 1",
-      description: "Discover how PDA's initiatives are transforming communities and creating lasting positive change."
+      description: t("ourImpact.impactStoriesDesc")
     },
     { 
       id: "sVqGZfIW5zc", 
       title: "Impact Story 2",
-      description: "Learn about the meaningful impact of our programs on individuals and communities across Sub-Saharan Africa."
+      description: t("ourImpact.impactStoriesDesc")
     },
   ];
 
@@ -22,12 +24,12 @@ const OurImpact = () => {
     { 
       id: "7tQK-p01OUA", 
       title: "Webinar 1",
-      description: "Join our expert-led webinar sessions covering key topics in development, research, and community empowerment."
+      description: t("ourImpact.webinarsDesc")
     },
     { 
       id: "1jyhbZKsKVY", 
       title: "Webinar 2",
-      description: "Explore insights and best practices from our development experts through engaging webinar presentations."
+      description: t("ourImpact.webinarsDesc")
     },
   ];
 
@@ -35,7 +37,7 @@ const OurImpact = () => {
     { 
       id: "CBXOLspFKug", 
       title: "Workshop Session",
-      description: "Watch our interactive workshop sessions where we share knowledge, methodologies, and practical approaches to development work."
+      description: t("ourImpact.workshopsDesc")
     },
   ];
 
@@ -84,7 +86,7 @@ const OurImpact = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          Our Impact
+          {t("ourImpact.title")}
         </motion.h1>
       </motion.div>
 
@@ -96,10 +98,10 @@ const OurImpact = () => {
         transition={{ duration: 0.6 }}
       >
         <p className="text-lg my-6 font-poppins max-md:text-base max-sm:text-sm leading-7 text-gray-700">
-          At Participatory Development Associates (PDA), we measure our success by the positive impact we create in communities across Sub-Saharan Africa. Through our innovative programs, research initiatives, and collaborative partnerships, we work tirelessly to empower individuals, strengthen communities, and drive sustainable development.
+          {t("ourImpact.description1")}
         </p>
         <p className="text-lg mb-6 font-poppins max-md:text-base max-sm:text-sm leading-7 text-gray-700">
-          Our impact extends beyond numbers and statistics—it's reflected in the lives transformed, opportunities created, and communities empowered. Explore our impact stories, webinars, and workshops to see how we're making a difference every day.
+          {t("ourImpact.description2")}
         </p>
       </motion.div>
       {/* Impact Stories Section */}
@@ -111,7 +113,7 @@ const OurImpact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <Tab label="Impact Stories" />
+          <Tab label={t("ourImpact.impactStories")} />
         </motion.div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-16">
           {impactStories.map((video, index) => (
@@ -136,7 +138,7 @@ const OurImpact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <Tab label="Webinars" />
+          <Tab label={t("ourImpact.webinars")} />
         </motion.div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-16">
           {webinars.map((video, index) => (
@@ -161,7 +163,7 @@ const OurImpact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <Tab label="Workshops" />
+          <Tab label={t("ourImpact.workshops")} />
         </motion.div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-16 max-w-4xl mx-auto">
           {workshops.map((video, index) => (

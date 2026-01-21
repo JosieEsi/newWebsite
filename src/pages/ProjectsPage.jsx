@@ -3,15 +3,18 @@ import { projects as allProjects } from "../components/ProjectsData";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { FaSearch, FaFilter, FaCalendarAlt, FaUsers, FaGlobe } from "react-icons/fa";
+import { useTranslation } from "../hooks/useTranslation";
 
 const ProjectsPage = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
+  const allValue = t("projectsPage.all");
   const [hoveredProject, setHoveredProject] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState(allValue);
   const [selectedDate, setSelectedDate] = useState("");
-  const [selectedPartner, setSelectedPartner] = useState("All");
-  const [selectedCountry, setSelectedCountry] = useState("All");
+  const [selectedPartner, setSelectedPartner] = useState(allValue);
+  const [selectedCountry, setSelectedCountry] = useState(allValue);
 
   // Extract unique partners and countries from projects
   const uniquePartners = useMemo(() => {
@@ -44,9 +47,9 @@ const ProjectsPage = () => {
     return Array.from(countries).sort();
   }, []);
 
-  // Categories list
-  const categories = [
-    "All",
+  // Categories list - using translations
+  const categories = useMemo(() => [
+    allValue,
     "Agriculture",
     "Capacity Building",
     "Child Protection and Welfare",
@@ -61,11 +64,11 @@ const ProjectsPage = () => {
     "Policy Analysis & Advocacy",
     "Women's Economic Empowerment",
     "Youth Welfare",
-  ];
+  ], [allValue]);
 
   // Helper function to map project categories to filter categories
   const mapCategoryToFilter = (projectCategory) => {
-    if (!projectCategory) return "All";
+    if (!projectCategory) return allValue;
     
     const categoryLower = projectCategory.toLowerCase();
     
@@ -128,7 +131,7 @@ const ProjectsPage = () => {
 
       // Category filter
       const matchesCategory =
-        selectedCategory === "All" ||
+        selectedCategory === allValue ||
         project.category === selectedCategory ||
         mapCategoryToFilter(project.category) === selectedCategory;
 
@@ -140,7 +143,7 @@ const ProjectsPage = () => {
 
       // Partner filter
       const matchesPartner =
-        selectedPartner === "All" ||
+        selectedPartner === allValue ||
         !project.partners ||
         project.partners === "" ||
         project.partners.toLowerCase().includes(selectedPartner.toLowerCase()) ||
@@ -148,7 +151,7 @@ const ProjectsPage = () => {
 
       // Country filter
       const matchesCountry =
-        selectedCountry === "All" ||
+        selectedCountry === allValue ||
         !project.location ||
         project.location === "" ||
         project.location.toLowerCase().includes(selectedCountry.toLowerCase()) ||
@@ -156,7 +159,7 @@ const ProjectsPage = () => {
 
       return matchesSearch && matchesCategory && matchesDate && matchesPartner && matchesCountry;
     });
-  }, [searchQuery, selectedCategory, selectedDate, selectedPartner, selectedCountry]);
+  }, [searchQuery, selectedCategory, selectedDate, selectedPartner, selectedCountry, allValue]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -234,7 +237,7 @@ const ProjectsPage = () => {
         transition={{ duration: 0.6 }}
       >
         <h1 className="font-poppins font-bold text-5xl md:text-6xl text-ash mb-4">
-          OUR <span className="text-orange">PROJECTS</span>
+          {t("projectsPage.title").toUpperCase()}
         </h1>
         <p className="font-poppins text-lg text-gray-600 max-w-2xl mx-auto">
           Empowering communities across Sub-Saharan Africa through innovative
@@ -255,12 +258,12 @@ const ProjectsPage = () => {
           <div className="mb-6">
             <label className="block text-sm font-poppins font-semibold text-gray-700 mb-2">
               <FaSearch className="inline mr-2" />
-              Search Projects
+              {t("projectsPage.searchPlaceholder")}
             </label>
             <div className="relative">
               <input
                 type="text"
-                placeholder="Search by project name or description..."
+                placeholder={t("projectsPage.searchPlaceholder")}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full px-4 py-3 pl-12 border-2 border-gray-200 rounded-lg focus:border-orange focus:outline-none transition-colors font-poppins"
@@ -273,7 +276,7 @@ const ProjectsPage = () => {
           <div className="mb-6">
             <label className="block text-sm font-poppins font-semibold text-gray-700 mb-3">
               <FaFilter className="inline mr-2" />
-              Filter by Category
+              {t("projectsPage.filterByCategory")}
             </label>
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
@@ -296,7 +299,7 @@ const ProjectsPage = () => {
           <div className="mb-6">
             <label className="block text-sm font-poppins font-semibold text-gray-700 mb-2">
               <FaCalendarAlt className="inline mr-2" />
-              Filter by Year
+              {t("projectsPage.filterByDate")}
             </label>
             <input
               type="text"
@@ -311,14 +314,14 @@ const ProjectsPage = () => {
           <div className="mb-6">
             <label className="block text-sm font-poppins font-semibold text-gray-700 mb-2">
               <FaUsers className="inline mr-2" />
-              Filter by Partner
+              {t("projectsPage.filterByPartner")}
             </label>
             <select
               value={selectedPartner}
               onChange={(e) => setSelectedPartner(e.target.value)}
               className="w-full md:w-64 px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-orange focus:outline-none transition-colors font-poppins bg-white"
             >
-              <option value="All">All Partners</option>
+              <option value={allValue}>{allValue}</option>
               {uniquePartners.map((partner) => (
                 <option key={partner} value={partner}>
                   {partner}
@@ -331,14 +334,14 @@ const ProjectsPage = () => {
           <div>
             <label className="block text-sm font-poppins font-semibold text-gray-700 mb-2">
               <FaGlobe className="inline mr-2" />
-              Filter by Country
+              {t("projectsPage.filterByCountry")}
             </label>
             <select
               value={selectedCountry}
               onChange={(e) => setSelectedCountry(e.target.value)}
               className="w-full md:w-64 px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-orange focus:outline-none transition-colors font-poppins bg-white"
             >
-              <option value="All">All Countries</option>
+              <option value={allValue}>{allValue}</option>
               {uniqueCountries.map((country) => (
                 <option key={country} value={country}>
                   {country}
@@ -359,19 +362,19 @@ const ProjectsPage = () => {
                 matching "<span className="font-semibold">{searchQuery}</span>"
               </span>
             )}
-            {selectedCategory !== "All" && (
+            {selectedCategory !== allValue && (
               <span>
                 {" "}
                 in <span className="font-semibold">{selectedCategory}</span>
               </span>
             )}
-            {selectedPartner !== "All" && (
+            {selectedPartner !== allValue && (
               <span>
                 {" "}
                 with partner <span className="font-semibold">{selectedPartner}</span>
               </span>
             )}
-            {selectedCountry !== "All" && (
+            {selectedCountry !== allValue && (
               <span>
                 {" "}
                 in <span className="font-semibold">{selectedCountry}</span>
@@ -392,19 +395,19 @@ const ProjectsPage = () => {
         {filteredProjects.length === 0 ? (
           <div className="col-span-full text-center py-16">
             <p className="font-poppins text-xl text-gray-500 mb-4">
-              No projects found matching your criteria.
+              {t("projectsPage.noProjectsFound")}
             </p>
             <button
               onClick={() => {
                 setSearchQuery("");
-                setSelectedCategory("All");
+                setSelectedCategory(allValue);
                 setSelectedDate("");
-                setSelectedPartner("All");
-                setSelectedCountry("All");
+                setSelectedPartner(allValue);
+                setSelectedCountry(allValue);
               }}
               className="px-6 py-3 bg-orange text-white rounded-lg font-poppins font-semibold hover:bg-orange/90 transition-colors"
             >
-              Clear All Filters
+              {t("projectsPage.clearFilters")}
             </button>
           </div>
         ) : (

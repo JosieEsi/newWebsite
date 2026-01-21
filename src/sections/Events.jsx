@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "../hooks/useTranslation";
 
 const Events = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   useEffect(() => {
     // Load Twitter's embed script
@@ -35,7 +37,7 @@ const Events = () => {
           className="font-poppins font-bold text-3xl text-red mb-6"
           whileHover={{ scale: 1.05 }}
         >
-          Upcoming Events
+          {t("events.upcomingEvents")}
         </motion.h3>
 
         <div className="pt-5 max-sm:pl-5 space-y-5">
@@ -91,7 +93,7 @@ const Events = () => {
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.95 }}
           >
-            View All News & Activities →
+            {t("common.viewAll")} {t("common.newsAndActivities")} →
           </motion.a>
         </motion.div>
       </motion.div>
@@ -106,7 +108,7 @@ const Events = () => {
       >
         <div className="h-[350px] w-[300px] bg-black border-solid rounded-3xl max-w-full overflow-hidden">
           <div className="w-full h-10 pt-2 pl-2 bg-yellow-50 flex justify-start rounded-tr-2xl rounded-tl-2xl">
-            <p className="text-xs sm:text-sm">Tweets from @pdaghanaofficial</p>
+            <p className="text-xs sm:text-sm">{t("events.tweetsFrom")}</p>
           </div>
           <a
             className="twitter-timeline"

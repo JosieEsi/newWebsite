@@ -5,8 +5,10 @@ import { podpic, soundwave } from "../assets/images";
 import NewsletterForm from "../components/NewsletterForm";
 import Button from "../components/Button";
 import { FaApple, FaSpotify, FaSoundcloud, FaGoogle, FaPlayCircle } from "react-icons/fa";
+import { useTranslation } from "../hooks/useTranslation";
 
 const Podcast = () => {
+  const { t } = useTranslation();
   const platforms = [
     { name: "Apple Podcasts", icon: FaApple, color: "text-gray-800", link: "https://podcasts.apple.com" },
     { name: "Spotify", icon: FaSpotify, color: "text-green-500", link: "https://open.spotify.com" },
@@ -41,7 +43,7 @@ const Podcast = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          Podcast
+          {t("podcast.title")}
         </motion.h1>
       </motion.div>
 
@@ -84,7 +86,7 @@ const Podcast = () => {
         transition={{ duration: 0.6 }}
       >
         <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200">
-          <h3 className="text-sm font-semibold text-gray-700 mb-6">Where to listen</h3>
+          <h3 className="text-sm font-semibold text-gray-700 mb-6">{t("podcast.listenOn")}</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
             {platforms.map((platform, index) => {
               const Icon = platform.icon;
@@ -100,13 +102,13 @@ const Podcast = () => {
                 >
                   <Icon className={`text-4xl ${platform.color} group-hover:scale-110 transition-transform duration-300`} />
                   <span className="font-bold text-gray-800 text-sm md:text-base">{platform.name}</span>
-                  <span className="text-sm italic text-gray-600">Subscribe</span>
+                  <span className="text-sm italic text-gray-600">{t("podcast.subscribe")}</span>
                 </motion.a>
               );
             })}
           </div>
           <p className="text-sm italic text-gray-600 text-center">
-            Or search for us in your usual podcast provider
+            {t("podcast.orSearch")}
           </p>
         </div>
       </motion.div>
@@ -119,7 +121,7 @@ const Podcast = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="text-2xl md:text-3xl font-bold text-orange mb-8 text-center">Latest Episodes</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-orange mb-8 text-center">{t("podcast.latestEpisodes")}</h2>
         
         {/* Coming Soon Section */}
         <motion.div
@@ -145,11 +147,10 @@ const Podcast = () => {
               <FaPlayCircle className="text-orange text-8xl md:text-9xl opacity-50" />
             </motion.div>
             <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              Coming Soon!
+              {t("common.comingSoon")}!
             </h3>
             <p className="text-lg md:text-xl text-gray-600 mb-6 max-w-2xl mx-auto">
-              We're preparing exciting podcast episodes that will share insights, stories, and discussions 
-              about development work. Stay tuned for our first episode!
+              {t("podcast.comingSoonMessage")}
             </p>
             <motion.div
               className="inline-block px-6 py-3 bg-orange text-white rounded-full font-semibold"
@@ -165,7 +166,7 @@ const Podcast = () => {
                 repeat: Infinity
               }}
             >
-              Be the first to know when we launch
+              {t("podcast.beFirstToKnow")}
             </motion.div>
           </div>
         </motion.div>
@@ -182,14 +183,14 @@ const Podcast = () => {
         <div className="bg-gradient-to-r from-gray-100 to-gray-200 rounded-2xl p-6 md:p-8 shadow-lg">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="font-bold text-xl mb-4">SUBSCRIBE TO OUR NEWSLETTERS</h3>
+              <h3 className="font-bold text-xl mb-4">{t("podcast.subscribeTitle")}</h3>
             </div>
             <div className="flex flex-col">
               <p className="font-bold mb-3 text-gray-800">
-                Stay up to date with PDA research, insights and events on your topics of interest
+                {t("podcast.subscribeDescription")}
               </p>
               <p className="mb-4 text-gray-700 text-sm">
-                We only use your email address to send you the newsletter and to see how many people are opening our emails. Please read our full privacy policy
+                {t("podcast.privacyNote")}
               </p>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <NewsletterForm />

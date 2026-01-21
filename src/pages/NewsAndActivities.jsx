@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaCalendarAlt, FaMapMarkerAlt, FaClock, FaNewspaper, FaVideo, FaImage } from "react-icons/fa";
+import { useTranslation } from "../hooks/useTranslation";
 
 const NewsAndActivities = () => {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState("all");
 
   const newsItems = [
@@ -90,7 +92,7 @@ const NewsAndActivities = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          News & Activities
+          {t("newsAndActivities.title")}
         </motion.h1>
       </motion.div>
 
@@ -115,7 +117,7 @@ const NewsAndActivities = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              {tab === "all" ? "All" : tab === "news" ? "News" : "Activities"}
+              {tab === "all" ? t("newsAndActivities.all") : tab === "news" ? t("newsAndActivities.news") : t("newsAndActivities.activities")}
             </motion.button>
           ))}
         </div>
@@ -153,7 +155,7 @@ const NewsAndActivities = () => {
                   <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
                     item.type === "news" ? "bg-blue-500 text-white" : "bg-green-500 text-white"
                   }`}>
-                    {item.type === "news" ? "News" : "Activity"}
+                    {item.type === "news" ? t("newsAndActivities.news") : t("newsAndActivities.activities")}
                   </span>
                 </div>
                 <div className="absolute top-4 right-4">
@@ -177,7 +179,7 @@ const NewsAndActivities = () => {
                   className="text-orange font-semibold text-sm hover:text-red transition-colors flex items-center gap-2"
                   whileHover={{ x: 5 }}
                 >
-                  Read More
+                  {t("common.readMore")}
                   <span>→</span>
                 </motion.button>
               </div>
@@ -194,7 +196,7 @@ const NewsAndActivities = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="text-3xl font-bold text-orange mb-8 text-center">Media Gallery</h2>
+        <h2 className="text-3xl font-bold text-orange mb-8 text-center">{t("newsAndActivities.mediaGallery")}</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <motion.a
             href="/videos"
@@ -203,8 +205,8 @@ const NewsAndActivities = () => {
             whileTap={{ scale: 0.95 }}
           >
             <FaVideo className="text-5xl mx-auto mb-4" />
-            <h3 className="font-bold text-xl mb-2">Videos</h3>
-            <p className="text-sm opacity-90">Watch our latest video content</p>
+            <h3 className="font-bold text-xl mb-2">{t("nav.videos")}</h3>
+            <p className="text-sm opacity-90">{t("newsAndActivities.viewVideos")}</p>
           </motion.a>
           <motion.a
             href="/photos"
@@ -213,8 +215,8 @@ const NewsAndActivities = () => {
             whileTap={{ scale: 0.95 }}
           >
             <FaImage className="text-5xl mx-auto mb-4" />
-            <h3 className="font-bold text-xl mb-2">Photos</h3>
-            <p className="text-sm opacity-90">Browse our photo galleries</p>
+            <h3 className="font-bold text-xl mb-2">{t("nav.photos")}</h3>
+            <p className="text-sm opacity-90">{t("newsAndActivities.viewPhotos")}</p>
           </motion.a>
           <motion.a
             href="/publications"
@@ -223,8 +225,8 @@ const NewsAndActivities = () => {
             whileTap={{ scale: 0.95 }}
           >
             <FaNewspaper className="text-5xl mx-auto mb-4" />
-            <h3 className="font-bold text-xl mb-2">Publications</h3>
-            <p className="text-sm opacity-90">Read our latest publications</p>
+            <h3 className="font-bold text-xl mb-2">{t("nav.publications")}</h3>
+            <p className="text-sm opacity-90">{t("newsAndActivities.viewPublications")}</p>
           </motion.a>
         </div>
       </motion.div>

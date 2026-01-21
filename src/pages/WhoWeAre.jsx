@@ -1,54 +1,56 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { whoweare } from "../assets/images";
 import { puzzle, peak, dart, bulb } from "../assets/icons";
 import { FaCheckCircle, FaUsers, FaNetworkWired, FaHeart, FaLightbulb, FaHandshake, FaAward } from "react-icons/fa";
+import { useTranslation } from "../hooks/useTranslation";
 
 const WhoWeAre = () => {
   const [hoveredValue, setHoveredValue] = useState(null);
+  const { t } = useTranslation();
 
-  const uniqueness = [
-    { icon: FaUsers, title: "Exceptional Client Focus", color: "text-orange" },
-    { icon: FaNetworkWired, title: "Strong Professional Network", color: "text-red" },
-    { icon: FaHeart, title: "Longevity & Resilience", color: "text-orange" },
-    { icon: FaLightbulb, title: "Vision and Ambition", color: "text-red" },
-    { icon: FaHandshake, title: "Innovative and Dynamic", color: "text-orange" },
-    { icon: FaUsers, title: "Inclusive & People-Centred", color: "text-red" },
-    { icon: FaAward, title: "Quality Service Delivery", color: "text-orange" },
-  ];
+  const uniqueness = useMemo(() => [
+    { icon: FaUsers, title: t("whoWeAre.uniquenessItems.clientFocus"), color: "text-orange" },
+    { icon: FaNetworkWired, title: t("whoWeAre.uniquenessItems.network"), color: "text-red" },
+    { icon: FaHeart, title: t("whoWeAre.uniquenessItems.longevity"), color: "text-orange" },
+    { icon: FaLightbulb, title: t("whoWeAre.uniquenessItems.vision"), color: "text-red" },
+    { icon: FaHandshake, title: t("whoWeAre.uniquenessItems.innovative"), color: "text-orange" },
+    { icon: FaUsers, title: t("whoWeAre.uniquenessItems.inclusive"), color: "text-red" },
+    { icon: FaAward, title: t("whoWeAre.uniquenessItems.quality"), color: "text-orange" },
+  ], [t]);
 
-  const coreValues = [
+  const coreValues = useMemo(() => [
     {
-      title: "Quality",
-      description: "We seek out information and/or data that reflects the situation/voice/context of the people concerned/of interest.",
+      title: t("whoWeAre.coreValuesItems.quality.title"),
+      description: t("whoWeAre.coreValuesItems.quality.description"),
       icon: "✓",
     },
     {
-      title: "Collaboration",
-      description: "We work in partnership with relevant actors / institutions to drive evidence-based solutions and actions.",
+      title: t("whoWeAre.coreValuesItems.collaboration.title"),
+      description: t("whoWeAre.coreValuesItems.collaboration.description"),
       icon: "🤝",
     },
     {
-      title: "Credibility",
-      description: "We are trustworthy and strive for consistency and excellence in everything/what we do.",
+      title: t("whoWeAre.coreValuesItems.credibility.title"),
+      description: t("whoWeAre.coreValuesItems.credibility.description"),
       icon: "⭐",
     },
     {
-      title: "Inclusivity",
-      description: "We work with, and support people of all gender identities, races, ethnicities, and abilities.",
+      title: t("whoWeAre.coreValuesItems.inclusivity.title"),
+      description: t("whoWeAre.coreValuesItems.inclusivity.description"),
       icon: "🌍",
     },
     {
-      title: "Respect",
-      description: "We value the uniqueness of every individual (everyone matters), so we create a safe and supportive environment where the views, opinions and contributions of everyone is encouraged and respected.",
+      title: t("whoWeAre.coreValuesItems.respect.title"),
+      description: t("whoWeAre.coreValuesItems.respect.description"),
       icon: "💙",
     },
     {
-      title: "Transparency",
-      description: "We are transparent and accountable in our dealings with partners and communities we serve.",
+      title: t("whoWeAre.coreValuesItems.transparency.title"),
+      description: t("whoWeAre.coreValuesItems.transparency.description"),
       icon: "🔍",
     },
-  ];
+  ], [t]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -85,7 +87,7 @@ const WhoWeAre = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          Who We Are
+          {t("whoWeAre.title")}
         </motion.h1>
       </motion.div>
 
@@ -114,9 +116,9 @@ const WhoWeAre = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl font-bold text-orange mb-6">Profile</h2>
+          <h2 className="text-3xl font-bold text-orange mb-6">{t("whoWeAre.profile")}</h2>
           <p className="font-poppins text-base md:text-lg text-center leading-relaxed mb-6">
-            PDA has extensive experience researching and evaluating social phenomena in Ghana and the sub-Saharan Africa region. We apply both experimental and non-experimental approaches, combining participatory techniques for both quantitative and qualitative methods to holistically assess and analyze all facets of projects for both programmatic and policy uptake.
+            {t("whoWeAre.profileText")}
           </p>
         </motion.div>
       </motion.section>
@@ -136,7 +138,7 @@ const WhoWeAre = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-orange text-center mb-4">PDA's Uniqueness</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-orange text-center mb-4">{t("whoWeAre.uniqueness")}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
             {uniqueness.map((item, index) => {
               const Icon = item.icon;
@@ -179,9 +181,9 @@ const WhoWeAre = () => {
           transition={{ duration: 0.6 }}
           whileHover={{ scale: 1.02 }}
         >
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">PDA's Unique Selling Proposition</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">{t("whoWeAre.usp")}</h2>
           <p className="text-lg md:text-xl leading-relaxed text-center">
-            We combine African-led insights with innovative strategies, ensuring exceptional quality and resilience in service delivery while prioritizing inclusivity and adaptability in a dynamic market. Our strong professional network and commitment to customer satisfaction empower us to create lasting partnerships and impactful solutions that transcend borders.
+            {t("whoWeAre.uspText")}
           </p>
         </motion.div>
       </motion.section>
@@ -211,9 +213,9 @@ const WhoWeAre = () => {
             <img src={peak} alt="Vision" className="h-24 w-24" />
           </motion.div>
           <div className="flex-1">
-            <h3 className="text-orange font-poppins font-bold text-2xl md:text-3xl mb-4">OUR VISION</h3>
+            <h3 className="text-orange font-poppins font-bold text-2xl md:text-3xl mb-4">{t("whoWeAre.vision")}</h3>
             <p className="font-poppins text-base md:text-lg leading-relaxed">
-              Our vision is of an equitable and sustainable world, where lives and systems are improved by policies, programmes, and interventions that are shaped by evidence and the insights of people.
+              {t("whoWeAre.visionText")}
             </p>
           </div>
         </motion.div>
@@ -244,12 +246,12 @@ const WhoWeAre = () => {
             <img src={dart} alt="Mission" className="h-24 w-24" />
           </motion.div>
           <div className="flex-1">
-            <h3 className="text-orange font-poppins font-bold text-2xl md:text-3xl mb-4">OUR MISSION</h3>
+            <h3 className="text-orange font-poppins font-bold text-2xl md:text-3xl mb-4">{t("whoWeAre.mission")}</h3>
             <p className="font-poppins text-base md:text-lg leading-relaxed mb-4">
-              Our mission is to collaborate locally and globally with communities, state and non-state actors* (multi-national companies, philanthropists, foundations) to generate knowledge, evidence and insights that reflect the voices of individuals, communities, and institutions to advance an equitable and sustainable world.
+              {t("whoWeAre.missionText")}
             </p>
             <p className="font-poppins text-sm text-gray-600 italic">
-              *Non-state actors include multi-national companies, philanthropists, and foundations
+              {t("whoWeAre.missionNote")}
             </p>
           </div>
         </motion.div>
@@ -284,7 +286,7 @@ const WhoWeAre = () => {
               className="flex-1"
               variants={itemVariants}
             >
-              <h3 className="text-orange font-poppins font-bold text-3xl md:text-4xl mb-8">Our Core Values</h3>
+              <h3 className="text-orange font-poppins font-bold text-3xl md:text-4xl mb-8">{t("whoWeAre.coreValues")}</h3>
             </motion.div>
           </div>
 

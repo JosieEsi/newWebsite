@@ -1,16 +1,69 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { search } from "../assets/icons";
-import { navLinks } from "../constants";
-import { navigation } from "../constants";
-import { socialMedia } from "../constants";
+import { navLinks as baseNavLinks, navigation as baseNavigation, socialMedia } from "../constants";
 import Button from "./Button";
 import SearchModal from "./SearchModal";
+import { useTranslation } from "../hooks/useTranslation";
 
 const Menu = ({ onLinkClick }) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const navigate = useNavigate();
+  const { t } = useTranslation();
+
+  // Generate translated navigation
+  const navLinks = useMemo(() => [
+    { href: "/", label: t("nav.home") },
+    { href: "/ethical-review-committee", label: t("nav.ethicalReviewCommittee") },
+    { href: "/child-abuse-tracker", label: t("nav.childAbuseTracker") },
+    { href: "/covid-19", label: t("nav.covid19") },
+    { href: "/#partners", label: t("nav.partners") },
+    { href: "/#events", label: t("nav.events") },
+  ], [t]);
+
+  const navigation = useMemo(() => [
+    {
+      title: t("nav.whoWeAre"),
+      link: "/who-we-are",
+      links: [
+        { name: t("nav.vision"), link: "/who-we-are#vision" },
+        { name: t("nav.mission"), link: "/who-we-are#mission" },
+        { name: t("nav.teams"), link: "/teams" },
+        { name: t("nav.board"), link: "/board" },
+        { name: t("nav.staff"), link: "/staff" },
+      ],
+    },
+    {
+      title: t("nav.whatWeDo"),
+      link: "/what-we-do",
+      links: [
+        { name: t("nav.strategicObjectives"), link: "/what-we-do#strategic-objectives" },
+        { name: t("nav.ourProjects"), link: "/our-projects" },
+        { name: t("nav.expertise"), link: "/what-we-do#expertise" },
+      ],
+    },
+    {
+      title: t("nav.resources"),
+      link: "/publications",
+      links: [
+        { name: t("nav.publications"), link: "/publications" },
+        { name: t("nav.podcast"), link: "/podcast" },
+        { name: t("nav.vodcast"), link: "/vodcast" },
+        { name: t("nav.videos"), link: "/videos" },
+        { name: t("nav.photos"), link: "/photos" },
+      ],
+    },
+    {
+      title: t("nav.impact"),
+      link: "/our-impact",
+      links: [
+        { name: t("nav.impactStories"), link: "/our-impact#impact-stories" },
+        { name: t("nav.webinars"), link: "/our-impact#webinars" },
+        { name: t("nav.workshops"), link: "/our-impact#workshops" },
+      ],
+    },
+  ], [t]);
 
   const handleLinkClick = (e, href) => {
     e.preventDefault();
@@ -111,17 +164,8 @@ const Menu = ({ onLinkClick }) => {
           ))}
           {/* Contact Us Section */}
           <div className="min-w-[180px]">
-            <a
-              href="/contact"
-              onClick={(e) => handleLinkClick(e, "/contact")}
-              className="hover:text-orange transition-colors duration-300"
-            >
-              <h4 className="font-poppins text-black font-semibold text-lg lg:text-xl mb-6 lg:mb-8">
-                Contact Us
-              </h4>
-            </a>
             <a href="/contact" onClick={(e) => handleLinkClick(e, "/contact")}>
-              <Button label="Contact Us" />
+              <Button label={t("nav.contactUs")} />
             </a>
           </div>
         </div>
@@ -142,7 +186,7 @@ const Menu = ({ onLinkClick }) => {
           aria-label="Search"
         >
           <img src={search} alt="Search Icon" className="w-6 h-6" />
-          <span className="font-poppins font-bold text-lg hidden sm:block">SEARCH</span>
+          <span className="font-poppins font-bold text-lg hidden sm:block">{t("common.search").toUpperCase()}</span>
         </motion.button>
       </motion.div>
       

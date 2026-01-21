@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Button from "../components/Button";
+import { useTranslation } from "../hooks/useTranslation";
 
 const Videos = () => {
+  const { t } = useTranslation();
   const videos = [
     {
       id: "61QUHKQ4ECc",
@@ -51,7 +53,7 @@ const Videos = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          Videos
+          {t("videos.title")}
         </motion.h1>
       </motion.div>
 

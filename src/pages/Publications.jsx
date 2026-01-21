@@ -7,8 +7,10 @@ import BookSlider from "../components/BookSlider";
 import FilterableTable from "../components/FilterableTable";
 import NewsletterForm from "../components/NewsletterForm";
 import { FaMicrophone, FaImage, FaVideo, FaDownload } from "react-icons/fa";
+import { useTranslation } from "../hooks/useTranslation";
 
 const Publications = () => {
+  const { t } = useTranslation();
   return (
     <section
       id="publications"
@@ -29,7 +31,7 @@ const Publications = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          Publications
+          {t("publications.title")}
         </motion.h1>
       </motion.div>
 
@@ -106,7 +108,7 @@ const Publications = () => {
             <div className="w-16 h-1 bg-orange mb-5"></div>
             <h3 className="mb-6 text-gray-600 font-semibold">January, 2024</h3>
             <motion.div className="mb-8" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button label="Download >>>" />
+              <Button label={`${t("common.download")} >>>`} />
             </motion.div>
             <motion.div
               className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl p-6 shadow-md"
@@ -116,11 +118,7 @@ const Publications = () => {
               transition={{ delay: 0.2 }}
             >
               <p className="text-gray-700 leading-relaxed">
-                Participatory Development Associates (PDA) is a social development
-                and consultancy organization in Ghana that supports development
-                processes at community, district, national, regional and
-                institutional levels towards creating a fairer world where all
-                people can realize their full potential.
+                {t("publications.featuredDescription")}
               </p>
             </motion.div>
           </div>
@@ -160,18 +158,15 @@ const Publications = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <h3 className="font-bold text-xl md:text-2xl mb-4 text-gray-800">
-                SUBSCRIBE TO OUR NEWSLETTERS
+                {t("publications.subscribeTitle")}
               </h3>
             </div>
             <div className="flex flex-col">
               <p className="font-bold mb-3 text-gray-800 text-lg">
-                Stay up to date with PDA research, insights and events on your
-                topics of interest
+                {t("publications.subscribeDescription")}
               </p>
               <p className="mb-6 text-gray-700 text-sm leading-relaxed">
-                We only use your email address to send you the newsletter and to
-                see how many people are opening our emails. Please read our full
-                privacy policy
+                {t("publications.privacyNote")}
               </p>
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <NewsletterForm />

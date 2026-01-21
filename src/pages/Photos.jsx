@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "../hooks/useTranslation";
 import {
   rand1,
   rand2,
@@ -22,6 +23,7 @@ import {
 } from "../assets/images";
 
 const Photos = () => {
+  const { t } = useTranslation();
   const albums = [
     {
       url: "https://photos.app.goo.gl/DeZ3HMJ9Nn5p1XcJ6",
@@ -164,7 +166,7 @@ const Photos = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          Photos
+          {t("photos.title")}
         </motion.h1>
       </motion.div>
 

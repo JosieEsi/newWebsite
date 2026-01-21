@@ -4,9 +4,11 @@ import { childabuse, abusecase } from "../assets/images";
 import Button from "../components/Button";
 import { FaExclamationTriangle, FaCalendarAlt, FaArrowRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "../hooks/useTranslation";
 
 const ChildAbuseTracker = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const [expandedReport, setExpandedReport] = useState(null);
 
   const reports = [
@@ -102,7 +104,7 @@ const ChildAbuseTracker = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          Child Abuse Tracker
+          {t("childAbuseTracker.title")}
         </motion.h1>
       </motion.div>
 
@@ -119,24 +121,16 @@ const ChildAbuseTracker = () => {
             <FaExclamationTriangle className="text-red text-4xl flex-shrink-0 mt-1" />
             <div>
               <h2 className="font-bold text-2xl md:text-3xl mb-4 text-gray-800">
-                About the Child Abuse Tracker
+                {t("childAbuseTracker.aboutTitle")}
               </h2>
               <p className="text-gray-700 leading-relaxed text-base md:text-lg mb-4">
-                As part of PDA's objective to advocate for the protection of children in Ghana, 
-                the organization developed an online platform that tracks cases of child abuse 
-                published in the newspapers and prominent online portals. The progress of these 
-                cases are also monitored in order to advocate for further intervention where necessary.
+                {t("childAbuseTracker.aboutText1")}
               </p>
               <p className="text-gray-700 leading-relaxed text-base md:text-lg mb-4">
-                Research shows that the reported cases constitute only a small fraction of the real 
-                abuses children face. Majority of the cases go unreported, and the victims live with 
-                the posttraumatic experiences that accompany such abuses. Sadly, even with the cases 
-                reported, justice still remains a distant possibility.
+                {t("childAbuseTracker.aboutText2")}
               </p>
               <p className="text-gray-700 leading-relaxed text-base md:text-lg font-semibold">
-                Join PDA in its efforts to advocate for justice for these victims and for stronger 
-                child protecting systems by visiting the Child Abuse Tracker and learning updates 
-                on specific cases in order to inform advocacy.
+                {t("childAbuseTracker.aboutText3")}
               </p>
             </div>
           </div>
@@ -152,7 +146,7 @@ const ChildAbuseTracker = () => {
         transition={{ duration: 0.6 }}
       >
         <h2 className="text-3xl md:text-4xl font-bold text-orange mb-8 text-center">
-          Quarterly Reports
+          {t("childAbuseTracker.quarterlyReports")}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {reports.map((report, index) => (
@@ -187,7 +181,7 @@ const ChildAbuseTracker = () => {
                       onClick={() => setExpandedReport(null)}
                       className="text-orange font-semibold text-sm hover:text-red transition-colors"
                     >
-                      Read Less
+                      {t("childAbuseTracker.readLess")}
                     </button>
                   </motion.div>
                 ) : (
@@ -200,7 +194,7 @@ const ChildAbuseTracker = () => {
                         onClick={() => setExpandedReport(index)}
                         className="text-orange font-semibold text-sm hover:text-red transition-colors flex items-center gap-2"
                       >
-                        Read More
+                        {t("childAbuseTracker.readMore")}
                         <FaArrowRight className="text-xs" />
                       </button>
                       <a
@@ -209,7 +203,7 @@ const ChildAbuseTracker = () => {
                         rel="noopener noreferrer"
                         className="text-orange font-semibold text-sm hover:text-red transition-colors"
                       >
-                        View Full Report →
+                        {t("childAbuseTracker.viewFullReport")}
                       </a>
                     </div>
                   </>

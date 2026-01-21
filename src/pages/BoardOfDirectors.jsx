@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { tony, eleanor, akosua, edem, annabelle, alex } from "../assets/images";
 import { FaCrown, FaUserTie, FaBuilding, FaCoins, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { useTranslation } from "../hooks/useTranslation";
 
 const BoardOfDirectors = () => {
+  const { t } = useTranslation();
   const [expandedBio, setExpandedBio] = useState(null);
 
   const boardDirectors = [
@@ -105,7 +107,7 @@ const BoardOfDirectors = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          BOARD OF DIRECTORS
+          {t("boardOfDirectors.title").toUpperCase()}
         </motion.h1>
       </motion.div>
 
@@ -118,7 +120,7 @@ const BoardOfDirectors = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Board Leadership
+          {t("boardOfDirectors.boardLeadership")}
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
@@ -182,12 +184,12 @@ const BoardOfDirectors = () => {
                     >
                       {isExpanded ? (
                         <>
-                          <span>Read Less</span>
+                          <span>{t("boardOfDirectors.readLess")}</span>
                           <FaChevronUp />
                         </>
                       ) : (
                         <>
-                          <span>Read More</span>
+                          <span>{t("boardOfDirectors.readMore")}</span>
                           <FaChevronDown />
                         </>
                       )}
@@ -210,7 +212,7 @@ const BoardOfDirectors = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            BOARD MEMBERS
+            {t("boardOfDirectors.boardMembers").toUpperCase()}
           </motion.h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
