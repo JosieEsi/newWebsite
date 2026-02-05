@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { projects as allProjects } from "../components/ProjectsData";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -6,7 +6,7 @@ import { FaSearch, FaFilter, FaCalendarAlt, FaUsers, FaGlobe } from "react-icons
 import { useTranslation } from "../hooks/useTranslation";
 
 const ProjectsPage = () => {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
   const navigate = useNavigate();
   const allValue = t("projectsPage.all");
   const [hoveredProject, setHoveredProject] = useState(null);
@@ -15,6 +15,27 @@ const ProjectsPage = () => {
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedPartner, setSelectedPartner] = useState(allValue);
   const [selectedCountry, setSelectedCountry] = useState(allValue);
+
+  // Reset category filter when language changes
+  useEffect(() => {
+    setSelectedCategory(allValue);
+  }, [language, allValue]);
+
+  // Helper function to get translated project field
+  const getProjectField = (project, fieldName) => {
+    if (!project) return "";
+    
+    // If French is selected and French field exists and is not empty
+    if (language === "fr") {
+      const frenchField = project[`${fieldName}Fr`];
+      if (frenchField && frenchField.trim() !== "") {
+        return frenchField;
+      }
+    }
+    
+    // Fallback to English field
+    return project[fieldName] || "";
+  };
 
   // Extract unique partners and countries from projects
   const uniquePartners = useMemo(() => {
@@ -47,93 +68,149 @@ const ProjectsPage = () => {
     return Array.from(countries).sort();
   }, []);
 
-  // Categories list - using translations
-  const categories = useMemo(() => [
-    allValue,
-    "Agriculture",
-    "Capacity Building",
-    "Child Protection and Welfare",
-    "Climate",
-    "Cocoa Sector",
-    "Community Development",
-    "Education & Literacy",
-    "Employment",
-    "Evidence Generation (MERL)",
-    "Facilitation & Moderation",
-    "Organizational Development",
-    "Policy Analysis & Advocacy",
-    "Women's Economic Empowerment",
-    "Youth Welfare",
-  ], [allValue]);
+  // Categories list - translated based on current language
+  const categories = useMemo(() => {
+    const categoryTranslations = {
+      en: {
+        all: allValue,
+        agriculture: "Agriculture",
+        capacityBuilding: "Capacity Building",
+        childProtection: "Child Protection and Welfare",
+        climate: "Climate",
+        cocoaSector: "Cocoa Sector",
+        communityDevelopment: "Community Development",
+        educationLiteracy: "Education & Literacy",
+        employment: "Employment",
+        evidenceGeneration: "Evidence Generation (MERL)",
+        facilitationModeration: "Facilitation & Moderation",
+        organizationalDevelopment: "Organizational Development",
+        policyAdvocacy: "Policy Analysis & Advocacy",
+        womenEmpowerment: "Women's Economic Empowerment",
+        youthWelfare: "Youth Welfare",
+      },
+      fr: {
+        all: allValue,
+        agriculture: "Agriculture",
+        capacityBuilding: "Renforcement des Capacités",
+        childProtection: "Protection et Bien-être des Enfants",
+        climate: "Climat",
+        cocoaSector: "Secteur du Cacao",
+        communityDevelopment: "Développement Communautaire",
+        educationLiteracy: "Éducation et Alphabétisation",
+        employment: "Emploi",
+        evidenceGeneration: "Génération de Preuves (MERL)",
+        facilitationModeration: "Facilitation et Modération",
+        organizationalDevelopment: "Développement Organisationnel",
+        policyAdvocacy: "Analyse et Plaidoyer Politique",
+        womenEmpowerment: "Autonomisation Économique des Femmes",
+        youthWelfare: "Bien-être des Jeunes",
+      },
+    };
 
-  // Helper function to map project categories to filter categories
+    const cats = categoryTranslations[language] || categoryTranslations.en;
+    return [
+      cats.all,
+      cats.agriculture,
+      cats.capacityBuilding,
+      cats.childProtection,
+      cats.climate,
+      cats.cocoaSector,
+      cats.communityDevelopment,
+      cats.educationLiteracy,
+      cats.employment,
+      cats.evidenceGeneration,
+      cats.facilitationModeration,
+      cats.organizationalDevelopment,
+      cats.policyAdvocacy,
+      cats.womenEmpowerment,
+      cats.youthWelfare,
+    ];
+  }, [allValue, language]);
+
+  // Helper function to map project categories to filter categories (works in both languages)
   const mapCategoryToFilter = (projectCategory) => {
     if (!projectCategory) return allValue;
     
     const categoryLower = projectCategory.toLowerCase();
     
-    // Map existing categories to new filter categories
-    if (categoryLower.includes("agriculture") || categoryLower.includes("cocoa")) {
-      if (categoryLower.includes("cocoa")) return "Cocoa Sector";
-      return "Agriculture";
+    // Category mapping - returns English category name for matching
+    // This ensures consistent filtering regardless of language
+    if (categoryLower.includes("agriculture") || categoryLower.includes("cocoa") || categoryLower.includes("cacao")) {
+      if (categoryLower.includes("cocoa") || categoryLower.includes("cacao")) {
+        return language === "fr" ? "Secteur du Cacao" : "Cocoa Sector";
+      }
+      return language === "fr" ? "Agriculture" : "Agriculture";
     }
-    if (categoryLower.includes("education") || categoryLower.includes("literacy")) {
-      return "Education & Literacy";
+    if (categoryLower.includes("education") || categoryLower.includes("literacy") || categoryLower.includes("éducation") || categoryLower.includes("alphabétisation")) {
+      return language === "fr" ? "Éducation et Alphabétisation" : "Education & Literacy";
     }
-    if (categoryLower.includes("child") || categoryLower.includes("protection") || categoryLower.includes("welfare")) {
-      return "Child Protection and Welfare";
+    if (categoryLower.includes("child") || categoryLower.includes("protection") || categoryLower.includes("welfare") || categoryLower.includes("enfant") || categoryLower.includes("bien-être")) {
+      return language === "fr" ? "Protection et Bien-être des Enfants" : "Child Protection and Welfare";
     }
-    if (categoryLower.includes("women") || categoryLower.includes("gender")) {
-      return "Women's Economic Empowerment";
+    if (categoryLower.includes("women") || categoryLower.includes("gender") || categoryLower.includes("femme") || categoryLower.includes("genre")) {
+      return language === "fr" ? "Autonomisation Économique des Femmes" : "Women's Economic Empowerment";
     }
-    if (categoryLower.includes("youth")) {
-      return "Youth Welfare";
+    if (categoryLower.includes("youth") || categoryLower.includes("jeune")) {
+      return language === "fr" ? "Bien-être des Jeunes" : "Youth Welfare";
     }
-    if (categoryLower.includes("climate") || categoryLower.includes("environment")) {
-      return "Climate";
+    if (categoryLower.includes("climate") || categoryLower.includes("environment") || categoryLower.includes("climat") || categoryLower.includes("environnement")) {
+      return language === "fr" ? "Climat" : "Climate";
     }
-    if (categoryLower.includes("capacity") || categoryLower.includes("training")) {
-      return "Capacity Building";
+    if (categoryLower.includes("capacity") || categoryLower.includes("training") || categoryLower.includes("capacité") || categoryLower.includes("formation")) {
+      return language === "fr" ? "Renforcement des Capacités" : "Capacity Building";
     }
-    if (categoryLower.includes("community")) {
-      return "Community Development";
+    if (categoryLower.includes("community") || categoryLower.includes("communautaire")) {
+      return language === "fr" ? "Développement Communautaire" : "Community Development";
     }
-    if (categoryLower.includes("employment") || categoryLower.includes("job")) {
-      return "Employment";
+    if (categoryLower.includes("employment") || categoryLower.includes("job") || categoryLower.includes("emploi")) {
+      return language === "fr" ? "Emploi" : "Employment";
     }
-    if (categoryLower.includes("research") || categoryLower.includes("evaluation") || categoryLower.includes("merl")) {
-      return "Evidence Generation (MERL)";
+    if (categoryLower.includes("research") || categoryLower.includes("evaluation") || categoryLower.includes("merl") || categoryLower.includes("recherche") || categoryLower.includes("évaluation")) {
+      return language === "fr" ? "Génération de Preuves (MERL)" : "Evidence Generation (MERL)";
     }
-    if (categoryLower.includes("policy") || categoryLower.includes("advocacy")) {
-      return "Policy Analysis & Advocacy";
+    if (categoryLower.includes("policy") || categoryLower.includes("advocacy") || categoryLower.includes("politique") || categoryLower.includes("plaidoyer")) {
+      return language === "fr" ? "Analyse et Plaidoyer Politique" : "Policy Analysis & Advocacy";
     }
-    if (categoryLower.includes("organizational") || categoryLower.includes("organization")) {
-      return "Organizational Development";
+    if (categoryLower.includes("organizational") || categoryLower.includes("organization") || categoryLower.includes("organisationnel") || categoryLower.includes("organisation")) {
+      return language === "fr" ? "Développement Organisationnel" : "Organizational Development";
     }
-    if (categoryLower.includes("facilitation") || categoryLower.includes("moderation")) {
-      return "Facilitation & Moderation";
+    if (categoryLower.includes("facilitation") || categoryLower.includes("moderation") || categoryLower.includes("facilitation") || categoryLower.includes("modération")) {
+      return language === "fr" ? "Facilitation et Modération" : "Facilitation & Moderation";
     }
     
     // Default to Community Development if no match
-    return "Community Development";
+    return language === "fr" ? "Développement Communautaire" : "Community Development";
   };
 
   // Filter projects based on search, category, date, partner, and country
   const filteredProjects = useMemo(() => {
     return allProjects.filter((project) => {
-      // Search filter (by name/description)
+      // Get translated project fields
+      const projectTitle = getProjectField(project, "title");
+      const projectDescription = getProjectField(project, "description");
+      const projectFullDescription = getProjectField(project, "fullDescription");
+      const projectCategory = project.category; // Category is not translated, use original
+
+      // Search filter (by name/description) - search in both English and French
       const matchesSearch =
         searchQuery === "" ||
-        project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        (project.fullDescription &&
-          project.fullDescription.toLowerCase().includes(searchQuery.toLowerCase()));
+        projectTitle.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        projectDescription.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        (projectFullDescription &&
+          projectFullDescription.toLowerCase().includes(searchQuery.toLowerCase())) ||
+        // Also search in English fields as fallback
+        (language === "fr" && (
+          (project.title && project.title.toLowerCase().includes(searchQuery.toLowerCase())) ||
+          (project.description && project.description.toLowerCase().includes(searchQuery.toLowerCase())) ||
+          (project.fullDescription && project.fullDescription.toLowerCase().includes(searchQuery.toLowerCase()))
+        ));
 
-      // Category filter
+      // Category filter - compare mapped category with selected category
+      const mappedCategory = mapCategoryToFilter(projectCategory);
       const matchesCategory =
         selectedCategory === allValue ||
-        project.category === selectedCategory ||
-        mapCategoryToFilter(project.category) === selectedCategory;
+        projectCategory === selectedCategory ||
+        mappedCategory === selectedCategory;
 
       // Date filter (by period)
       const matchesDate =
@@ -159,7 +236,7 @@ const ProjectsPage = () => {
 
       return matchesSearch && matchesCategory && matchesDate && matchesPartner && matchesCountry;
     });
-  }, [searchQuery, selectedCategory, selectedDate, selectedPartner, selectedCountry, allValue]);
+  }, [searchQuery, selectedCategory, selectedDate, selectedPartner, selectedCountry, allValue, language]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -390,7 +467,7 @@ const ProjectsPage = () => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        key={`${searchQuery}-${selectedCategory}-${selectedDate}-${selectedPartner}-${selectedCountry}`}
+        key={`${searchQuery}-${selectedCategory}-${selectedDate}-${selectedPartner}-${selectedCountry}-${language}`}
       >
         {filteredProjects.length === 0 ? (
           <div className="col-span-full text-center py-16">
@@ -437,7 +514,7 @@ const ProjectsPage = () => {
                 <div className="relative h-64 overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
                   <img
                     src={project.image}
-                    alt={project.title}
+                    alt={getProjectField(project, "title")}
                     className={`w-full h-full object-cover transition-transform duration-500 ${
                       isHovered ? "scale-110" : "scale-100"
                     }`}
@@ -453,7 +530,7 @@ const ProjectsPage = () => {
                       isHovered ? "scale-110 rotate-3" : "scale-100"
                     }`}
                   >
-                    {project.category}
+                    {mapCategoryToFilter(project.category)}
                   </div>
 
                   {/* Status Badge */}
@@ -467,10 +544,10 @@ const ProjectsPage = () => {
                   <h3
                     className={`font-poppins font-bold text-xl mb-3 ${colors.text} transition-colors duration-300`}
                   >
-                    {project.title}
+                    {getProjectField(project, "title")}
                   </h3>
                   <p className="font-poppins text-sm text-gray-600 mb-4 line-clamp-2">
-                    {project.description}
+                    {getProjectField(project, "description")}
                   </p>
 
                   {/* Location */}
@@ -508,7 +585,7 @@ const ProjectsPage = () => {
                   >
                     <div className="pt-4 border-t border-gray-200">
                       <p className="font-poppins text-sm text-gray-700 mb-4 leading-relaxed">
-                        {project.fullDescription}
+                        {getProjectField(project, "fullDescription")}
                       </p>
                       <button
                         onClick={() => {
@@ -577,6 +654,19 @@ const ProjectsPage = () => {
             className="bg-white text-orange px-8 py-4 rounded-lg font-poppins font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             Get in Touch
+          </button>
+        </div>
+        
+        {/* Link to Archives Page */}
+        <div className="mt-8">
+          <button
+            onClick={() => navigate("/archives")}
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg font-poppins font-semibold transition-all duration-300 transform hover:scale-105 shadow-md"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            {t("projectsPage.viewArchives")}
           </button>
         </div>
       </motion.div>

@@ -25,6 +25,7 @@ import { useEffect } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ScrollToTop from "./components/ScrollToTop";
+import CookieConsent from "./components/CookieConsent";
 
 
 const App = () => {
@@ -117,6 +118,9 @@ const App = () => {
       <section className="bg-[#525050] padding">
         <Footer />
       </section>
+      
+      {/* Cookie Consent Banner */}
+      <CookieConsent />
     </main>
   );
 };

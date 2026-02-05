@@ -30,5 +30,5 @@ export const useTranslation = () => {
     return value || key;
   };
 
-  return { t, language };
+  return { t, language, currentLanguage: language };
 };

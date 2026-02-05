@@ -241,9 +241,21 @@ const EthicalReviewCommittee = () => {
             </h3>
             <div className="space-y-4">
               {[
-                "Preliminary Screening Tool",
-                "ERC Guidelines for Applicants",
-                "ERC Application Form"
+                {
+                  title: "Preliminary Screening Tool",
+                  filePath: "/assets/documents/preliminary_screening_tool.docx",
+                  fileName: "preliminary_screening_tool.docx"
+                },
+                {
+                  title: "ERC Guidelines for Applicants",
+                  filePath: "/assets/documents/ERC-Guidelines-for-Applicants.pdf",
+                  fileName: "ERC-Guidelines-for-Applicants.pdf"
+                },
+                {
+                  title: "ERC Application Form",
+                  filePath: "/assets/documents/ERC_application_form.docx",
+                  fileName: "ERC_application_form.docx"
+                }
               ].map((doc, index) => (
                 <motion.div
                   key={index}
@@ -260,12 +272,20 @@ const EthicalReviewCommittee = () => {
                     </div>
                     <div className="flex-grow">
                       <p className="font-poppins text-sm font-semibold text-gray-800">
-                        {doc}
+                        {doc.title}
                       </p>
                     </div>
-                    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                    <motion.a
+                      href={doc.filePath}
+                      download={doc.fileName}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                      onClick={(e) => e.stopPropagation()}
+                    >
                       <Button label={t("common.download")} />
-                    </motion.div>
+                    </motion.a>
                   </div>
                 </motion.div>
               ))}

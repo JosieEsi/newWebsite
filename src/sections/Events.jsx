@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "../hooks/useTranslation";
@@ -6,14 +6,79 @@ import { useTranslation } from "../hooks/useTranslation";
 const Events = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
+  const twitterContainerRef = useRef(null);
+  const [isInView, setIsInView] = useState(false);
+  const [tweets, setTweets] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Load Twitter's embed script
-    const script = document.createElement("script");
-    script.src = "https://platform.twitter.com/widgets.js";
-    script.async = true;
-    document.body.appendChild(script);
+    // Intersection Observer to detect when Twitter container is visible
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsInView(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (twitterContainerRef.current) {
+      observer.observe(twitterContainerRef.current);
+    }
+
+    return () => {
+      if (twitterContainerRef.current) {
+        observer.unobserve(twitterContainerRef.current);
+      }
+    };
   }, []);
+
+  useEffect(() => {
+    if (!isInView) return;
+
+    // Load Twitter widgets script
+    const loadTwitterScript = () => {
+      // Check if script already exists
+      if (document.getElementById("twitter-wjs")) {
+        if (window.twttr && window.twttr.widgets) {
+          window.twttr.widgets.load();
+          setLoading(false);
+        }
+        return;
+      }
+
+      // Create and load script
+      const script = document.createElement("script");
+      script.id = "twitter-wjs";
+      script.src = "https://platform.twitter.com/widgets.js";
+      script.async = true;
+      script.charset = "utf-8";
+      
+      script.onload = () => {
+        if (window.twttr && window.twttr.widgets) {
+          window.twttr.widgets.load();
+          setLoading(false);
+        }
+      };
+
+      script.onerror = () => {
+        setLoading(false);
+      };
+
+      document.body.appendChild(script);
+    };
+
+    // Small delay to ensure DOM is ready
+    const timer = setTimeout(loadTwitterScript, 300);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [isInView]);
+
+
 
   const events = [
     { day: "02", month: "SEPT", title: "Cluster Reading Level Competition", location: "Mankraso" },
@@ -106,19 +171,38 @@ const Events = () => {
         transition={{ duration: 0.6 }}
         whileHover={{ scale: 1.02 }}
       >
-        <div className="h-[350px] w-[300px] bg-black border-solid rounded-3xl max-w-full overflow-hidden">
+        <div className="h-[350px] w-[300px] bg-black border-solid rounded-3xl max-w-full overflow-hidden" ref={twitterContainerRef}>
           <div className="w-full h-10 pt-2 pl-2 bg-yellow-50 flex justify-start rounded-tr-2xl rounded-tl-2xl">
             <p className="text-xs sm:text-sm">{t("events.tweetsFrom")}</p>
           </div>
-          <a
-            className="twitter-timeline"
-            data-width="295"
-            data-height="300"
-            data-theme="dark"
-            href="https://twitter.com/pdaghofficial?ref_src=twsrc%5Etfw"
-          >
-            Tweets by pdaghofficial
-          </a>
+          <div className="w-full h-[310px] overflow-hidden bg-black">
+            {isInView ? (
+              <div className="w-full h-full overflow-y-auto">
+                {loading ? (
+                  <div className="flex items-center justify-center h-full text-white/50">
+                    <p className="text-sm">Loading tweets...</p>
+                  </div>
+                ) : (
+                  <div className="w-full h-full">
+                    <blockquote 
+                      className="twitter-timeline" 
+                      data-theme="dark" 
+                      data-width="295" 
+                      data-height="300"
+                      data-chrome="noheader nofooter"
+                      data-tweet-limit="5"
+                    >
+                      <a href="https://x.com/pdaghofficial?ref_src=twsrc%5Etfw">Tweets by pdaghofficial</a>
+                    </blockquote>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div className="flex items-center justify-center h-full text-white/50">
+                <p className="text-sm">Loading...</p>
+              </div>
+            )}
+          </div>
         </div>
       </motion.div>
     </section>

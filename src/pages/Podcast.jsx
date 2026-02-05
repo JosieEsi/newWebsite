@@ -32,6 +32,8 @@ const Podcast = () => {
           src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=1920&q=80" 
           className="w-full h-[400px] md:h-[500px] object-cover" 
           alt="Podcast"
+          loading="lazy"
+          decoding="async"
           onError={(e) => {
             e.target.src = podpic;
           }}

@@ -101,7 +101,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="max-container w-full min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24"
+      className="w-full min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24"
     >
       {/* Hero Section */}
       <motion.div

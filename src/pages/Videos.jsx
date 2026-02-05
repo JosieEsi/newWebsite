@@ -8,10 +8,10 @@ const Videos = () => {
   const videos = [
     {
       id: "61QUHKQ4ECc",
-      title: "Knowledge Sharing Workshop on Child Protection",
+      title: "VSLA & GALS - End of First Cycle (Full Documentary)",
     },
-    { id: "6VhatIeDRpo", title: "Community Development Initiatives" },
-    { id: "5r9aOmU0mWI", title: "VSLA Training Program" },
+    { id: "6VhatIeDRpo", title: "Cocoa Community Library Project" },
+    { id: "5r9aOmU0mWI", title: "Child Labour Remediation" },
     { id: "vE39_togVdE", title: "Introduction of the VLSA/GALS Program" },
     { id: "iIA6YCYQK7s", title: "Short video on VSLA/GALS project" },
     { id: "WP7Fqs8fNrI", title: "Child Labour Awareness" },
@@ -100,7 +100,7 @@ const Videos = () => {
               </h2>
               <div className="w-16 h-1 bg-white mb-4"></div>
               <p className="text-white/90 text-sm">
-                Watch our featured video content showcasing PDA's impactful work and community initiatives.
+                {t("videos.featuredDescription")}
               </p>
             </div>
           </motion.div>
@@ -146,7 +146,7 @@ const Videos = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button label="Watch All Videos >>>" />
+            <Button label={`${t("videos.watchAllVideos")} >>>`} />
           </a>
         </motion.div>
       </motion.section>

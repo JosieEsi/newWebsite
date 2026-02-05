@@ -11,7 +11,7 @@ const Covid19 = () => {
     {
       date: "12 APRIL, 2022",
       title: "COVID-19; A THREAT TO FOOD SECURITY",
-      downloadLink: "#"
+      downloadLink: "/assets/documents/COVID-19 A Threat To Food Security In Ghana.pdf"
     },
     {
       date: "26 MAY, 2022",
@@ -92,20 +92,34 @@ const Covid19 = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <a
-                  href={pub.downloadLink}
-                  download
-                  className="inline-block"
-                >
+                {pub.downloadLink !== "#" ? (
+                  <a
+                    href={pub.downloadLink}
+                    download
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block"
+                  >
+                    <Button
+                      label={
+                        <span className="flex items-center gap-2">
+                          <FaDownload />
+                          {t("covid19.download")}
+                        </span>
+                      }
+                    />
+                  </a>
+                ) : (
                   <Button
                     label={
                       <span className="flex items-center gap-2">
-                        <FaDownload />
+                        <FaFilePdf />
                         {t("covid19.download")}
                       </span>
                     }
+                    disabled={true}
                   />
-                </a>
+                )}
               </motion.div>
             </motion.div>
           ))}

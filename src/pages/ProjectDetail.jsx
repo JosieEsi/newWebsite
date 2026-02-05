@@ -1,27 +1,65 @@
 import React from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { projects } from "../components/ProjectsData";
+import { archivedProjects } from "../components/ArchivedProjectsData";
 import { motion } from "framer-motion";
 import { FaArrowLeft, FaMapMarkerAlt, FaCalendarAlt, FaUsers, FaTag } from "react-icons/fa";
+import { useTranslation } from "../hooks/useTranslation";
 
 const ProjectDetail = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
+  const { currentLanguage } = useTranslation();
   
-  // Find the project by slug
-  const project = projects.find((p) => p.slug === slug);
+  // Check if this is an archived project based on the route
+  const isArchived = location.pathname.startsWith("/archives");
+  
+  // Find the project by slug in the appropriate data source
+  const project = isArchived 
+    ? archivedProjects.find((p) => p.slug === slug)
+    : projects.find((p) => p.slug === slug);
+  
+  // Helper function to get translated field or fallback to English
+  const getField = (fieldName) => {
+    if (!project) return "";
+    
+    // If French is selected, try to get French field first
+    if (currentLanguage === "fr") {
+      const frenchField = project[`${fieldName}Fr`];
+      
+      // Check if it's an array
+      if (Array.isArray(frenchField)) {
+        return frenchField.length > 0 ? frenchField : (project[fieldName] || []);
+      }
+      
+      // Check if it's a string
+      if (typeof frenchField === "string" && frenchField.trim() !== "") {
+        return frenchField;
+      }
+      
+      // If French field doesn't exist or is empty, fall through to English
+    }
+    
+    // Fallback to English field
+    const englishField = project[fieldName];
+    if (Array.isArray(englishField)) {
+      return englishField;
+    }
+    return englishField || "";
+  };
 
   if (!project) {
     return (
       <section className="max-container w-full min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-red mb-4">Project Not Found</h1>
-          <p className="text-gray-600 mb-8">The project you're looking for doesn't exist.</p>
+          <h1 className="text-4xl font-bold text-red mb-4">{currentLanguage === "fr" ? "Projet Non Trouvé" : "Project Not Found"}</h1>
+          <p className="text-gray-600 mb-8">{currentLanguage === "fr" ? "Le projet que vous recherchez n'existe pas." : "The project you're looking for doesn't exist."}</p>
           <button
             onClick={() => navigate("/our-projects")}
             className="bg-orange text-white px-6 py-3 rounded-lg hover:bg-orange/90 transition-colors"
           >
-            Back to Projects
+            {currentLanguage === "fr" ? "Retour aux Projets" : "Back to Projects"}
           </button>
         </div>
       </section>
@@ -49,11 +87,15 @@ const ProjectDetail = () => {
   const handleBackClick = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    navigate("/our-projects", { replace: false });
+    if (isArchived) {
+      navigate("/archives", { replace: false });
+    } else {
+      navigate("/our-projects", { replace: false });
+    }
   };
 
   return (
-    <section className="max-container w-full min-h-screen bg-white relative">
+    <section className="max-container w-full min-h-screen bg-white relative" key={`project-${slug}-${currentLanguage}`}>
       {/* Back Button */}
       <div className="fixed top-20 left-6 z-50 lg:left-20">
         <motion.button
@@ -66,7 +108,9 @@ const ProjectDetail = () => {
           transition={{ duration: 0.3 }}
         >
           <FaArrowLeft className="text-lg" />
-          <span>Back to Projects</span>
+          <span>{currentLanguage === "fr" 
+            ? (isArchived ? "Retour aux Archives" : "Retour aux Projets")
+            : (isArchived ? "Back to Archives" : "Back to Projects")}</span>
         </motion.button>
       </div>
 
@@ -79,7 +123,7 @@ const ProjectDetail = () => {
       >
         <img
           src={project.image}
-          alt={project.title}
+          alt={getField("title")}
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
@@ -90,16 +134,16 @@ const ProjectDetail = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            {project.title}
+            {getField("title")}
           </motion.h1>
-          {project.subtitle && (
+          {getField("subtitle") && (
             <motion.p
               className="text-xl text-white/90 font-poppins"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.3 }}
             >
-              {project.subtitle}
+              {getField("subtitle")}
             </motion.p>
           )}
         </div>
@@ -112,7 +156,7 @@ const ProjectDetail = () => {
             <div className="flex items-start gap-3">
               <FaUsers className={`text-2xl ${colors.text} mt-1`} />
               <div>
-                <h3 className="font-semibold text-gray-800 mb-1">Partners</h3>
+                <h3 className="font-semibold text-gray-800 mb-1">{currentLanguage === "fr" ? "Partenaires" : "Partners"}</h3>
                 <p className="text-gray-600 text-sm">{project.partners}</p>
               </div>
             </div>
@@ -121,7 +165,7 @@ const ProjectDetail = () => {
             <div className="flex items-start gap-3">
               <FaCalendarAlt className={`text-2xl ${colors.text} mt-1`} />
               <div>
-                <h3 className="font-semibold text-gray-800 mb-1">Period</h3>
+                <h3 className="font-semibold text-gray-800 mb-1">{currentLanguage === "fr" ? "Période" : "Period"}</h3>
                 <p className="text-gray-600 text-sm">{project.period}</p>
               </div>
             </div>
@@ -130,7 +174,7 @@ const ProjectDetail = () => {
             <div className="flex items-start gap-3">
               <FaMapMarkerAlt className={`text-2xl ${colors.text} mt-1`} />
               <div>
-                <h3 className="font-semibold text-gray-800 mb-1">Location</h3>
+                <h3 className="font-semibold text-gray-800 mb-1">{currentLanguage === "fr" ? "Lieu" : "Location"}</h3>
                 <p className="text-gray-600 text-sm">{project.location}</p>
               </div>
             </div>
@@ -139,7 +183,7 @@ const ProjectDetail = () => {
             <div className="flex items-start gap-3">
               <FaTag className={`text-2xl ${colors.text} mt-1`} />
               <div>
-                <h3 className="font-semibold text-gray-800 mb-1">Category</h3>
+                <h3 className="font-semibold text-gray-800 mb-1">{currentLanguage === "fr" ? "Catégorie" : "Category"}</h3>
                 <p className="text-gray-600 text-sm">{project.category}</p>
               </div>
             </div>
@@ -148,7 +192,7 @@ const ProjectDetail = () => {
       </div>
 
       {/* Main Content */}
-      <div className="px-6 lg:px-20 py-12">
+      <div className="px-6 lg:px-20 py-12" key={currentLanguage}>
         <div className="max-w-4xl mx-auto">
           {/* Project Snapshot */}
           {project.snapshot && (
@@ -159,10 +203,10 @@ const ProjectDetail = () => {
               transition={{ delay: 0.4 }}
             >
               <h2 className={`text-3xl font-bold ${colors.text} mb-6 font-poppins`}>
-                Project Snapshot
+                {currentLanguage === "fr" ? "Aperçu du Projet" : "Project Snapshot"}
               </h2>
               <div className="prose prose-lg max-w-none">
-                {project.snapshot.split('\n').map((paragraph, index) => (
+                {(getField("snapshot") || "").split('\n').map((paragraph, index) => (
                   paragraph.trim() && (
                     <p key={index} className="text-gray-700 mb-4 leading-relaxed font-poppins">
                       {paragraph.trim()}
@@ -182,10 +226,10 @@ const ProjectDetail = () => {
               transition={{ delay: 0.5 }}
             >
               <h2 className={`text-3xl font-bold ${colors.text} mb-6 font-poppins`}>
-                How We Went About It
+                {currentLanguage === "fr" ? "Comment Nous Nous Y Sommes Pris" : "How We Went About It"}
               </h2>
               <div className="prose prose-lg max-w-none">
-                {project.howWeWentAboutIt.split('\n').map((paragraph, index) => (
+                {(getField("howWeWentAboutIt") || "").split('\n').map((paragraph, index) => (
                   paragraph.trim() && (
                     <p key={index} className="text-gray-700 mb-4 leading-relaxed font-poppins">
                       {paragraph.trim()}
@@ -205,10 +249,10 @@ const ProjectDetail = () => {
               transition={{ delay: 0.6 }}
             >
               <h2 className={`text-3xl font-bold ${colors.text} mb-6 font-poppins`}>
-                Key Objectives
+                {currentLanguage === "fr" ? "Objectifs Clés" : "Key Objectives"}
               </h2>
               <ul className="list-disc list-inside space-y-3">
-                {project.objectives.map((objective, index) => (
+                {getField("objectives").map((objective, index) => (
                   <li key={index} className="text-gray-700 leading-relaxed font-poppins">
                     {objective}
                   </li>
@@ -226,10 +270,10 @@ const ProjectDetail = () => {
               transition={{ delay: 0.7 }}
             >
               <h2 className={`text-3xl font-bold ${colors.text} mb-6 font-poppins`}>
-                Key Activities
+                {currentLanguage === "fr" ? "Activités Clés" : "Key Activities"}
               </h2>
               <ul className="list-disc list-inside space-y-3">
-                {project.activities.map((activity, index) => (
+                {getField("activities").map((activity, index) => (
                   <li key={index} className="text-gray-700 leading-relaxed font-poppins">
                     {activity}
                   </li>
@@ -247,10 +291,10 @@ const ProjectDetail = () => {
               transition={{ delay: 0.8 }}
             >
               <h2 className={`text-3xl font-bold ${colors.text} mb-6 font-poppins`}>
-                Expected Outcomes
+                {currentLanguage === "fr" ? "Résultats Attendus" : "Expected Outcomes"}
               </h2>
               <ul className="list-disc list-inside space-y-3">
-                {project.outcomes.map((outcome, index) => (
+                {getField("outcomes").map((outcome, index) => (
                   <li key={index} className="text-gray-700 leading-relaxed font-poppins">
                     {outcome}
                   </li>
@@ -260,38 +304,44 @@ const ProjectDetail = () => {
           )}
 
           {/* Additional Content Sections */}
-          {project.additionalSections && project.additionalSections.map((section, index) => (
-            <motion.div
-              key={index}
-              className="mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.9 + index * 0.1 }}
-            >
-              <h2 className={`text-3xl font-bold ${colors.text} mb-6 font-poppins`}>
-                {section.title}
-              </h2>
-              <div className="prose prose-lg max-w-none">
-                {typeof section.content === 'string' ? (
-                  section.content.split('\n').map((paragraph, pIndex) => (
-                    paragraph.trim() && (
-                      <p key={pIndex} className="text-gray-700 mb-4 leading-relaxed font-poppins">
-                        {paragraph.trim()}
-                      </p>
-                    )
-                  ))
-                ) : (
-                  <ul className="list-disc list-inside space-y-3">
-                    {section.content.map((item, itemIndex) => (
-                      <li key={itemIndex} className="text-gray-700 leading-relaxed font-poppins">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            </motion.div>
-          ))}
+          {project.additionalSections && project.additionalSections.map((section, index) => {
+            // Get translated section title and content
+            const sectionTitle = currentLanguage === "fr" && section.titleFr ? section.titleFr : section.title;
+            const sectionContent = currentLanguage === "fr" && section.contentFr ? section.contentFr : section.content;
+            
+            return (
+              <motion.div
+                key={index}
+                className="mb-12"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.9 + index * 0.1 }}
+              >
+                <h2 className={`text-3xl font-bold ${colors.text} mb-6 font-poppins`}>
+                  {sectionTitle}
+                </h2>
+                <div className="prose prose-lg max-w-none">
+                  {typeof sectionContent === 'string' ? (
+                    sectionContent.split('\n').map((paragraph, pIndex) => (
+                      paragraph.trim() && (
+                        <p key={pIndex} className="text-gray-700 mb-4 leading-relaxed font-poppins">
+                          {paragraph.trim()}
+                        </p>
+                      )
+                    ))
+                  ) : (
+                    <ul className="list-disc list-inside space-y-3">
+                      {Array.isArray(sectionContent) && sectionContent.map((item, itemIndex) => (
+                        <li key={itemIndex} className="text-gray-700 leading-relaxed font-poppins">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </motion.div>
+            );
+          })}
 
           {/* Status Badge */}
           <motion.div
@@ -301,7 +351,7 @@ const ProjectDetail = () => {
             transition={{ delay: 1 }}
           >
             <div className="flex items-center gap-4">
-              <span className="text-gray-600 font-semibold">Status:</span>
+              <span className="text-gray-600 font-semibold">{currentLanguage === "fr" ? "Statut :" : "Status:"}</span>
               <span className={`px-4 py-2 rounded-full text-white font-semibold ${colors.bg}`}>
                 {project.status}
               </span>

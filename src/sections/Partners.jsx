@@ -111,9 +111,14 @@ import {
 // import { partners } from "../constants";
 
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import Button from "../components/Button";
+import { useTranslation } from "../hooks/useTranslation";
 
 const Partners = () => {
+  const navigate = useNavigate();
+  const { t } = useTranslation();
   const partners = [
     { imgURL: beyond, name: "Beyond" },
     { imgURL: british, name: "British" },
@@ -191,6 +196,20 @@ const Partners = () => {
             ))}
           </div>
         </div>
+
+        {/* View More Button */}
+        <motion.div
+          className="flex justify-center mt-8"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+        >
+          <Button 
+            label={t("partnersPage.viewMore")} 
+            onClick={() => navigate("/partners")}
+          />
+        </motion.div>
       </motion.div>
     </section>
   );

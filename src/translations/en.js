@@ -52,6 +52,9 @@ export const en = {
     viewAll: "View All",
     newsAndActivities: "News & Activities",
     name: "Name",
+    notFound: "Content not found",
+    backToNews: "Back to News & Activities",
+    keyPoints: "Key Points",
     email: "Email",
     organization: "Organization",
     phone: "Phone",
@@ -231,6 +234,7 @@ export const en = {
     clearFilters: "CLEAR FILTERS",
     noReportsFound: "No reports found matching your filters.",
     downloadPDF: "Download PDF",
+    viewArchives: "View Archive Publications",
     featuredDescription: "Participatory Development Associates (PDA) is a social development and consultancy organization in Ghana that supports development processes at community, district, national, regional and institutional levels towards creating a fairer world where all people can realize their full potential.",
     reportTypes: {
       "PDA Report / Concept Note": "PDA Report / Concept Note",
@@ -244,11 +248,20 @@ export const en = {
       "Research & Evaluation": "Research & Evaluation",
       "Agriculture": "Agriculture",
       "Education": "Education",
+      "Health": "Health",
+      "Social Development": "Social Development",
+      "Governance": "Governance",
+      "Business Development": "Business Development",
+      "Child Protection": "Child Protection",
+      "Financial Inclusion": "Financial Inclusion",
+      "General": "General",
     },
   },
   // Videos Page
   videos: {
     title: "Videos",
+    featuredDescription: "Watch our featured video content showcasing PDA's impactful work and community initiatives.",
+    watchAllVideos: "Watch All Videos",
   },
   // Photos Page
   photos: {
@@ -382,6 +395,56 @@ export const en = {
     viewPhotos: "View Photos",
     viewPublications: "View Publications",
   },
+  // Partners Page
+  partnersPage: {
+    title: "Our Partners",
+    all: "All",
+    viewMore: "View More Partners",
+    visitWebsite: "Visit Website",
+    testimonials: "Partner Testimonials",
+  },
+  // Cookie Consent
+  cookieConsent: {
+    title: "We Use Cookies",
+    description: "We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By clicking 'Accept', you consent to our use of cookies. You can learn more about how we use cookies in our Privacy Policy.",
+    accept: "Accept All",
+    decline: "Decline",
+    learnMore: "Learn More",
+  },
+  // Privacy Policy
+  privacyPolicy: {
+    title: "Privacy Policy",
+    lastUpdated: "Last Updated",
+    introduction: {
+      title: "Introduction",
+      content: "Participatory Development Associates (PDA) is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website (pdaghana.com) and use our services.\n\nBy using our website, you consent to the data practices described in this policy. If you do not agree with the data practices described in this policy, you should not use our website.",
+    },
+    information: {
+      title: "Information We Collect",
+      content: "We collect information that you provide directly to us, including:\n\n• Personal Information: Name, email address, organization, phone number, and other contact details when you subscribe to our newsletter, contact us, or submit forms.\n• Usage Information: We automatically collect certain information about your device and how you interact with our website, including IP address, browser type, pages visited, time spent on pages, and referring website addresses.\n• Cookies and Tracking Technologies: We use cookies and similar tracking technologies to track activity on our website and hold certain information. Cookies are files with a small amount of data which may include an anonymous unique identifier.\n\nWe do not collect sensitive personal information such as financial data, health information, or other sensitive categories unless explicitly required for specific services and with your explicit consent.",
+    },
+    cookies: {
+      title: "How We Use Cookies",
+      content: "We use cookies and similar tracking technologies to:\n\n• Enhance User Experience: Remember your preferences and settings to provide a personalized browsing experience.\n• Analyze Website Traffic: Understand how visitors use our website to improve functionality and content.\n• Functionality: Enable certain features and functionality of our website.\n• Analytics: Collect anonymous statistical data about website usage.\n\nYou can control cookies through your browser settings. However, disabling cookies may limit your ability to use certain features of our website. For more information about cookies and how to manage them, please visit your browser's help section.",
+    },
+    dataProtection: {
+      title: "Data Protection and Security",
+      content: "We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include:\n\n• Secure data transmission using encryption technologies (SSL/TLS).\n• Restricted access to personal information on a need-to-know basis.\n• Regular security assessments and updates.\n• Compliance with Ghana's Data Protection Act, 2012 (Act 843) and other applicable data protection laws.\n\nHowever, no method of transmission over the Internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee absolute security.",
+    },
+    rights: {
+      title: "Your Rights",
+      content: "Under Ghana's Data Protection Act and applicable privacy laws, you have the following rights regarding your personal information:\n\n• Right to Access: You can request access to the personal information we hold about you.\n• Right to Rectification: You can request correction of inaccurate or incomplete information.\n• Right to Erasure: You can request deletion of your personal information in certain circumstances.\n• Right to Object: You can object to the processing of your personal information for certain purposes.\n• Right to Data Portability: You can request transfer of your data to another service provider.\n• Right to Withdraw Consent: You can withdraw your consent at any time where we rely on consent to process your information.\n\nTo exercise any of these rights, please contact us using the contact information provided below.",
+    },
+    updates: {
+      title: "Changes to This Privacy Policy",
+      content: "We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any material changes by posting the new Privacy Policy on this page and updating the 'Last Updated' date.\n\nWe encourage you to review this Privacy Policy periodically to stay informed about how we are protecting your information. Your continued use of our website after any changes constitutes your acceptance of the updated Privacy Policy.",
+    },
+    contact: {
+      title: "Contact Us",
+      description: "If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:",
+      address: "Participatory Development Associates (PDA)\nP.O. Box CT 4434, Cantonments\nAccra, Ghana",
+    },
+  },
   // Projects Page
   projectsPage: {
     title: "Our Projects",
@@ -393,6 +456,7 @@ export const en = {
     all: "All",
     noProjectsFound: "No projects found matching your criteria.",
     clearFilters: "Clear Filters",
+    viewArchives: "View Project Archives",
   },
   // Events Section
   events: {

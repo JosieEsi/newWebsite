@@ -18,8 +18,9 @@ const Menu = ({ onLinkClick }) => {
     { href: "/ethical-review-committee", label: t("nav.ethicalReviewCommittee") },
     { href: "/child-abuse-tracker", label: t("nav.childAbuseTracker") },
     { href: "/covid-19", label: t("nav.covid19") },
-    { href: "/#partners", label: t("nav.partners") },
+    { href: "/partners", label: t("nav.partners") },
     { href: "/#events", label: t("nav.events") },
+    { href: "https://www.pdaafrica.org", label: "PDA Africa", external: true },
   ], [t]);
 
   const navigation = useMemo(() => [
@@ -70,7 +71,7 @@ const Menu = ({ onLinkClick }) => {
     if (href.startsWith("#")) {
       // Handle hash links
       const hash = href.substring(1);
-      if (hash === "events" || hash === "partners") {
+      if (hash === "events") {
         // Navigate to home and scroll to section
         navigate("/");
         setTimeout(() => {
@@ -97,14 +98,27 @@ const Menu = ({ onLinkClick }) => {
         {/* Main Navigation Links */}
         <div className="flex flex-col text-red gap-6 lg:gap-10 font-semibold text-lg lg:text-xl font-poppins">
           {navLinks.map((section) => (
-            <a
-              key={section.label}
-              href={section.href}
-              onClick={(e) => handleLinkClick(e, section.href)}
-              className="hover:text-orange transition-colors duration-300"
-            >
-              {section.label}
-            </a>
+            section.external ? (
+              <a
+                key={section.label}
+                href={section.href}
+                onClick={onLinkClick}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <Button label={section.label} />
+              </a>
+            ) : (
+              <a
+                key={section.label}
+                href={section.href}
+                onClick={(e) => handleLinkClick(e, section.href)}
+                className="hover:text-orange transition-colors duration-300"
+              >
+                {section.label}
+              </a>
+            )
           ))}
           <div className="flex gap-5 mt-4">
             {socialMedia.map((icon) => (

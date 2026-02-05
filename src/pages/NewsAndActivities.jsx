@@ -1,68 +1,16 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import { FaCalendarAlt, FaMapMarkerAlt, FaClock, FaNewspaper, FaVideo, FaImage } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
+import { newsAndActivitiesData } from "../data/newsAndActivitiesData.js";
 
 const NewsAndActivities = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("all");
 
-  const newsItems = [
-    {
-      id: 1,
-      type: "news",
-      date: "January 15, 2025",
-      title: "PDA Launches New Community Development Initiative",
-      description: "Participatory Development Associates announces a groundbreaking initiative focused on empowering rural communities through sustainable development practices.",
-      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=80",
-      category: "Community Development"
-    },
-    {
-      id: 2,
-      type: "activity",
-      date: "January 10, 2025",
-      title: "Knowledge Sharing Workshop Successfully Concluded",
-      description: "The 8th Knowledge Sharing Workshop brought together stakeholders from across Ghana to discuss innovative approaches to development.",
-      image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&q=80",
-      category: "Workshop"
-    },
-    {
-      id: 3,
-      type: "news",
-      date: "January 5, 2025",
-      title: "New Research Publication on Child Protection",
-      description: "PDA releases comprehensive research findings on child protection mechanisms in cocoa-growing communities.",
-      image: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&q=80",
-      category: "Research"
-    },
-    {
-      id: 4,
-      type: "activity",
-      date: "December 20, 2024",
-      title: "Annual Reading Level Competition Winners Announced",
-      description: "Celebrating the achievements of students in the Annual Reading Level Competition held in Mankraso.",
-      image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80",
-      category: "Education"
-    },
-    {
-      id: 5,
-      type: "news",
-      date: "December 15, 2024",
-      title: "PDA Partners with International Organizations",
-      description: "New partnerships established to expand PDA's impact across Sub-Saharan Africa.",
-      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
-      category: "Partnerships"
-    },
-    {
-      id: 6,
-      type: "activity",
-      date: "December 10, 2024",
-      title: "VSLA Training Program Graduation Ceremony",
-      description: "Over 200 participants successfully completed the Village Savings and Loan Association training program.",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80",
-      category: "Training"
-    }
-  ];
+  const newsItems = newsAndActivitiesData;
 
   const filteredItems = activeTab === "all" 
     ? newsItems 
@@ -176,6 +124,7 @@ const NewsAndActivities = () => {
                   {item.description}
                 </p>
                 <motion.button
+                  onClick={() => navigate(`/news-and-activities/${item.slug}`)}
                   className="text-orange font-semibold text-sm hover:text-red transition-colors flex items-center gap-2"
                   whileHover={{ x: 5 }}
                 >

@@ -60,6 +60,9 @@ export const fr = {
     contact: "Contact",
     send: "Envoyer",
     loading: "Chargement...",
+    notFound: "Contenu non trouvé",
+    backToNews: "Retour aux Actualités et Activités",
+    keyPoints: "Points Clés",
   },
   // Footer
   footer: {
@@ -231,6 +234,7 @@ export const fr = {
     clearFilters: "EFFACER LES FILTRES",
     noReportsFound: "Aucun rapport trouvé correspondant à vos filtres.",
     downloadPDF: "Télécharger PDF",
+    viewArchives: "Voir les Publications d'Archives",
     featuredDescription: "Participatory Development Associates (PDA) est une organisation de développement social et de conseil au Ghana qui soutient les processus de développement aux niveaux communautaire, district, national, régional et institutionnel en vue de créer un monde plus équitable où toutes les personnes peuvent réaliser leur plein potentiel.",
     reportTypes: {
       "PDA Report / Concept Note": "Rapport PDA / Note Conceptuelle",
@@ -244,11 +248,20 @@ export const fr = {
       "Research & Evaluation": "Recherche et Évaluation",
       "Agriculture": "Agriculture",
       "Education": "Éducation",
+      "Health": "Santé",
+      "Social Development": "Développement Social",
+      "Governance": "Gouvernance",
+      "Business Development": "Développement des Affaires",
+      "Child Protection": "Protection de l'Enfance",
+      "Financial Inclusion": "Inclusion Financière",
+      "General": "Général",
     },
   },
   // Videos Page
   videos: {
     title: "Vidéos",
+    featuredDescription: "Regardez notre contenu vidéo vedette présentant le travail impactant de PDA et les initiatives communautaires.",
+    watchAllVideos: "Voir Toutes les Vidéos",
   },
   // Photos Page
   photos: {
@@ -382,6 +395,56 @@ export const fr = {
     viewPhotos: "Voir les Photos",
     viewPublications: "Voir les Publications",
   },
+  // Partners Page
+  partnersPage: {
+    title: "Nos Partenaires",
+    all: "Tout",
+    viewMore: "Voir Plus de Partenaires",
+    visitWebsite: "Visiter le Site Web",
+    testimonials: "Témoignages des Partenaires",
+  },
+  // Cookie Consent
+  cookieConsent: {
+    title: "Nous Utilisons des Cookies",
+    description: "Nous utilisons des cookies pour améliorer votre expérience de navigation, analyser le trafic du site et personnaliser le contenu. En cliquant sur 'Accepter', vous acceptez notre utilisation des cookies. Vous pouvez en savoir plus sur la façon dont nous utilisons les cookies dans notre Politique de Confidentialité.",
+    accept: "Tout Accepter",
+    decline: "Refuser",
+    learnMore: "En Savoir Plus",
+  },
+  // Privacy Policy
+  privacyPolicy: {
+    title: "Politique de Confidentialité",
+    lastUpdated: "Dernière Mise à Jour",
+    introduction: {
+      title: "Introduction",
+      content: "Participatory Development Associates (PDA) s'engage à protéger votre vie privée et à assurer la sécurité de vos informations personnelles. Cette Politique de Confidentialité explique comment nous collectons, utilisons, divulguons et protégeons vos informations lorsque vous visitez notre site web (pdaghana.com) et utilisez nos services.\n\nEn utilisant notre site web, vous acceptez les pratiques de données décrites dans cette politique. Si vous n'êtes pas d'accord avec les pratiques de données décrites dans cette politique, vous ne devez pas utiliser notre site web.",
+    },
+    information: {
+      title: "Informations que Nous Collectons",
+      content: "Nous collectons les informations que vous nous fournissez directement, notamment :\n\n• Informations Personnelles : Nom, adresse e-mail, organisation, numéro de téléphone et autres coordonnées lorsque vous vous abonnez à notre newsletter, nous contactez ou soumettez des formulaires.\n• Informations d'Utilisation : Nous collectons automatiquement certaines informations sur votre appareil et la façon dont vous interagissez avec notre site web, y compris l'adresse IP, le type de navigateur, les pages visitées, le temps passé sur les pages et les adresses des sites web de référence.\n• Cookies et Technologies de Suivi : Nous utilisons des cookies et des technologies de suivi similaires pour suivre l'activité sur notre site web et conserver certaines informations. Les cookies sont des fichiers contenant une petite quantité de données qui peuvent inclure un identifiant unique anonyme.\n\nNous ne collectons pas d'informations personnelles sensibles telles que les données financières, les informations de santé ou d'autres catégories sensibles, sauf si cela est explicitement requis pour des services spécifiques et avec votre consentement explicite.",
+    },
+    cookies: {
+      title: "Comment Nous Utilisons les Cookies",
+      content: "Nous utilisons des cookies et des technologies de suivi similaires pour :\n\n• Améliorer l'Expérience Utilisateur : Mémoriser vos préférences et paramètres pour fournir une expérience de navigation personnalisée.\n• Analyser le Trafic du Site Web : Comprendre comment les visiteurs utilisent notre site web pour améliorer la fonctionnalité et le contenu.\n• Fonctionnalité : Activer certaines fonctionnalités de notre site web.\n• Analytique : Collecter des données statistiques anonymes sur l'utilisation du site web.\n\nVous pouvez contrôler les cookies via les paramètres de votre navigateur. Cependant, la désactivation des cookies peut limiter votre capacité à utiliser certaines fonctionnalités de notre site web. Pour plus d'informations sur les cookies et comment les gérer, veuillez consulter la section d'aide de votre navigateur.",
+    },
+    dataProtection: {
+      title: "Protection et Sécurité des Données",
+      content: "Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos informations personnelles contre l'accès non autorisé, l'altération, la divulgation ou la destruction. Ces mesures comprennent :\n\n• Transmission sécurisée des données utilisant des technologies de cryptage (SSL/TLS).\n• Accès restreint aux informations personnelles sur une base de besoin de savoir.\n• Évaluations et mises à jour régulières de la sécurité.\n• Conformité avec la Loi sur la Protection des Données du Ghana, 2012 (Loi 843) et d'autres lois applicables sur la protection des données.\n\nCependant, aucune méthode de transmission sur Internet ou de stockage électronique n'est sécurisée à 100%. Bien que nous nous efforcions d'utiliser des moyens commercialement acceptables pour protéger vos informations personnelles, nous ne pouvons garantir une sécurité absolue.",
+    },
+    rights: {
+      title: "Vos Droits",
+      content: "En vertu de la Loi sur la Protection des Données du Ghana et des lois applicables sur la vie privée, vous avez les droits suivants concernant vos informations personnelles :\n\n• Droit d'Accès : Vous pouvez demander l'accès aux informations personnelles que nous détenons sur vous.\n• Droit de Rectification : Vous pouvez demander la correction d'informations inexactes ou incomplètes.\n• Droit à l'Effacement : Vous pouvez demander la suppression de vos informations personnelles dans certaines circonstances.\n• Droit d'Opposition : Vous pouvez vous opposer au traitement de vos informations personnelles à certaines fins.\n• Droit à la Portabilité des Données : Vous pouvez demander le transfert de vos données à un autre fournisseur de services.\n• Droit de Retirer le Consentement : Vous pouvez retirer votre consentement à tout moment lorsque nous nous appuyons sur le consentement pour traiter vos informations.\n\nPour exercer l'un de ces droits, veuillez nous contacter en utilisant les coordonnées fournies ci-dessous.",
+    },
+    updates: {
+      title: "Modifications de cette Politique de Confidentialité",
+      content: "Nous pouvons mettre à jour cette Politique de Confidentialité de temps à autre pour refléter les changements dans nos pratiques ou pour d'autres raisons opérationnelles, légales ou réglementaires. Nous vous informerons de tout changement matériel en publiant la nouvelle Politique de Confidentialité sur cette page et en mettant à jour la date de 'Dernière Mise à Jour'.\n\nNous vous encourageons à examiner cette Politique de Confidentialité périodiquement pour rester informé de la façon dont nous protégeons vos informations. Votre utilisation continue de notre site web après tout changement constitue votre acceptation de la Politique de Confidentialité mise à jour.",
+    },
+    contact: {
+      title: "Contactez-Nous",
+      description: "Si vous avez des questions, préoccupations ou demandes concernant cette Politique de Confidentialité ou nos pratiques de données, veuillez nous contacter :",
+      address: "Participatory Development Associates (PDA)\nB.P. CT 4434, Cantonments\nAccra, Ghana",
+    },
+  },
   // Projects Page
   projectsPage: {
     title: "Nos Projets",
@@ -393,6 +456,7 @@ export const fr = {
     all: "Tout",
     noProjectsFound: "Aucun projet trouvé correspondant à vos critères.",
     clearFilters: "Effacer les Filtres",
+    viewArchives: "Voir les Archives des Projets",
   },
   // Events Section
   events: {

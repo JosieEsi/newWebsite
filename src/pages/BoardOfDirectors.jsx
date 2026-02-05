@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { tony, eleanor, akosua, edem, annabelle, alex } from "../assets/images";
+import { tony, eleanor, akosua, edem, annabelle, alex, clement, osei, allstaff } from "../assets/images";
 import { FaCrown, FaUserTie, FaBuilding, FaCoins, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
 
@@ -60,7 +60,7 @@ const BoardOfDirectors = () => {
     },
     {
       name: "Clement Sefa Nyarko (PhD)",
-      image: alex, // Placeholder - needs actual image
+      image: clement,
       role: "Technical Consultant",
     },
     {
@@ -70,7 +70,7 @@ const BoardOfDirectors = () => {
     },
     {
       name: "Osei Y. Asuamah",
-      image: alex, // Placeholder - needs actual image
+      image: osei,
       role: "Finance Manager",
     },
   ];
@@ -92,13 +92,9 @@ const BoardOfDirectors = () => {
         transition={{ duration: 0.6 }}
       >
         <img 
-          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1920&q=80" 
+          src={allstaff}
           className="w-full h-[300px] md:h-[400px] object-cover" 
           alt="Board of Directors"
-          onError={(e) => {
-            e.target.style.display = 'none';
-            e.target.parentElement.style.backgroundColor = '#F89823';
-          }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         <motion.h1

@@ -23,7 +23,13 @@ const Publications = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
-        <img src={glasses} className="w-full h-[400px] md:h-[500px] object-cover" alt="Publications" />
+        <img 
+          src={glasses} 
+          className="w-full h-[400px] md:h-[500px] object-cover" 
+          alt="Publications"
+          loading="lazy"
+          decoding="async"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         <motion.h1
           className="font-poppins font-bold text-4xl md:text-6xl text-white text-center absolute bottom-10 left-0 right-0 px-4"
@@ -85,7 +91,13 @@ const Publications = () => {
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <img src={publication} alt="2023 In Review" className="w-full h-auto rounded-lg" />
+            <img 
+              src={publication} 
+              alt="2023 In Review" 
+              className="w-full h-auto rounded-lg" 
+              loading="lazy"
+              decoding="async"
+            />
           </motion.div>
           <div>
             <motion.h1
@@ -108,7 +120,15 @@ const Publications = () => {
             <div className="w-16 h-1 bg-orange mb-5"></div>
             <h3 className="mb-6 text-gray-600 font-semibold">January, 2024</h3>
             <motion.div className="mb-8" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button label={`${t("common.download")} >>>`} />
+              <a
+                href="/assets/documents/2023-in-review.pdf"
+                download="2023-in-review.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <Button label={`${t("common.download")} >>>`} />
+              </a>
             </motion.div>
             <motion.div
               className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl p-6 shadow-md"

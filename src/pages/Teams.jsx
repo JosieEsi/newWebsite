@@ -50,7 +50,7 @@ const Teams = () => {
       image: acuteam,
       description:
         "The Advocacy and Communications Unit (ACU) handles PDA's social development initiatives, advocacy projects, and also liaises with other units within the organization. We amplify voices and share knowledge to drive positive change.",
-      memberCount: 1,
+      memberCount: 3,
       keyAreas: [
         "Digital media management",
         "Event moderation and facilitation",

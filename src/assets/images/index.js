@@ -143,6 +143,38 @@ import ksw from "./ksw.jpg";
 import fvr from "./fvr.jpg";
 import dpw from "./dpw.jpeg";
 
+
+ import eunice from "./Eunice.jpg";
+ import bashiru from "./Bashiru.jpg";
+ import guide from "./Guide.jpg";
+ import joshua from "./Joshua.jpg";
+ import abdallah from "./Abdallah.jpg";
+ import louis from "./Louis.jpg";
+ import ken from "./Ken.jpg";
+ import patricia from "./Patricia.jpeg";
+ import gabriel from "./Gabriel.jpg";
+ import selorm from "./Selorm.jpg";
+ import ignatius from "./Ignatius.jpg";
+ import arnold from "./Arnold.jpg";
+ import david from "./David.jpg";
+ import charles from "./Charles.jpg";
+ import breh from "./Breh.jpg";
+import dzato from "./Dzato.jpg";
+ import stella from "./Stella.jpg";
+ import patrick from "./Patrick.jpg";
+ import andrew from "./Andrew.jpg";
+ import seth from "./Seth.jpg";
+ import lucy from "./Lucy.jpg";
+ import ernest from "./Ernest.jpg";
+ import gaddiel from "./Gaddiel.jpg";
+ import prince from "./Prince.jpg";
+ import araba from "./Araba.jpg";
+ import aseda from "./Aseda.jpg";
+ import clement from "./Clement.jpg";
+ import osei from "./Osei.jpg";
+ import edemnew from "./Edemnew.png";
+
+
 export {
   image1,
   image2,
@@ -278,4 +310,33 @@ export {
   ksw,
   fvr,
   dpw,
+  eunice,
+  bashiru,
+  guide,
+  joshua,
+  abdallah,
+  louis,
+  ken,
+  patricia,
+  gabriel,
+  selorm,
+  ignatius,
+  arnold,
+  david,
+  charles,
+  breh,
+  dzato,
+  stella,
+  patrick,
+  andrew,
+  seth,
+  lucy,
+  ernest,
+  gaddiel,
+  prince,
+  araba,
+  aseda,
+  clement,
+  osei,
+  edemnew,
 };
