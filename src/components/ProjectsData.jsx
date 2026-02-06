@@ -716,7 +716,7 @@ export const projects = [
       "By strengthening SWIMS capacity, case managers are better equipped to deliver comprehensive social services that promote the well-being of vulnerable children."
     ],
     partners: "Barry Callebaut Nyonkopa; Right to Play",
-    period: "2025 –",
+    period: "2025",
     category: "Child Protection and Welfare; Financial Inclusion (VSLAs)",
     location: "Ghana",
     status: "Ongoing",
