@@ -593,6 +593,8 @@ const ProjectsPage = () => {
                             navigate(project.detailLink);
                           } else if (project.slug) {
                             navigate(`/projects/${project.slug}`);
+                          } else {
+                            console.warn("Project missing slug and detailLink:", project.id);
                           }
                         }}
                         className={`w-full ${colors.bg} ${colors.hoverBg} text-white px-6 py-3 rounded-lg font-poppins font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg`}
@@ -612,6 +614,8 @@ const ProjectsPage = () => {
                           navigate(project.detailLink);
                         } else if (project.slug) {
                           navigate(`/projects/${project.slug}`);
+                        } else {
+                          console.warn("Project missing slug and detailLink:", project.id);
                         }
                       }}
                       className={`w-full ${colors.bg} ${colors.hoverBg} text-white px-6 py-3 rounded-lg font-poppins font-semibold transition-all duration-300 transform hover:scale-105 shadow-md`}

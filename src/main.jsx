@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { LanguageProvider } from "./contexts/LanguageContext.jsx";
 import Contact from "./pages/Contact.jsx";
 import PDAAFRICA from "./pages/PDAAFRICA.jsx";
 import DonateForm from "./components/DonateForm.jsx"; // Import the DonateForm component
@@ -30,6 +31,17 @@ import UnderConstruction from "./components/UnderConstruction.jsx";
 import ErrorFallback from "./components/ErrorFallback.jsx";
 import LandingPage from "./pages/LandingPage.jsx";
 import ProjectsPage from "./pages/ProjectsPage.jsx";
+import EdemProfile from "./pages/EdemProfile.jsx";
+import PublicationViewer from "./pages/PublicationViewer.jsx";
+import PartnersPage from "./pages/PartnersPage.jsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
+import ArchivesPage from "./pages/ArchivesPage.jsx";
+import ProjectDetail from "./pages/ProjectDetail.jsx";
+import NewsAndActivities from "./pages/NewsAndActivities.jsx";
+import NewsDetail from "./pages/NewsDetail.jsx";
+import Photos from "./pages/Photos.jsx";
+import Vodcast from "./pages/Vodcast.jsx";
+import Videos from "./pages/Videos.jsx";
 
 
 const router = createBrowserRouter([
@@ -142,6 +154,54 @@ const router = createBrowserRouter([
         element: <Covid19 />,
       },
       {
+        path: "/edem-profile",
+        element: <EdemProfile />,
+      },
+      {
+        path: "/publication-viewer",
+        element: <PublicationViewer />,
+      },
+      {
+        path: "/partners",
+        element: <PartnersPage />,
+      },
+      {
+        path: "/privacy-policy",
+        element: <PrivacyPolicy />,
+      },
+      {
+        path: "/archives",
+        element: <ArchivesPage />,
+      },
+      {
+        path: "/archives/:slug",
+        element: <ProjectDetail />,
+      },
+      {
+        path: "/projects/:slug",
+        element: <ProjectDetail />,
+      },
+      {
+        path: "/news-and-activities",
+        element: <NewsAndActivities />,
+      },
+      {
+        path: "/news-and-activities/:slug",
+        element: <NewsDetail />,
+      },
+      {
+        path: "/photos",
+        element: <Photos />,
+      },
+      {
+        path: "/vodcast",
+        element: <Vodcast />,
+      },
+      {
+        path: "/videos",
+        element: <Videos />,
+      },
+      {
         path: "*", // Catch-all route for 404 errors
         element: <UnderConstruction />,
       },
@@ -151,6 +211,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <LanguageProvider>
+      <RouterProvider router={router} />
+    </LanguageProvider>
   </React.StrictMode>
 );
