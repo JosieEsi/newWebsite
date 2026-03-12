@@ -16,6 +16,10 @@ import {
   AfricaGallery,
   VideoGallery,
   CurrentProjects,
+  WhatWeDoSlider,
+  PartnerTestimonials,
+  ImpactStats,
+  CTASection,
 } from "./sections";
 import Nav from "./components/Nav";
 import PDAAFRICA from "./pages/PDAAFRICA";
@@ -58,30 +62,41 @@ const App = () => {
           <section>
             <Hero />
           </section>
-          <section className="padding">
+          <section className="py-12 sm:py-16 md:py-24">
+            <WhatWeDoSlider />
+          </section>
+          <section className="py-12 sm:py-16 md:py-24 bg-white">
             <Work />
           </section>
-          <section className="padding bg-gray-200">
+          <section className="py-12 sm:py-16 md:py-24 bg-gray-50">
             <Updates />
           </section>
-          {/* <section className="padding">
+          <section className="py-12 sm:py-16 md:py-24 bg-white">
             <CurrentProjects />
-          </section> */}
-          <section className="padding">
-            <Units />
           </section>
-          <section className="padding">
-            <Events />
+          <section className="py-12 sm:py-16 md:py-24 bg-gray-50">
+            <ImpactStats />
           </section>
-          <section className="bg-gray-200 padding">
-            <Publications />
-          </section>
-          <section className="padding">
-            <Videos />
-          </section>
-          <section className="padding">
+          <section className="py-12 sm:py-16 md:py-24 bg-white">
             <Partners />
           </section>
+          <section>
+            <CTASection />
+          </section>
+          
+          {/* OLD SECTIONS - COMMENTED OUT FOR POTENTIAL REVERT */}
+          {/* <section className="padding">
+            <Units />
+          </section> */}
+          {/* <section className="padding">
+            <Events />
+          </section> */}
+          {/* <section className="bg-gray-200 padding">
+            <Publications />
+          </section> */}
+          {/* <section className="padding">
+            <Videos />
+          </section> */}
         </>
       ) : location.pathname === "/pdaafrica" ? (
         // PDAAFRICA page layout

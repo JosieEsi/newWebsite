@@ -1,20 +1,67 @@
 import React, { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { strategic, farmer } from "../assets/images";
+import { map } from "../assets/images";
 import Button from "../components/Button";
 import { clipboard, bulb } from "../assets/icons";
 import { Link, useNavigate } from "react-router-dom";
-import { FaGlobe, FaHandshake, FaUsers, FaDollarSign, FaChartLine, FaArrowRight } from "react-icons/fa";
+import { FaGlobe, FaHandshake, FaUsers, FaDollarSign, FaArrowRight, FaSearch, FaChartBar, FaBook, FaUsersCog, FaChevronLeft, FaChevronRight, FaMapMarkerAlt } from "react-icons/fa";
 import { projects } from "../components/ProjectsData";
 import { useTranslation } from "../hooks/useTranslation";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const WhatWeDo = () => {
   const [hoveredObjective, setHoveredObjective] = useState(null);
+  const [hoveredService, setHoveredService] = useState(null);
   const navigate = useNavigate();
   const { t } = useTranslation();
 
   const leftExpertise = useMemo(() => t("whatWeDo.leftExpertise"), [t]);
   const rightExpertise = useMemo(() => t("whatWeDo.rightExpertise"), [t]);
+
+  // Filter current projects (Active and Ongoing) - Limit to 6
+  const currentProjects = useMemo(() => {
+    return projects.filter(project => 
+      project.status === "Active" || project.status === "Ongoing"
+    ).slice(0, 6);
+  }, []);
+
+  const services = useMemo(() => [
+    {
+      icon: FaSearch,
+      title: t("whatWeDo.services.research.title"),
+      description: t("whatWeDo.services.research.description"),
+      color: "from-orange to-red",
+      bgColor: "bg-orange/10",
+      iconColor: "text-orange",
+    },
+    {
+      icon: FaChartBar,
+      title: t("whatWeDo.services.impact.title"),
+      description: t("whatWeDo.services.impact.description"),
+      color: "from-red to-orange",
+      bgColor: "bg-red/10",
+      iconColor: "text-red",
+    },
+    {
+      icon: FaBook,
+      title: t("whatWeDo.services.synthesis.title"),
+      description: t("whatWeDo.services.synthesis.description"),
+      color: "from-orange to-red",
+      bgColor: "bg-orange/10",
+      iconColor: "text-orange",
+    },
+    {
+      icon: FaUsersCog,
+      title: t("whatWeDo.services.learning.title"),
+      description: t("whatWeDo.services.learning.description"),
+      color: "from-red to-orange",
+      bgColor: "bg-red/10",
+      iconColor: "text-red",
+    },
+  ], [t]);
 
   const strategicObjectives = useMemo(() => [
     {
@@ -62,182 +109,537 @@ const WhatWeDo = () => {
     }
   };
 
+  // Countries for interactive map
+  const countries = [
+    "Ghana", "Cote D'Ivoire", "Cameroon", "Egypt", "Kenya", "Morocco", 
+    "Nigeria", "Senegal", "Uganda"
+  ];
+
+  // Custom slider arrows
+  const CustomPrevArrow = ({ onClick }) => (
+    <button
+      onClick={onClick}
+      className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 group"
+      aria-label="Previous"
+    >
+      <FaChevronLeft className="text-orange group-hover:text-red transition-colors" />
+    </button>
+  );
+
+  const CustomNextArrow = ({ onClick }) => (
+    <button
+      onClick={onClick}
+      className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 group"
+      aria-label="Next"
+    >
+      <FaChevronRight className="text-orange group-hover:text-red transition-colors" />
+    </button>
+  );
+
+  const projectSliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
+  };
+
   return (
     <section
       id="whatwedo"
       className="max-container max-w-full w-full min-h-screen lg:justify-center flex flex-col font-poppins bg-white"
     >
-      {/* Strategic Objectives Section */}
-      <section
-        id="strategic-objectives"
-        className="flex flex-col justify-center mt-20 mb-20"
+      {/* Enhanced Hero Section */}
+      <motion.div
+        className="relative w-full mt-24 overflow-hidden"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
       >
+        <motion.img 
+          src={farmer} 
+          className="w-full h-[350px] sm:h-[400px] md:h-[500px] lg:h-[550px] object-cover" 
+          alt="What We Do"
+          initial={{ scale: 1.1 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20" />
+        
+        {/* Animated Background Elements */}
         <motion.div
-          className="relative w-full"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-        >
-          <img src={farmer} className="w-full h-[400px] md:h-[500px] object-cover" alt="Strategic Objectives" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-          <motion.h1
-            className="font-poppins font-bold text-4xl md:text-6xl text-white text-center absolute bottom-10 left-0 right-0 px-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-          >
-            {t("whatWeDo.title")}
-          </motion.h1>
-        </motion.div>
+          className="absolute top-20 right-20 w-32 h-32 bg-orange/20 rounded-full blur-3xl"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.5, 0.3],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div
+          className="absolute bottom-20 left-20 w-40 h-40 bg-red/20 rounded-full blur-3xl"
+          animate={{
+            scale: [1, 1.3, 1],
+            opacity: [0.3, 0.5, 0.3],
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
 
-        {/* Strategic Objectives Grid */}
         <motion.div
-          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 mb-12"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          className="absolute inset-0 flex items-center justify-center"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {strategicObjectives.map((objective, index) => {
-              const Icon = objective.icon;
+          <div className="text-center px-4 max-w-4xl mx-auto">
+            <motion.h1
+              className="font-poppins font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white mb-6 leading-tight"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+            >
+              What We Do
+            </motion.h1>
+            <motion.div
+              className="w-32 h-1 bg-gradient-to-r from-orange to-red mx-auto rounded-full"
+              initial={{ width: 0 }}
+              animate={{ width: 128 }}
+              transition={{ delay: 0.8, duration: 0.6 }}
+            />
+          </div>
+        </motion.div>
+      </motion.div>
+
+      {/* Redesigned Services Section */}
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-20 md:py-28 bg-gradient-to-b from-white via-gray-50/50 to-white">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <motion.h2
+              className="text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange to-red mb-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+            >
+              Our Core Services
+            </motion.h2>
+            <motion.div
+              className="w-24 h-1 bg-gradient-to-r from-orange to-red mx-auto rounded-full"
+              initial={{ width: 0 }}
+              whileInView={{ width: 96 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+            />
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+            {services.map((service, index) => {
+              const Icon = service.icon;
+              const isHovered = hoveredService === index;
               return (
                 <motion.div
                   key={index}
-                  className={`bg-gradient-to-br ${objective.color} rounded-2xl p-6 md:p-8 shadow-xl text-white relative overflow-hidden group cursor-pointer`}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  className="group relative bg-white rounded-3xl p-8 md:p-10 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100"
+                  initial={{ opacity: 0, y: 50, rotateX: -15 }}
+                  whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ scale: 1.05, y: -10 }}
-                  onHoverStart={() => setHoveredObjective(index)}
-                  onHoverEnd={() => setHoveredObjective(null)}
+                  transition={{ duration: 0.6, delay: index * 0.15 }}
+                  whileHover={{ y: -10, scale: 1.02 }}
+                  onHoverStart={() => setHoveredService(index)}
+                  onHoverEnd={() => setHoveredService(null)}
                 >
-                  {/* Number Badge */}
-                  <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full w-12 h-12 flex items-center justify-center font-bold text-2xl">
-                    {objective.number}
-                  </div>
-
-                  {/* Icon */}
+                  {/* Animated Background Gradient */}
                   <motion.div
-                    className="mb-4"
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 0.6 }}
+                    className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
+                  />
+
+                  {/* Icon Container */}
+                  <motion.div
+                    className={`relative mb-6 inline-flex p-4 rounded-2xl ${service.bgColor} group-hover:scale-110 transition-transform duration-500`}
+                    whileHover={{ rotate: [0, -10, 10, -10, 0] }}
+                    transition={{ duration: 0.5 }}
                   >
-                    <Icon className="text-5xl mb-4" />
+                    <Icon className={`text-4xl ${service.iconColor}`} />
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-br from-orange/20 to-red/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    />
                   </motion.div>
 
                   {/* Content */}
-                  <h3 className="font-bold text-xl md:text-2xl mb-4">{objective.title}</h3>
-                  <p className="text-white/90 text-sm md:text-base leading-relaxed">
-                    {objective.description}
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-orange group-hover:to-red transition-all duration-500">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+                    {service.description}
                   </p>
 
-                  {/* Hover Effect Overlay */}
+                  {/* Animated Border */}
                   <motion.div
-                    className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    initial={false}
+                    className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${service.color}`}
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: isHovered ? 1 : 0 }}
+                    transition={{ duration: 0.3 }}
                   />
                 </motion.div>
               );
             })}
           </div>
-        </motion.div>
-
+        </div>
       </section>
 
-      {/* Our Projects Section */}
-      <section
-        id="our-projects"
-        className="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen flex flex-col py-16"
-      >
-        <motion.h1
-          className="font-bold text-orange flex justify-center text-3xl md:text-4xl mt-10 mb-12 px-4"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          {t("whatWeDo.ourProjects")}
-        </motion.h1>
+      {/* Interactive Where We Work Section */}
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-20 md:py-28 bg-gradient-to-br from-gray-50 via-orange/5 to-gray-50 relative overflow-hidden">
+        {/* Background Decoration */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-orange/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-red/5 rounded-full blur-3xl"></div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 mb-12">
+        <div className="max-w-7xl mx-auto relative z-10">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <motion.div
-              className="flex justify-center lg:justify-start"
+              className="inline-flex items-center gap-3 mb-6"
+              whileHover={{ scale: 1.1 }}
+            >
+              <FaMapMarkerAlt className="text-4xl text-orange" />
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+                {t("work.whereWeWork")}
+              </h2>
+            </motion.div>
+            <motion.div
+              className="w-24 h-1 bg-gradient-to-r from-orange to-red mx-auto rounded-full"
+              initial={{ width: 0 }}
+              whileInView={{ width: 96 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+            />
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Interactive Map */}
+            <motion.div
+              className="relative"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              whileHover={{ scale: 1.1, rotate: 5 }}
+              transition={{ duration: 0.8 }}
             >
-              <div className="bg-orange rounded-[50px] w-28 h-28 flex items-center justify-center shadow-xl">
-                <img src={clipboard} alt="Projects" className="w-20 h-20" />
+              <motion.div
+                className="bg-white rounded-3xl p-8 shadow-2xl border border-gray-100 relative"
+                whileHover={{ scale: 1.05, rotate: 2 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <img
+                  src={map}
+                  alt="Map"
+                  className="w-full h-auto object-contain"
+                />
+              </motion.div>
+            </motion.div>
+
+            {/* Countries List */}
+            <motion.div
+              className="space-y-4"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
+                {t("work.description")}
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                {countries.map((country, index) => (
+                  <motion.div
+                    key={country}
+                    className="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-orange group cursor-pointer"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1, duration: 0.5 }}
+                    whileHover={{ x: 5, scale: 1.02 }}
+                  >
+                    <div className="flex items-center gap-3">
+                      <FaMapMarkerAlt className="text-orange group-hover:scale-125 transition-transform duration-300" />
+                      <span className="font-semibold text-gray-800 group-hover:text-orange transition-colors">
+                        {country}
+                      </span>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
-            
-            <div className="flex-1 w-full">
-              {/* Featured Projects Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {projects.slice(0, 3).map((project, index) => {
-                  const colors = project.color === "orange" 
-                    ? { bg: "bg-orange", text: "text-orange", border: "border-orange" }
-                    : { bg: "bg-red", text: "text-red", border: "border-red" };
-                  
-                  return (
-                    <motion.div
-                      key={project.id}
-                      className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer group"
-                      initial={{ opacity: 0, y: 30 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      whileHover={{ scale: 1.03, y: -5 }}
-                      onClick={() => handleProjectClick(project)}
-                    >
-                      <div className="relative h-48 overflow-hidden">
-                        <img
-                          src={project.image}
-                          alt={project.title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                        />
-                        <div className={`absolute top-4 right-4 ${colors.bg} text-white px-3 py-1 rounded-full text-xs font-semibold`}>
-                          {project.status}
-                        </div>
-                      </div>
-                      <div className="p-6">
-                        <h3 className={`font-bold text-lg mb-2 ${colors.text} group-hover:underline`}>
-                          {project.title}
-                        </h3>
-                        <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-                          {project.description}
-                        </p>
-                        <div className="flex items-center justify-between">
-                          <span className="text-xs text-gray-500">{project.location}</span>
-                          <FaArrowRight className={`${colors.text} group-hover:translate-x-2 transition-transform duration-300`} />
-                        </div>
-                      </div>
-                    </motion.div>
-                  );
-                })}
-              </div>
-            </div>
           </div>
         </div>
+      </section>
 
+      {/* Modernized Strategic Objectives Section */}
+      <section
+        id="strategic-objectives"
+        className="w-full px-4 sm:px-6 lg:px-8 py-20 md:py-28 bg-gradient-to-b from-white to-gray-50"
+      >
         <motion.div
-          className="flex justify-center mt-12"
-          initial={{ opacity: 0, y: 20 }}
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
         >
-          <Link to="/our-projects">
-            <Button label={`${t("common.moreProjects")} >>>`} />
-          </Link>
+          <motion.h2
+            className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange to-red mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+          >
+            {t("whatWeDo.title")}
+          </motion.h2>
+          <motion.div
+            className="w-24 h-1 bg-gradient-to-r from-orange to-red mx-auto rounded-full"
+            initial={{ width: 0 }}
+            whileInView={{ width: 96 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+          />
         </motion.div>
+
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {strategicObjectives.map((objective, index) => {
+              const Icon = objective.icon;
+              const isHovered = hoveredObjective === index;
+              return (
+                <motion.div
+                  key={index}
+                  className={`relative bg-gradient-to-br ${objective.color} rounded-3xl p-8 shadow-2xl text-white overflow-hidden group cursor-pointer`}
+                  initial={{ opacity: 0, y: 50, rotateY: -15 }}
+                  whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileHover={{ y: -15, scale: 1.05, rotateY: 5 }}
+                  onHoverStart={() => setHoveredObjective(index)}
+                  onHoverEnd={() => setHoveredObjective(null)}
+                >
+                  {/* Animated Background Pattern */}
+                  <motion.div
+                    className="absolute inset-0 opacity-10"
+                    animate={{
+                      backgroundPosition: ["0% 0%", "100% 100%"],
+                    }}
+                    transition={{
+                      duration: 20,
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                    }}
+                    style={{
+                      backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)",
+                      backgroundSize: "20px 20px",
+                    }}
+                  />
+
+                  {/* Number Badge */}
+                  <motion.div
+                    className="absolute top-6 right-6 bg-white/20 backdrop-blur-md rounded-full w-16 h-16 flex items-center justify-center font-bold text-2xl border-2 border-white/30"
+                    whileHover={{ rotate: 360, scale: 1.1 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    {objective.number}
+                  </motion.div>
+
+                  {/* Icon */}
+                  <motion.div
+                    className="mb-6 relative z-10"
+                    animate={isHovered ? {
+                      rotate: [0, -10, 10, -10, 0],
+                      scale: [1, 1.2, 1],
+                    } : {}}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <Icon className="text-6xl mb-4 drop-shadow-lg" />
+                  </motion.div>
+
+                  {/* Content */}
+                  <div className="relative z-10">
+                    <h3 className="font-bold text-2xl md:text-3xl mb-4 leading-tight">
+                      {objective.title}
+                    </h3>
+                    <p className="text-white/90 text-base md:text-lg leading-relaxed">
+                      {objective.description}
+                    </p>
+                  </div>
+
+                  {/* Hover Effect Overlay */}
+                  <motion.div
+                    className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    initial={false}
+                  />
+
+                  {/* Shine Effect */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12"
+                    initial={{ x: "-100%" }}
+                    animate={isHovered ? { x: "200%" } : { x: "-100%" }}
+                    transition={{ duration: 0.8 }}
+                  />
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Current Projects Slider Section */}
+      <section
+        id="current-projects"
+        className="bg-gradient-to-br from-gray-50 via-orange/5 to-gray-100 py-20 md:py-28 relative overflow-hidden"
+      >
+        {/* Background Decoration */}
+        <div className="absolute top-0 left-0 w-full h-full opacity-5">
+          <div className="absolute top-20 left-20 w-64 h-64 bg-orange rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-64 h-64 bg-red rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <motion.div
+              className="inline-flex items-center gap-4 mb-6"
+              whileHover={{ scale: 1.1 }}
+            >
+              <motion.div
+                className="bg-gradient-to-br from-orange to-red rounded-full p-4 shadow-xl"
+                whileHover={{ rotate: 360 }}
+                transition={{ duration: 0.6 }}
+              >
+                <img src={clipboard} alt="Projects" className="w-8 h-8" />
+              </motion.div>
+              <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange to-red">
+                Current Projects
+              </h2>
+            </motion.div>
+            <motion.p
+              className="text-gray-600 text-lg"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+            >
+              Explore our active initiatives across Sub-Saharan Africa
+            </motion.p>
+          </motion.div>
+
+          <div className="relative px-8 md:px-12">
+            <Slider {...projectSliderSettings}>
+              {currentProjects.map((project, index) => {
+                const colors = project.color === "orange" 
+                  ? { bg: "bg-orange", text: "text-orange", border: "border-orange" }
+                  : { bg: "bg-red", text: "text-red", border: "border-red" };
+                
+                return (
+                  <div key={project.id} className="px-3">
+                    <motion.div
+                      className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer group h-full"
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      whileHover={{ y: -10, scale: 1.02 }}
+                      onClick={() => handleProjectClick(project)}
+                    >
+                      <div className="relative h-56 overflow-hidden">
+                        <motion.img
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-full object-cover"
+                          whileHover={{ scale: 1.15 }}
+                          transition={{ duration: 0.5 }}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                        <motion.div
+                          className={`absolute top-4 right-4 ${colors.bg} text-white px-4 py-2 rounded-full text-xs font-semibold shadow-lg`}
+                          whileHover={{ scale: 1.1 }}
+                        >
+                          {project.status}
+                        </motion.div>
+                      </div>
+                      <div className="p-6">
+                        <h3 className={`font-bold text-xl mb-3 ${colors.text} group-hover:underline transition-all duration-300`}>
+                          {project.title}
+                        </h3>
+                        <p className="text-gray-600 text-sm mb-4 line-clamp-3 leading-relaxed">
+                          {project.description}
+                        </p>
+                        <div className="flex items-center justify-between pt-4 border-t border-gray-200">
+                          <span className="text-xs text-gray-500 font-medium">{project.location}</span>
+                          <motion.div
+                            whileHover={{ x: 5 }}
+                            transition={{ duration: 0.3 }}
+                          >
+                            <FaArrowRight className={`${colors.text} text-lg`} />
+                          </motion.div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  </div>
+                );
+              })}
+            </Slider>
+          </div>
+
+          <motion.div
+            className="flex justify-center mt-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Link to="/our-projects">
+              <Button label={`${t("common.moreProjects")} >>>`} />
+            </Link>
+          </motion.div>
+        </div>
       </section>
 
       {/* Expertise Section */}

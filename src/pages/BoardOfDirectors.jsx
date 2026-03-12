@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import { tony, eleanor, akosua, edem, annabelle, alex, clement, osei, allstaff } from "../assets/images";
 import { FaCrown, FaUserTie, FaBuilding, FaCoins, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
 
 const BoardOfDirectors = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [expandedBio, setExpandedBio] = useState(null);
 
   const boardDirectors = [
@@ -93,12 +95,12 @@ const BoardOfDirectors = () => {
       >
         <img 
           src={allstaff}
-          className="w-full h-[300px] md:h-[400px] object-cover" 
+          className="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] object-cover" 
           alt="Board of Directors"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         <motion.h1
-          className="font-poppins font-bold text-4xl md:text-6xl text-white text-center absolute bottom-10 left-0 right-0 px-4"
+          className="font-poppins font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white text-center absolute bottom-8 sm:bottom-10 left-0 right-0 px-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
@@ -251,6 +253,22 @@ const BoardOfDirectors = () => {
           </div>
         </div>
       </section>
+
+      {/* Quick Links Section */}
+      <div className="mt-20 mb-16 flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <button
+          onClick={() => navigate("/teams")}
+          className="bg-gray-200 hover:bg-gray-300 text-ash px-8 py-4 rounded-lg font-poppins font-semibold transition-colors"
+        >
+          Our Teams
+        </button>
+        <button
+          onClick={() => navigate("/staff")}
+          className="bg-orange hover:bg-red text-white px-8 py-4 rounded-lg font-poppins font-semibold transition-colors"
+        >
+          View All Staff
+        </button>
+      </div>
     </section>
   );
 };

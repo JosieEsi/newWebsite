@@ -41,6 +41,7 @@ const Footer = () => {
       links: baseFooterLinks[3].links.map(link => {
         const nameMap = {
           "Publications": t("footer.links.publications"),
+          "News & Activities": t("common.newsAndActivities"),
           "Podcast": t("footer.links.podcast"),
           "Vodcast": t("footer.links.vodcast"),
           "Videos": t("footer.links.videos"),
@@ -111,7 +112,13 @@ const Footer = () => {
         <img src={line} alt="line" className="w-full mt-10" />
       </div>
 
-      <div className="flex mt-10 justify-end">
+      <div className="flex mt-10 justify-between items-center">
+        <a 
+          href="/disclaimer" 
+          className="font-poppins text-sm text-white hover:text-orange transition-colors"
+        >
+          {t("footer.links.disclaimer")}
+        </a>
         <p className="font-poppins text-sm text-white">
           {t("footer.copyright")}
         </p>

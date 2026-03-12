@@ -1,5 +1,10 @@
-// import PartnersCard from "../components/PartnersCard";
-
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import Button from "../components/Button";
+import { useTranslation } from "../hooks/useTranslation";
+import { partnerTestimonials } from "../data/partnersData";
+import { FaQuoteLeft, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import {
   beyond,
   british,
@@ -29,96 +34,12 @@ import {
   university,
 } from "../assets/images";
 
-// const Partners = () => {
-//   return (
-//     <section
-//       id="partners"
-//       className="flex max-container overflow-hidden justify-center"
-//     >
-//       <div className=" bg-white w-full lg:w-2/3  max-sm:w-full flex flex-col justify-center">
-//         <div className="bg-white ml-10 max-sm:ml-0 justify-center ">
-//           <h3 className="font-poppins font-bold text-3xl text-ash pb-4">
-//             Partners
-//           </h3>
-//         </div>
-
-//         <div className="flex overflow-hidden group justify-center">
-//           <div className="flex animate-loop-scroll space-x-10 group-hover:paused relative">
-//             <img src={beyond} alt="" className="w-20 h-20" />
-//             <img src={british} alt="" className="w-20 h-20" />
-//             <img src={callund} alt="" className="w-20 h-20" />
-//             <img src={cdd} alt="" className="w-20 h-20" />
-//             <img src={cocoa} alt="" className="w-20 h-20" />
-//             <img src={coram} alt="" className="w-20 h-20" />
-//             <img src={edtech} alt="" className="w-20 h-20" />
-//             <img src={euro} alt="" className="w-20 h-20" />
-//             <img src={slaves} alt="" className="w-20 h-20" />
-//             <img src={gain} alt="" className="w-20 h-20" />
-//             <img src={initial} alt="" className="w-20 h-20" />
-//             <img src={ipsos} alt="" className="w-20 h-20" />
-//             <img src={institute} alt="" className="w-20 h-20" />
-//             <img src={kokoo} alt="" className="w-20 h-20" />
-//             <img src={mastercard} alt="" className="w-20 h-20" />
-//             <img src={opm} alt="" className="w-20 h-20" />
-//             <img src={pandemics} alt="" className="w-20 h-20" />
-//             <img src={root} alt="" className="w-20 h-20" />
-//             <img src={sabre} alt="" className="w-20 h-20" />
-//             <img src={schol} alt="" className="w-20 h-20" />
-//             <img src={star} alt="" className="w-20 h-20" />
-//             <img src={sustainable} alt="" className="w-20 h-20" />
-//             <img src={tonys} alt="" className="w-20 h-20" />
-//             <img src={tzedek} alt="" className="w-20 h-20" />
-//             <img src={unicef} alt="" className="w-20 h-20" />
-//             <img src={university} alt="" className="w-20 h-20" />
-//           </div>
-
-//           <div className=" flex animate-loop-scroll space-x-10 group-hover:paused ">
-//             <img src={beyond} alt="" className="w-20 h-20" />
-//             <img src={british} alt="" className="w-20 h-20" />
-//             <img src={callund} alt="" className="w-20 h-20" />
-//             <img src={cdd} alt="" className="w-20 h-20" />
-//             <img src={cocoa} alt="" className="w-20 h-20" />
-//             <img src={coram} alt="" className="w-20 h-20" />
-//             <img src={edtech} alt="" className="w-20 h-20" />
-//             <img src={euro} alt="" className="w-20 h-20" />
-//             <img src={slaves} alt="" className="w-20 h-20" />
-//             <img src={gain} alt="" className="w-20 h-20" />
-//             <img src={initial} alt="" className="w-20 h-20" />
-//             <img src={ipsos} alt="" className="w-20 h-20" />
-//             <img src={institute} alt="" className="w-20 h-20" />
-//             <img src={kokoo} alt="" className="w-20 h-20" />
-//             <img src={mastercard} alt="" className="w-20 h-20" />
-//             <img src={opm} alt="" className="w-20 h-20" />
-//             <img src={pandemics} alt="" className="w-20 h-20" />
-//             <img src={root} alt="" className="w-20 h-20" />
-//             <img src={sabre} alt="" className="w-20 h-20" />
-//             <img src={schol} alt="" className="w-20 h-20" />
-//             <img src={star} alt="" className="w-20 h-20" />
-//             <img src={sustainable} alt="" className="w-20 h-20" />
-//             <img src={tonys} alt="" className="w-20 h-20" />
-//             <img src={tzedek} alt="" className="w-20 h-20" />
-//             <img src={unicef} alt="" className="w-20 h-20" />
-//             <img src={university} alt="" className="w-20 h-20" />
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Partners;
-
-// import { partners } from "../constants";
-
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
-import Button from "../components/Button";
-import { useTranslation } from "../hooks/useTranslation";
-
 const Partners = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
+  const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
+
   const partners = [
     { imgURL: beyond, name: "Beyond" },
     { imgURL: british, name: "British" },
@@ -148,69 +69,230 @@ const Partners = () => {
     { imgURL: university, name: "University" },
   ];
 
+  const nextTestimonial = () => {
+    setDirection(1);
+    setCurrentTestimonialIndex((prev) => (prev + 1) % partnerTestimonials.length);
+  };
+
+  const prevTestimonial = () => {
+    setDirection(-1);
+    setCurrentTestimonialIndex((prev) => (prev - 1 + partnerTestimonials.length) % partnerTestimonials.length);
+  };
+
+  // Auto-rotate testimonials
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setDirection(1);
+      setCurrentTestimonialIndex((prev) => (prev + 1) % partnerTestimonials.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [currentTestimonialIndex]);
+
+  const currentTestimonial = partnerTestimonials[currentTestimonialIndex];
+
+  const slideVariants = {
+    enter: (direction) => ({
+      x: direction > 0 ? 100 : -100,
+      opacity: 0,
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+      position: "relative",
+    },
+    exit: (direction) => ({
+      x: direction < 0 ? 100 : -100,
+      opacity: 0,
+      position: "absolute",
+    }),
+  };
+
   return (
-    <section
-      id="partners"
-      className="flex max-container overflow-hidden justify-center px-4 sm:px-6 lg:px-8"
-    >
+    <section id="partners" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Section Header - Consistent Style */}
       <motion.div
-        className="bg-white w-full lg:w-2/3 max-sm:w-full flex flex-col justify-center"
-        initial={{ opacity: 0, y: 50 }}
+        className="text-center mb-12 md:mb-16"
+        initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <motion.div
-          className="bg-white ml-10 max-sm:ml-0 justify-center"
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
+        <div className="flex items-center gap-2 sm:gap-4 mb-6 justify-center">
+          <motion.div
+            className="h-1 bg-orange flex-1 max-w-16 sm:max-w-24 md:max-w-32"
+            initial={{ width: 0 }}
+            whileInView={{ width: "100%" }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.2 }}
+          />
+          <motion.h2
+            className="font-poppins font-bold text-3xl sm:text-4xl md:text-5xl text-gray-900"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+          >
+            Our Partners
+          </motion.h2>
+          <motion.div
+            className="h-1 bg-red flex-1 max-w-16 sm:max-w-24 md:max-w-32"
+            initial={{ width: 0 }}
+            whileInView={{ width: "100%" }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.4 }}
+          />
+        </div>
+        <motion.p
+          className="text-gray-600 text-lg"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
         >
-          <h3 className="font-poppins font-bold text-3xl text-ash pb-4">
-            Partners
-          </h3>
-        </motion.div>
+          Trusted by leading organizations worldwide
+        </motion.p>
+      </motion.div>
 
-        <div className="flex overflow-hidden group justify-center py-4">
-          <div className="flex animate-loop-scroll space-x-10 group-hover:paused relative">
-            {partners.map((partner, index) => (
-              <motion.img
-                key={index}
-                src={partner.imgURL}
-                alt={partner.name}
-                className="w-20 h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"
-                whileHover={{ scale: 1.2, rotate: 5 }}
-                transition={{ duration: 0.2 }}
-              />
-            ))}
-            {partners.map((partner, index) => (
-              <motion.img
-                key={index + partners.length}
-                src={partner.imgURL}
-                alt={partner.name}
-                className="w-20 h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"
-                whileHover={{ scale: 1.2, rotate: 5 }}
-                transition={{ duration: 0.2 }}
-              />
-            ))}
+      {/* Combined Section: Testimonials + Partner Logos */}
+      <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-6 md:p-8">
+        {/* Compact Testimonial Section */}
+        <div className="relative mb-8 pb-8 border-b border-gray-200">
+          <div className="relative h-[320px] sm:h-[280px] md:h-[240px] overflow-hidden">
+            <AnimatePresence initial={false} custom={direction} mode="wait">
+              <motion.div
+                key={currentTestimonialIndex}
+                custom={direction}
+                variants={slideVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{
+                  x: { type: "spring", stiffness: 400, damping: 30 },
+                  opacity: { duration: 0.2 }
+                }}
+                className="h-full"
+              >
+                <div className="flex flex-col md:flex-row items-start gap-6 h-full">
+                  <div className="flex-shrink-0">
+                    <img
+                      src={currentTestimonial.image}
+                      alt={currentTestimonial.partner}
+                      className="w-16 h-16 md:w-20 md:h-20 rounded-full object-contain bg-gray-100 p-2 shadow-md"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex-grow">
+                    <FaQuoteLeft className="text-orange text-2xl md:text-3xl mb-3" />
+                    <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-4 italic line-clamp-3">
+                      "{currentTestimonial.quote}"
+                    </p>
+                    <div>
+                      <p className="font-bold text-gray-800 text-base md:text-lg mb-1">
+                        {currentTestimonial.name}
+                      </p>
+                      <p className="text-orange font-semibold text-sm md:text-base mb-1">
+                        {currentTestimonial.role}
+                      </p>
+                      <p className="text-gray-600 text-sm md:text-base">
+                        {currentTestimonial.partner}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Compact Navigation Buttons */}
+            <button
+              onClick={prevTestimonial}
+              className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white hover:bg-orange border-2 border-gray-200 hover:border-orange flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300 group"
+              aria-label="Previous"
+            >
+              <FaChevronLeft className="text-gray-600 group-hover:text-white transition-colors text-sm" />
+            </button>
+            <button
+              onClick={nextTestimonial}
+              className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white hover:bg-red border-2 border-gray-200 hover:border-red flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300 group"
+              aria-label="Next"
+            >
+              <FaChevronRight className="text-gray-600 group-hover:text-white transition-colors text-sm" />
+            </button>
+
+            {/* Compact Dots Indicator */}
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex justify-center gap-2">
+              {partnerTestimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => {
+                    setDirection(index > currentTestimonialIndex ? 1 : -1);
+                    setCurrentTestimonialIndex(index);
+                  }}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    index === currentTestimonialIndex
+                      ? "bg-orange w-6"
+                      : "bg-gray-300 hover:bg-gray-400 w-2"
+                  }`}
+                  aria-label={`Go to testimonial ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Partner Logos Carousel */}
+        <div>
+          <div className="flex overflow-hidden group justify-center py-4">
+            <div className="flex animate-loop-scroll space-x-8 group-hover:paused relative">
+              {partners.map((partner, index) => (
+                <motion.div
+                  key={index}
+                  className="flex-shrink-0"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: index * 0.03 }}
+                >
+                  <motion.img
+                    src={partner.imgURL}
+                    alt={partner.name}
+                    className="w-16 h-16 md:w-20 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"
+                    whileHover={{ scale: 1.15, rotate: 5 }}
+                    transition={{ duration: 0.2 }}
+                  />
+                </motion.div>
+              ))}
+              {partners.map((partner, index) => (
+                <motion.div
+                  key={index + partners.length}
+                  className="flex-shrink-0"
+                >
+                  <motion.img
+                    src={partner.imgURL}
+                    alt={partner.name}
+                    className="w-16 h-16 md:w-20 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer"
+                    whileHover={{ scale: 1.15, rotate: 5 }}
+                    transition={{ duration: 0.2 }}
+                  />
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
 
         {/* View More Button */}
         <motion.div
-          className="flex justify-center mt-8"
+          className="flex justify-center mt-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          <Button 
-            label={t("partnersPage.viewMore")} 
+          <Button
+            label={t("partnersPage.viewMore")}
             onClick={() => navigate("/partners")}
           />
         </motion.div>
-      </motion.div>
+      </div>
     </section>
   );
 };

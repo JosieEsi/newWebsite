@@ -150,7 +150,7 @@ export const projects = [
     period: "2025", // COPY EXACT PERIOD FROM LIVE SITE
     category: "Cocoa Sector",
     location: "Ghana",
-    status: "Active",
+    status: "Ongoing",
     color: "red",
   },
   {
@@ -176,7 +176,7 @@ export const projects = [
     period: "2025", // COPY EXACT PERIOD FROM LIVE SITE
     category: "Research & Environment",
     location: "Ghana, Côte d'Ivoire",
-    status: "Active",
+    status: "Ongoing",
     color: "orange",
   },
   {
@@ -235,7 +235,7 @@ export const projects = [
     period: "2025", // COPY EXACT PERIOD FROM LIVE SITE
     category: "Cocoa Sector",
     location: "Ghana, Côte d'Ivoire",
-    status: "Active",
+    status: "Ongoing",
     color: "orange",
   },
   {
@@ -274,7 +274,7 @@ export const projects = [
     period: "2023-2026", // COPY EXACT PERIOD FROM LIVE SITE
     category: "Education & Child Literacy",
     location: "Ghana",
-    status: "Active",
+    status: "Ongoing",
     color: "red",
    // detailLink: "/pdaafrica/cocoa-communities-library-project",
   },
@@ -306,7 +306,7 @@ export const projects = [
     period: "2025", // COPY EXACT PERIOD FROM LIVE SITE
     category: "Child Protection",
     location: "Ghana",
-    status: "Active",
+    status: "Ongoing",
     color: "orange",
   },
   {
@@ -336,7 +336,7 @@ export const projects = [
     period: "2024-2025", // COPY EXACT PERIOD FROM LIVE SITE
     category: "Women's Economic Empowerment",
     location: "Ghana",
-    status: "Active",
+    status: "Ongoing",
     color: "red",
   },
   {
@@ -371,7 +371,7 @@ export const projects = [
     period: "2024 – 2025",
     category: "Financial Inclusion & Gender",
     location: "Ghana (Multiple Regions: Eastern, Central, Ashanti, Western North, Oti)",
-    status: "Active",
+    status: "Ongoing",
     color: "orange",
   },
   {
@@ -429,7 +429,7 @@ export const projects = [
     period: "2026", // COPY EXACT PERIOD FROM LIVE SITE 
     category: "Communication & Empowerment", 
     location: "Ghana", 
-    status: "Active", 
+    status: "Ongoing", 
     color: "orange", },
   
   // Additional projects from VSLA page and other sources
@@ -500,7 +500,7 @@ export const projects = [
     period: "", // ADD EXACT PERIOD FROM LIVE SITE
     category: "Women's Economic Empowerment",
     location: "Western North Region, Ghana (Akontombra, Fosukrom, Adabokrom districts)",
-    status: "Active",
+    status: "Ongoing",
     color: "red",
   },
   {
@@ -535,7 +535,7 @@ export const projects = [
     period: "", // ADD EXACT PERIOD FROM LIVE SITE
     category: "Research & Finance",
     location: "Côte d'Ivoire",
-    status: "Active",
+    status: "Ongoing",
     color: "orange",
   },
   {
@@ -570,7 +570,7 @@ export const projects = [
     period: "2024-2025", // ADD EXACT PERIOD FROM LIVE SITE
     category: "Financial Inclusion & Gender",
     location: "Eastern & Central Regions, Ghana",
-    status: "Active",
+    status: "Ongoing",
     color: "orange",
   },
   
@@ -616,7 +616,7 @@ export const projects = [
     period: "2023-2025", // COPY EXACT PERIOD FROM LIVE SITE
     category: "Education and Literacy",
     location: "Ghana",
-    status: "Active",
+    status: "Ongoing",
     color: "red",
   },
   
@@ -655,7 +655,7 @@ export const projects = [
     period: "", // ADD EXACT PERIOD FROM LIVE SITE
     category: "Inclusive Development",
     location: "Ghana, Nigeria, Senegal",
-    status: "Active",
+    status: "Ongoing",
     color: "red",
   },
   {
@@ -961,11 +961,289 @@ export const projects = [
   period: "2024 – Present",
   category: "Climate-Responsive Agriculture; Research & Development; Livelihoods",
   location: "Ghana, Egypt, Kenya, Morocco, Nigeria",
-  status: "Active",
+  status: "Ongoing",
   color: "orange",
+},
+{
+  id: 31,
+  slug: "scaling-jobs-for-women-through-technology-sjfwt-soronko-academy",
+  title: "Scaling Jobs for Women Through Technology (SJFWT) - Soronko Academy",
+  image: female,
+  description: "Empowering women through technology training and job placement programs.",
+  fullDescription: "A program focused on scaling employment opportunities for women through technology skills training and capacity building in partnership with Soronko Academy.",
+  snapshot: "The Scaling Jobs for Women Through Technology (SJFWT) project, in partnership with Soronko Academy, aims to increase employment opportunities for women by providing technology skills training, mentorship, and job placement support. The program focuses on bridging the gender gap in the technology sector and empowering women with digital skills for economic independence.",
+  howWeWentAboutIt: "PDA collaborates with Soronko Academy to deliver comprehensive technology training programs, including coding, digital literacy, and entrepreneurship skills. The project includes mentorship programs, networking opportunities, and direct job placement support to ensure sustainable employment outcomes for women participants.",
+  objectives: [
+    "Increase women's participation in the technology sector",
+    "Provide technology skills training and capacity building",
+    "Support job placement and career advancement for women",
+    "Bridge the gender gap in technology employment"
+  ],
+  activities: [
+    "Technology skills training programs",
+    "Mentorship and career guidance",
+    "Job placement and internship support",
+    "Networking events and industry connections",
+    "Entrepreneurship training for tech startups"
+  ],
+  outcomes: [
+    "Increased number of women trained in technology skills",
+    "Improved job placement rates for program participants",
+    "Enhanced career advancement opportunities for women",
+    "Strengthened partnerships with technology companies"
+  ],
+  partners: "Soronko Academy",
+  period: "2024 – Present",
+  category: "Women's Economic Empowerment; Technology & Skills Development",
+  location: "Ghana",
+  status: "Ongoing",
+  color: "orange",
+},
+{
+  id: 32,
+  slug: "scaling-mest-programs",
+  title: "Scaling MEST Programs",
+  image: strategic,
+  description: "Supporting the scaling of MEST (Meltwater Entrepreneurial School of Technology) programs across Africa.",
+  fullDescription: "A collaborative initiative to scale MEST's technology entrepreneurship training programs, supporting young entrepreneurs across Africa with skills, mentorship, and startup support.",
+  snapshot: "The Scaling MEST Programs initiative focuses on expanding the reach and impact of MEST's technology entrepreneurship training across Africa. The program provides comprehensive training in technology, business development, and entrepreneurship to young African innovators, supporting them to build scalable tech startups.",
+  howWeWentAboutIt: "PDA works with MEST to scale their programs through strategic partnerships, curriculum development, and program delivery. The initiative includes training programs, mentorship, seed funding support, and networking opportunities to help young entrepreneurs launch and grow their technology businesses.",
+  objectives: [
+    "Scale MEST technology entrepreneurship programs across Africa",
+    "Support young tech entrepreneurs with training and mentorship",
+    "Facilitate startup development and growth",
+    "Build a strong ecosystem for technology entrepreneurship"
+  ],
+  activities: [
+    "Entrepreneurship training programs",
+    "Mentorship and coaching",
+    "Startup incubation and acceleration",
+    "Seed funding and investment support",
+    "Networking and ecosystem building"
+  ],
+  outcomes: [
+    "Increased number of trained technology entrepreneurs",
+    "More tech startups launched and scaled",
+    "Enhanced entrepreneurship ecosystem",
+    "Improved access to funding and resources"
+  ],
+  partners: "MEST (Meltwater Entrepreneurial School of Technology)",
+  period: "2024 – Present",
+  category: "Technology & Entrepreneurship; Youth Development",
+  location: "Ghana, Nigeria, Kenya, South Africa",
+  status: "Ongoing",
+  color: "red",
+},
+{
+  id: 33,
+  slug: "initiative-for-youth-in-agricultural-transformation-iyat",
+  title: "Initiative for Youth in Agricultural Transformation (IYAT)",
+  image: farmer,
+  description: "Empowering youth to transform agriculture through innovation and modern farming practices.",
+  fullDescription: "The Initiative for Youth in Agricultural Transformation (IYAT) aims to engage and empower young people in agriculture, providing them with modern farming techniques, agribusiness skills, and opportunities to transform the agricultural sector.",
+  snapshot: "The Initiative for Youth in Agricultural Transformation (IYAT) is designed to attract and retain young people in agriculture by providing training in modern farming techniques, agribusiness development, and agricultural innovation. The program addresses the aging farmer population and the need to make agriculture attractive to the next generation.",
+  howWeWentAboutIt: "PDA implements the IYAT program through comprehensive training modules covering modern agricultural practices, agribusiness management, value chain development, and technology integration. The program includes mentorship, access to land and resources, and market linkages to support youth-led agricultural enterprises.",
+  objectives: [
+    "Attract and retain youth in agriculture",
+    "Provide modern agricultural training and skills",
+    "Support youth-led agribusiness development",
+    "Transform agriculture through innovation and technology"
+  ],
+  activities: [
+    "Agricultural training programs",
+    "Agribusiness development support",
+    "Access to land and farming resources",
+    "Market linkages and value chain development",
+    "Technology integration in agriculture"
+  ],
+  outcomes: [
+    "Increased youth participation in agriculture",
+    "More youth-led agribusinesses established",
+    "Improved agricultural productivity and innovation",
+    "Enhanced food security and rural development"
+  ],
+  partners: "",
+  period: "2024 – Present",
+  category: "Agriculture & Youth Development",
+  location: "Ghana",
+  status: "Ongoing",
+  color: "orange",
+},
+{
+  id: 34,
+  slug: "ghana1000-initiative",
+  title: "Ghana1000 Initiative",
+  image: business,
+  description: "A large-scale initiative to create employment and economic opportunities across Ghana.",
+  fullDescription: "The Ghana1000 Initiative is a comprehensive program aimed at creating significant employment opportunities and driving economic transformation across Ghana through skills development, entrepreneurship support, and job creation.",
+  snapshot: "The Ghana1000 Initiative is a large-scale program designed to create employment opportunities and drive economic growth across Ghana. The initiative focuses on skills development, entrepreneurship support, job creation, and economic empowerment to transform livelihoods and communities.",
+  howWeWentAboutIt: "PDA implements the Ghana1000 Initiative through a multi-faceted approach including skills training programs, entrepreneurship development, job placement services, and economic empowerment initiatives. The program works with various sectors including agriculture, technology, manufacturing, and services to create diverse employment opportunities.",
+  objectives: [
+    "Create significant employment opportunities",
+    "Develop skills and capacity for economic participation",
+    "Support entrepreneurship and business development",
+    "Drive economic transformation and growth"
+  ],
+  activities: [
+    "Skills training and capacity building",
+    "Entrepreneurship development programs",
+    "Job placement and employment support",
+    "Business incubation and acceleration",
+    "Economic empowerment initiatives"
+  ],
+  outcomes: [
+    "Increased employment opportunities across sectors",
+    "Enhanced skills and capacity among participants",
+    "More businesses established and scaled",
+    "Improved economic outcomes for communities"
+  ],
+  partners: "",
+  period: "2024 – Present",
+  category: "Economic Development; Employment & Skills",
+  location: "Ghana",
+  status: "Ongoing",
+  color: "red",
+},
+{
+  id: 35,
+  slug: "absa-young-africa-works-program",
+  title: "Absa Young Africa Works Program",
+  image: yfutures,
+  description: "Empowering young people across Africa with skills, employment, and entrepreneurship opportunities.",
+  fullDescription: "The Absa Young Africa Works Program, in partnership with the Mastercard Foundation, aims to create employment opportunities for young people across Africa through skills training, entrepreneurship support, and job placement services.",
+  snapshot: "The Absa Young Africa Works Program is a pan-African initiative designed to address youth unemployment by providing comprehensive skills training, entrepreneurship support, and job placement services. The program focuses on creating sustainable employment opportunities and economic empowerment for young people across the continent.",
+  howWeWentAboutIt: "PDA implements the Absa Young Africa Works Program through strategic partnerships, delivering skills training programs, entrepreneurship development, mentorship, and job placement services. The program works across multiple sectors to create diverse employment pathways for young people.",
+  objectives: [
+    "Create employment opportunities for young people",
+    "Provide skills training and capacity building",
+    "Support youth entrepreneurship and business development",
+    "Address youth unemployment across Africa"
+  ],
+  activities: [
+    "Skills training programs",
+    "Entrepreneurship development and support",
+    "Job placement and career services",
+    "Mentorship and career guidance",
+    "Business incubation and acceleration"
+  ],
+  outcomes: [
+    "Increased employment among program participants",
+    "More youth-led businesses established",
+    "Enhanced skills and capacity among young people",
+    "Improved economic outcomes for youth"
+  ],
+  partners: "Absa Bank; Mastercard Foundation",
+  period: "2024 – Present",
+  category: "Youth Development; Employment & Skills",
+  location: "Ghana, Kenya, Uganda, South Africa",
+  status: "Ongoing",
+  color: "orange",
+},
+{
+  id: 36,
+  slug: "happy-program",
+  title: "HAPPY Program",
+  image: child,
+  description: "A program focused on health, agriculture, and prosperity for youth and communities.",
+  fullDescription: "The HAPPY Program (Health, Agriculture, and Prosperity for Youth) is a comprehensive initiative that addresses health, agricultural development, and economic prosperity for young people and their communities.",
+  snapshot: "The HAPPY Program integrates health, agriculture, and prosperity initiatives to create holistic development outcomes for youth and communities. The program addresses multiple dimensions of wellbeing including health, food security, and economic empowerment.",
+  howWeWentAboutIt: "PDA implements the HAPPY Program through integrated interventions including health education and services, agricultural training and support, and economic empowerment activities. The program takes a holistic approach to community development, addressing interconnected challenges and opportunities.",
+  objectives: [
+    "Improve health outcomes for youth and communities",
+    "Enhance agricultural productivity and food security",
+    "Promote economic prosperity and empowerment",
+    "Create sustainable development pathways"
+  ],
+  activities: [
+    "Health education and services",
+    "Agricultural training and support",
+    "Economic empowerment programs",
+    "Community mobilization and engagement",
+    "Integrated development interventions"
+  ],
+  outcomes: [
+    "Improved health outcomes",
+    "Enhanced agricultural productivity",
+    "Increased economic opportunities",
+    "Strengthened community resilience"
+  ],
+  partners: "",
+  period: "2024 – Present",
+  category: "Health & Agriculture; Community Development",
+  location: "Ghana",
+  status: "Ongoing",
+  color: "red",
+},
+{
+  id: 37,
+  slug: "global-plastic-action-partnership",
+  title: "Global Plastic Action Partnership",
+  image: strategic,
+  description: "Addressing plastic pollution and promoting sustainable waste management practices.",
+  fullDescription: "The Global Plastic Action Partnership (GPAP) is an initiative focused on addressing plastic pollution through sustainable waste management, circular economy approaches, and community engagement.",
+  snapshot: "The Global Plastic Action Partnership works to combat plastic pollution by promoting sustainable waste management practices, supporting circular economy initiatives, and engaging communities in plastic reduction and recycling efforts. The program addresses one of the most pressing environmental challenges of our time.",
+  howWeWentAboutIt: "PDA implements the Global Plastic Action Partnership through community engagement, waste management training, recycling initiatives, and policy advocacy. The program works with communities, businesses, and government to create sustainable solutions to plastic pollution.",
+  objectives: [
+    "Reduce plastic pollution and environmental impact",
+    "Promote sustainable waste management practices",
+    "Support circular economy initiatives",
+    "Engage communities in environmental protection"
+  ],
+  activities: [
+    "Waste management training and capacity building",
+    "Recycling and circular economy initiatives",
+    "Community engagement and awareness campaigns",
+    "Policy advocacy and stakeholder engagement",
+    "Research and data collection on plastic pollution"
+  ],
+  outcomes: [
+    "Reduced plastic pollution in target areas",
+    "Improved waste management practices",
+    "Increased community engagement in environmental protection",
+    "Enhanced policy and regulatory frameworks"
+  ],
+  partners: "World Economic Forum; Global Plastic Action Partnership",
+  period: "2024 – Present",
+  category: "Environment & Sustainability",
+  location: "Ghana",
+  status: "Ongoing",
+  color: "orange",
+},
+{
+  id: 38,
+  slug: "ghana-netherlands-seed-partnership-gnsp",
+  title: "Ghana-Netherlands Seed Partnership (GNSP)",
+  image: farmer,
+  description: "Strengthening seed systems and agricultural productivity through international partnership.",
+  fullDescription: "The Ghana-Netherlands Seed Partnership (GNSP) aims to strengthen seed systems, improve agricultural productivity, and enhance food security through collaboration between Ghana and the Netherlands.",
+  snapshot: "The Ghana-Netherlands Seed Partnership (GNSP) focuses on improving seed systems, enhancing agricultural productivity, and strengthening food security through technical cooperation, capacity building, and knowledge exchange between Ghana and the Netherlands. The partnership addresses critical challenges in agricultural development and seed quality.",
+  howWeWentAboutIt: "PDA supports the GNSP through research, capacity building, stakeholder engagement, and program implementation. The partnership involves collaboration with seed producers, farmers, research institutions, and government agencies to improve seed systems and agricultural outcomes.",
+  objectives: [
+    "Strengthen seed systems and quality",
+    "Improve agricultural productivity",
+    "Enhance food security",
+    "Build capacity in seed production and distribution"
+  ],
+  activities: [
+    "Seed system research and development",
+    "Capacity building for seed producers",
+    "Farmer training and extension services",
+    "Stakeholder engagement and coordination",
+    "Knowledge exchange and technical cooperation"
+  ],
+  outcomes: [
+    "Improved seed quality and availability",
+    "Enhanced agricultural productivity",
+    "Strengthened seed systems",
+    "Improved food security outcomes"
+  ],
+  partners: "Government of Ghana; Government of the Netherlands",
+  period: "2024 – Present",
+  category: "Agriculture & Food Security; International Partnership",
+  location: "Ghana",
+  status: "Ongoing",
+  color: "red",
 }
-
-
 
   // Continue adding projects 20-100 below
   // Visit pdaghana.com/projects/ for complete list and exact content

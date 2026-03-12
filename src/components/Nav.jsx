@@ -79,6 +79,7 @@ const Nav = () => {
         style={{
           top: "100px",
           zIndex: 1,
+          maxHeight: "calc(100vh - 100px)",
         }}
       >
         <Menu onLinkClick={handleClick} />

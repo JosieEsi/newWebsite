@@ -103,8 +103,8 @@ export const navigation = [
     link: "/publications",
     links: [
       { name: "Publications", link: "/publications" },
-      { name: "Podcast", link: "/podcast" },
-      { name: "Vodcast", link: "/vodcast" },
+      { name: "News & Activities", link: "/news-and-activities" },
+      { name: "Podcast and Vodcasts", link: "/podcast-and-vodcast" },
       { name: "Videos", link: "/videos" },
       { name: "Photos", link: "/photos" },
     ],
@@ -114,9 +114,9 @@ export const navigation = [
     title: "Impact",
     link: "/our-impact",
     links: [
-      { name: "Impact Stories", link: "/our-impact#impact-stories" },
-      { name: "Webinars", link: "/our-impact#webinars" },
-      { name: "Workshops", link: "/our-impact#workshops" },
+      { name: "Policy Change", link: "/our-impact#policies" },
+      { name: "Practice Change", link: "/our-impact#practices" },
+      { name: "System Change", link: "/our-impact#systems" },
     ],
   },
 ];
@@ -200,11 +200,11 @@ export const footerLinks = [
   {
     title: "Resources",
     links: [
-      { name: "Publications", link: "/" },
-      { name: "Podcast", link: "/" },
-      { name: "Vodcast", link: "/" },
-      { name: "Videos", link: "/" },
-      { name: "Photos", link: "/" },
+      { name: "Publications", link: "/publications" },
+      { name: "News & Activities", link: "/news-and-activities" },
+      { name: "Podcast and Vodcasts", link: "/podcast-and-vodcast" },
+      { name: "Videos", link: "/videos" },
+      { name: "Photos", link: "/photos" },
     ],
   },
 

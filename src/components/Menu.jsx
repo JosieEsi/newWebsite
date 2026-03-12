@@ -1,16 +1,25 @@
 import { useState, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { search } from "../assets/icons";
 import { navLinks as baseNavLinks, navigation as baseNavigation, socialMedia } from "../constants";
 import Button from "./Button";
 import SearchModal from "./SearchModal";
 import { useTranslation } from "../hooks/useTranslation";
+import { FaChevronDown, FaChevronUp, FaExternalLinkAlt } from "react-icons/fa";
 
 const Menu = ({ onLinkClick }) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [expandedSections, setExpandedSections] = useState({});
   const navigate = useNavigate();
   const { t } = useTranslation();
+
+  const toggleSection = (sectionTitle) => {
+    setExpandedSections((prev) => ({
+      ...prev,
+      [sectionTitle]: !prev[sectionTitle],
+    }));
+  };
 
   // Generate translated navigation
   const navLinks = useMemo(() => [
@@ -20,7 +29,7 @@ const Menu = ({ onLinkClick }) => {
     { href: "/covid-19", label: t("nav.covid19") },
     { href: "/partners", label: t("nav.partners") },
     { href: "/#events", label: t("nav.events") },
-    { href: "https://www.pdaafrica.org", label: "PDA Africa", external: true },
+    { href: "https://www.pdaafrica.org", label: "PDA Africa", external: true, isSubOrg: true },
   ], [t]);
 
   const navigation = useMemo(() => [
@@ -49,8 +58,8 @@ const Menu = ({ onLinkClick }) => {
       link: "/publications",
       links: [
         { name: t("nav.publications"), link: "/publications" },
-        { name: t("nav.podcast"), link: "/podcast" },
-        { name: t("nav.vodcast"), link: "/vodcast" },
+        { name: t("common.newsAndActivities"), link: "/news-and-activities" },
+        { name: t("nav.podcastAndVodcast"), link: "/podcast-and-vodcast" },
         { name: t("nav.videos"), link: "/videos" },
         { name: t("nav.photos"), link: "/photos" },
       ],
@@ -59,9 +68,9 @@ const Menu = ({ onLinkClick }) => {
       title: t("nav.impact"),
       link: "/our-impact",
       links: [
-        { name: t("nav.impactStories"), link: "/our-impact#impact-stories" },
-        { name: t("nav.webinars"), link: "/our-impact#webinars" },
-        { name: t("nav.workshops"), link: "/our-impact#workshops" },
+        { name: t("ourImpact.policies.title"), link: "/our-impact#policies" },
+        { name: t("ourImpact.practices.title"), link: "/our-impact#practices" },
+        { name: t("ourImpact.systems.title"), link: "/our-impact#systems" },
       ],
     },
   ], [t]);
@@ -94,115 +103,303 @@ const Menu = ({ onLinkClick }) => {
 
   return (
     <>
-      <section className="max-container flex flex-col lg:flex-row justify-between p-6 lg:p-10 gap-8 overflow-y-auto max-h-screen">
-        {/* Main Navigation Links */}
-        <div className="flex flex-col text-red gap-6 lg:gap-10 font-semibold text-lg lg:text-xl font-poppins">
-          {navLinks.map((section) => (
-            section.external ? (
-              <a
+      <section className="max-container flex flex-col lg:flex-row justify-between p-4 sm:p-6 md:p-8 lg:p-10 gap-6 md:gap-7 lg:gap-8 overflow-y-auto max-h-[calc(100vh-100px)] pb-20 md:pb-24 lg:pb-24">
+        {/* Mobile & Tablet Layout */}
+        <div className="lg:hidden w-full space-y-5 md:space-y-6">
+          {/* Top Action Buttons - Mobile & Tablet */}
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pb-4 md:pb-5 border-b border-gray-200">
+            <motion.button
+              onClick={() => setIsSearchOpen(true)}
+              className="flex-1 bg-orange hover:bg-red text-white rounded-lg px-5 py-3.5 md:px-6 md:py-4 font-poppins font-semibold text-sm md:text-base lg:text-lg flex items-center justify-center gap-2 transition-all duration-300 shadow-md hover:shadow-lg"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <img src={search} alt="Search Icon" className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
+              <span>{t("common.search").toUpperCase()}</span>
+            </motion.button>
+            <a
+              href="/contact"
+              onClick={(e) => handleLinkClick(e, "/contact")}
+              className="flex-1 block"
+            >
+              <Button label={t("nav.contactUs")} className="w-full text-sm md:text-base" />
+            </a>
+          </div>
+
+          {/* PDA Africa - Prominent Position */}
+          {navLinks.filter(section => section.isSubOrg).map((section) => (
+            <motion.a
+              key={section.label}
+              href={section.href}
+              onClick={onLinkClick}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full py-3.5 px-4 md:py-4 md:px-5 rounded-xl bg-gradient-to-r from-orange to-orange/90 text-white font-poppins font-bold text-base md:text-lg lg:text-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-between border-2 border-orange/20"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <span>{section.label}</span>
+              <FaExternalLinkAlt className="text-sm md:text-base lg:text-lg" />
+            </motion.a>
+          ))}
+
+          {/* Quick Links - Mobile & Tablet */}
+          <div className="space-y-1">
+            <h3 className="font-poppins font-semibold text-xs md:text-sm text-gray-500 uppercase tracking-wider mb-3 md:mb-4">
+              Quick Links
+            </h3>
+            <div className="space-y-1">
+              {navLinks.filter(section => !section.isSubOrg).map((section) => (
+                section.external ? (
+                  <motion.a
+                    key={section.label}
+                    href={section.href}
+                    onClick={onLinkClick}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block py-3 px-4 rounded-lg hover:bg-gray-50 transition-all duration-200"
+                    whileHover={{ scale: 1.01 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="font-poppins text-base md:text-lg font-medium text-black">
+                        {section.label}
+                      </span>
+                      <FaExternalLinkAlt className="text-xs text-gray-400" />
+                    </div>
+                  </motion.a>
+                ) : (
+                  <a
+                    key={section.label}
+                    href={section.href}
+                    onClick={(e) => handleLinkClick(e, section.href)}
+                    className="block py-2.5 px-4 rounded-lg hover:bg-gray-50 hover:text-orange transition-colors duration-200"
+                  >
+                    <span className="font-poppins text-base text-black font-medium">
+                      {section.label}
+                    </span>
+                  </a>
+                )
+              ))}
+            </div>
+          </div>
+
+          {/* Navigation Sections - Mobile & Tablet (Collapsible) */}
+          <div className="space-y-2 md:space-y-3">
+            {navigation.map((section) => (
+              <div key={section.title} className="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
+                <button
+                  onClick={() => toggleSection(section.title)}
+                  className="w-full flex items-center justify-between py-4 md:py-5 px-4 md:px-5 bg-gray-50 hover:bg-orange/10 transition-colors duration-200"
+                >
+                  <a
+                    href={section.link === "#" ? "#" : section.link}
+                    onClick={(e) => {
+                      if (section.link !== "#") {
+                        e.stopPropagation();
+                        handleLinkClick(e, section.link);
+                      } else {
+                        e.preventDefault();
+                        e.stopPropagation();
+                      }
+                    }}
+                    className="font-poppins text-base md:text-lg font-semibold text-black flex-1 text-left"
+                  >
+                    {section.title}
+                  </a>
+                  {expandedSections[section.title] ? (
+                    <FaChevronUp className="text-gray-400 text-sm md:text-base" />
+                  ) : (
+                    <FaChevronDown className="text-gray-400 text-sm md:text-base" />
+                  )}
+                </button>
+                <AnimatePresence>
+                  {expandedSections[section.title] && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="overflow-hidden"
+                    >
+                      <ul className="py-2 space-y-1 bg-white">
+                        {section.links.map((link) => (
+                          <li key={link.name} className="break-words">
+                            <a
+                              href={link.link}
+                              onClick={(e) => handleLinkClick(e, link.link)}
+                              className="block py-2.5 md:py-3 px-6 md:px-7 font-poppins text-sm md:text-base text-gray-700 hover:text-orange hover:bg-orange/10 transition-colors duration-200 leading-relaxed"
+                            >
+                              <span className="break-words inline-block">{link.name}</span>
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
+          </div>
+
+          {/* Social Media - Mobile & Tablet */}
+          <div className="pt-4 md:pt-5 border-t border-gray-200">
+            <h3 className="font-poppins font-semibold text-xs md:text-sm text-gray-500 uppercase tracking-wider mb-3 md:mb-4">
+              Follow Us
+            </h3>
+            <div className="flex gap-4 md:gap-5">
+              {socialMedia.map((icon) => (
+                <motion.a
+                  key={icon.alt}
+                  href={icon.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={onLinkClick}
+                  className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-100 hover:bg-orange flex items-center justify-center transition-all duration-300"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <img src={icon.src} alt={icon.alt} width={20} height={20} className="md:w-6 md:h-6" />
+                </motion.a>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop Layout */}
+        <div className="hidden lg:flex lg:flex-row justify-between w-full gap-6 xl:gap-8 2xl:gap-10">
+          {/* Main Navigation Links */}
+          <div className="flex flex-col text-red gap-5 lg:gap-6 xl:gap-8 font-semibold text-base lg:text-lg xl:text-xl font-poppins min-w-[220px] xl:min-w-[240px]">
+            {navLinks.filter(section => !section.isSubOrg).map((section) => (
+              section.external ? (
+                <motion.a
+                  key={section.label}
+                  href={section.href}
+                  onClick={onLinkClick}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <Button label={section.label} />
+                </motion.a>
+              ) : (
+                <motion.a
+                  key={section.label}
+                  href={section.href}
+                  onClick={(e) => handleLinkClick(e, section.href)}
+                  className="hover:text-orange transition-colors duration-300 py-1"
+                  whileHover={{ x: 5 }}
+                >
+                  {section.label}
+                </motion.a>
+              )
+            ))}
+            
+            {/* PDA Africa - Special Position */}
+            {navLinks.filter(section => section.isSubOrg).map((section) => (
+              <motion.a
                 key={section.label}
                 href={section.href}
                 onClick={onLinkClick}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block"
+                className="mt-2"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
               >
-                <Button label={section.label} />
-              </a>
-            ) : (
-              <a
-                key={section.label}
-                href={section.href}
-                onClick={(e) => handleLinkClick(e, section.href)}
-                className="hover:text-orange transition-colors duration-300"
-              >
-                {section.label}
-              </a>
-            )
-          ))}
-          <div className="flex gap-5 mt-4">
-            {socialMedia.map((icon) => (
-              <div className="flex" key={icon.alt}>
-                <a
+                <motion.button
+                  className="w-full px-6 py-4 border font-poppins text-base lg:text-lg leading-none bg-gradient-to-r from-orange to-orange/90 text-white font-bold border-none rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2"
+                  whileHover={{ 
+                    boxShadow: "0 10px 30px rgba(248, 154, 35, 0.5)",
+                  }}
+                >
+                  <span>{section.label}</span>
+                  <FaExternalLinkAlt className="text-sm" />
+                </motion.button>
+              </motion.a>
+            ))}
+            
+            <div className="flex gap-3 lg:gap-4 mt-4 pt-4 border-t border-gray-200">
+              {socialMedia.map((icon) => (
+                <motion.a
+                  key={icon.alt}
                   href={icon.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={onLinkClick}
-                  className="hover:scale-110 transition-transform duration-300"
+                  className="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-gray-100 hover:bg-orange flex items-center justify-center transition-all duration-300"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  <img src={icon.src} alt={icon.alt} width={24} height={24} />
-                </a>
+                  <img src={icon.src} alt={icon.alt} width={20} height={20} className="lg:w-6 lg:h-6" />
+                </motion.a>
+              ))}
+            </div>
+          </div>
+
+          {/* Divider */}
+          <div className="bg-gradient-to-b from-transparent via-orange to-transparent h-auto w-0.5 mx-2 xl:mx-4"></div>
+
+          {/* Navigation Sections */}
+          <div className="grid grid-cols-5 gap-3 lg:gap-4 xl:gap-6 2xl:gap-8 flex-1">
+            {navigation.map((section) => (
+              <div key={section.title} className="min-w-0 xl:min-w-[140px]">
+                <motion.a
+                  href={section.link === "#" ? "#" : section.link}
+                  onClick={(e) => {
+                    if (section.link !== "#") {
+                      handleLinkClick(e, section.link);
+                    } else {
+                      e.preventDefault();
+                    }
+                  }}
+                  className="hover:text-orange transition-colors duration-300 block mb-3 lg:mb-4 xl:mb-5"
+                  whileHover={{ x: 3 }}
+                >
+                  <h4 className="font-poppins text-black font-bold text-lg lg:text-xl xl:text-2xl 2xl:text-3xl border-b-2 border-transparent hover:border-orange pb-1.5 lg:pb-2 transition-all duration-300 break-words">
+                    {section.title}
+                  </h4>
+                </motion.a>
+                <ul className="space-y-2 lg:space-y-2.5">
+                  {section.links.map((link) => (
+                    <li
+                      className="font-poppins text-sm lg:text-base xl:text-lg text-black font-normal hover:text-orange transition-colors duration-300 break-words"
+                      key={link.name}
+                    >
+                      <motion.a
+                        href={link.link}
+                        onClick={(e) => handleLinkClick(e, link.link)}
+                        className="block py-0.5 leading-relaxed"
+                        whileHover={{ x: 3 }}
+                      >
+                        <span className="break-words">{link.name}</span>
+                      </motion.a>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Divider - Hidden on mobile */}
-        <div className="bg-orange h-auto w-0.5 mx-0 lg:mx-10 hidden lg:block"></div>
-
-        {/* Navigation Sections */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 xl:gap-16 flex-1">
-          {navigation.map((section) => (
-            <div key={section.title} className="min-w-[180px]">
-              <a
-                href={section.link === "#" ? "#" : section.link}
-                onClick={(e) => {
-                  if (section.link !== "#") {
-                    handleLinkClick(e, section.link);
-                  } else {
-                    e.preventDefault();
-                  }
-                }}
-                className="hover:text-orange transition-colors duration-300"
+            {/* Contact Us & Search Section */}
+            <div className="min-w-0 xl:min-w-[140px] flex flex-col gap-3">
+              <motion.button
+                onClick={() => setIsSearchOpen(true)}
+                className="w-full bg-orange hover:bg-red text-white rounded-lg px-4 py-3 font-poppins font-semibold text-xs lg:text-sm xl:text-base flex items-center justify-center gap-2 transition-all duration-300 shadow-md hover:shadow-lg"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
               >
-                <h4 className="font-poppins text-black font-semibold text-lg lg:text-xl mb-6 lg:mb-8">
-                  {section.title}
-                </h4>
+                <img src={search} alt="Search Icon" className="w-4 h-4 lg:w-5 lg:h-5" />
+                <span>{t("common.search").toUpperCase()}</span>
+              </motion.button>
+              <a href="/contact" onClick={(e) => handleLinkClick(e, "/contact")} className="w-full">
+                <Button label={t("nav.contactUs")} className="text-xs lg:text-sm xl:text-base w-full" />
               </a>
-              <ul className="space-y-3 lg:space-y-4">
-                {section.links.map((link) => (
-                  <li
-                    className="font-poppins text-sm lg:text-base text-black hover:text-orange transition-colors duration-300"
-                    key={link.name}
-                  >
-                    <a
-                      href={link.link}
-                      onClick={(e) => handleLinkClick(e, link.link)}
-                    >
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
             </div>
-          ))}
-          {/* Contact Us Section */}
-          <div className="min-w-[180px]">
-            <a href="/contact" onClick={(e) => handleLinkClick(e, "/contact")}>
-              <Button label={t("nav.contactUs")} />
-            </a>
           </div>
         </div>
       </section>
       
-      {/* Search Button at Bottom Corner */}
-      <motion.div
-        className="fixed bottom-8 right-8 z-50"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.3 }}
-      >
-        <motion.button
-          onClick={() => setIsSearchOpen(true)}
-          className="bg-orange hover:bg-red text-white rounded-full p-4 shadow-2xl flex items-center gap-3 transition-all duration-300"
-          whileHover={{ scale: 1.1, boxShadow: "0 10px 30px rgba(248, 154, 35, 0.5)" }}
-          whileTap={{ scale: 0.95 }}
-          aria-label="Search"
-        >
-          <img src={search} alt="Search Icon" className="w-6 h-6" />
-          <span className="font-poppins font-bold text-lg hidden sm:block">{t("common.search").toUpperCase()}</span>
-        </motion.button>
-      </motion.div>
       
       <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </>

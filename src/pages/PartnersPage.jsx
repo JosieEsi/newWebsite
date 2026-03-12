@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaExternalLinkAlt, FaGlobe, FaQuoteLeft, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaQuoteLeft, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
 import { partnersData, partnerTestimonials } from "../data/partnersData.js";
 
@@ -35,14 +35,14 @@ const PartnersPage = () => {
       >
         <img
           src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1920&q=80"
-          className="w-full h-[400px] md:h-[500px] object-cover"
+          className="w-full h-[300px] sm:h-[350px] md:h-[450px] lg:h-[500px] object-cover"
           alt="Our Partners"
           loading="lazy"
           decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         <motion.h1
-          className="font-poppins font-bold text-4xl md:text-6xl text-white text-center absolute bottom-10 left-0 right-0 px-4"
+          className="font-poppins font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white text-center absolute bottom-8 sm:bottom-10 left-0 right-0 px-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
@@ -112,18 +112,6 @@ const PartnersPage = () => {
                   {partner.category}
                 </span>
                 <p className="text-gray-600 text-sm mb-4 flex-grow">{partner.description}</p>
-                <motion.a
-                  href={partner.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full px-4 py-2 bg-orange text-white rounded-lg font-semibold hover:bg-red transition-colors flex items-center justify-center gap-2"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <FaGlobe />
-                  {t("partnersPage.visitWebsite")}
-                  <FaExternalLinkAlt className="text-xs" />
-                </motion.a>
               </div>
             </motion.div>
           ))}

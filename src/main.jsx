@@ -22,7 +22,7 @@ import Covid19 from "./pages/Covid19.jsx";
 import OurImpact from "./pages/OurImpact.jsx";
 import Publications from "./pages/Publications.jsx";
 import VidPic from "./pages/VidPic.jsx";
-import Podcast from "./pages/Podcast.jsx";
+import PodcastAndVodcast from "./pages/PodcastAndVodcast.jsx";
 import BoardOfDirectors from "./pages/BoardOfDirectors.jsx";
 import CCLPDashboard from "./pages/CCLPDashboard.jsx";
 import VSLADashboard from "./pages/VSLADashboard.jsx";
@@ -35,12 +35,12 @@ import EdemProfile from "./pages/EdemProfile.jsx";
 import PublicationViewer from "./pages/PublicationViewer.jsx";
 import PartnersPage from "./pages/PartnersPage.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
+import Disclaimer from "./pages/Disclaimer.jsx";
 import ArchivesPage from "./pages/ArchivesPage.jsx";
 import ProjectDetail from "./pages/ProjectDetail.jsx";
 import NewsAndActivities from "./pages/NewsAndActivities.jsx";
 import NewsDetail from "./pages/NewsDetail.jsx";
 import Photos from "./pages/Photos.jsx";
-import Vodcast from "./pages/Vodcast.jsx";
 import Videos from "./pages/Videos.jsx";
 
 
@@ -126,8 +126,8 @@ const router = createBrowserRouter([
         element: <VidPic />,
       },
       {
-        path: "/podcast",
-        element: <Podcast />,
+        path: "/podcast-and-vodcast",
+        element: <PodcastAndVodcast />,
       },
       {
         path: "/staff",
@@ -170,6 +170,10 @@ const router = createBrowserRouter([
         element: <PrivacyPolicy />,
       },
       {
+        path: "/disclaimer",
+        element: <Disclaimer />,
+      },
+      {
         path: "/archives",
         element: <ArchivesPage />,
       },
@@ -192,10 +196,6 @@ const router = createBrowserRouter([
       {
         path: "/photos",
         element: <Photos />,
-      },
-      {
-        path: "/vodcast",
-        element: <Vodcast />,
       },
       {
         path: "/videos",

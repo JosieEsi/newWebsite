@@ -1,8 +1,9 @@
 import React, { useState, useMemo, useEffect } from "react";
 import { projects as allProjects } from "../components/ProjectsData";
+import { archivedProjects } from "../components/ArchivedProjectsData";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { FaSearch, FaFilter, FaCalendarAlt, FaUsers, FaGlobe } from "react-icons/fa";
+import { FaSearch, FaFilter, FaCalendarAlt, FaUsers, FaGlobe, FaArchive } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
 
 const ProjectsPage = () => {
@@ -182,9 +183,22 @@ const ProjectsPage = () => {
     return language === "fr" ? "Développement Communautaire" : "Community Development";
   };
 
+  // Combine projects: include archived projects only when searching
+  const projectsToSearch = useMemo(() => {
+    if (searchQuery.trim() === "") {
+      // No search query: only show current projects
+      return allProjects.map(p => ({ ...p, isArchived: false }));
+    } else {
+      // Search query exists: include both current and archived projects
+      const current = allProjects.map(p => ({ ...p, isArchived: false }));
+      const archived = archivedProjects.map(p => ({ ...p, isArchived: true }));
+      return [...current, ...archived];
+    }
+  }, [searchQuery]);
+
   // Filter projects based on search, category, date, partner, and country
   const filteredProjects = useMemo(() => {
-    return allProjects.filter((project) => {
+    return projectsToSearch.filter((project) => {
       // Get translated project fields
       const projectTitle = getProjectField(project, "title");
       const projectDescription = getProjectField(project, "description");
@@ -236,7 +250,7 @@ const ProjectsPage = () => {
 
       return matchesSearch && matchesCategory && matchesDate && matchesPartner && matchesCountry;
     });
-  }, [searchQuery, selectedCategory, selectedDate, selectedPartner, selectedCountry, allValue, language]);
+  }, [searchQuery, selectedCategory, selectedDate, selectedPartner, selectedCountry, allValue, language, projectsToSearch, getProjectField, mapCategoryToFilter]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -313,7 +327,7 @@ const ProjectsPage = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h1 className="font-poppins font-bold text-5xl md:text-6xl text-ash mb-4">
+        <h1 className="font-poppins font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-ash mb-4">
           {t("projectsPage.title").toUpperCase()}
         </h1>
         <p className="font-poppins text-lg text-gray-600 max-w-2xl mx-auto">
@@ -432,11 +446,21 @@ const ProjectsPage = () => {
         <div className="mb-6">
           <p className="font-poppins text-gray-600">
             Showing <span className="font-bold text-orange">{filteredProjects.length}</span> of{" "}
-            <span className="font-bold">{allProjects.length}</span> projects
+            <span className="font-bold">
+              {searchQuery.trim() === "" 
+                ? allProjects.length 
+                : allProjects.length + archivedProjects.length
+              }
+            </span> projects
             {searchQuery && (
               <span>
                 {" "}
                 matching "<span className="font-semibold">{searchQuery}</span>"
+              </span>
+            )}
+            {searchQuery.trim() !== "" && filteredProjects.some(p => p.isArchived) && (
+              <span className="text-sm text-gray-500 ml-2">
+                (including archived projects)
               </span>
             )}
             {selectedCategory !== allValue && (
@@ -503,11 +527,22 @@ const ProjectsPage = () => {
             >
               {/* Main Card */}
               <div
-                className={`relative rounded-2xl overflow-hidden shadow-xl cursor-pointer h-full bg-white border-2 ${colors.border} transition-all duration-300`}
+                className={`relative rounded-2xl overflow-hidden shadow-xl cursor-pointer h-full bg-white border-2 ${colors.border} transition-all duration-300 ${
+                  project.isArchived ? "opacity-95" : ""
+                }`}
                 style={{
                   boxShadow: isHovered
                     ? `0 20px 40px -10px ${colors.shadow}`
                     : "0 10px 30px rgba(0, 0, 0, 0.1)",
+                }}
+                onClick={() => {
+                  if (project.slug) {
+                    // Navigate to archives route for archived projects
+                    const route = project.isArchived 
+                      ? `/archives/${project.slug}`
+                      : `/projects/${project.slug}`;
+                    navigate(route);
+                  }
                 }}
               >
                 {/* Image Container */}
@@ -535,8 +570,16 @@ const ProjectsPage = () => {
 
                   {/* Status Badge */}
                   <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-poppins font-semibold text-ash">
-                    {project.status}
+                    {project.isArchived ? "Archived" : (project.status || "Ongoing")}
                   </div>
+                  
+                  {/* Archived Badge */}
+                  {project.isArchived && (
+                    <div className="absolute top-16 left-4 bg-orange/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-poppins font-semibold text-white flex items-center gap-1">
+                      <FaArchive className="text-xs" />
+                      Pre-2016
+                    </div>
+                  )}
                 </div>
 
                 {/* Content Section */}
@@ -588,11 +631,16 @@ const ProjectsPage = () => {
                         {getProjectField(project, "fullDescription")}
                       </p>
                       <button
-                        onClick={() => {
+                        onClick={(e) => {
+                          e.stopPropagation(); // Prevent card click from firing
                           if (project.detailLink && project.detailLink !== "#") {
                             navigate(project.detailLink);
                           } else if (project.slug) {
-                            navigate(`/projects/${project.slug}`);
+                            // Navigate to archives route for archived projects
+                            const route = project.isArchived 
+                              ? `/archives/${project.slug}`
+                              : `/projects/${project.slug}`;
+                            navigate(route);
                           } else {
                             console.warn("Project missing slug and detailLink:", project.id);
                           }

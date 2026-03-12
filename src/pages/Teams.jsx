@@ -14,14 +14,18 @@ const Teams = () => {
       icon: globe,
       image: africateam1,
       description:
-        "The PDA Africa handles the design, implementation and management of community-led projects and programmes both within PDA and on behalf of partners. Our team works directly with communities across Sub-Saharan Africa to drive sustainable development initiatives.",
+        "PDA Africa handles the design, implementation and management of community-led projects and programmes both within PDA and on behalf of partners. Our team works directly with communities across Sub-Saharan Africa to drive sustainable development initiatives.",
       memberCount: 4,
       keyAreas: [
-        "Community-led project design and implementation",
         "Financial inclusion and VSLA programs",
-        "Child labor remediation",
-        "Gender empowerment initiatives",
-        "Community mobilization and training",
+        "Child Protection & Labor Remediation",
+        "Education & Literacy Project Management",
+        "Women's Economic Empowerment",
+        "Climate-smart Agriculture",
+        "Smallholder Farmer Capacity Building",
+        "Community Mobilization & Sensitization",
+
+ 
       ],
       link: "/pdaafrica",
     },
@@ -130,7 +134,28 @@ const Teams = () => {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-end">
                 <button
-                  onClick={() => navigate("/staff")}
+                  onClick={() => {
+                    // Map team IDs to staff page department sections
+                    const teamToDepartmentMap = {
+                      "pda-africa": "pdaAfrica",
+                      "rel": "rel",
+                      "communications": "communications",
+                      "finance-admin": "finance",
+                    };
+                    const department = teamToDepartmentMap[team.id] || null;
+                    if (department) {
+                      navigate(`/staff#${department}`);
+                      // Scroll to section after navigation
+                      setTimeout(() => {
+                        const element = document.getElementById(department);
+                        if (element) {
+                          element.scrollIntoView({ behavior: "smooth", block: "start" });
+                        }
+                      }, 100);
+                    } else {
+                      navigate("/staff");
+                    }
+                  }}
                   className="bg-orange text-white px-6 py-3 rounded-lg font-poppins font-semibold hover:bg-red transition-colors"
                 >
                   View Team Members

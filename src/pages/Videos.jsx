@@ -7,18 +7,18 @@ const Videos = () => {
   const { t } = useTranslation();
   const videos = [
     {
-      id: "61QUHKQ4ECc",
-      title: "VSLA & GALS - End of First Cycle (Full Documentary)",
+      id: "CBXOLspFKug",
+      title: "8th Knowledge Sharing Workshop",
     },
-    { id: "6VhatIeDRpo", title: "Cocoa Community Library Project" },
-    { id: "5r9aOmU0mWI", title: "Child Labour Remediation" },
-    { id: "vE39_togVdE", title: "Introduction of the VLSA/GALS Program" },
-    { id: "iIA6YCYQK7s", title: "Short video on VSLA/GALS project" },
-    { id: "WP7Fqs8fNrI", title: "Child Labour Awareness" },
-    { id: "dIA1cnLkwA0", title: "Cocoa Communities Library Project Launch" },
+    { id: "VSvz_fSONdU", title: "Making M.E.R.L work for a change" },
+    { id: "sVqGZfIW5zc", title: "Equipping organizations to thrive and transform communities" },
+    { id: "7tQK-p01OUA", title: "Webinar-Early Childhood Literacy" },
+    { id: "1jyhbZKsKVY", title: "Indigenous Knowledge Systems" },
+    { id: "eK4T94Q-4Uw", title: "Young Female Business for Growth" },
+    { id: "x8nvCUvf9Bw", title: "8KSW-Documentary" },
     { id: "lpoBrrvidpw", title: "The Experiences of Female-led Micro and Small scale enterprises" },
     { id: "CIpl6mAXpts", title: "The story of Salomey" },
-    { id: "9ZgLBUB281o", title: "The story of Abiba" },
+    { id: "rcsM63m0EG8", title: "PDA 2024 End of year message " },
   ];
 
   // Using a professional video-themed header image URL
@@ -48,7 +48,7 @@ const Videos = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         <motion.h1
-          className="font-poppins font-bold text-4xl md:text-6xl text-white text-center absolute bottom-10 left-0 right-0 px-4"
+          className="font-poppins font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white text-center absolute bottom-8 sm:bottom-10 left-0 right-0 px-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}

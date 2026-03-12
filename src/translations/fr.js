@@ -23,6 +23,7 @@ export const fr = {
     publications: "Publications",
     podcast: "Podcast",
     vodcast: "Vodcast",
+    podcastAndVodcast: "Podcast et Vodcasts",
     videos: "Vidéos",
     photos: "Photos",
     impactStories: "Histoires d'impact",
@@ -34,6 +35,11 @@ export const fr = {
     title: "Chacun Compte",
     description: "Participatory Development Associates (PDA) est une organisation de développement social, de gestion de projets et de conseil basée au Ghana et qui travaille dans toute l'Afrique subsaharienne.",
     readMore: "EN SAVOIR PLUS",
+  },
+  // Work Section
+  work: {
+    whereWeWork: "Où Nous Travaillons",
+    description: "PDA est une organisation de développement social au Ghana avec des opérations en Côte d'Ivoire, au Cameroun, en Égypte, au Kenya, au Maroc, au Nigeria, au Sénégal, en Ouganda et dans d'autres pays africains",
   },
   // Common
   common: {
@@ -81,6 +87,7 @@ export const fr = {
       covid19: "COVID 19",
       partners: "Partenaires",
       events: "Événements",
+      disclaimer: "Avertissement",
       ourProjects: "Nos projets",
       expertise: "Expertise",
       publications: "Publications",
@@ -95,8 +102,8 @@ export const fr = {
   whoWeAre: {
     title: "Qui Nous Sommes",
     profile: "Profil",
+    profileIntro: "Participatory Development Associates (PDA) est une organisation de développement social, de gestion de projets et de conseil basée au Ghana et travaillant dans toute l'Afrique subsaharienne.",
     profileText: "PDA possède une vaste expérience dans la recherche et l'évaluation des phénomènes sociaux au Ghana et dans la région de l'Afrique subsaharienne. Nous appliquons des approches expérimentales et non expérimentales, combinant des techniques participatives pour les méthodes quantitatives et qualitatives afin d'évaluer et d'analyser de manière holistique tous les aspects des projets pour l'adoption programmatique et politique.",
-    uniqueness: "L'Unicité de PDA",
     uniquenessItems: {
       clientFocus: "Focus Client Exceptionnel",
       network: "Réseau Professionnel Fort",
@@ -144,6 +151,24 @@ export const fr = {
   // What We Do Page
   whatWeDo: {
     title: "Objectifs Stratégiques",
+    services: {
+      research: {
+        title: "Recherche et Génération de Preuves",
+        description: "Nous concevons et menons des recherches appliquées rigoureuses et des évaluations qui génèrent des données fiables et spécifiques au contexte. Nos études de base, médiane et finale fournissent des informations longitudinales qui éclairent la conception des programmes et les décisions politiques.",
+      },
+      impact: {
+        title: "Mesure de l'Impact et Évaluation",
+        description: "Nous effectuons des évaluations d'impact et des enquêtes à grande échelle pour évaluer l'efficacité, la pertinence et la durabilité. Nos analyses examinent la qualité de la mise en œuvre et les résultats aux niveaux communautaire, national et régional.",
+      },
+      synthesis: {
+        title: "Synthèse des Preuves et Intégration des Connaissances",
+        description: "Nous synthétisons les recherches existantes et les preuves des programmes pour identifier les modèles, les leçons et les implications stratégiques. Cela permet aux décideurs d'agir sur la base d'informations consolidées et de haute qualité plutôt que sur des résultats fragmentés.",
+      },
+      learning: {
+        title: "Apprentissage Collaboratif, Adaptation et Amélioration des Performances",
+        description: "Nous facilitons les processus d'apprentissage collaboratif qui renforcent l'appropriation et la responsabilité parmi les parties prenantes. Grâce à la gestion adaptative, nous soutenons les ajustements opportuns qui améliorent les performances et les résultats à long terme.",
+      },
+    },
     objectives: {
       international: {
         title: "Reconnaissance et Expansion Internationales",
@@ -375,8 +400,105 @@ export const fr = {
   // Our Impact Page
   ourImpact: {
     title: "Notre Impact",
-    description1: "Chez Participatory Development Associates (PDA), nous mesurons notre succès par l'impact positif que nous créons dans les communautés à travers l'Afrique subsaharienne. Grâce à nos programmes innovants, initiatives de recherche et partenariats collaboratifs, nous travaillons sans relâche pour autonomiser les individus, renforcer les communautés et promouvoir le développement durable.",
-    description2: "Notre impact s'étend au-delà des chiffres et des statistiques—il se reflète dans les vies transformées, les opportunités créées et les communautés autonomisées. Explorez nos histoires d'impact, webinaires et ateliers pour voir comment nous faisons une différence chaque jour.",
+    heroDescription: "Preuve de la façon dont notre travail transforme les politiques, les pratiques et les systèmes vers un monde équitable et durable.",
+    introTitle: "Transformer les Systèmes pour un Changement Durable",
+    introDescription: "Chez PDA, l'impact est la preuve de la façon dont notre travail transforme les politiques, les pratiques et les systèmes vers un monde équitable et durable. Nous mesurons le succès non seulement par les chiffres, mais par les transformations tangibles que nous permettons dans les communautés, les institutions et les structures de gouvernance à travers l'Afrique subsaharienne.",
+    policies: {
+      title: "Changement de Politique",
+      subtitle: "Influencer la Prise de Décision",
+      description: "Notre travail de recherche et de plaidoyer informe et façonne directement les décisions politiques aux niveaux local, national et régional, créant des cadres pour un développement équitable et durable.",
+      evidence1: {
+        title: "Réformes Politiques Nationales",
+        description: "Nos recherches ont directement influencé le développement et la mise en œuvre de politiques nationales en matière de protection de l'enfance, d'éducation et de protection sociale dans plusieurs pays.",
+        metric: "15+ Politiques",
+      },
+      evidence2: {
+        title: "Cadres Régionaux",
+        description: "Nous avons contribué à des cadres politiques régionaux qui abordent les défis transfrontaliers et promeuvent des solutions collaboratives pour le développement durable.",
+        metric: "5+ Cadres",
+      },
+      evidence3: {
+        title: "Gouvernance Locale",
+        description: "Notre travail a renforcé les structures de gouvernance locale, permettant aux communautés de participer de manière significative à l'élaboration et à la mise en œuvre des politiques.",
+        metric: "50+ Communautés",
+      },
+    },
+    practices: {
+      title: "Changement de Pratique",
+      subtitle: "Transformer la Façon dont le Travail est Fait",
+      description: "Nous introduisons et développons des pratiques innovantes qui améliorent la prestation de services, renforcent l'engagement communautaire et créent des voies plus efficaces vers le développement durable.",
+      evidence1: {
+        title: "Méthodologies Innovantes",
+        description: "Nos approches participatives et méthodologies fondées sur des preuves ont été adoptées par des organisations et institutions, transformant la façon dont le travail de développement est mené.",
+        metric: "100+ Organisations",
+      },
+      evidence2: {
+        title: "Renforcement des Capacités",
+        description: "Grâce à la formation et au transfert de connaissances, nous avons renforcé les capacités de milliers de praticiens, leur permettant de mettre en œuvre les meilleures pratiques dans leur travail.",
+        metric: "5,000+ Praticiens",
+      },
+      evidence3: {
+        title: "Solutions Dirigées par la Communauté",
+        description: "Nous avons facilité l'adoption de pratiques de développement dirigées par la communauté qui privilégient les connaissances locales et les solutions durables.",
+        metric: "200+ Communautés",
+      },
+    },
+    systems: {
+      title: "Changement de Système",
+      subtitle: "Construire des Structures Résilientes",
+      description: "Nous travaillons à transformer des systèmes entiers—de l'éducation et de la santé à la gouvernance et aux structures économiques—créant des fondations plus équitables, résilientes et durables pour le développement.",
+      evidence1: {
+        title: "Systèmes Éducatifs",
+        description: "Notre travail a contribué à des améliorations systémiques dans la prestation, l'accès et la qualité de l'éducation, en particulier pour les communautés marginalisées.",
+        metric: "10+ Pays",
+      },
+      evidence2: {
+        title: "Protection Sociale",
+        description: "Nous avons aidé à renforcer les systèmes de protection sociale qui fournissent des filets de sécurité et un soutien aux populations vulnérables à travers l'Afrique subsaharienne.",
+        metric: "8+ Pays",
+      },
+      evidence3: {
+        title: "Systèmes Économiques",
+        description: "Nos initiatives ont contribué à construire des systèmes économiques plus inclusifs qui créent des opportunités pour les femmes, les jeunes et les groupes marginalisés.",
+        metric: "25+ Programmes",
+      },
+    },
+    metricsTitle: "Notre Impact en Chiffres",
+    metricsDescription: "Preuve quantifiable de notre contribution au changement de politique, de pratique et de système à travers l'Afrique subsaharienne.",
+    metric1: {
+      label: "Pays Atteints",
+      value: "15+",
+    },
+    metric2: {
+      label: "Politiques Influencées",
+      value: "20+",
+    },
+    metric3: {
+      label: "Communautés Engagées",
+      value: "500+",
+    },
+    metric4: {
+      label: "Vies Impactées",
+      value: "1M+",
+    },
+    evidenceTitle: "Impact Fondé sur des Preuves",
+    evidenceDescription: "Notre impact est documenté par des processus rigoureux de recherche, d'évaluation et d'apprentissage continu.",
+    evidence1: {
+      title: "Publications de Recherche",
+      description: "Recherche évaluée par les pairs et notes de politique qui documentent notre impact et contribuent à la base de connaissances mondiale sur le développement.",
+    },
+    evidence2: {
+      title: "Rapports d'Évaluation",
+      description: "Évaluations complètes qui mesurent l'efficacité et la durabilité de nos interventions et leurs impacts systémiques.",
+    },
+    evidence3: {
+      title: "Témoignages des Parties Prenantes",
+      description: "Comptes rendus de première main de partenaires, bénéficiaires et décideurs sur la façon dont le travail de PDA a créé un changement significatif.",
+    },
+    learnMore: "En Savoir Plus",
+    ctaTitle: "Rejoignez-Nous pour Créer un Impact Durable",
+    ctaDescription: "Partenaire avec nous pour transformer les politiques, les pratiques et les systèmes vers un monde plus équitable et durable. Ensemble, nous pouvons créer un changement fondé sur des preuves qui dure.",
+    ctaButton: "Contactez-Nous",
     impactStories: "Histoires d'Impact",
     impactStoriesDesc: "Découvrez comment les initiatives de PDA transforment les communautés et créent un changement positif durable.",
     webinars: "Webinaires",
@@ -475,5 +597,38 @@ export const fr = {
     title: "🚧 Page en Construction 🚧",
     message: "Nous travaillons dur pour vous apporter quelque chose d'extraordinaire! Revenez bientôt.",
     goHome: "Aller à l'Accueil",
+  },
+  // Disclaimer
+  disclaimer: {
+    title: "Avertissement sur l'Utilisation de Photos, la Protection des Données et le Consentement",
+    lastUpdated: "Dernière Mise à Jour",
+    introduction: {
+      title: "Notre Engagement",
+      content: "Participatory Development Associates (PDA) s'engage à protéger la vie privée, la dignité et les droits de toutes les personnes dont les images apparaissent sur ce site web.",
+    },
+    consent: {
+      title: "Consentement Éclairé",
+      content: "Les photographies ne sont publiées qu'après avoir obtenu le consentement éclairé préalable des personnes concernées, ou d'un parent ou tuteur légal dans le cas des mineurs. Les images sont utilisées strictement à des fins de communication, documentation, rapport et éducation liées à nos programmes et activités.",
+    },
+    usage: {
+      title: "Utilisation et Fins Commerciales",
+      content: "PDA ne vend, n'échange ni ne distribue d'images personnelles à des fins commerciales. Si nécessaire, les détails d'identification sont limités pour protéger la vie privée et la confidentialité.",
+    },
+    ownership: {
+      title: "Propriété des Images et Droits d'Utilisation",
+      content: "Toutes les photographies sur ce site web restent la propriété de PDA et/ou des photographes respectifs. Les visiteurs, partenaires et tiers ne sont pas autorisés à télécharger, reproduire, distribuer, modifier ou réutiliser des images sans autorisation écrite préalable de PDA.",
+    },
+    protection: {
+      title: "Protection de la Vie Privée",
+      content: "Nous prenons la vie privée au sérieux. Si nécessaire, les détails d'identification sont limités pour protéger la vie privée et la confidentialité. Toutes les images sont utilisées conformément à nos directives éthiques et à nos politiques de protection des données.",
+    },
+    contact: {
+      title: "Contactez-Nous",
+      content: "Si vous pensez qu'une image de vous ou de quelqu'un sous votre garde a été utilisée sans consentement approprié, ou si vous souhaitez qu'une image soit retirée, veuillez nous contacter directement afin que nous puissions examiner et traiter rapidement votre demande.",
+    },
+    contactSection: {
+      title: "Informations de Contact",
+      description: "Pour toute question, préoccupation ou demande concernant l'utilisation des images, veuillez nous contacter:",
+    },
   },
 };

@@ -26,22 +26,22 @@ const Photos = () => {
   const { t } = useTranslation();
   const albums = [
     {
-      url: "https://photos.app.goo.gl/DeZ3HMJ9Nn5p1XcJ6",
+      url: "https://photos.app.goo.gl/XF1mZjagnw3KD5LK7",
       img: rand1,
-      title: "Field Trip_February 2020",
-      count: 50,
+      title: "Data Protection Workshop",
+      count: 22,
     },
     {
-      url: "https://photos.app.goo.gl/Ax1K2Dpc7GCXwPcS8",
+      url: "https://photos.app.goo.gl/HUiCMbXahGvjyRDY7",
       img: rand2,
-      title: "Farmer Voice Radio",
-      count: 204,
+      title: "YOFEB-4G Project",
+      count: 181,
     },
     {
-      url: "https://photos.app.goo.gl/zMscdv8XuBUzQUQq7",
+      url: "https://photos.app.goo.gl/HT3GrzSHciSQj4cu8",
       img: rand3,
-      title: "VSLA/GALS Learning Meeting, Bekwai",
-      count: 48,
+      title: "ABSA Project",
+      count: 109,
     },
     {
       url: "https://photos.app.goo.gl/8nudMZcdbmGX4Fmw5",
@@ -161,7 +161,7 @@ const Photos = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         <motion.h1
-          className="font-poppins font-bold text-4xl md:text-6xl text-white text-center absolute bottom-10 left-0 right-0 px-4"
+          className="font-poppins font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white text-center absolute bottom-8 sm:bottom-10 left-0 right-0 px-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}

@@ -63,7 +63,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative flex flex-col justify-end lg:justify-center bg-cover bg-left top-20 h-[500px] wide:h-[800px] overflow-hidden"
+      className="relative flex flex-col justify-end lg:justify-center bg-cover bg-left top-20 min-h-[400px] sm:h-[450px] md:h-[500px] lg:h-[600px] wide:h-[800px] overflow-hidden"
     >
       <video
         loop
@@ -85,16 +85,8 @@ const Hero = () => {
         animate="visible"
       >
         <div className="max-w-4xl mx-auto text-white">
-          <motion.h1
-            className="font-poppins font-bold lg:text-7xl max-sm:text-4xl md:text-6xl mb-6"
-            variants={itemVariants}
-            whileHover={{ scale: 1.02 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            {t("hero.title")}
-          </motion.h1>
           <motion.p
-            className="py-5 text-xl max-sm:text-base md:text-2xl font-poppins leading-relaxed mb-8 px-4"
+            className="py-5 text-lg md:text-xl font-poppins leading-relaxed mb-8 px-4"
             variants={itemVariants}
           >
             {t("hero.description")}

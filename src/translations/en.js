@@ -23,6 +23,7 @@ export const en = {
     publications: "Publications",
     podcast: "Podcast",
     vodcast: "Vodcast",
+    podcastAndVodcast: "Podcast and Vodcasts",
     videos: "Videos",
     photos: "Photos",
     impactStories: "Impact Stories",
@@ -34,6 +35,11 @@ export const en = {
     title: "Everyone Matters",
     description: "Participatory Development Associates (PDA), is a social development, project management and advisory organisation that is based in Ghana and works across Sub-Saharan Africa.",
     readMore: "READ MORE",
+  },
+  // Work Section
+  work: {
+    whereWeWork: "Where We Work",
+    description: "PDA is a social development organization in Ghana with operations in Cote D'Ivoire, Cameroon, Egypt, Kenya, Morocco, Nigeria, Senegal, Uganda, and other African countries",
   },
   // Common
   common: {
@@ -81,6 +87,7 @@ export const en = {
       covid19: "COVID 19",
       partners: "Partners",
       events: "Events",
+      disclaimer: "Disclaimer",
       ourProjects: "Our Projects",
       expertise: "Expertise",
       publications: "Publications",
@@ -95,8 +102,8 @@ export const en = {
   whoWeAre: {
     title: "Who We Are",
     profile: "Profile",
+    profileIntro: "Participatory Development Associates (PDA), is a social development, project management and advisory organisation that is based in Ghana and works across Sub-Saharan Africa.",
     profileText: "PDA has extensive experience researching and evaluating social phenomena in Ghana and the sub-Saharan Africa region. We apply both experimental and non-experimental approaches, combining participatory techniques for both quantitative and qualitative methods to holistically assess and analyze all facets of projects for both programmatic and policy uptake.",
-    uniqueness: "PDA's Uniqueness",
     uniquenessItems: {
       clientFocus: "Exceptional Client Focus",
       network: "Strong Professional Network",
@@ -144,6 +151,24 @@ export const en = {
   // What We Do Page
   whatWeDo: {
     title: "Strategic Objectives",
+    services: {
+      research: {
+        title: "Research & Evidence Generation",
+        description: "We design and conduct rigorous applied research and assessments that generate reliable, context-specific data. Our baseline, midline, and endline studies provide longitudinal insights that inform program design and policy decisions.",
+      },
+      impact: {
+        title: "Impact Measurement & Evaluation",
+        description: "We carry out impact evaluations and large-scale surveys to assess effectiveness, relevance, and sustainability. Our analyses examine implementation quality and results across community, national, and regional levels.",
+      },
+      synthesis: {
+        title: "Evidence Synthesis & Knowledge Integration",
+        description: "We synthesize existing research and program evidence to identify patterns, lessons, and strategic implications. This enables decision-makers to act on consolidated, high-quality insights rather than fragmented findings.",
+      },
+      learning: {
+        title: "Collaborative Learning, Adaptation & Performance Improvement",
+        description: "We facilitate collaborative learning processes that strengthen ownership and accountability among stakeholders. Through adaptive management, we support timely adjustments that improve performance and long-term outcomes.",
+      },
+    },
     objectives: {
       international: {
         title: "International Recognition & Expansion",
@@ -375,8 +400,105 @@ export const en = {
   // Our Impact Page
   ourImpact: {
     title: "Our Impact",
-    description1: "At Participatory Development Associates (PDA), we measure our success by the positive impact we create in communities across Sub-Saharan Africa. Through our innovative programs, research initiatives, and collaborative partnerships, we work tirelessly to empower individuals, strengthen communities, and drive sustainable development.",
-    description2: "Our impact extends beyond numbers and statistics—it's reflected in the lives transformed, opportunities created, and communities empowered. Explore our impact stories, webinars, and workshops to see how we're making a difference every day.",
+    heroDescription: "Evidence of how our work is changing policies, practices, and systems towards an equitable and sustainable world.",
+    introTitle: "Transforming Systems for Lasting Change",
+    introDescription: "At PDA, impact is evidence of how our work is changing policies, practices, and systems towards an equitable and sustainable world. We measure success not just by numbers, but by the tangible transformations we enable in communities, institutions, and governance structures across Sub-Saharan Africa.",
+    policies: {
+      title: "Policy Change",
+      subtitle: "Influencing Decision-Making",
+      description: "Our research and advocacy work directly informs and shapes policy decisions at local, national, and regional levels, creating frameworks for equitable and sustainable development.",
+      evidence1: {
+        title: "National Policy Reforms",
+        description: "Our research has directly influenced the development and implementation of national policies in child protection, education, and social protection across multiple countries.",
+        metric: "15+ Policies",
+      },
+      evidence2: {
+        title: "Regional Frameworks",
+        description: "We've contributed to regional policy frameworks that address cross-border challenges and promote collaborative solutions for sustainable development.",
+        metric: "5+ Frameworks",
+      },
+      evidence3: {
+        title: "Local Governance",
+        description: "Our work has strengthened local governance structures, enabling communities to participate meaningfully in policy development and implementation.",
+        metric: "50+ Communities",
+      },
+    },
+    practices: {
+      title: "Practice Change",
+      subtitle: "Transforming How Work Gets Done",
+      description: "We introduce and scale innovative practices that improve service delivery, enhance community engagement, and create more effective pathways to sustainable development.",
+      evidence1: {
+        title: "Innovative Methodologies",
+        description: "Our participatory approaches and evidence-based methodologies have been adopted by organizations and institutions, transforming how development work is conducted.",
+        metric: "100+ Organizations",
+      },
+      evidence2: {
+        title: "Capacity Building",
+        description: "Through training and knowledge transfer, we've built the capacity of thousands of practitioners, enabling them to implement best practices in their work.",
+        metric: "5,000+ Practitioners",
+      },
+      evidence3: {
+        title: "Community-Led Solutions",
+        description: "We've facilitated the adoption of community-led development practices that prioritize local knowledge and sustainable solutions.",
+        metric: "200+ Communities",
+      },
+    },
+    systems: {
+      title: "System Change",
+      subtitle: "Building Resilient Structures",
+      description: "We work to transform entire systems—from education and health to governance and economic structures—creating more equitable, resilient, and sustainable foundations for development.",
+      evidence1: {
+        title: "Education Systems",
+        description: "Our work has contributed to systemic improvements in education delivery, access, and quality, particularly for marginalized communities.",
+        metric: "10+ Countries",
+      },
+      evidence2: {
+        title: "Social Protection",
+        description: "We've helped strengthen social protection systems that provide safety nets and support for vulnerable populations across Sub-Saharan Africa.",
+        metric: "8+ Countries",
+      },
+      evidence3: {
+        title: "Economic Systems",
+        description: "Our initiatives have contributed to building more inclusive economic systems that create opportunities for women, youth, and marginalized groups.",
+        metric: "25+ Programs",
+      },
+    },
+    metricsTitle: "Our Impact by the Numbers",
+    metricsDescription: "Quantifiable evidence of our contribution to policy, practice, and system change across Sub-Saharan Africa.",
+    metric1: {
+      label: "Countries Reached",
+      value: "15+",
+    },
+    metric2: {
+      label: "Policies Influenced",
+      value: "20+",
+    },
+    metric3: {
+      label: "Communities Engaged",
+      value: "500+",
+    },
+    metric4: {
+      label: "Lives Impacted",
+      value: "1M+",
+    },
+    evidenceTitle: "Evidence-Based Impact",
+    evidenceDescription: "Our impact is documented through rigorous research, evaluation, and continuous learning processes.",
+    evidence1: {
+      title: "Research Publications",
+      description: "Peer-reviewed research and policy briefs that document our impact and contribute to the global knowledge base on development.",
+    },
+    evidence2: {
+      title: "Evaluation Reports",
+      description: "Comprehensive evaluations that measure the effectiveness and sustainability of our interventions and their systemic impacts.",
+    },
+    evidence3: {
+      title: "Stakeholder Testimonials",
+      description: "First-hand accounts from partners, beneficiaries, and policymakers on how PDA's work has created meaningful change.",
+    },
+    learnMore: "Learn More",
+    ctaTitle: "Join Us in Creating Lasting Impact",
+    ctaDescription: "Partner with us to transform policies, practices, and systems towards a more equitable and sustainable world. Together, we can create evidence-based change that lasts.",
+    ctaButton: "Get in Touch",
     impactStories: "Impact Stories",
     impactStoriesDesc: "Discover how PDA's initiatives are transforming communities and creating lasting positive change.",
     webinars: "Webinars",
@@ -475,5 +597,38 @@ export const en = {
     title: "🚧 Page Under Construction 🚧",
     message: "We're working hard to bring you something awesome! Check back soon.",
     goHome: "Go Home",
+  },
+  // Disclaimer
+  disclaimer: {
+    title: "Website Photo Use, Data Protection & Consent Disclaimer",
+    lastUpdated: "Last Updated",
+    introduction: {
+      title: "Our Commitment",
+      content: "Participatory Development Associates (PDA) is committed to safeguarding the privacy, dignity, and rights of all individuals whose images appear on this website.",
+    },
+    consent: {
+      title: "Informed Consent",
+      content: "Photographs are published only after prior informed consent has been obtained from the individuals concerned, or from a parent or legal guardian in the case of minors. Images are used strictly for communication, documentation, reporting, and educational purposes related to our programs and activities.",
+    },
+    usage: {
+      title: "Usage and Commercial Purposes",
+      content: "PDA does not sell, trade, or distribute personal images for commercial purposes. Where necessary, identifying details are limited to protect privacy and confidentiality.",
+    },
+    ownership: {
+      title: "Image Ownership and Usage Rights",
+      content: "All photographs on this website remain the property of PDA and/or the respective photographers. Visitors, partners, and third parties are not permitted to download, reproduce, distribute, modify, or reuse any images without prior written permission from PDA.",
+    },
+    protection: {
+      title: "Privacy Protection",
+      content: "We take privacy seriously. Where necessary, identifying details are limited to protect privacy and confidentiality. All images are used in accordance with our ethical guidelines and data protection policies.",
+    },
+    contact: {
+      title: "Contact Us",
+      content: "If you believe that an image of you or someone under your care has been used without appropriate consent, or you would like an image removed, please contact us directly so that we can promptly review and address your request.",
+    },
+    contactSection: {
+      title: "Contact Information",
+      description: "For questions, concerns, or requests regarding image usage, please contact us:",
+    },
   },
 };

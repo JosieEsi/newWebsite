@@ -15,6 +15,10 @@ import CustomerReviews from "./CustomerReviews";
 import PdaafricaContact from "./PdaafricaContact";
 import VideoGallery from "./VideoGallery";
 import CurrentProjects from "./CurrentProjects";
+import WhatWeDoSlider from "./WhatWeDoSlider";
+import PartnerTestimonials from "./PartnerTestimonials";
+import ImpactStats from "./ImpactStats";
+import CTASection from "./CTASection";
 
 export {
   Hero,
@@ -34,4 +38,8 @@ export {
   CustomerReviews,
   PdaafricaContact,
   CurrentProjects,
+  WhatWeDoSlider,
+  PartnerTestimonials,
+  ImpactStats,
+  CTASection,
 };

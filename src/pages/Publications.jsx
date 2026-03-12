@@ -25,14 +25,14 @@ const Publications = () => {
       >
         <img 
           src={glasses} 
-          className="w-full h-[400px] md:h-[500px] object-cover" 
+          className="w-full h-[300px] sm:h-[350px] md:h-[450px] lg:h-[500px] object-cover" 
           alt="Publications"
           loading="lazy"
           decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         <motion.h1
-          className="font-poppins font-bold text-4xl md:text-6xl text-white text-center absolute bottom-10 left-0 right-0 px-4"
+          className="font-poppins font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white text-center absolute bottom-8 sm:bottom-10 left-0 right-0 px-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
@@ -51,7 +51,7 @@ const Publications = () => {
       >
         <div className="flex flex-wrap justify-center gap-6">
           <motion.a
-            href="/podcast"
+            href="/podcast-and-vodcast"
             className="w-20 h-20 bg-red rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"
             whileHover={{ scale: 1.1, rotate: 5 }}
             whileTap={{ scale: 0.95 }}

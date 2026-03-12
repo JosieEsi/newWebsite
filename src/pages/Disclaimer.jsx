@@ -1,47 +1,47 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaShieldAlt, FaLock, FaUserShield, FaCookie, FaEnvelope, FaPhone } from "react-icons/fa";
+import { FaCamera, FaShieldAlt, FaLock, FaUserShield, FaFileContract, FaExclamationTriangle } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
 
-const PrivacyPolicy = () => {
+const Disclaimer = () => {
   const { t } = useTranslation();
 
   const sections = [
     {
       id: "introduction",
       icon: FaShieldAlt,
-      title: t("privacyPolicy.introduction.title"),
-      content: t("privacyPolicy.introduction.content"),
+      title: t("disclaimer.introduction.title"),
+      content: t("disclaimer.introduction.content"),
     },
     {
-      id: "information",
+      id: "consent",
       icon: FaUserShield,
-      title: t("privacyPolicy.information.title"),
-      content: t("privacyPolicy.information.content"),
+      title: t("disclaimer.consent.title"),
+      content: t("disclaimer.consent.content"),
     },
     {
-      id: "cookies",
-      icon: FaCookie,
-      title: t("privacyPolicy.cookies.title"),
-      content: t("privacyPolicy.cookies.content"),
+      id: "usage",
+      icon: FaCamera,
+      title: t("disclaimer.usage.title"),
+      content: t("disclaimer.usage.content"),
     },
     {
-      id: "data-protection",
+      id: "protection",
       icon: FaLock,
-      title: t("privacyPolicy.dataProtection.title"),
-      content: t("privacyPolicy.dataProtection.content"),
+      title: t("disclaimer.protection.title"),
+      content: t("disclaimer.protection.content"),
     },
     {
-      id: "rights",
-      icon: FaUserShield,
-      title: t("privacyPolicy.rights.title"),
-      content: t("privacyPolicy.rights.content"),
+      id: "ownership",
+      icon: FaFileContract,
+      title: t("disclaimer.ownership.title"),
+      content: t("disclaimer.ownership.content"),
     },
     {
-      id: "updates",
-      icon: FaShieldAlt,
-      title: t("privacyPolicy.updates.title"),
-      content: t("privacyPolicy.updates.content"),
+      id: "contact",
+      icon: FaExclamationTriangle,
+      title: t("disclaimer.contact.title"),
+      content: t("disclaimer.contact.content"),
     },
   ];
 
@@ -56,8 +56,8 @@ const PrivacyPolicy = () => {
       >
         <img
           src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80"
-          className="w-full h-[300px] md:h-[400px] object-cover"
-          alt="Privacy Policy"
+          className="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] object-cover"
+          alt="Disclaimer"
           loading="lazy"
           decoding="async"
         />
@@ -68,7 +68,7 @@ const PrivacyPolicy = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          {t("privacyPolicy.title")}
+          {t("disclaimer.title")}
         </motion.h1>
       </motion.div>
 
@@ -80,7 +80,7 @@ const PrivacyPolicy = () => {
         transition={{ delay: 0.2 }}
       >
         <p className="text-gray-600 text-sm italic">
-          {t("privacyPolicy.lastUpdated")}: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+          {t("disclaimer.lastUpdated")}: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
         </p>
       </motion.div>
 
@@ -119,35 +119,29 @@ const PrivacyPolicy = () => {
         viewport={{ once: true }}
       >
         <div className="bg-gradient-to-br from-orange/10 to-red/10 rounded-xl p-8 border-l-4 border-orange">
-          <h2 className="font-bold text-2xl text-gray-800 mb-4">{t("privacyPolicy.contact.title")}</h2>
-          <p className="text-gray-700 mb-6">{t("privacyPolicy.contact.description")}</p>
+          <h2 className="font-bold text-2xl text-gray-800 mb-4">{t("disclaimer.contactSection.title")}</h2>
+          <p className="text-gray-700 mb-6">{t("disclaimer.contactSection.description")}</p>
           <div className="space-y-3">
             <div className="flex items-center gap-3">
-              <FaEnvelope className="text-orange" />
               <a href="mailto:info@pdaghana.com" className="text-gray-700 hover:text-orange transition-colors">
                 info@pdaghana.com
               </a>
             </div>
             <div className="flex items-center gap-3">
-              <FaPhone className="text-orange" />
-              <a href="tel:+233508493316" className="text-gray-700 hover:text-orange transition-colors">
-                +233 (0) 50 849 3316
+              <a href="tel:+233208129622" className="text-gray-700 hover:text-orange transition-colors">
+                +233 (0) 208 129 622
               </a>
             </div>
             <div className="flex items-center gap-3">
-              <FaPhone className="text-orange" />
-              <a href="tel:+233509229218" className="text-gray-700 hover:text-orange transition-colors">
-                +233 (0) 50 922 9218
+              <a href="tel:+233302252998" className="text-gray-700 hover:text-orange transition-colors">
+                +233 (0) 302 252 998 / 297 0177
               </a>
             </div>
           </div>
-          <p className="text-gray-600 text-sm mt-6">
-            {t("privacyPolicy.contact.address")}
-          </p>
         </div>
       </motion.div>
     </section>
   );
 };
 
-export default PrivacyPolicy;
+export default Disclaimer;

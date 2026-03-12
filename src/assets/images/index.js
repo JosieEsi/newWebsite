@@ -173,6 +173,20 @@ import dzato from "./Dzato.jpg";
  import clement from "./Clement.jpg";
  import osei from "./Osei.jpg";
  import edemnew from "./Edemnew.png";
+ import abu from "./Abu.jpg";
+ import derek from "./Derek.jpg";
+ import emelia from "./Emelia.jpg";
+ import eugene from "./Eugene-1.jpg";
+ import yaro from "./Eunice-Yaro.jpg";
+ import harrison from "./harrison.jpg";
+ import incoom from "./Incoom.jpg";
+ import josephine from "./Josephine.jpg";
+ import kalevor from "./Kalevor.jpg";
+ import philip from "./philip.jpg";
+ import racheal from "./Racheal.jpg";
+ import ruth from "./Ruth.jpg";
+ import sanni from "./Sanni.jpg";
+ import tietaar from "./Tietaar.jpg";
 
 
 export {
@@ -339,4 +353,18 @@ export {
   clement,
   osei,
   edemnew,
+  abu,
+  derek,
+  emelia,
+  eugene,
+  yaro,
+  harrison,
+  incoom,
+  josephine,
+  kalevor,
+  philip,
+  racheal,
+  ruth,
+  sanni,
+  tietaar,
 };

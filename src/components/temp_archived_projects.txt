@@ -9,7 +9,7 @@
     description: "Capacity building training programme for ILGS and Ibis staff on facilitation skills and public engagement in local governance.",
     fullDescription: "In collaboration with Ibis Organisation Capacity Building staff, PDA designed and facilitated a two-module, 3-day residential training programme targeting key staff of ILGS and Ibis' Public Participation in Local Governance Programme.",
     snapshot: "In collaboration with Ibis Organisation Capacity Building staff, PDA designed and facilitated a two-module, 3-day residential training programme targeting key staff of ILGS and Ibis' Public Participation in Local Governance Programme. The training focused on enhancing facilitation skills and promoting effective public engagement in local governance initiatives.",
-    howWeWentAboutIt: "â€¢ Curriculum Development: Collaborated with Ibis staff to design a comprehensive two-module training programme.\nâ€¢ Interactive Training: Utilized group exercises, case studies, and hands-on facilitation practice over a 3-day residential period.\nâ€¢ Skill Application: Guided participants through practical exercises to apply facilitation techniques in public participation contexts.",
+    howWeWentAboutIt: " Curriculum Development: Collaborated with Ibis staff to design a comprehensive two-module training programme.\n Interactive Training: Utilized group exercises, case studies, and hands-on facilitation practice over a 3-day residential period.\n Skill Application: Guided participants through practical exercises to apply facilitation techniques in public participation contexts.",
     objectives: [
       "Build capacity in facilitation skills for effective public participation.",
       "Enhance strategic planning and community engagement among local governance practitioners.",
@@ -29,7 +29,7 @@
       "Fostered a collaborative learning environment that contributed to sustained capacity building in the sector."
     ],
     partners: "Ibis / Institute for Local Government Studies (ILGS)",
-    period: "Jul â€“ Nov 2008",
+    period: "Jul - Nov 2008",
     category: "Organizational Development / Capacity Building",
     location: "Ghana",
     status: "Completed",
@@ -43,7 +43,7 @@
     description: "Consultation phase for the Governance and Transparency Fund Programme, gathering evidence on citizen demand for good governance.",
     fullDescription: "PDA led the consultation phase for the ODI and Partners Governance and Transparency Fund Programme, aimed at strengthening citizen demand for good governance through evidence-based approaches.",
     snapshot: "PDA led the consultation phase for the ODI and Partners Governance and Transparency Fund Programme, aimed at strengthening citizen demand for good governance through evidence-based approaches. This involved conducting individual interviews and coordinating a 2-day multi-stakeholder workshop with government organizations, donors, and civil society representatives to gather diverse insights on governance challenges and solutions.",
-    howWeWentAboutIt: "â€¢ Stakeholder Interviews: Conducted in-depth interviews with representatives from government, donor agencies, and civil society.\nâ€¢ Workshop Coordination: Organized a 2-day workshop to facilitate dialogue and collective analysis of the evidence gathered.\nâ€¢ Data Synthesis: Consolidated findings from interviews and the workshop to support evidence-based programme design.",
+    howWeWentAboutIt: " Stakeholder Interviews: Conducted in-depth interviews with representatives from government, donor agencies, and civil society.\n Workshop Coordination: Organized a 2-day workshop to facilitate dialogue and collective analysis of the evidence gathered.\n Data Synthesis: Consolidated findings from interviews and the workshop to support evidence-based programme design.",
     objectives: [
       "Collect and analyze evidence on citizen demand for good governance.",
       "Engage a wide range of stakeholders to inform the design of the GTF Programme.",
@@ -77,7 +77,7 @@
     description: "Workshop for on-air community radios to review PDA's inventory findings and discuss capacity enhancement strategies.",
     fullDescription: "PDA facilitated a workshop organized by the Ghana Community Radio Network for on-air community radios, presenting findings from PDA's comprehensive inventory of community radios across Ghana.",
     snapshot: "PDA facilitated a workshop organized by the Ghana Community Radio Network for on-air community radios. The session was designed to review and discuss the findings of an inventory conducted by PDA on community radios across Ghana, offering insights into their capacities and areas for improvement.",
-    howWeWentAboutIt: "â€¢ Workshop Coordination: Organized a session that brought together on-air community radio personnel.\nâ€¢ Data Presentation: Presented the findings from the PDA-conducted inventory on community radios.\nâ€¢ Interactive Discussion: Facilitated group discussions to interpret the data, identify challenges, and propose improvements.",
+    howWeWentAboutIt: " Workshop Coordination: Organized a session that brought together on-air community radio personnel.\n Data Presentation: Presented the findings from the PDA-conducted inventory on community radios.\n Interactive Discussion: Facilitated group discussions to interpret the data, identify challenges, and propose improvements.",
     objectives: [
       "Present and review the findings from PDA's community radio inventory.",
       "Generate actionable recommendations for enhancing the performance and outreach of community radio stations.",
@@ -106,12 +106,12 @@
   {
     id: 63,
     slug: "pda-facilitator-development-series-advanced-facilitator-formation-programme",
-    title: "PDA Facilitator Development Series â€“ Advanced Facilitator Formation Programme",
+    title: "PDA Facilitator Development Series - Advanced Facilitator Formation Programme",
     image: getProjectImage("Organizational Development / Capacity Building", "PDA Facilitator Development Series", "Advanced facilitator formation programme for experienced facilitators."),
     description: "Advanced facilitator formation programme to enhance skills of experienced facilitators through innovative methodologies.",
     fullDescription: "This advanced facilitator formation programme was developed to build on the experience of seasoned facilitators, involving stakeholder consultation, curriculum design, fund-raising, hands-on facilitation, and comprehensive documentation.",
     snapshot: "This advanced facilitator formation programme was developed to build on the experience of seasoned facilitators. PDA, in partnership with IBIS West Africa, coordinated and co-facilitated the programme, which involved a rigorous stakeholder consultation process, curriculum design, fund-raising, hands-on facilitation, and comprehensive documentation.",
-    howWeWentAboutIt: "â€¢ Stakeholder Consultation: Engaged experienced facilitators and partners to define training needs.\nâ€¢ Curriculum Development: Designed an advanced training curriculum that addressed practical challenges and innovative approaches in facilitation.\nâ€¢ Programme Delivery: Co-facilitated an intensive training programme over a multi-day residential session.\nâ€¢ Documentation: Captured lessons learned and best practices for future reference and scaling.",
+    howWeWentAboutIt: " Stakeholder Consultation: Engaged experienced facilitators and partners to define training needs.\n Curriculum Development: Designed an advanced training curriculum that addressed practical challenges and innovative approaches in facilitation.\n Programme Delivery: Co-facilitated an intensive training programme over a multi-day residential session.\n Documentation: Captured lessons learned and best practices for future reference and scaling.",
     objectives: [
       "Enhance the skills of experienced facilitators through advanced training.",
       "Introduce innovative facilitation methodologies tailored for complex development settings.",
@@ -145,7 +145,7 @@
     description: "One-week orientation workshop for Mars Inc. partners to familiarize them with core principles and integrated development approach.",
     fullDescription: "PDA facilitated a one-week orientation workshop for partners of Mars Inc., designed to familiarize participants with Mars Inc.'s core principles, values, and the integrated development approach intended for selected cocoa communities.",
     snapshot: "PDA facilitated a one-week orientation workshop for partners of Mars Inc. This workshop was designed to familiarize participants with Mars Inc.'s core principles, values, and the integrated development approach intended for selected cocoa communities, ensuring alignment and effective programme implementation.",
-    howWeWentAboutIt: "â€¢ Curriculum Design: Developed a comprehensive orientation programme covering key aspects of Mars Inc.'s values and integrated development strategy.\nâ€¢ Workshop Delivery: Facilitated a one-week workshop that included presentations, interactive discussions, and practical exercises.\nâ€¢ Stakeholder Engagement: Ensured active participation and dialogue to clarify expectations and operational strategies among all partners.",
+    howWeWentAboutIt: " Curriculum Design: Developed a comprehensive orientation programme covering key aspects of Mars Inc.'s values and integrated development strategy.\n Workshop Delivery: Facilitated a one-week workshop that included presentations, interactive discussions, and practical exercises.\n Stakeholder Engagement: Ensured active participation and dialogue to clarify expectations and operational strategies among all partners.",
     objectives: [
       "Introduce Mars Inc.'s core values and development approach to local partners.",
       "Align partners with the strategic vision and operational modalities of Mars Inc.'s integrated development programme.",
@@ -179,7 +179,7 @@
     description: "Strategic planning process facilitation for Right to Play's West and Central Africa teams across seven countries.",
     fullDescription: "PDA facilitated the strategic planning process for Right to Play's West and Central Africa teams, spanning seven countries, to build a shared vision and operational roadmap for regional activities.",
     snapshot: "PDA facilitated the strategic planning process for Right to Play's West and Central Africa teams, spanning seven countries. The process aimed to build a shared vision and operational roadmap for regional activities, aligning diverse teams on strategic priorities and future actions.",
-    howWeWentAboutIt: "â€¢ Workshop Organization: Coordinated planning sessions with representatives from all 7 country teams.\nâ€¢ Participatory Methodologies: Employed interactive discussions and group exercises to encourage collective visioning.\nâ€¢ Synthesis & Documentation: Captured and consolidated diverse inputs into a strategic plan that was endorsed by all teams.",
+    howWeWentAboutIt: " Workshop Organization: Coordinated planning sessions with representatives from all 7 country teams.\n Participatory Methodologies: Employed interactive discussions and group exercises to encourage collective visioning.\n Synthesis & Documentation: Captured and consolidated diverse inputs into a strategic plan that was endorsed by all teams.",
     objectives: [
       "Develop a unified strategic plan for regional operations.",
       "Align the priorities and activities of teams across 7 countries.",
@@ -213,7 +213,7 @@
     description: "Lead facilitation of RAVI's Annual Learning Festivals, bringing together over 200 participants from civil society and government.",
     fullDescription: "PDA served as the lead facilitator for RAVI's Annual Learning Festivals, events that gathered over 200 participants from civil society and government organizations in Ghana for learning, sharing best practices, and fostering partnerships.",
     snapshot: "PDA served as the lead facilitator for RAVI's Annual Learning Festivals, events that gathered over 200 participants from civil society and government organizations in Ghana. These festivals provided a dynamic forum for learning, sharing best practices, and fostering partnerships to enhance advocacy and civic engagement.",
-    howWeWentAboutIt: "â€¢ Event Coordination: Organized the logistics and program structure for large-scale multi-stakeholder events.\nâ€¢ Interactive Facilitation: Engaged participants through workshops, group discussions, and networking sessions.\nâ€¢ Outcome Documentation: Captured key insights and recommendations to inform ongoing advocacy efforts.",
+    howWeWentAboutIt: " Event Coordination: Organized the logistics and program structure for large-scale multi-stakeholder events.\n Interactive Facilitation: Engaged participants through workshops, group discussions, and networking sessions.\n Outcome Documentation: Captured key insights and recommendations to inform ongoing advocacy efforts.",
     objectives: [
       "Facilitate cross-sector dialogue and knowledge sharing among diverse stakeholders.",
       "Build capacity in advocacy and public engagement through interactive sessions.",
@@ -247,7 +247,7 @@
     description: "Regional workshop and national seminar introducing ODI's Civil Society Partnership Programme and exploring evidence-based policy influence.",
     fullDescription: "PDA coordinated a regional workshop and national seminar that brought together civil society participants from Ghana and Nigeria to explore how evidence can be used to influence policy.",
     snapshot: "PDA coordinated a regional workshop and national seminar that brought together civil society participants from Ghana and Nigeria. The event introduced the ODI 'Civil Society Partnership Programme' and explored how evidence can be used to influence policy, highlighting best practices and challenges in evidence-based advocacy.",
-    howWeWentAboutIt: "â€¢ Regional Coordination: Organized a two-day workshop involving participants from multiple countries in West Africa.\nâ€¢ Interactive Discussions: Facilitated sessions that combined individual insights with group analysis on using evidence for policy advocacy.\nâ€¢ Synthesis of Insights: Consolidated feedback and discussions to produce recommendations for improving evidence utilization in policy influence.",
+    howWeWentAboutIt: " Regional Coordination: Organized a two-day workshop involving participants from multiple countries in West Africa.\n Interactive Discussions: Facilitated sessions that combined individual insights with group analysis on using evidence for policy advocacy.\n Synthesis of Insights: Consolidated feedback and discussions to produce recommendations for improving evidence utilization in policy influence.",
     objectives: [
       "Introduce ODI's Civil Society Partnership Programme to key stakeholders.",
       "Explore the role of evidence in shaping public policy.",
@@ -281,7 +281,7 @@
     description: "5-day introductory workshop for RAVI grant partners on rights-based approaches and effective citizen-government engagement.",
     fullDescription: "PDA facilitated a 5-day introductory workshop designed for newly selected RAVI grant partners, focusing on rights-based approaches, power dynamics, and strategies for effective citizen government engagement.",
     snapshot: "PDA facilitated a 5-day introductory workshop designed for newly selected RAVI grant partners. The workshop focused on rights-based approaches, power dynamics, and strategies for effective citizen government engagement, aiming to equip partners with the tools needed for impactful advocacy.",
-    howWeWentAboutIt: "â€¢ Curriculum Development: Designed a comprehensive 5-day training programme incorporating lectures, case studies, and interactive group work.\nâ€¢ Engagement Techniques: Employed participatory exercises to explore rights, power, and citizen-government interaction.\nâ€¢ Practical Application: Facilitated sessions that allowed participants to practice and refine their advocacy and engagement skills.",
+    howWeWentAboutIt: " Curriculum Development: Designed a comprehensive 5-day training programme incorporating lectures, case studies, and interactive group work.\n Engagement Techniques: Employed participatory exercises to explore rights, power, and citizen-government interaction.\n Practical Application: Facilitated sessions that allowed participants to practice and refine their advocacy and engagement skills.",
     objectives: [
       "Build foundational capacity in rights-based approaches among new grant partners.",
       "Enhance understanding of power dynamics and effective citizen engagement in governance.",
@@ -315,7 +315,7 @@
     description: "5-day course co-facilitated with CARE to enhance facilitation skills of 25 staff and partners for community empowerment.",
     fullDescription: "PDA co-facilitated a 5-day course aimed at enhancing the facilitation skills of 25 CARE staff and partners, focusing on methodologies for community empowerment tailored to support the CARE Agricultural and Natural Resources programme.",
     snapshot: "PDA co-facilitated a 5-day course aimed at enhancing the facilitation skills of 25 CARE staff and partners. The course focused on methodologies for community empowerment, tailored to support the CARE Agricultural and Natural Resources programme in fostering effective community-led initiatives.",
-    howWeWentAboutIt: "â€¢ Joint Facilitation: Worked alongside CARE personnel to deliver a cohesive training experience.\nâ€¢ Interactive Methods: Utilized participatory approaches such as role-plays, group discussions, and case studies to build practical skills.\nâ€¢ Focus on Empowerment: Emphasized techniques and strategies for enabling communities to take charge of their development processes.",
+    howWeWentAboutIt: " Joint Facilitation: Worked alongside CARE personnel to deliver a cohesive training experience.\n Interactive Methods: Utilized participatory approaches such as role-plays, group discussions, and case studies to build practical skills.\n Focus on Empowerment: Emphasized techniques and strategies for enabling communities to take charge of their development processes.",
     objectives: [
       "Enhance facilitation skills among CARE staff and partners for effective community empowerment.",
       "Introduce innovative approaches and methodologies for engaging communities in development processes.",
@@ -349,7 +349,7 @@
     description: "Two workshops in southern and middle zones of Ghana to introduce the DFID-funded Global School Partnerships Programme to educators.",
     fullDescription: "PDA facilitated two workshops in the southern and middle zones of Ghana to introduce prospective participants to the DFID-funded Global School Partnerships Programme.",
     snapshot: "PDA facilitated two workshops in the southern and middle zones of Ghana to introduce prospective participants to the DFID-funded Global School Partnerships Programme. The sessions were designed to familiarize educators and school administrators with the programme's objectives and operational framework.",
-    howWeWentAboutIt: "â€¢ Workshop Planning: Coordinated logistics and developed a tailored agenda for each workshop zone.\nâ€¢ Interactive Sessions: Employed participatory methods to engage educators and school leaders.\nâ€¢ Feedback Mechanisms: Integrated Q&A sessions and group discussions to capture participant insights.",
+    howWeWentAboutIt: " Workshop Planning: Coordinated logistics and developed a tailored agenda for each workshop zone.\n Interactive Sessions: Employed participatory methods to engage educators and school leaders.\n Feedback Mechanisms: Integrated Q&A sessions and group discussions to capture participant insights.",
     objectives: [
       "Introduce the Global School Partnerships Programme to key educational stakeholders.",
       "Generate interest and gather feedback from prospective participants.",
@@ -383,7 +383,7 @@
     description: "Co-moderated two one-day stakeholder consultation workshops in Kumasi and Accra to generate responses to the EU country strategy.",
     fullDescription: "PDA co-moderated two one-day stakeholder consultation workshops in Kumasi and Accra, designed to generate comprehensive responses to the EU country strategy by engaging a broad spectrum of stakeholders.",
     snapshot: "PDA co-moderated two one-day stakeholder consultation workshops in Kumasi and Accra. The sessions were designed to generate comprehensive responses to the EU country strategy by engaging a broad spectrum of stakeholders.",
-    howWeWentAboutIt: "â€¢ Co-Moderation: Collaborated with EU representatives to structure and guide the consultation sessions.\nâ€¢ Stakeholder Engagement: Facilitated interactive discussions with participants from varied sectors.\nâ€¢ Synthesis of Feedback: Compiled and analyzed stakeholder responses to support the refinement of the EU country strategy.",
+    howWeWentAboutIt: " Co-Moderation: Collaborated with EU representatives to structure and guide the consultation sessions.\n Stakeholder Engagement: Facilitated interactive discussions with participants from varied sectors.\n Synthesis of Feedback: Compiled and analyzed stakeholder responses to support the refinement of the EU country strategy.",
     objectives: [
       "Solicit stakeholder input on the EU country strategy.",
       "Create a platform for diverse voicesâ€”including government, civil society, and private sectorâ€”to contribute to policy dialogue.",
@@ -412,12 +412,12 @@
   {
     id: 72,
     slug: "national-bushfire-policy-workshop-third-tier",
-    title: "National Bushfire Policy Workshop â€“ Third Tier",
+    title: "National Bushfire Policy Workshop - Third Tier",
     image: getProjectImage("Policy Analysis & Advocacy", "National Bushfire Policy Workshop", "Third tier of a three-tier National Workshop on Bushfire Policy."),
     description: "Facilitated the third tier (1 day) of a three-tier National Workshop on Bushfire Policy, bringing together diverse stakeholders for policy dialogue.",
     fullDescription: "PDA facilitated the third tier (1 day) of a three-tier (5-day) National Workshop on Bushfire Policy, bringing together participants from four pilot communities, government departments, research institutions, NGOs, and policy makers.",
     snapshot: "PDA facilitated the third tier (1 day) of a three-tier (5-day) National Workshop on Bushfire Policy. The session brought together participants from four pilot communities, government departments, research institutions, NGOs, and policy makers for an intensive policy dialogue on bushfire management.",
-    howWeWentAboutIt: "â€¢ Targeted Facilitation: Designed interactive sessions to consolidate earlier discussions and drive policy-oriented dialogue.\nâ€¢ Diverse Participation: Ensured balanced representation from pilot communities, government, academia, and NGOs.\nâ€¢ Outcome Documentation: Captured key insights and recommendations to inform subsequent policy action.",
+    howWeWentAboutIt: " Targeted Facilitation: Designed interactive sessions to consolidate earlier discussions and drive policy-oriented dialogue.\n Diverse Participation: Ensured balanced representation from pilot communities, government, academia, and NGOs.\n Outcome Documentation: Captured key insights and recommendations to inform subsequent policy action.",
     objectives: [
       "Facilitate a focused policy dialogue on bushfire management issues.",
       "Integrate insights from diverse stakeholder groups into the national policy framework.",
@@ -451,7 +451,7 @@
     description: "Main facilitator for a World Cafe session exploring the role of CSOs in the 2004 elections, encouraging dialogue and strategy sharing.",
     fullDescription: "PDA acted as one of the main facilitators in a World Cafe session focused on exploring the role of Civil Society Organisations (CSOs) in the 2004 elections.",
     snapshot: "PDA acted as one of the main facilitators in a World Cafe session focused on exploring the role of Civil Society Organisations (CSOs) in the 2004 elections. The interactive format encouraged participants to share experiences and debate strategies for effective CSO involvement in electoral processes.",
-    howWeWentAboutIt: "â€¢ Interactive Design: Utilized the World Cafe format to create a relaxed yet focused environment for dialogue.\nâ€¢ Thematic Discussions: Structured conversations around key themes related to CSO roles in elections.\nâ€¢ Facilitation Techniques: Employed group rotations and summary sessions to capture diverse perspectives.",
+    howWeWentAboutIt: " Interactive Design: Utilized the World Cafe format to create a relaxed yet focused environment for dialogue.\n Thematic Discussions: Structured conversations around key themes related to CSO roles in elections.\n Facilitation Techniques: Employed group rotations and summary sessions to capture diverse perspectives.",
     objectives: [
       "Facilitate a dynamic dialogue on the impact and role of CSOs during elections.",
       "Generate innovative ideas and best practices for enhancing CSO participation in electoral processes.",
@@ -485,7 +485,7 @@
     description: "Hands-on training for two community radio stations to develop facilitation skills for better community engagement in natural resource management.",
     fullDescription: "PDA worked with two community radio stationsâ€”members of the Ghana Community Radio Networkâ€”to develop their facilitation skills, empowering these stations to better engage communities in natural resource management dialogues.",
     snapshot: "PDA worked with two community radio stationsâ€”members of the Ghana Community Radio Networkâ€”to develop their facilitation skills. The initiative was aimed at empowering these stations to better engage communities in natural resource management dialogues.",
-    howWeWentAboutIt: "â€¢ Tailored Training: Designed a skills development module specific to the needs of community radio facilitators.\nâ€¢ Interactive Methods: Utilized role-plays, group exercises, and real-life scenarios to build practical facilitation skills.\nâ€¢ On-site Coaching: Provided direct support and feedback to enhance learning outcomes.",
+    howWeWentAboutIt: " Tailored Training: Designed a skills development module specific to the needs of community radio facilitators.\n Interactive Methods: Utilized role-plays, group exercises, and real-life scenarios to build practical facilitation skills.\n On-site Coaching: Provided direct support and feedback to enhance learning outcomes.",
     objectives: [
       "Enhance the facilitation capacities of community radio station staff.",
       "Strengthen the role of community media in mobilizing public participation in natural resource management.",
@@ -519,7 +519,7 @@
     description: "3-day workshop on proposal and report writing for 20 regional representatives of GNECC to build capacity in documentation and fundraising.",
     fullDescription: "PDA facilitated a 3-day workshop focused on proposal and report writing for 20 regional representatives of the GNECC, designed to build the capacity of participants to effectively articulate and document project ideas and outcomes.",
     snapshot: "PDA facilitated a 3-day workshop focused on proposal and report writing for 20 regional representatives of the GNECC. The workshop was designed to build the capacity of participants to effectively articulate and document project ideas and outcomes.",
-    howWeWentAboutIt: "â€¢ Interactive Curriculum: Developed a curriculum that combined theory with hands-on writing exercises.\nâ€¢ Group Work: Facilitated group activities and peer reviews to encourage collaborative learning.\nâ€¢ Practical Application: Provided real-life examples and case studies to illustrate effective writing strategies.",
+    howWeWentAboutIt: " Interactive Curriculum: Developed a curriculum that combined theory with hands-on writing exercises.\n Group Work: Facilitated group activities and peer reviews to encourage collaborative learning.\n Practical Application: Provided real-life examples and case studies to illustrate effective writing strategies.",
     objectives: [
       "Strengthen skills in proposal and report writing among civil society representatives.",
       "Enhance the ability of participants to secure funding and report on project achievements.",
@@ -553,7 +553,7 @@
     description: "Workshop for CARE ANR Programme on building constructive and sustainable organisational relationships and partnerships.",
     fullDescription: "PDA facilitated a workshop for the CARE ANR Programme focused on building constructive and sustainable organisational relationships, exploring strategies for developing, managing, and monitoring mutually beneficial partnerships.",
     snapshot: "PDA facilitated a workshop for the CARE ANR Programme focused on building constructive and sustainable organisational relationships. The session explored strategies for developing, managing, and monitoring mutually beneficial partnerships.",
-    howWeWentAboutIt: "â€¢ Curriculum Development: Created a training module addressing key aspects of organizational relationships.\nâ€¢ Interactive Sessions: Led role-plays and group discussions to explore challenges and solutions.\nâ€¢ Practical Tools: Provided frameworks and templates for managing and monitoring partnerships.",
+    howWeWentAboutIt: " Curriculum Development: Created a training module addressing key aspects of organizational relationships.\n Interactive Sessions: Led role-plays and group discussions to explore challenges and solutions.\n Practical Tools: Provided frameworks and templates for managing and monitoring partnerships.",
     objectives: [
       "Enhance understanding of effective relationship management within and between organizations.",
       "Equip participants with practical tools to develop and sustain collaborative partnerships.",
@@ -587,7 +587,7 @@
     description: "Three-day workshop with RUMNET staff and stakeholders to review and refine an existing strategic plan for organizational alignment.",
     fullDescription: "PDA facilitated a three-day workshop with RUMNET staff and key stakeholders at regional and community levels to review and refine an existing strategic plan, ensuring it remained responsive to current challenges and opportunities.",
     snapshot: "PDA facilitated a three-day workshop with RUMNET staff and key stakeholders at regional and community levels to review and refine an existing strategic plan. The session was designed to ensure that the plan remained responsive to current challenges and opportunities.",
-    howWeWentAboutIt: "â€¢ Structured Reviews: Organized sessions that allowed for comprehensive examination of the strategic plan.\nâ€¢ Stakeholder Engagement: Ensured participation from both regional and community-level representatives.\nâ€¢ Action Planning: Facilitated the development of an updated, actionable strategic roadmap based on participant input.",
+    howWeWentAboutIt: " Structured Reviews: Organized sessions that allowed for comprehensive examination of the strategic plan.\n Stakeholder Engagement: Ensured participation from both regional and community-level representatives.\n Action Planning: Facilitated the development of an updated, actionable strategic roadmap based on participant input.",
     objectives: [
       "Review the current strategic plan with a broad range of stakeholders.",
       "Identify areas for improvement and update strategic priorities.",
@@ -621,7 +621,7 @@
     description: "Strategic planning workshop for CARE International's Agricultural and Natural Resources Programme to develop a forward-looking strategic roadmap.",
     fullDescription: "PDA facilitated a strategic planning workshop for CARE International's Agricultural and Natural Resources Programme, bringing together key programme stakeholders to review the current operational framework and develop a forward-looking strategic roadmap.",
     snapshot: "PDA facilitated a strategic planning workshop for CARE International's Agricultural and Natural Resources Programme. The workshop brought together key programme stakeholders to review the current operational framework and to develop a forward-looking strategic roadmap for enhancing programme impact.",
-    howWeWentAboutIt: "â€¢ Planning and Preparation: Developed a tailored agenda and prepared facilitation materials based on stakeholder inputs.\nâ€¢ Interactive Sessions: Employed participatory exercises, including group work and scenario planning, to foster open dialogue.\nâ€¢ Outcome Synthesis: Consolidated insights and recommendations into a strategic roadmap for the programme.",
+    howWeWentAboutIt: " Planning and Preparation: Developed a tailored agenda and prepared facilitation materials based on stakeholder inputs.\n Interactive Sessions: Employed participatory exercises, including group work and scenario planning, to foster open dialogue.\n Outcome Synthesis: Consolidated insights and recommendations into a strategic roadmap for the programme.",
     objectives: [
       "Align programme vision and strategic priorities among stakeholders.",
       "Identify actionable steps and key performance indicators for future interventions.",
@@ -655,7 +655,7 @@
     description: "Moderated retreat for national-level stakeholders to enhance the effectiveness of HIV/AIDS interventions at the district level.",
     fullDescription: "PDA moderated a retreat for national-level stakeholders involved in the HIV/AIDS District Response Initiative, fostering dialogue among policymakers, programme managers, and civil society representatives.",
     snapshot: "PDA moderated a retreat for national-level stakeholders involved in the HIV/AIDS District Response Initiative. The retreat aimed to foster dialogue among policymakers, programme managers, and civil society representatives to enhance the effectiveness of HIV/AIDS interventions at the district level.",
-    howWeWentAboutIt: "â€¢ Retreat Coordination: Organized the agenda and logistics to support an intensive dialogue among diverse stakeholders.\nâ€¢ Facilitated Dialogue: Used structured discussion formats to explore key issues and strategic options.\nâ€¢ Feedback Capture: Documented insights and formulated actionable recommendations for enhanced programme coordination.",
+    howWeWentAboutIt: " Retreat Coordination: Organized the agenda and logistics to support an intensive dialogue among diverse stakeholders.\n Facilitated Dialogue: Used structured discussion formats to explore key issues and strategic options.\n Feedback Capture: Documented insights and formulated actionable recommendations for enhanced programme coordination.",
     objectives: [
       "Facilitate open dialogue on challenges and opportunities in district-level HIV/AIDS responses.",
       "Build consensus on strategic priorities and coordinated actions.",
@@ -689,7 +689,7 @@
     description: "Moderated workshop to refine project design and partnership framework for the Western and Ashanti Region STI/HIV/AIDS Project.",
     fullDescription: "PDA moderated a workshop designed to refine the project design and partnership framework for the Western and Ashanti Region STI/HIV/AIDS Project, bringing together regional stakeholders to review project approaches.",
     snapshot: "PDA moderated a workshop designed to refine the project design and partnership framework for the Western and Ashanti Region STI/HIV/AIDS Project. The workshop brought together regional stakeholders to review project approaches and to forge effective partnerships for improved service delivery.",
-    howWeWentAboutIt: "â€¢ Pre-Workshop Consultation: Engaged key stakeholders to identify critical issues and potential partnership opportunities.\nâ€¢ Interactive Facilitation: Led sessions combining group discussions, brainstorming, and consensus-building exercises.\nâ€¢ Documentation: Consolidated feedback into a refined project design and partnership framework.",
+    howWeWentAboutIt: " Pre-Workshop Consultation: Engaged key stakeholders to identify critical issues and potential partnership opportunities.\n Interactive Facilitation: Led sessions combining group discussions, brainstorming, and consensus-building exercises.\n Documentation: Consolidated feedback into a refined project design and partnership framework.",
     objectives: [
       "Refine the project design through collaborative discussion.",
       "Establish a clear partnership framework to enhance implementation.",
@@ -723,7 +723,7 @@
     description: "Sub-regional conference to identify strategies for winning governmental recognition for community radio and advocating for enabling legislative frameworks.",
     fullDescription: "PDA facilitated a sub-regional conference aimed at identifying strategies to win governmental recognition for community radio, focusing on articulating its importance and advocating for enabling legislative and regulatory frameworks.",
     snapshot: "PDA facilitated a sub-regional conference aimed at identifying strategies to win governmental recognition for community radio. The conference focused on articulating the importance of community radio and advocating for the establishment of enabling legislative and regulatory frameworks to support its role as the third media sector.",
-    howWeWentAboutIt: "â€¢ Conference Organization: Coordinated logistics and developed an agenda that addressed key policy and operational issues for community radio.\nâ€¢ Engagement Techniques: Utilized interactive methods, such as breakout sessions and plenary discussions, to capture diverse perspectives.\nâ€¢ Strategy Development: Guided participants in drafting recommendations aimed at influencing legislative and regulatory frameworks.",
+    howWeWentAboutIt: " Conference Organization: Coordinated logistics and developed an agenda that addressed key policy and operational issues for community radio.\n Engagement Techniques: Utilized interactive methods, such as breakout sessions and plenary discussions, to capture diverse perspectives.\n Strategy Development: Guided participants in drafting recommendations aimed at influencing legislative and regulatory frameworks.",
     objectives: [
       "Raise awareness among government and policy-makers about the critical role of community radio.",
       "Develop strategic recommendations to advocate for supportive legislative and regulatory reforms.",
@@ -757,7 +757,7 @@
     description: "Strategic planning workshop with the Special Education Unit of the Ministry of Education to clarify vision and set a roadmap for enhancing special education services.",
     fullDescription: "PDA facilitated a strategic planning workshop with the staff of the Special Education Unit of the Ministry of Education, designed to help the team clarify its vision, align strategic priorities, and set a roadmap.",
     snapshot: "PDA facilitated a strategic planning workshop with the staff of the Special Education Unit of the Ministry of Education. The workshop was designed to help the team clarify its vision, align strategic priorities, and set a roadmap for enhancing special education services.",
-    howWeWentAboutIt: "â€¢ Workshop Preparation: Developed tailored agendas and preparatory materials reflecting the Unit's operational context.\nâ€¢ Interactive Facilitation: Employed participatory exercises, group discussions, and scenario planning to engage participants.\nâ€¢ Strategic Roadmap Development: Consolidated ideas and recommendations into a documented strategic plan.",
+    howWeWentAboutIt: " Workshop Preparation: Developed tailored agendas and preparatory materials reflecting the Unit's operational context.\n Interactive Facilitation: Employed participatory exercises, group discussions, and scenario planning to engage participants.\n Strategic Roadmap Development: Consolidated ideas and recommendations into a documented strategic plan.",
     objectives: [
       "Align the strategic vision and priorities for the Special Education Unit.",
       "Foster collaborative planning among staff to address current challenges and opportunities.",
@@ -791,7 +791,7 @@
     description: "Programme review workshop to assess performance, capture participant feedback, and identify areas for improvement in the School Linking Programme.",
     fullDescription: "PDA facilitated a programme review workshop for participants in the School Linking Programme, aiming to assess programme performance, capture participant feedback, and identify areas for improvement.",
     snapshot: "PDA facilitated a programme review workshop for participants in the School Linking Programme. The workshop aimed to assess programme performance, capture participant feedback, and identify areas for improvement to strengthen school partnerships.",
-    howWeWentAboutIt: "â€¢ Structured Review Sessions: Developed a comprehensive agenda that allowed participants to review achievements and challenges.\nâ€¢ Group Discussions: Utilized interactive exercises to capture detailed feedback and suggestions.\nâ€¢ Feedback Synthesis: Compiled and analyzed input to guide future programme enhancements.",
+    howWeWentAboutIt: " Structured Review Sessions: Developed a comprehensive agenda that allowed participants to review achievements and challenges.\n Group Discussions: Utilized interactive exercises to capture detailed feedback and suggestions.\n Feedback Synthesis: Compiled and analyzed input to guide future programme enhancements.",
     objectives: [
       "Evaluate the effectiveness of the School Linking Programme.",
       "Gather insights and feedback from programme participants for continuous improvement.",
@@ -825,7 +825,7 @@
     description: "Inter-ministerial workshop to develop a multi-sectoral strategy for providing comprehensive, sustainable, and integrated services to Volta Lake island communities.",
     fullDescription: "PDA facilitated an inter-ministerial workshop aimed at developing a multi-sectoral strategy to provide comprehensive, sustainable, and integrated services to communities living on the islands of the Volta Lake.",
     snapshot: "PDA facilitated an inter-ministerial workshop aimed at developing a multi-sectoral strategy to provide comprehensive, sustainable, and integrated services to communities living on the islands of the Volta Lake. The workshop brought together representatives from various government ministries to coordinate service delivery.",
-    howWeWentAboutIt: "â€¢ Stakeholder Engagement: Brought together representatives from relevant ministries in an interactive workshop setting.\nâ€¢ Facilitated Dialogue: Used participatory methods to explore challenges and opportunities, fostering inter-ministerial collaboration.\nâ€¢ Strategy Consolidation: Synthesized discussion outputs into a draft multi-sectoral strategy for future refinement.",
+    howWeWentAboutIt: " Stakeholder Engagement: Brought together representatives from relevant ministries in an interactive workshop setting.\n Facilitated Dialogue: Used participatory methods to explore challenges and opportunities, fostering inter-ministerial collaboration.\n Strategy Consolidation: Synthesized discussion outputs into a draft multi-sectoral strategy for future refinement.",
     objectives: [
       "Develop a unified, multi-sectoral strategy for integrated service provision on the Volta Lake islands.",
       "Enhance coordination among different government sectors to address the unique needs of island communities.",
@@ -859,7 +859,7 @@
     description: "Workshop to design a methodology for assessing the capacity of community-based organizations (CBOs) in the Wenchi District.",
     fullDescription: "PDA facilitated a workshop focused on designing a methodology for assessing the capacity of community-based organizations (CBOs) in the Wenchi District, developing a robust framework to evaluate CBO performance.",
     snapshot: "PDA facilitated a workshop focused on designing a methodology for assessing the capacity of community-based organizations (CBOs) in the Wenchi District. This initiative aimed to develop a robust framework to evaluate CBO performance, ultimately guiding capacity-building efforts.",
-    howWeWentAboutIt: "â€¢ Interactive Methodology Design: Conducted participatory sessions to identify key indicators and assessment tools.\nâ€¢ Collaborative Development: Engaged local stakeholders in group exercises to tailor the methodology to local needs.\nâ€¢ Documentation: Compiled workshop outputs into a comprehensive capacity assessment framework for CBOs.",
+    howWeWentAboutIt: " Interactive Methodology Design: Conducted participatory sessions to identify key indicators and assessment tools.\n Collaborative Development: Engaged local stakeholders in group exercises to tailor the methodology to local needs.\n Documentation: Compiled workshop outputs into a comprehensive capacity assessment framework for CBOs.",
     objectives: [
       "Design a practical and replicable capacity assessment methodology for CBOs.",
       "Enhance local stakeholders' ability to evaluate organizational strengths and weaknesses.",
@@ -888,12 +888,12 @@
   {
     id: 86,
     slug: "workshop-de-stigmatising-hiv-aids-creating-enabling-society",
-    title: "Workshop on De-stigmatising HIV/AIDS â€“ Creating an Enabling Society",
+    title: "Workshop on De-stigmatising HIV/AIDS - Creating an Enabling Society",
     image: getProjectImage("Policy Analysis & Advocacy", "Workshop on De-stigmatising HIV/AIDS", "Workshop focused on de-stigmatising HIV/AIDS and fostering inclusive society."),
     description: "Workshop focused on de-stigmatising HIV/AIDS to foster a more inclusive and supportive society for people living with HIV/AIDS.",
     fullDescription: "PDA facilitated a workshop focused on de-stigmatising HIV/AIDS, aiming to foster a more inclusive and supportive society for people living with HIV/AIDS through informed dialogue and strategy development.",
     snapshot: "PDA facilitated a workshop focused on de-stigmatising HIV/AIDS, aiming to foster a more inclusive and supportive society for people living with HIV/AIDS. The workshop provided a platform for stakeholders to discuss challenges, share best practices, and develop strategies to reduce stigma and promote public understanding.",
-    howWeWentAboutIt: "â€¢ Interactive Sessions: Designed group discussions and activities to explore the roots of stigma and identify practical interventions.\nâ€¢ Expert Facilitation: Guided dialogue among policy makers, health professionals, and community representatives.\nâ€¢ Strategy Development: Assisted participants in formulating actionable recommendations for advocacy and policy reform.",
+    howWeWentAboutIt: " Interactive Sessions: Designed group discussions and activities to explore the roots of stigma and identify practical interventions.\n Expert Facilitation: Guided dialogue among policy makers, health professionals, and community representatives.\n Strategy Development: Assisted participants in formulating actionable recommendations for advocacy and policy reform.",
     objectives: [
       "Reduce social stigma associated with HIV/AIDS through informed dialogue.",
       "Engage diverse stakeholders in developing strategies to create an enabling environment for people living with HIV/AIDS.",
@@ -927,7 +927,7 @@
     description: "National workshop to discuss and enhance participation and financing mechanisms of CSOs in the health sector, creating a more inclusive environment.",
     fullDescription: "PDA facilitated a national workshop that convened key health sector stakeholders to discuss and enhance the participation and financing mechanisms of CSOs in the health sector, creating a more inclusive environment.",
     snapshot: "PDA facilitated a national workshop that convened key health sector stakeholdersâ€”including government officials, donor representatives, and civil society leadersâ€”to discuss and enhance the participation and financing mechanisms of CSOs in the health sector. The workshop aimed to create a more inclusive environment and develop innovative financing solutions to empower CSOs in influencing health policy and service delivery.",
-    howWeWentAboutIt: "â€¢ Agenda Development: Crafted a comprehensive agenda addressing participation challenges and financing options for CSOs.\nâ€¢ Stakeholder Engagement: Invited representatives from MOH, DFID, Save the Children UK, and leading CSOs in the health sector.\nâ€¢ Interactive Facilitation: Employed breakout sessions and group discussions to encourage dialogue and generate innovative ideas.\nâ€¢ Outcome Documentation: Consolidated insights and recommendations into a workshop report for policy advocacy.",
+    howWeWentAboutIt: " Agenda Development: Crafted a comprehensive agenda addressing participation challenges and financing options for CSOs.\n Stakeholder Engagement: Invited representatives from MOH, DFID, Save the Children UK, and leading CSOs in the health sector.\n Interactive Facilitation: Employed breakout sessions and group discussions to encourage dialogue and generate innovative ideas.\n Outcome Documentation: Consolidated insights and recommendations into a workshop report for policy advocacy.",
     objectives: [
       "Strengthen the role of CSOs in health sector decision-making processes.",
       "Explore and propose innovative financing mechanisms to support CSOs.",
@@ -961,7 +961,7 @@
     description: "Focused workshop to develop a comprehensive proposal for implementing a monitoring and evaluation framework for the Ghana Poverty Reduction Strategy.",
     fullDescription: "PDA facilitated a focused workshop aimed at developing a comprehensive proposal for implementing a monitoring and evaluation framework for the Ghana Poverty Reduction Strategy, bringing together key stakeholders to outline an M&E approach.",
     snapshot: "PDA facilitated a focused workshop aimed at developing a comprehensive proposal for implementing a monitoring and evaluation framework for the Ghana Poverty Reduction Strategy. The workshop brought together key stakeholders to outline an M&E approach that would enhance accountability, assess impact, and inform future poverty reduction initiatives.",
-    howWeWentAboutIt: "â€¢ Workshop Organization: Coordinated a multi-stakeholder workshop with representatives from the Ministry, GTZ, and other relevant bodies.\nâ€¢ Participatory Approach: Utilized interactive methods to draw on participants' experiences and insights for designing an effective M&E framework.\nâ€¢ Framework Development: Facilitated discussions to define key indicators, methodological approaches, and roles for implementing the M&E system.\nâ€¢ Proposal Synthesis: Consolidated workshop outcomes into a draft proposal for further refinement and implementation.",
+    howWeWentAboutIt: " Workshop Organization: Coordinated a multi-stakeholder workshop with representatives from the Ministry, GTZ, and other relevant bodies.\n Participatory Approach: Utilized interactive methods to draw on participants' experiences and insights for designing an effective M&E framework.\n Framework Development: Facilitated discussions to define key indicators, methodological approaches, and roles for implementing the M&E system.\n Proposal Synthesis: Consolidated workshop outcomes into a draft proposal for further refinement and implementation.",
     objectives: [
       "Develop a robust proposal for an effective M&E framework for the Ghana Poverty Reduction Strategy.",
       "Engage stakeholders to identify key performance indicators and appropriate evaluation methodologies.",
@@ -990,7 +990,7 @@
     descriptionFr: "Atelier ciblÃ© pour dÃ©velopper une proposition complÃ¨te pour la mise en Å“uvre d'un cadre de suivi et d'Ã©valuation de la StratÃ©gie de RÃ©duction de la PauvretÃ© du Ghana.",
     fullDescriptionFr: "PDA a facilitÃ© un atelier ciblÃ© visant Ã  dÃ©velopper une proposition complÃ¨te pour la mise en Å“uvre d'un cadre de suivi et d'Ã©valuation de la StratÃ©gie de RÃ©duction de la PauvretÃ© du Ghana, rÃ©unissant les principales parties prenantes pour esquisser une approche de suivi et d'Ã©valuation.",
     snapshotFr: "PDA a facilitÃ© un atelier ciblÃ© visant Ã  dÃ©velopper une proposition complÃ¨te pour la mise en Å“uvre d'un cadre de suivi et d'Ã©valuation de la StratÃ©gie de RÃ©duction de la PauvretÃ© du Ghana. L'atelier a rÃ©uni les principales parties prenantes pour esquisser une approche de suivi et d'Ã©valuation qui amÃ©liorerait la responsabilitÃ©, Ã©valuerait l'impact et informerait les futures initiatives de rÃ©duction de la pauvretÃ©.",
-    howWeWentAboutItFr: "â€¢ Organisation de l'Atelier: Coordination d'un atelier multi-parties prenantes avec des reprÃ©sentants du MinistÃ¨re, GTZ et d'autres organismes pertinents.\nâ€¢ Approche Participative: Utilisation de mÃ©thodes interactives pour tirer parti des expÃ©riences et des idÃ©es des participants pour concevoir un cadre de suivi et d'Ã©valuation efficace.\nâ€¢ DÃ©veloppement du Cadre: Facilitation de discussions pour dÃ©finir les indicateurs clÃ©s, les approches mÃ©thodologiques et les rÃ´les pour la mise en Å“uvre du systÃ¨me de suivi et d'Ã©valuation.\nâ€¢ SynthÃ¨se de la Proposition: Consolidation des rÃ©sultats de l'atelier en une proposition prÃ©liminaire pour affinement et mise en Å“uvre ultÃ©rieurs.",
+    howWeWentAboutItFr: " Organisation de l'Atelier: Coordination d'un atelier multi-parties prenantes avec des reprÃ©sentants du MinistÃ¨re, GTZ et d'autres organismes pertinents.\n Approche Participative: Utilisation de mÃ©thodes interactives pour tirer parti des expÃ©riences et des idÃ©es des participants pour concevoir un cadre de suivi et d'Ã©valuation efficace.\n DÃ©veloppement du Cadre: Facilitation de discussions pour dÃ©finir les indicateurs clÃ©s, les approches mÃ©thodologiques et les rÃ´les pour la mise en Å“uvre du systÃ¨me de suivi et d'Ã©valuation.\n SynthÃ¨se de la Proposition: Consolidation des rÃ©sultats de l'atelier en une proposition prÃ©liminaire pour affinement et mise en Å“uvre ultÃ©rieurs.",
     objectivesFr: [
       "DÃ©velopper une proposition solide pour un cadre de suivi et d'Ã©valuation efficace pour la StratÃ©gie de RÃ©duction de la PauvretÃ© du Ghana.",
       "Engager les parties prenantes pour identifier les indicateurs de performance clÃ©s et les mÃ©thodologies d'Ã©valuation appropriÃ©es.",
@@ -1018,7 +1018,7 @@
     description: "18-month initiative to protect children from sexual exploitation and abuse in informal gold mining communities using narrative pedagogy and community engagement.",
     fullDescription: "This project was part of an 18-month initiative aimed at protecting children from sexual exploitation and abuse in informal gold mining communities, implemented in 10 communities across three districts in the Ashanti Region.",
     snapshot: "This project was part of an 18-month initiative aimed at protecting children from sexual exploitation and abuse in informal gold mining communities. It was implemented in 10 communities across three districts in the Ashanti Region: Obuasi Municipality, Adansi North, and Amansie Central. The project sought to engage community members in actively reducing child exploitation by leveraging local culture, education, and research. A key innovation of the project was the use of narrative pedagogyâ€”a method that integrates storytelling and educationâ€”to raise awareness about child abuse. Illustrated narratives were developed to communicate important themes around child protection, child health, and community-based prevention strategies.",
-    howWeWentAboutIt: "â€¢ Participatory Research: Conducted community-based research to understand local child protection challenges and solutions.\nâ€¢ Educational Materials Development: Created illustrated narratives addressing child abuse, health, and safety.\nâ€¢ Community Workshops: Organized training sessions for parents, teachers, and community leaders on identifying and preventing child abuse.\nâ€¢ Cultural Integration: Used traditional storytelling methods to facilitate discussions on child protection.\nâ€¢ Monitoring & Follow-Up: Engaged with local groups to assess project impact and community response.",
+    howWeWentAboutIt: " Participatory Research: Conducted community-based research to understand local child protection challenges and solutions.\n Educational Materials Development: Created illustrated narratives addressing child abuse, health, and safety.\n Community Workshops: Organized training sessions for parents, teachers, and community leaders on identifying and preventing child abuse.\n Cultural Integration: Used traditional storytelling methods to facilitate discussions on child protection.\n Monitoring & Follow-Up: Engaged with local groups to assess project impact and community response.",
     objectives: [
       "Create a safer environment for children in informal gold mining communities.",
       "Raise awareness about sexual exploitation and child abuse through culturally relevant storytelling.",
@@ -1040,7 +1040,7 @@
       "Encouraged community-led action to safeguard children from abuse."
     ],
     partners: "Free the Slaves (FTS)",
-    period: "December 2011 â€“ March 2012",
+    period: "December 2011 - March 2012",
     category: "Child Protection & Community Development",
     location: "Ghana (Obuasi Municipality, Adansi North, and Amansie Central Districts, Ashanti Region)",
     status: "Completed",
@@ -1049,7 +1049,7 @@
     descriptionFr: "Initiative de 18 mois visant Ã  protÃ©ger les enfants contre l'exploitation sexuelle et les abus dans les communautÃ©s d'exploitation aurifÃ¨re informelle en utilisant la pÃ©dagogie narrative et l'engagement communautaire.",
     fullDescriptionFr: "Ce projet faisait partie d'une initiative de 18 mois visant Ã  protÃ©ger les enfants contre l'exploitation sexuelle et les abus dans les communautÃ©s d'exploitation aurifÃ¨re informelle, mis en Å“uvre dans 10 communautÃ©s Ã  travers trois districts de la RÃ©gion d'Ashanti.",
     snapshotFr: "Ce projet faisait partie d'une initiative de 18 mois visant Ã  protÃ©ger les enfants contre l'exploitation sexuelle et les abus dans les communautÃ©s d'exploitation aurifÃ¨re informelle. Il a Ã©tÃ© mis en Å“uvre dans 10 communautÃ©s Ã  travers trois districts de la RÃ©gion d'Ashanti: la MunicipalitÃ© d'Obuasi, Adansi North et Amansie Central. Le projet visait Ã  engager les membres de la communautÃ© Ã  rÃ©duire activement l'exploitation des enfants en tirant parti de la culture locale, de l'Ã©ducation et de la recherche. Une innovation clÃ© du projet Ã©tait l'utilisation de la pÃ©dagogie narrativeâ€”une mÃ©thode qui intÃ¨gre le conte et l'Ã©ducationâ€”pour sensibiliser aux abus d'enfants. Des rÃ©cits illustrÃ©s ont Ã©tÃ© dÃ©veloppÃ©s pour communiquer des thÃ¨mes importants autour de la protection de l'enfance, de la santÃ© des enfants et des stratÃ©gies de prÃ©vention communautaires.",
-    howWeWentAboutItFr: "â€¢ Recherche Participative: MenÃ© une recherche communautaire pour comprendre les dÃ©fis et solutions locaux de protection de l'enfance.\nâ€¢ DÃ©veloppement de MatÃ©riels Ã‰ducatifs: CrÃ©Ã© des rÃ©cits illustrÃ©s abordant les abus d'enfants, la santÃ© et la sÃ©curitÃ©.\nâ€¢ Ateliers Communautaires: OrganisÃ© des sessions de formation pour les parents, enseignants et dirigeants communautaires sur l'identification et la prÃ©vention des abus d'enfants.\nâ€¢ IntÃ©gration Culturelle: UtilisÃ© des mÃ©thodes de conte traditionnelles pour faciliter les discussions sur la protection de l'enfance.\nâ€¢ Suivi et Suivi: EngagÃ© avec les groupes locaux pour Ã©valuer l'impact du projet et la rÃ©ponse communautaire.",
+    howWeWentAboutItFr: " Recherche Participative: MenÃ© une recherche communautaire pour comprendre les dÃ©fis et solutions locaux de protection de l'enfance.\n DÃ©veloppement de MatÃ©riels Ã‰ducatifs: CrÃ©Ã© des rÃ©cits illustrÃ©s abordant les abus d'enfants, la santÃ© et la sÃ©curitÃ©.\n Ateliers Communautaires: OrganisÃ© des sessions de formation pour les parents, enseignants et dirigeants communautaires sur l'identification et la prÃ©vention des abus d'enfants.\n IntÃ©gration Culturelle: UtilisÃ© des mÃ©thodes de conte traditionnelles pour faciliter les discussions sur la protection de l'enfance.\n Suivi et Suivi: EngagÃ© avec les groupes locaux pour Ã©valuer l'impact du projet et la rÃ©ponse communautaire.",
     objectivesFr: [
       "CrÃ©er un environnement plus sÃ»r pour les enfants dans les communautÃ©s d'exploitation aurifÃ¨re informelle.",
       "Sensibiliser Ã  l'exploitation sexuelle et aux abus d'enfants grÃ¢ce Ã  des rÃ©cits culturellement pertinents.",
@@ -1079,7 +1079,7 @@
     description: "Five-year action-research initiative to enhance capacity of civil society, media, and elected representatives to access, interpret, and utilize information for policy influence.",
     fullDescription: "The MWANANCHI Ghana Project is part of ODI's five-year action-research initiative implemented across seven African countries, aiming to enhance the capacity of civil society, media, and elected representatives to shape government policy.",
     snapshot: "The MWANANCHI Ghana Project is part of ODI's five-year action-research initiative implemented across seven African countries. In Ghana, the project aimed to enhance the capacity of civil society, media, and elected representatives to access, interpret, and utilize information and communication resources effectively to shape government policy. By linking voice and accountability, the project empowered citizens to transform institutions toward greater transparency and responsiveness. Key to its strategy was the recognition that media, civil society, elected representatives, and traditional rulers are essential interlocutors in citizen-state relations. The project promoted improved use of evidence in policymaking and focused on representative engagement, policy processes, and accountability, leveraging ICT to create sustainable dialogue platforms.",
-    howWeWentAboutIt: "â€¢ Collaborative Partnerships: Worked with 11 grant partners in six regions, including organizations like Basic Needs Ghana, BEWDA, Choice Ghana, Conservation Foundation, Drama Network, Friends of the Nation, GNAD, Radio Ada, ToYACE, ATWWAR, and Grassroots Sisterhood Foundation.\nâ€¢ ICT-Driven Platforms: Utilized innovative information and communication technologies to create platforms for ongoing dialogue among civil society, media, and government stakeholders.\nâ€¢ Evidence-Based Advocacy: Supported research into legislative and decision-making processes to build a robust evidence base for advocacy.\nâ€¢ Innovative Engagement: Experimented with practical, community-focused approaches to strengthen freedom of speech, dialogue, and citizen-led governance improvements.",
+    howWeWentAboutIt: " Collaborative Partnerships: Worked with 11 grant partners in six regions, including organizations like Basic Needs Ghana, BEWDA, Choice Ghana, Conservation Foundation, Drama Network, Friends of the Nation, GNAD, Radio Ada, ToYACE, ATWWAR, and Grassroots Sisterhood Foundation.\n ICT-Driven Platforms: Utilized innovative information and communication technologies to create platforms for ongoing dialogue among civil society, media, and government stakeholders.\n Evidence-Based Advocacy: Supported research into legislative and decision-making processes to build a robust evidence base for advocacy.\n Innovative Engagement: Experimented with practical, community-focused approaches to strengthen freedom of speech, dialogue, and citizen-led governance improvements.",
     objectives: [
       "Enhance Stakeholder Capacity: Improve the ability of civil society, media, and elected representatives to access and use information for policy influence.",
       "Strengthen Accountability: Foster greater transparency and accountability among traditional authorities and elected officials.",
@@ -1102,7 +1102,7 @@
       "Capacity Building: Built the capacity of partner organizations to advocate for better governance and responsive public institutions, with lessons shared locally and beyond."
     ],
     partners: "Overseas Development Institute (ODI)",
-    period: "October 2009 â€“ March 2013",
+    period: "October 2009 - March 2013",
     category: "Community Development",
     location: "Ghana",
     status: "Completed",
@@ -1111,7 +1111,7 @@
     descriptionFr: "Initiative de recherche-action de cinq ans pour renforcer la capacitÃ© de la sociÃ©tÃ© civile, des mÃ©dias et des reprÃ©sentants Ã©lus Ã  accÃ©der, interprÃ©ter et utiliser l'information pour influencer les politiques.",
     fullDescriptionFr: "Le Projet MWANANCHI Ghana fait partie de l'initiative de recherche-action de cinq ans de l'ODI mise en Å“uvre dans sept pays africains, visant Ã  renforcer la capacitÃ© de la sociÃ©tÃ© civile, des mÃ©dias et des reprÃ©sentants Ã©lus Ã  faÃ§onner la politique gouvernementale.",
     snapshotFr: "Le Projet MWANANCHI Ghana fait partie de l'initiative de recherche-action de cinq ans de l'ODI mise en Å“uvre dans sept pays africains. Au Ghana, le projet visait Ã  renforcer la capacitÃ© de la sociÃ©tÃ© civile, des mÃ©dias et des reprÃ©sentants Ã©lus Ã  accÃ©der, interprÃ©ter et utiliser efficacement les ressources d'information et de communication pour faÃ§onner la politique gouvernementale. En reliant la voix et la responsabilitÃ©, le projet a autonomisÃ© les citoyens Ã  transformer les institutions vers une plus grande transparence et rÃ©activitÃ©. La clÃ© de sa stratÃ©gie Ã©tait la reconnaissance que les mÃ©dias, la sociÃ©tÃ© civile, les reprÃ©sentants Ã©lus et les dirigeants traditionnels sont des interlocuteurs essentiels dans les relations citoyen-Ã‰tat. Le projet a promu une meilleure utilisation des preuves dans l'Ã©laboration des politiques et s'est concentrÃ© sur l'engagement reprÃ©sentatif, les processus politiques et la responsabilitÃ©, en tirant parti des TIC pour crÃ©er des plateformes de dialogue durables.",
-    howWeWentAboutItFr: "â€¢ Partenariats Collaboratifs: TravaillÃ© avec 11 partenaires subventionnÃ©s dans six rÃ©gions, y compris des organisations comme Basic Needs Ghana, BEWDA, Choice Ghana, Conservation Foundation, Drama Network, Friends of the Nation, GNAD, Radio Ada, ToYACE, ATWWAR et Grassroots Sisterhood Foundation.\nâ€¢ Plateformes BasÃ©es sur les TIC: UtilisÃ© des technologies innovantes d'information et de communication pour crÃ©er des plateformes de dialogue continu entre la sociÃ©tÃ© civile, les mÃ©dias et les parties prenantes gouvernementales.\nâ€¢ Plaidoyer BasÃ© sur des Preuves: Soutenu la recherche sur les processus lÃ©gislatifs et dÃ©cisionnels pour construire une base de preuves solide pour le plaidoyer.\nâ€¢ Engagement Innovant: ExpÃ©rimentÃ© avec des approches pratiques axÃ©es sur la communautÃ© pour renforcer la libertÃ© d'expression, le dialogue et les amÃ©liorations de la gouvernance menÃ©es par les citoyens.",
+    howWeWentAboutItFr: " Partenariats Collaboratifs: TravaillÃ© avec 11 partenaires subventionnÃ©s dans six rÃ©gions, y compris des organisations comme Basic Needs Ghana, BEWDA, Choice Ghana, Conservation Foundation, Drama Network, Friends of the Nation, GNAD, Radio Ada, ToYACE, ATWWAR et Grassroots Sisterhood Foundation.\n Plateformes BasÃ©es sur les TIC: UtilisÃ© des technologies innovantes d'information et de communication pour crÃ©er des plateformes de dialogue continu entre la sociÃ©tÃ© civile, les mÃ©dias et les parties prenantes gouvernementales.\n Plaidoyer BasÃ© sur des Preuves: Soutenu la recherche sur les processus lÃ©gislatifs et dÃ©cisionnels pour construire une base de preuves solide pour le plaidoyer.\n Engagement Innovant: ExpÃ©rimentÃ© avec des approches pratiques axÃ©es sur la communautÃ© pour renforcer la libertÃ© d'expression, le dialogue et les amÃ©liorations de la gouvernance menÃ©es par les citoyens.",
     objectivesFr: [
       "Renforcer la CapacitÃ© des Parties Prenantes: AmÃ©liorer la capacitÃ© de la sociÃ©tÃ© civile, des mÃ©dias et des reprÃ©sentants Ã©lus Ã  accÃ©der et utiliser l'information pour influencer les politiques.",
       "Renforcer la ResponsabilitÃ©: Favoriser une plus grande transparence et responsabilitÃ© parmi les autoritÃ©s traditionnelles et les fonctionnaires Ã©lus.",
@@ -1142,7 +1142,7 @@
     description: "Integrated approach combining agriculture, environment, education, and health to transform community incomes and welfare in cocoa-dependent communities.",
     fullDescription: "The iMPACT Project, funded by Mars Incorporated as part of the Mars Partnership for African Cocoa Communities of Tomorrow, targeted rural cocoa-dependent communities in Ghana, demonstrating that an integrated approach can transform community incomes and welfare.",
     snapshot: "The iMPACT Project, funded by Mars Incorporated as part of the Mars Partnership for African Cocoa Communities of Tomorrow, targeted rural cocoa-dependent communities in Ghana. Piloted in 18 communities across two districtsâ€”Wasa Amenfi West (Asankrangwa) and Assin North (Assin Fosu)â€”the project aimed to demonstrate that an integrated approach combining agriculture, environment, education, and health can transform community incomes and welfare. By enhancing the capacity of cocoa farming communities to identify and improve their social, economic, and environmental conditions, the project sought to make cocoa farming a profitable, socially rewarding, and environmentally sustainable livelihood, while also positioning it as an attractive occupation for future generations.",
-    howWeWentAboutIt: "â€¢ Training & Capacity Building: Organized workshops and training sessions to equip CEPs and district stakeholders with participatory tools for dialogue, sensitization, and planning.\nâ€¢ Facilitated Community Engagement: Conducted interactive sessions that enabled communities to voice their challenges and collaboratively design action plans.\nâ€¢ Participatory Planning: Guided communities through the elaboration of comprehensive action plans that integrated agriculture, education, environment, and health strategies.\nâ€¢ Ongoing Support: Provided continuous coordination and monitoring support to ensure that CEPs effectively implemented the community action plans and adapted strategies based on feedback.",
+    howWeWentAboutIt: " Training & Capacity Building: Organized workshops and training sessions to equip CEPs and district stakeholders with participatory tools for dialogue, sensitization, and planning.\n Facilitated Community Engagement: Conducted interactive sessions that enabled communities to voice their challenges and collaboratively design action plans.\n Participatory Planning: Guided communities through the elaboration of comprehensive action plans that integrated agriculture, education, environment, and health strategies.\n Ongoing Support: Provided continuous coordination and monitoring support to ensure that CEPs effectively implemented the community action plans and adapted strategies based on feedback.",
     objectives: [
       "Capacity Building: Empower cocoa farming communities to assess and improve their social, economic, and environmental conditions.",
       "Integrated Development: Demonstrate the benefits of integrating agriculture, education, environment, and health interventions.",
@@ -1164,7 +1164,7 @@
       "Strengthened Local Engagement: Fostered a strong sense of ownership and collaboration among community members, CEPs, and local stakeholders, paving the way for long-term sustainable development."
     ],
     partners: "The iMPACT Consortium (a partnership including AFRICARE, GTZ, ICI, IFESH, MARS Inc, Rainforest Alliance, and STCP)",
-    period: "December 2007 â€“ January 2012",
+    period: "December 2007 - January 2012",
     category: "Agriculture & Community Development",
     location: "Ghana (Wasa Amenfi West and Assin North Districts)",
     status: "Completed",
@@ -1178,7 +1178,7 @@
     description: "Pilot initiative examining land access challenges faced by poor land users through literature review and community-level dialogues to support national civil society advocacy.",
     fullDescription: "The Voices from the Land Project was implemented under CARE International's Security in Land Tenure Project (SLATE), focusing on examining land access challenges faced by poor land users through comprehensive research and community dialogues.",
     snapshot: "The Voices from the Land Project was implemented under CARE International's Security in Land Tenure Project (SLATE). This pilot initiative focused on examining land access challenges faced by poor land users through a comprehensive literature review and community-level dialogues. Pilot activities were conducted in two districts in the Greater Accra region and two in the Upper West, in collaboration with partner organization CIKOD. The project aimed to support national civil society advocacy, ensuring that Ghana's land policy incorporates mechanisms for equitable security of land tenure.",
-    howWeWentAboutIt: "â€¢ Research and Analysis: Conducted an in-depth literature review on the challenges faced by poor land users in accessing land.\nâ€¢ Community Engagement: Coordinated with CIKOD to facilitate dialogues in selected districts in Greater Accra and Upper West, allowing community members to share experiences and recommendations.\nâ€¢ Advocacy Support: Synthesized research and dialogue findings to support and empower civil society advocacy aimed at reforming Ghana's land policy.\nâ€¢ Sustainable Channels: Developed mechanisms to ensure ongoing community input into national policy discussions.",
+    howWeWentAboutIt: " Research and Analysis: Conducted an in-depth literature review on the challenges faced by poor land users in accessing land.\n Community Engagement: Coordinated with CIKOD to facilitate dialogues in selected districts in Greater Accra and Upper West, allowing community members to share experiences and recommendations.\n Advocacy Support: Synthesized research and dialogue findings to support and empower civil society advocacy aimed at reforming Ghana's land policy.\n Sustainable Channels: Developed mechanisms to ensure ongoing community input into national policy discussions.",
     objectives: [
       "Conduct a literature review to identify barriers to land access for poor land users.",
       "Facilitate community-level dialogues to amplify the voices and concerns of marginalized land users.",
@@ -1198,7 +1198,7 @@
       "Policy Influence: Contributed to the national dialogue on land tenure security, pushing for more equitable mechanisms in Ghana's land policy."
     ],
     partners: "CARE International Ghana",
-    period: "May 2006 â€“ January 2007",
+    period: "May 2006 - January 2007",
     category: "Policy Analysis & Advocacy",
     location: "Ghana (Greater Accra and Upper West Regions)",
     status: "Completed",
@@ -1212,7 +1212,7 @@
     description: "6-year bilateral programme to contribute to increased food security in northern Ghana through community-driven, environmentally, economically, and socially sustainable approaches.",
     fullDescription: "PDA provides the Capacity Development Specialist on this 6-year bilateral programme funded by CIDA and implemented through the Ministry of Local Government and Rural Development, contributing to increased food security in northern Ghana.",
     snapshot: "PDA provides the Capacity Development Specialist on this 6-year bilateral programme funded by CIDA and implemented through the Ministry of Local Government and Rural Development. The overall goal of CIFS is to contribute to increased food security in northern Ghana through an approach that is environmentally, economically, and socially sustainable. The project demonstrates that community-driven initiatives, implemented within the existing framework for district planning, can be an effective and sustainable way of increasing food security. It covers 10 districts in the eastern corridor of the Northern Region and uses capacity building to enable cross-district learning and replication of best practices.",
-    howWeWentAboutIt: "â€¢ Capacity Building: Delivered tailored training sessions for local government and community representatives.\nâ€¢ Participatory Planning: Facilitated dialogues and planning workshops to integrate community initiatives into district strategies.\nâ€¢ Monitoring and Evaluation: Coordinated continuous monitoring and cross-district knowledge sharing to refine interventions.",
+    howWeWentAboutIt: " Capacity Building: Delivered tailored training sessions for local government and community representatives.\n Participatory Planning: Facilitated dialogues and planning workshops to integrate community initiatives into district strategies.\n Monitoring and Evaluation: Coordinated continuous monitoring and cross-district knowledge sharing to refine interventions.",
     objectives: [
       "Increase food security in northern Ghana through sustainable, community-driven initiatives.",
       "Integrate community-based capacity building into district planning processes.",
@@ -1232,7 +1232,7 @@
       "Enhanced food security outcomes in targeted districts through coordinated capacity building."
     ],
     partners: "Ministry of Local Government Rural Development & Canadian International Development Agency",
-    period: "May 2004 â€“ 2011",
+    period: "May 2004 - 2011",
     category: "Community Development / Food Security",
     location: "Ghana (10 districts in eastern corridor of Northern Region)",
     status: "Completed",
@@ -1246,7 +1246,7 @@
     description: "Five-year programme to enhance citizens' engagement with the state on social, political, economic, cultural, and civil rights issues, with PDA responsible for capacity building of grant partners.",
     fullDescription: "PDA is part of a consortium of four organizations, led by Action Aid International Ghana, managing a five-year programme that aims to enhance citizens' engagement with the state on rights issues.",
     snapshot: "PDA is part of a consortium of four organizations, led by Action Aid International Ghana, managing a five-year programme that aims to enhance citizens' engagement with the state on social, political, economic, cultural, and civil rights issues. The initiative, known as the Civil Society Rights and Voice Initiative (RAVI), focuses on empowering civil society to engage effectively with governmental processes. PDA's specific responsibility was the capacity building of grant partner organizations.",
-    howWeWentAboutIt: "â€¢ Training Programs: Developed and facilitated training sessions on advocacy, policy engagement, and rights-based approaches.\nâ€¢ Mentorship and Support: Provided ongoing mentorship and technical support to strengthen the operational capacities of partner organizations.\nâ€¢ Networking and Collaboration: Fostered networks among civil society organizations to enhance collective advocacy efforts.",
+    howWeWentAboutIt: " Training Programs: Developed and facilitated training sessions on advocacy, policy engagement, and rights-based approaches.\n Mentorship and Support: Provided ongoing mentorship and technical support to strengthen the operational capacities of partner organizations.\n Networking and Collaboration: Fostered networks among civil society organizations to enhance collective advocacy efforts.",
     objectives: [
       "Enhance citizen engagement with state institutions regarding social, political, and economic rights.",
       "Build the capacity of grant partner organizations to advocate for civil rights.",
@@ -1266,7 +1266,7 @@
       "Contributed to more accountable and responsive governance in Ghana."
     ],
     partners: "DFID Ghana",
-    period: "October 2004 â€“ September 2009",
+    period: "October 2004 - September 2009",
     category: "Policy Analysis & Advocacy / Capacity Building",
     location: "Ghana",
     status: "Completed",
@@ -1280,7 +1280,7 @@
     description: "Pilot initiative targeting the elimination of the worst forms of child labour and forced labour in cocoa production and marketing through community-driven approaches.",
     fullDescription: "PDA serves as the Local Coordinating Agency for the \"Yen Daakye\" ('Our Future') Programme, a pilot initiative targeting the elimination of the worst forms of child labour and forced labour in cocoa production and marketing.",
     snapshot: "PDA serves as the Local Coordinating Agency for the \"Yen Daakye\" ('Our Future') Programme, a pilot initiative targeting the elimination of the worst forms of child labour and forced labour in cocoa production and marketing. This community-driven project is part of ICI's broader effort to create sustainable and child-centred development in cocoa farming communities. The pilot runs in three districtsâ€”New Edubiase in the Ashanti Region, and Daboase and Asankrangwa in the Western Regionâ€”through district-based NGOs acting as Implementing Partners, supported by a PDA team comprising district facilitators, a field coordinator, and a community technical consultant.",
-    howWeWentAboutIt: "â€¢ Capacity Building: Delivered training and workshops to enhance the skills of local facilitators and community groups.\nâ€¢ Participatory Planning: Facilitated dialogue sessions to develop community action plans addressing child labour and forced labour issues.\nâ€¢ Coordination and Support: Coordinated the activities of district facilitators and provided continuous backstopping and monitoring of project implementation.",
+    howWeWentAboutIt: " Capacity Building: Delivered training and workshops to enhance the skills of local facilitators and community groups.\n Participatory Planning: Facilitated dialogue sessions to develop community action plans addressing child labour and forced labour issues.\n Coordination and Support: Coordinated the activities of district facilitators and provided continuous backstopping and monitoring of project implementation.",
     objectives: [
       "Eliminate the worst forms of child and forced labour in cocoa production and marketing.",
       "Develop sustainable, community-driven approaches to improve the livelihoods of cocoa farming communities.",
@@ -1300,7 +1300,7 @@
       "Empowered communities to take ownership of development initiatives, ensuring long-term benefits and improved livelihoods for cocoa farming families."
     ],
     partners: "International Cocoa Initiative",
-    period: "November 2004 â€“ 2010",
+    period: "November 2004 - 2010",
     category: "Agriculture & Child Protection",
     location: "Ghana (New Edubiase, Daboase, and Asankrangwa Districts)",
     status: "Completed",
@@ -1314,7 +1314,7 @@
     description: "Pilot project to increase civil society involvement in forestry policy decisions through capacity building in advocacy, negotiation, communication, and lobbying skills.",
     fullDescription: "PDA provided the Team Leader for this pilot project aimed at increasing civil society involvement in forestry policy decisions, working with FRR in the UK to support grassroots organisations within three Forest Districts in Ghana.",
     snapshot: "PDA provided the Team Leader for this pilot project aimed at increasing civil society involvement in forestry policy decisions. Working with FRR in the UK, PDA assumed in-country management responsibility for CSF, supporting a Fund Administrator who hosted the CSF Coordinator. The facility targeted grassroots organisations within three Forest Districts in Ghanaâ€”Kade, Sunyani, and Asankraguaâ€”to mobilise marginalised groups through capacity building in advocacy, negotiation, communication, and lobbying skills. Additionally, the project focused on enhancing accountability and transparency within the forest sector across government, industry, and civil society.",
-    howWeWentAboutIt: "â€¢ Management & Coordination: Assumed full in-country management responsibility for the project, ensuring smooth operations and coordination with FRR and local stakeholders.\nâ€¢ Capacity Building: Organized and delivered training sessions in advocacy, negotiation, communication, and lobbying to empower grassroots organisations.\nâ€¢ Stakeholder Engagement: Facilitated dialogue and collaboration among civil society, government, and industry to improve transparency and accountability in the forest sector.",
+    howWeWentAboutIt: " Management & Coordination: Assumed full in-country management responsibility for the project, ensuring smooth operations and coordination with FRR and local stakeholders.\n Capacity Building: Organized and delivered training sessions in advocacy, negotiation, communication, and lobbying to empower grassroots organisations.\n Stakeholder Engagement: Facilitated dialogue and collaboration among civil society, government, and industry to improve transparency and accountability in the forest sector.",
     objectives: [
       "Encourage greater involvement of civil society in forestry policy decisions.",
       "Build the capacity of grassroots organisations to represent their interests effectively.",
@@ -1334,7 +1334,7 @@
       "Contributed to improved accountability and transparency within the forest sector through targeted capacity-building interventions."
     ],
     partners: "Department For International Development (DFID) UK, in collaboration with FRR (Forest Research and Resources)",
-    period: "November 2003 â€“ September 2006",
+    period: "November 2003 - September 2006",
     category: "Policy Analysis & Advocacy / Capacity Building",
     location: "Ghana (Kade, Sunyani, and Asankragua Forest Districts)",
     status: "Completed",
@@ -1348,7 +1348,7 @@
     description: "Research project to deepen understanding of the nature and extent of child forced early marriage (CFEM) in fishing communities that serve as source or destination areas for child trafficking.",
     fullDescription: "PDA was contracted by Challenging Heights to conduct research aimed at deepening the understanding of the nature and extent of child forced early marriage (CFEM) in fishing communities.",
     snapshot: "Child marriage is a fundamental violation of children's human rights and is closely linked with child trafficking and child labour. PDA was contracted by Challenging Heights to conduct research aimed at deepening the understanding of the nature and extent of child forced early marriage (CFEM) in fishing communities that serve as either source or destination areas for child trafficking.",
-    howWeWentAboutIt: "â€¢ Research Design: Developed a tailored framework to assess CFEM in target communities.\nâ€¢ Data Collection: Engaged beneficiaries through surveys, interviews, and focus groups.\nâ€¢ Analysis & Reporting: Synthesized findings into recommendations for policy and programmatic responses.",
+    howWeWentAboutIt: " Research Design: Developed a tailored framework to assess CFEM in target communities.\n Data Collection: Engaged beneficiaries through surveys, interviews, and focus groups.\n Analysis & Reporting: Synthesized findings into recommendations for policy and programmatic responses.",
     objectives: [
       "Increase knowledge of the prevalence and drivers of child marriage in fishing communities.",
       "Uncover the interconnections between child marriage, trafficking, and child labour.",
@@ -1368,7 +1368,7 @@
       "Contributed to the formulation of interventions aimed at protecting children's rights."
     ],
     partners: "Challenging Heights",
-    period: "September â€“ December 2016",
+    period: "September - December 2016",
     category: "Child Rights & Protection / Research",
     location: "Ghana",
     status: "Completed",
@@ -1382,7 +1382,7 @@
     description: "Study examining gender dynamics within Junior High School governance structures and their impact on gender mainstreaming and pupil retention.",
     fullDescription: "Commissioned by the girls' education unit of the Ghana Education Service and Camfed, this study examined gender dynamics within Junior High School governance structures, focusing on how gendered membership, participation, and decision-making processes affect gender mainstreaming.",
     snapshot: "Commissioned by the girls' education unit of the Ghana Education Service and Camfed, this study examined gender dynamics within Junior High School governance structures. The research focused on how gendered membership, participation, and decision-making processes affect the mainstreaming of gender issues, the creation of gender-friendly school environments, and pupil retention, particularly benefiting female students.",
-    howWeWentAboutIt: "â€¢ Field Research: Utilized surveys, interviews, and focus groups in selected schools.\nâ€¢ Data Analysis: Examined the composition and processes of School Management Committees and other governance structures.\nâ€¢ Reporting: Compiled findings to provide actionable insights and recommendations for policy improvement.",
+    howWeWentAboutIt: " Field Research: Utilized surveys, interviews, and focus groups in selected schools.\n Data Analysis: Examined the composition and processes of School Management Committees and other governance structures.\n Reporting: Compiled findings to provide actionable insights and recommendations for policy improvement.",
     objectives: [
       "Determine the extent to which school governance structures are gendered.",
       "Assess how these gender dynamics impact the mainstreaming of gender issues and the creation of inclusive school environments.",
@@ -1402,7 +1402,7 @@
       "Contributed to improving pupil retention and overall educational outcomes for female students."
     ],
     partners: "Camfed",
-    period: "August â€“ December 2016",
+    period: "August - December 2016",
     category: "Education & Gender / Research",
     location: "Ghana (Northern and Eastern Regions)",
     status: "Completed",
@@ -1411,12 +1411,12 @@
   {
     id: 99,
     slug: "mobile-health-research-ghana-adolescent-reproductive-health",
-    title: "Mobile Health Research â€“ Ghana Adolescent and Reproductive Health",
+    title: "Mobile Health Research - Ghana Adolescent and Reproductive Health",
     image: getProjectImage("Health & Adolescent Reproductive Health / Research", "Mobile Health Research", "Study to understand challenges and opportunities for ASRH providers using mobile application."),
     description: "Study to understand challenges and opportunities for ASRH providers using a mobile application developed by the Ghana Health Service.",
     fullDescription: "This study aimed to understand the challenges and opportunities faced by adolescent sexual and reproductive health (ASRH) providers in the Brong Ahafo Region who were using a mobile application developed by the Ghana Health Service.",
     snapshot: "This study aimed to understand the challenges and opportunities faced by adolescent sexual and reproductive health (ASRH) providers in the Brong Ahafo Region who were using a mobile application developed by the Ghana Health Service. Funded through the Ghana Adolescent Reproductive Health (GHARH) Project, the application provides real-time updates on ASRH issues, offering a cost-effective alternative to traditional in-service training programs.",
-    howWeWentAboutIt: "â€¢ Field Research: Collected qualitative and quantitative data from healthcare providers in the Brong Ahafo Region.\nâ€¢ Data Analysis: Evaluated the usability and impact of the mobile application on ASRH service provision.\nâ€¢ Reporting: Delivered comprehensive findings to inform enhancements in training and service delivery strategies.",
+    howWeWentAboutIt: " Field Research: Collected qualitative and quantitative data from healthcare providers in the Brong Ahafo Region.\n Data Analysis: Evaluated the usability and impact of the mobile application on ASRH service provision.\n Reporting: Delivered comprehensive findings to inform enhancements in training and service delivery strategies.",
     objectives: [
       "Identify challenges and opportunities for ASRH providers using the mobile platform.",
       "Evaluate the mobile application as a tool for real-time training and information dissemination.",
@@ -1435,8 +1435,8 @@
       "Informed enhancements to the mobile application, leading to more effective real-time support for healthcare providers.",
       "Contributed to better ASRH outcomes through evidence-based capacity building."
     ],
-    partners: "Palladium â€“ Futures Group Global Outreach Inc.",
-    period: "September â€“ July/December 2016",
+    partners: "Palladium - Futures Group Global Outreach Inc.",
+    period: "September - July/December 2016",
     category: "Health & Adolescent Reproductive Health / Research",
     location: "Ghana (Brong Ahafo Region)",
     status: "Completed",
@@ -1445,12 +1445,12 @@
   {
     id: 100,
     slug: "interburns-study-community-burns-survey",
-    title: "Interburns Study â€“ Community Burns Survey",
+    title: "Interburns Study - Community Burns Survey",
     image: getProjectImage("Health & Community Research", "Interburns Study Community Burns Survey", "Comprehensive community burns survey across 7 regions in Ghana."),
     description: "Comprehensive community burns survey across 7 regions in Ghana to collect data on incidence, knowledge, attitudes, and practices surrounding burns.",
     fullDescription: "PDA was contracted to conduct a comprehensive community burns survey across 7 regions in Ghana, aiming to collect data on the incidence, knowledge, attitudes, and practices surrounding burns.",
     snapshot: "PDA was contracted to conduct a comprehensive community burns survey across 7 regions in Ghana (Northern, Upper East, Brong Ahafo, Ashanti, Volta, Central, and Greater Accra). The survey aimed to collect data on the incidence, knowledge, attitudes, and practices surrounding burns, with the goal of informing the development of targeted advocacy and educational materials by InterBurns.",
-    howWeWentAboutIt: "â€¢ Team Training: Trained field researchers on technical and ethical data collection methods.\nâ€¢ Field Monitoring: Monitored data collection to ensure adherence to quality standards and timelines.\nâ€¢ Data Management: Performed data entry, cleaning, and analysis to ensure accuracy.\nâ€¢ Reporting: Prepared a concise data analysis report to guide InterBurns' advocacy and education efforts.",
+    howWeWentAboutIt: " Team Training: Trained field researchers on technical and ethical data collection methods.\n Field Monitoring: Monitored data collection to ensure adherence to quality standards and timelines.\n Data Management: Performed data entry, cleaning, and analysis to ensure accuracy.\n Reporting: Prepared a concise data analysis report to guide InterBurns' advocacy and education efforts.",
     objectives: [
       "Assess the incidence and impact of burns across different regions.",
       "Gather insights on community knowledge, attitudes, and practices related to burns.",
@@ -1484,7 +1484,7 @@
     description: "Comprehensive assessment in Krisan Camp to profile socio-economic conditions of refugees, assess protection risks, and evaluate livelihood options.",
     fullDescription: "PDA was contracted by the UNHCR Ghana Office to undertake a comprehensive assessment in Krisan Camp, aiming to profile the socio-economic conditions of refugees, assess protection risks, and evaluate livelihood options.",
     snapshot: "PDA was contracted by the UNHCR Ghana Office to undertake a comprehensive assessment in Krisan Camp. The study aimed to profile the socio-economic conditions of refugees, assess the protection risks they face, and evaluate livelihood options that minimize these risks. Using both quantitative and qualitative methodologies, the research provided nuanced insights into how refugees acquire livelihood assets and the risks associated with pursuing normal livelihood options.",
-    howWeWentAboutIt: "â€¢ Mixed-Methods Research: Employed surveys and in-depth interviews to gather detailed data on livelihoods and protection risks.\nâ€¢ Data Analysis: Analyzed quantitative and qualitative data to discern trends and identify critical challenges.\nâ€¢ Reporting: Compiled findings into a nuanced report with actionable recommendations for policy and practice.",
+    howWeWentAboutIt: " Mixed-Methods Research: Employed surveys and in-depth interviews to gather detailed data on livelihoods and protection risks.\n Data Analysis: Analyzed quantitative and qualitative data to discern trends and identify critical challenges.\n Reporting: Compiled findings into a nuanced report with actionable recommendations for policy and practice.",
     objectives: [
       "Profile the socio-economic conditions of refugees in Krisan Camp.",
       "Identify existing and potential protection risks linked to livelihood strategies.",
@@ -1504,7 +1504,7 @@
       "Enhanced UNHCR's ability to advocate for refugee rights and improved livelihood interventions."
     ],
     partners: "The United Nations High Commission for Refugees (UNHCR)",
-    period: "January â€“ February 2016",
+    period: "January - February 2016",
     category: "Protection & Livelihood Research",
     location: "Ghana (Krisan Camp, Western Region)",
     status: "Completed",
@@ -1518,7 +1518,7 @@
     description: "Learning Partnership for the EOY programme to enhance capacity of youth in construction and agriculture sectors to secure jobs, grow businesses, and access finance.",
     fullDescription: "PDA, DRT, and ODI form the Learning Partnership for the EOY programme implemented in Ghana and Uganda, aiming to enhance the capacity of youth in the construction and agriculture sectors.",
     snapshot: "PDA, DRT, and ODI form the Learning Partnership for the EOY programme implemented in Ghana and Uganda. The programme aims to enhance the capacity of youth in the construction and agriculture sectors to secure jobs, grow their businesses, and access finance. The Learning Partnership develops an evidence-based understanding of young people's needs through research, evaluation, policy analysis, knowledge sharing, and multi-sector dialogue.",
-    howWeWentAboutIt: "â€¢ Knowledge Development: Conducted comprehensive research and evaluations to identify youth challenges and opportunities.\nâ€¢ Capacity Building: Organized workshops and dialogue sessions to share findings and build stakeholder capacity.\nâ€¢ Multi-Sector Engagement: Facilitated collaborative discussions among government, donors, and civil society to refine programme strategies.",
+    howWeWentAboutIt: " Knowledge Development: Conducted comprehensive research and evaluations to identify youth challenges and opportunities.\n Capacity Building: Organized workshops and dialogue sessions to share findings and build stakeholder capacity.\n Multi-Sector Engagement: Facilitated collaborative discussions among government, donors, and civil society to refine programme strategies.",
     objectives: [
       "Develop evidence-based insights into youth needs in the construction and agriculture sectors.",
       "Enhance youth capacity for employment, entrepreneurship, and financial access.",
@@ -1538,7 +1538,7 @@
       "Enhanced collaboration among stakeholders, resulting in more responsive and effective youth development strategies."
     ],
     partners: "Overseas Development Institute/MasterCard Foundation",
-    period: "2015 â€“ 2020",
+    period: "2015 - 2020",
     category: "Youth Development / Capacity Building",
     location: "Ghana and Uganda",
     status: "Completed",
@@ -1552,7 +1552,7 @@
     description: "Impact evaluation of RTIMP using Participatory Impact Assessment & Learning Approach (PIALA) across 300 communities in 30 districts.",
     fullDescription: "PDA led a team of 13 staff to conduct an impact evaluation of the RTIMP, executed by Ghana's Ministry of Food and Agriculture from 2007 to 2014, using the Participatory Impact Assessment & Learning Approach (PIALA).",
     snapshot: "PDA led a team of 13 staff to conduct an impact evaluation of the RTIMP, executed by Ghana's Ministry of Food and Agriculture from 2007 to 2014. Commissioned jointly by IFAD and the Ministry, the evaluation employed the Participatory Impact Assessment & Learning Approach (PIALA) using mixed methods across 300 communities in 30 districts. The project aimed to improve rural livelihoods by developing commodity chains for roots and tubers, focusing on products such as gari, high quality cassava flour, bonding cassava plywood, and fresh yam export.",
-    howWeWentAboutIt: "â€¢ Mixed Methods Research: Implemented surveys, interviews, and workshops across 300 communities to gather robust data.\nâ€¢ Participatory Engagement: Facilitated stakeholder sense-making workshops to integrate community perspectives.\nâ€¢ Data Analysis & Reporting: Synthesized quantitative and qualitative data into a comprehensive evaluation report with strategic recommendations.",
+    howWeWentAboutIt: " Mixed Methods Research: Implemented surveys, interviews, and workshops across 300 communities to gather robust data.\n Participatory Engagement: Facilitated stakeholder sense-making workshops to integrate community perspectives.\n Data Analysis & Reporting: Synthesized quantitative and qualitative data into a comprehensive evaluation report with strategic recommendations.",
     objectives: [
       "Assess the impact of RTIMP on improving rural livelihoods through enhanced commodity chains.",
       "Evaluate smallholder linkages to markets, production enhancement, and processing improvements.",
@@ -1572,7 +1572,7 @@
       "Strengthened smallholder capacities by highlighting areas for improved market linkages, production, and processing."
     ],
     partners: "IFAD",
-    period: "2007 â€“ 2015",
+    period: "2007 - 2015",
     category: "Agriculture & Livelihoods / Impact Evaluation",
     location: "Ghana (30 districts)",
     status: "Completed",
@@ -1586,7 +1586,7 @@
     description: "Qualitative baseline study to investigate the trafficking of children into forced labour within Ghana's fishing industry.",
     fullDescription: "PDA conducted a qualitative baseline study to investigate the trafficking of children into forced labour within Ghana's fishing industry, seeking to understand the mechanisms, key players, and community perceptions.",
     snapshot: "PDA conducted a qualitative baseline study to investigate the trafficking of children into forced labour within Ghana's fishing industry. The study sought to understand the mechanisms, key players, and community perceptions surrounding child trafficking and forced labour. Over 30 focus group discussions and 60 key informant interviews were carried out in 6 communities across four regions, with findings aimed at informing interventions to prevent trafficking and enhance child protection.",
-    howWeWentAboutIt: "â€¢ Field Research: Conducted over 30 FGDs and 60 KIIs in strategically selected communities.\nâ€¢ Thematic Analysis: Analyzed qualitative data to identify recurring patterns and key factors driving trafficking.\nâ€¢ Reporting: Developed a detailed baseline report outlining critical insights and recommendations for intervention.",
+    howWeWentAboutIt: " Field Research: Conducted over 30 FGDs and 60 KIIs in strategically selected communities.\n Thematic Analysis: Analyzed qualitative data to identify recurring patterns and key factors driving trafficking.\n Reporting: Developed a detailed baseline report outlining critical insights and recommendations for intervention.",
     objectives: [
       "Determine the nature and manifestations of child trafficking and forced labour in the fishing industry.",
       "Understand community perceptions of the public justice system related to trafficking.",
@@ -1606,7 +1606,7 @@
       "Enhanced stakeholder awareness and led to more effective, targeted interventions to protect children's rights."
     ],
     partners: "International Justice Mission",
-    period: "February â€“ July 2015",
+    period: "February - July 2015",
     category: "Child Protection / Forced Labour Research",
     location: "Ghana (Eastern, Volta, Central, and Greater Accra Regions)",
     status: "Completed",
@@ -1615,12 +1615,12 @@
   {
     id: 105,
     slug: "jobs-future-ghana-country-study",
-    title: "Jobs for the Future â€“ Ghana Country Study",
+    title: "Jobs for the Future - Ghana Country Study",
     image: getProjectImage("Employment & Skills Development / Research", "Jobs for the Future Ghana Country Study", "Ghana country study as part of ODI's research into emerging global trends in job markets."),
     description: "Ghana country study as part of ODI's research into emerging global trends in job markets and their effects on skills development.",
     fullDescription: "PDA conducted the Ghana country study as part of ODI's research into emerging global trends in job markets and their effects on skills development, examining challenges faced by companies and the workforce.",
     snapshot: "PDA conducted the Ghana country study as part of ODI's research into emerging global trends in job markets and their effects on skills development. The study examined the challenges faced by companies and the workforce in an increasingly competitive world, using a combined approach that included a literature review, interviews with multinational companies and key experts, and an in-depth analysis of trends in both Vietnam and Ghana.",
-    howWeWentAboutIt: "â€¢ Literature Review: Reviewed existing research and data on global job market trends.\nâ€¢ Key Informant Interviews: Carried out interviews with experts from multiple sectors to gather diverse perspectives.\nâ€¢ Comparative Analysis: Examined trends in Vietnam and Ghana to highlight similarities and differences impacting skills development.\nâ€¢ Synthesis & Reporting: Compiled findings to provide a basis for discussions on addressing skills mismatches and harnessing technology for training.",
+    howWeWentAboutIt: " Literature Review: Reviewed existing research and data on global job market trends.\n Key Informant Interviews: Carried out interviews with experts from multiple sectors to gather diverse perspectives.\n Comparative Analysis: Examined trends in Vietnam and Ghana to highlight similarities and differences impacting skills development.\n Synthesis & Reporting: Compiled findings to provide a basis for discussions on addressing skills mismatches and harnessing technology for training.",
     objectives: [
       "Analyze emerging global job market trends and their impact on skills development in Ghana.",
       "Understand the challenges faced by companies and the workforce regarding recruitment and talent pipelines.",
@@ -1641,7 +1641,7 @@
       "Enhanced understanding of the role of technology in large-scale capacity building for future job markets."
     ],
     partners: "Overseas Development Institute (ODI)",
-    period: "August 2014 â€“ January 2015",
+    period: "August 2014 - January 2015",
     category: "Employment & Skills Development / Research",
     location: "Ghana",
     status: "Completed",
@@ -1655,7 +1655,7 @@
     description: "Country study on modern day slavery in Ghana, mapping coverage, cost, impact, and effectiveness of existing responses and interventions.",
     fullDescription: "PDA conducted a country study on modern day slavery (MDS) in Ghana, focusing on mapping the coverage, cost, impact, and effectiveness of existing responses and interventions.",
     snapshot: "PDA conducted a country study on modern day slavery (MDS) in Ghana, focusing on mapping the coverage, cost, impact, and effectiveness of existing responses and interventions. The study involved extensive literature review and a series of interviews with stakeholders from government, civil society, and Ghanaian industries, culminating in a consultative workshop with over 30 representatives.",
-    howWeWentAboutIt: "â€¢ Literature Mapping: Reviewed existing literature and policies on modern day slavery in Ghana.\nâ€¢ Stakeholder Identification & Interviews: Conducted interviews with a diverse range of stakeholders to capture the current state of MDS interventions.\nâ€¢ Consultative Workshop: Organized a workshop with over 30 representatives to discuss findings and refine recommendations.\nâ€¢ Data Analysis & Reporting: Analyzed the collected data and synthesized insights into a comprehensive country report.",
+    howWeWentAboutIt: " Literature Mapping: Reviewed existing literature and policies on modern day slavery in Ghana.\n Stakeholder Identification & Interviews: Conducted interviews with a diverse range of stakeholders to capture the current state of MDS interventions.\n Consultative Workshop: Organized a workshop with over 30 representatives to discuss findings and refine recommendations.\n Data Analysis & Reporting: Analyzed the collected data and synthesized insights into a comprehensive country report.",
     objectives: [
       "Map and assess existing forms of modern day slavery in Ghana and review policies addressing MDS.",
       "Evaluate the cost, impact, and effectiveness of current interventions against modern day slavery.",
@@ -1676,7 +1676,7 @@
       "Contributed to the development of more targeted and effective interventions to combat modern day slavery in Ghana."
     ],
     partners: "Walk Free Foundation",
-    period: "May â€“ September 2014",
+    period: "May - September 2014",
     category: "Human Rights / Modern Slavery Research",
     location: "Ghana",
     status: "Completed",
@@ -1690,7 +1690,7 @@
     description: "Qualitative assessment exploring the economic impacts of LEAP and its synergies with other social protection programmes in northern Ghana.",
     fullDescription: "Oxford Policy Management (OPM) was contracted by FAO to assess the economic impacts of cash transfer programmes across six countries. In Ghana, the focus was on the LEAP cash transfer programme.",
     snapshot: "Oxford Policy Management (OPM) was contracted by FAO to assess the economic impacts of cash transfer programmes across six countries. In Ghana, the focus was on the LEAP cash transfer programme. PDA supported the study by providing two team leaders and six field researchers to conduct a qualitative assessment, exploring the economic impacts of LEAP and its synergies with other social protection programmes.",
-    howWeWentAboutIt: "â€¢ Literature Review: Reviewed existing studies on cash transfer programmes and economic impacts.\nâ€¢ Field Research: Conducted in-depth interviews with beneficiaries, policymakers, and experts in sectors such as ICT, real estate, telecommunications, and manufacturing.\nâ€¢ Data Analysis: Synthesized qualitative data to identify key trends and insights regarding the impact of LEAP.",
+    howWeWentAboutIt: " Literature Review: Reviewed existing studies on cash transfer programmes and economic impacts.\n Field Research: Conducted in-depth interviews with beneficiaries, policymakers, and experts in sectors such as ICT, real estate, telecommunications, and manufacturing.\n Data Analysis: Synthesized qualitative data to identify key trends and insights regarding the impact of LEAP.",
     objectives: [
       "Evaluate the economic impacts of the LEAP programme in northern Ghana.",
       "Explore how LEAP interacts with other social protection interventions.",
@@ -1710,7 +1710,7 @@
       "Contributed to discussions on how to enhance the effectiveness of cash transfer programmes in poverty reduction."
     ],
     partners: "Oxford Policy Management / FAQ",
-    period: "October â€“ December 2013",
+    period: "October - December 2013",
     category: "Economic Research / Social Protection",
     location: "Ghana (with focus on northern Ghana)",
     status: "Completed",
@@ -1724,7 +1724,7 @@
     description: "Research to gather and analyze data on inequities affecting adolescents and young people in Ghana, focusing on laws, policies, bottlenecks in social service provision, and socio-cultural norms.",
     fullDescription: "This research aimed to gather and analyze data on the inequities affecting adolescents and young people in Ghana, focusing on laws, policies, bottlenecks in social service provision, and prevailing socio-cultural norms.",
     snapshot: "This research aimed to gather and analyze data on the inequities affecting adolescents and young people in Ghana. Focusing on laws, policies, bottlenecks in social service provision, and prevailing socio-cultural norms, the study provided evidence to guide national policy development and programming for youth. The process included extensive desk-based literature reviews, qualitative research in six regions, and the production of a final report along with six regional reports.",
-    howWeWentAboutIt: "â€¢ Literature Review: Conducted a comprehensive review of existing information on youth inequities in Ghana.\nâ€¢ Field Research: Undertook qualitative research in six regions to fill key information gaps.\nâ€¢ Stakeholder Engagement: Held consultations with key informants and communities to validate findings.\nâ€¢ Reporting: Developed a final report and six regional reports to guide national policy and programming.",
+    howWeWentAboutIt: " Literature Review: Conducted a comprehensive review of existing information on youth inequities in Ghana.\n Field Research: Undertook qualitative research in six regions to fill key information gaps.\n Stakeholder Engagement: Held consultations with key informants and communities to validate findings.\n Reporting: Developed a final report and six regional reports to guide national policy and programming.",
     objectives: [
       "Identify the extent and reasons for inequities affecting adolescents and young people.",
       "Analyze bottlenecks in the provision and utilization of basic social services.",
@@ -1744,7 +1744,7 @@
       "Supported national stakeholders in developing more equitable youth policies."
     ],
     partners: "UNFPA, UNICEF, and DFID",
-    period: "May 2013 â€“ March 2014",
+    period: "May 2013 - March 2014",
     category: "Youth & Social Policy / Research",
     location: "Ghana",
     status: "Completed",
@@ -1758,7 +1758,7 @@
     description: "Extensive national baseline study on child protection in Ghana, employing both qualitative and quantitative methods across all 10 regions.",
     fullDescription: "PDA managed an extensive national baseline study on child protection in Ghana, employing both qualitative and quantitative methods across all 10 regions, informing the development of the national child protection policy.",
     snapshot: "PDA managed an extensive national baseline study on child protection in Ghana, employing both qualitative and quantitative methods across all 10 regions. The research informed the development of the national child protection policy and the final baseline for the Government of Ghana/UNICEF Child Protection Programme. Key components included a literature review, training of 40 field researchers, regional consultation workshops, and a quantitative survey covering 3000 individuals across 100 enumeration areas.",
-    howWeWentAboutIt: "â€¢ Tool Development & Training: Created data collection tools and field manuals, and trained 40 field researchers.\nâ€¢ Field Data Collection: Managed a quantitative survey of 3000 people and qualitative data collection through consultations in all 10 regions.\nâ€¢ Stakeholder Engagement: Organized regional consultation and validation workshops at both the start and end of data collection.\nâ€¢ Data Analysis & Reporting: Analyzed data and produced a comprehensive final report to inform policy development.",
+    howWeWentAboutIt: " Tool Development & Training: Created data collection tools and field manuals, and trained 40 field researchers.\n Field Data Collection: Managed a quantitative survey of 3000 people and qualitative data collection through consultations in all 10 regions.\n Stakeholder Engagement: Organized regional consultation and validation workshops at both the start and end of data collection.\n Data Analysis & Reporting: Analyzed data and produced a comprehensive final report to inform policy development.",
     objectives: [
       "Establish a comprehensive baseline on child protection across Ghana.",
       "Identify key gaps and challenges in the current child protection environment.",
@@ -1778,7 +1778,7 @@
       "Strengthened the capacity of UNICEF and government partners to address child protection challenges across Ghana."
     ],
     partners: "UNICEF",
-    period: "January 2013 â€“ February 2014",
+    period: "January 2013 - February 2014",
     category: "Child Protection / Baseline Research",
     location: "Ghana (all 10 regions)",
     status: "Completed",
@@ -1792,7 +1792,7 @@
     description: "Part of an ITAD UK-led consortium conducting an independent 5-year evaluation of the MV Project in Northern Ghana using mixed methods, with PDA undertaking qualitative components.",
     fullDescription: "PDA is part of an ITAD UK-led consortium conducting an independent 5-year evaluation of the MV Project in Northern Ghana using mixed methods, with PDA undertaking the qualitative components using Participatory Rapid Appraisal (PRA) and Reality Check approaches.",
     snapshot: "PDA is part of an ITAD UK-led consortium conducting an independent 5-year evaluation of the MV Project in Northern Ghana using mixed methods. PDA undertook the qualitative components of the evaluation using Participatory Rapid Appraisal (PRA) and Reality Check approaches. This evaluation builds on, expands, and validates the MV project's own M&E data from both the MV site and a selected comparison site.",
-    howWeWentAboutIt: "â€¢ Employed participatory methods such as focus group discussions and key informant interviews.\nâ€¢ Integrated Reality Check exercises to compare project sites with comparison areas.\nâ€¢ Coordinated field data collection and analysis to inform the external evaluation.",
+    howWeWentAboutIt: " Employed participatory methods such as focus group discussions and key informant interviews.\n Integrated Reality Check exercises to compare project sites with comparison areas.\n Coordinated field data collection and analysis to inform the external evaluation.",
     objectives: [
       "Establish baseline data and track changes over the project's implementation.",
       "Provide an independent qualitative assessment of the MV Project's impact on community livelihoods.",
@@ -1812,7 +1812,7 @@
       "Informed future programmatic decisions with independent, evidence-based insights."
     ],
     partners: "DFID and SADA",
-    period: "2012 â€“ 2019",
+    period: "2012 - 2019",
     category: "Impact Evaluation / Social Development",
     location: "Northern Ghana",
     status: "Completed",
@@ -1826,7 +1826,7 @@
     description: "Evaluation of the DFID-funded Ghana Election Support Programme, focusing on media monitoring, polling station observation, and telephone survey of polling agents.",
     fullDescription: "PDA was contracted by Coffey to evaluate the DFID-funded Ghana Election Support Programme, focusing on media monitoring, polling station observation on election day, and conducting a telephone survey of polling agents.",
     snapshot: "PDA was contracted by Coffey to evaluate the DFID-funded Ghana Election Support Programme. The evaluation focused on media monitoring, polling station observation on election day, and conducting a telephone survey of 150 polling agents to assess the programme's effectiveness.",
-    howWeWentAboutIt: "â€¢ Coordinated a team to monitor media and observe election-day activities.\nâ€¢ Designed and administered a telephone survey targeting 150 polling agents.\nâ€¢ Analyzed data to evaluate the programme's performance and generate recommendations.",
+    howWeWentAboutIt: " Coordinated a team to monitor media and observe election-day activities.\n Designed and administered a telephone survey targeting 150 polling agents.\n Analyzed data to evaluate the programme's performance and generate recommendations.",
     objectives: [
       "Assess the performance and impact of the election support interventions.",
       "Monitor media coverage and polling station conditions during the elections.",
@@ -1846,7 +1846,7 @@
       "Contributed to evidence-based refinements in electoral support programmes."
     ],
     partners: "Coffey International Development Ltd. / DFID",
-    period: "November 2012 â€“ February 2013",
+    period: "November 2012 - February 2013",
     category: "Election Monitoring / Impact Evaluation",
     location: "Ghana",
     status: "Completed",
@@ -1860,7 +1860,7 @@
     description: "Research examining challenges faced by marginalized, including migrant, girls within the Dome/Taifa community to determine the feasibility of establishing an academy.",
     fullDescription: "This research examined the challenges faced by marginalized, including migrant, girls within the Dome/Taifa community to determine the feasibility of establishing an academy.",
     snapshot: "This research examined the challenges faced by marginalized, including migrant, girls within the Dome/Taifa community to determine the feasibility of establishing an academy. The study explored factors affecting school attendance, community reception of an academy, and potential tensions between marginalized girls and the wider community.",
-    howWeWentAboutIt: "â€¢ Conducted interviews and focus groups with community members, girls, and local leaders.\nâ€¢ Reviewed existing literature and community data to contextualize challenges.\nâ€¢ Analyzed findings to identify key factors influencing school attendance and community dynamics.",
+    howWeWentAboutIt: " Conducted interviews and focus groups with community members, girls, and local leaders.\n Reviewed existing literature and community data to contextualize challenges.\n Analyzed findings to identify key factors influencing school attendance and community dynamics.",
     objectives: [
       "Assess the barriers preventing marginalized girls from attending school.",
       "Evaluate community attitudes toward the establishment of an academy.",
@@ -1880,7 +1880,7 @@
       "Highlighted community dynamics and tensions for targeted interventions."
     ],
     partners: "Free Generation International (FGI)",
-    period: "May â€“ September 2012",
+    period: "May - September 2012",
     category: "Educational Research / Feasibility Study",
     location: "Ghana (Dome/Taifa community)",
     status: "Completed",
@@ -1889,16 +1889,16 @@
   {
     id: 113,
     slug: "sustainable-west-africa-palm-oil-programme-swapp-ghana-mill-survey",
-    title: "Sustainable West Africa Palmâ€“Oil Programme (SWAPP) Ghana Mill Survey",
+    title: "Sustainable West Africa Palm-Oil Programme (SWAPP) Ghana Mill Survey",
     image: getProjectImage("Agricultural Research / Market Analysis", "SWAPP Ghana Mill Survey", "Survey to collect data from oil palm mills across Ghana."),
-    description: "Survey to collect data from oil palm mills across Ghana to assess operational challenges and market conditions, contributing to the sustainability of the palmâ€“oil sector.",
+    description: "Survey to collect data from oil palm mills across Ghana to assess operational challenges and market conditions, contributing to the sustainability of the palm-oil sector.",
     fullDescription: "PDA was part of the team that conducted the WAFF/SWAPP Ghana Mill Survey, aiming to collect data from oil palm mills across Ghana to assess operational challenges and market conditions.",
-    snapshot: "PDA was part of the team that conducted the WAFF/SWAPP Ghana Mill Survey. The survey aimed to collect data from oil palm mills across Ghana to assess operational challenges and market conditions, contributing to the sustainability of the palmâ€“oil sector.",
-    howWeWentAboutIt: "â€¢ Developed and pilot-tested the survey questionnaire in collaboration with the project team.\nâ€¢ Visited multiple oil palm mills to administer the survey and collect data.\nâ€¢ Transcribed, cleaned, and analyzed the data, followed by report preparation.",
+    snapshot: "PDA was part of the team that conducted the WAFF/SWAPP Ghana Mill Survey. The survey aimed to collect data from oil palm mills across Ghana to assess operational challenges and market conditions, contributing to the sustainability of the palm-oil sector.",
+    howWeWentAboutIt: " Developed and pilot-tested the survey questionnaire in collaboration with the project team.\n Visited multiple oil palm mills to administer the survey and collect data.\n Transcribed, cleaned, and analyzed the data, followed by report preparation.",
     objectives: [
       "Develop and test a survey questionnaire tailored to oil palm mill operations.",
       "Collect and analyze data from various oil palm mills to understand industry challenges.",
-      "Provide a detailed report with findings to inform programme interventions in the palmâ€“oil sector."
+      "Provide a detailed report with findings to inform programme interventions in the palm-oil sector."
     ],
     activities: [
       "Survey questionnaire development and pilot testing",
@@ -1909,12 +1909,12 @@
       "Comprehensive report preparation"
     ],
     outcomes: [
-      "Delivered a detailed report on operational challenges and market conditions in the palmâ€“oil sector.",
+      "Delivered a detailed report on operational challenges and market conditions in the palm-oil sector.",
       "Informed sustainability strategies for the SWAPP programme.",
       "Provided actionable data to support policy and programmatic decision-making."
     ],
     partners: "West African Fair Fruit (WAFF)",
-    period: "April â€“ May 2012",
+    period: "April - May 2012",
     category: "Agricultural Research / Market Analysis",
     location: "Ghana",
     status: "Completed",
@@ -1928,7 +1928,7 @@
     description: "Follow-up study reviewing livelihood dependency on forest resources in the Wassa Amenfi West District to assess how forest-dependent livelihoods influence REDD+ implementation.",
     fullDescription: "PDA was commissioned by IUCN to follow up on the 2009 Poverty-Forest linkage analysis by reviewing livelihood dependency on forest resources in the Wassa Amenfi West District.",
     snapshot: "PDA was commissioned by IUCN to follow up on the 2009 Poverty-Forest linkage analysis by reviewing livelihood dependency on forest resources in the Wassa Amenfi West District. The study aimed to assess how forest-dependent livelihoods influence the implementation of REDD+ initiatives and to further develop a socio-economic baseline for the district.",
-    howWeWentAboutIt: "â€¢ Carried out a follow-up field survey to collect data on livelihoods in the district.\nâ€¢ Reviewed previous Poverty-Forest linkage studies and integrated new findings.\nâ€¢ Analyzed data to assess the implications for REDD+ and sustainable forest management.",
+    howWeWentAboutIt: " Carried out a follow-up field survey to collect data on livelihoods in the district.\n Reviewed previous Poverty-Forest linkage studies and integrated new findings.\n Analyzed data to assess the implications for REDD+ and sustainable forest management.",
     objectives: [
       "Update the socio-economic baseline of forest-dependent communities in the Wassa Amenfi West District.",
       "Analyze the impact of forest-dependent livelihoods on REDD+ implementation.",
@@ -1948,7 +1948,7 @@
       "Contributed to improved strategies for sustainable forest and livelihood management in the region."
     ],
     partners: "The International Union for Conservation of Nature (IUCN)",
-    period: "January â€“ April 2012",
+    period: "January - April 2012",
     category: "Socio-Economic Research / Environmental Policy",
     location: "Ghana (Wassa Amenfi West District)",
     status: "Completed",
@@ -1962,7 +1962,7 @@
     description: "Study to understand the impact of global financial, food, and fuel crises on vulnerable Ghanaians, with a particular focus on the construction industry and child protection issues.",
     fullDescription: "This study aimed to understand the impact of global financial, food, and fuel crises on vulnerable Ghanaians, with a particular focus on the construction industry, examining the loss of employment and coping strategies.",
     snapshot: "This study aimed to understand the impact of global financial, food, and fuel crises on vulnerable Ghanaians, with a particular focus on the construction industry. It examined the loss of employment and the coping strategies adopted by affected households, highlighting the vulnerability of children in terms of child protection issues such as child labor, displacement, and family separation.",
-    howWeWentAboutIt: "â€¢ Conducted interviews and focus group discussions with affected families and key stakeholders in the construction sector.\nâ€¢ Analyzed qualitative data to identify critical trends and challenges.\nâ€¢ Synthesized findings to inform policy recommendations and intervention strategies.",
+    howWeWentAboutIt: " Conducted interviews and focus group discussions with affected families and key stakeholders in the construction sector.\n Analyzed qualitative data to identify critical trends and challenges.\n Synthesized findings to inform policy recommendations and intervention strategies.",
     objectives: [
       "Analyze the effects of the financial, food, and fuel crises on employment within the construction industry.",
       "Assess the coping strategies of households impacted by these crises.",
@@ -1981,7 +1981,7 @@
       "Informed stakeholders and policymakers on effective coping strategies and necessary interventions."
     ],
     partners: "UNICEF / Dept. of Labour",
-    period: "October 2010 â€“ February 2011",
+    period: "October 2010 - February 2011",
     category: "Child Protection / Social Impact Research",
     location: "Ghana",
     status: "Completed",
@@ -1995,7 +1995,7 @@
     description: "Technical support to GEF by mapping key social and community issues associated with the Afram-Plains plantation forestry project.",
     fullDescription: "PDA provided technical support to GEF by mapping key social and community issues associated with the Afram-Plains plantation forestry project, identifying potential negative impacts and development opportunities.",
     snapshot: "PDA provided technical support to GEF by mapping key social and community issues associated with the Afram-Plains plantation forestry project. This assessment aimed to identify both the potential negative impacts and the development opportunities, enabling GEF to fine-tune its project strategies and proactively address concerns raised by civil society and NGO groups.",
-    howWeWentAboutIt: "â€¢ Reviewed existing literature and project documentation to understand contextual issues.\nâ€¢ Conducted stakeholder consultations to capture local perspectives.\nâ€¢ Compiled and analyzed findings to provide actionable recommendations for project enhancement.",
+    howWeWentAboutIt: " Reviewed existing literature and project documentation to understand contextual issues.\n Conducted stakeholder consultations to capture local perspectives.\n Compiled and analyzed findings to provide actionable recommendations for project enhancement.",
     objectives: [
       "Identify critical social and community concerns related to the forestry project.",
       "Highlight potential negative impacts and opportunities for positive development.",
@@ -2015,7 +2015,7 @@
       "Contributed to a more balanced approach to project development and conflict mitigation."
     ],
     partners: "Global Environmental Fund (GEF)",
-    period: "May â€“ July 2010",
+    period: "May - July 2010",
     category: "Environmental & Community Impact Assessment",
     location: "Ghana",
     status: "Completed",
@@ -2024,12 +2024,12 @@
   {
     id: 117,
     slug: "gender-poverty-environment-infrastructure-linkages-ghana",
-    title: "Gender, Poverty, Environment and Infrastructure Linkages â€“ Ghana",
+    title: "Gender, Poverty, Environment and Infrastructure Linkages - Ghana",
     image: getProjectImage("Policy Analysis & Advocacy / Sustainable Development", "Gender Poverty Environment Infrastructure Linkages", "Research analyzing the complex interconnections between poverty, environment, gender, and infrastructure."),
     description: "Research analyzing the complex interconnections between poverty, environment, gender, and infrastructure in Ghana to identify ways to transform negative linkages into positive outcomes.",
     fullDescription: "Commissioned by The World Bank, this research analyzed the complex interconnections between poverty, environment, gender, and infrastructure in Ghana, seeking to understand local perceptions and practices.",
     snapshot: "Commissioned by The World Bank, this research analyzed the complex interconnections between poverty, environment, gender, and infrastructure in Ghana. The study sought to understand local perceptions of the gender-poverty-environment nexus and its interaction with infrastructure and sustainable development initiatives, aiming to identify ways to transform negative linkages into positive outcomes.",
-    howWeWentAboutIt: "â€¢ Facilitated focus groups and conducted key informant interviews with diverse community members.\nâ€¢ Analyzed qualitative data to identify challenges and opportunities in transforming negative linkages.\nâ€¢ Synthesized insights into actionable recommendations for policy and development programs.",
+    howWeWentAboutIt: " Facilitated focus groups and conducted key informant interviews with diverse community members.\n Analyzed qualitative data to identify challenges and opportunities in transforming negative linkages.\n Synthesized insights into actionable recommendations for policy and development programs.",
     objectives: [
       "Examine the interrelationships between poverty, environment, gender, and infrastructure.",
       "Understand local perceptions and practices regarding these linkages.",
@@ -2049,7 +2049,7 @@
       "Contributed to policy recommendations aimed at leveraging positive outcomes from these linkages."
     ],
     partners: "The World Bank",
-    period: "March â€“ May 2011",
+    period: "March - May 2011",
     category: "Policy Analysis & Advocacy / Sustainable Development",
     location: "Ghana",
     status: "Completed",
@@ -2058,12 +2058,12 @@
   {
     id: 118,
     slug: "ghana-baseline-giraf-project",
-    title: "Ghana Baseline â€“ GIRAF Project",
+    title: "Ghana Baseline - GIRAF Project",
     image: getProjectImage("Environmental Policy / Baseline Research", "Ghana Baseline GIRAF Project", "Baseline study to establish the current status of forest forums in Ghana."),
     description: "Baseline study to establish the current status of forest forums in Ghana and assess the capacity of Forestwatch Ghana members in engaging with forest policy, advocacy, and facilitation.",
     fullDescription: "This study aimed to establish a baseline on the current status of forest forums in Ghana and to assess the capacity of Forestwatch Ghana members in engaging with forest policy, advocacy, and facilitation of forest forums.",
     snapshot: "This study aimed to establish a baseline on the current status of forest forums in Ghana and to assess the capacity of Forestwatch Ghana members in engaging with forest policy, advocacy, and facilitation of forest forums. The research provided essential insights into the operational strengths and capacity gaps among stakeholders, forming a basis for future interventions and policy reforms.",
-    howWeWentAboutIt: "â€¢ Conducted interviews and focus groups with Forestwatch Ghana members and relevant stakeholders.\nâ€¢ Reviewed existing documentation and literature on forest forums and policy engagement.\nâ€¢ Analyzed findings to pinpoint capacity gaps and formulate recommendations for improvement.",
+    howWeWentAboutIt: " Conducted interviews and focus groups with Forestwatch Ghana members and relevant stakeholders.\n Reviewed existing documentation and literature on forest forums and policy engagement.\n Analyzed findings to pinpoint capacity gaps and formulate recommendations for improvement.",
     objectives: [
       "Create a comprehensive baseline on existing forest forums in Ghana.",
       "Assess the capacity of Forestwatch Ghana members in policy engagement and advocacy.",
@@ -2083,7 +2083,7 @@
       "Contributed to the development of a more effective framework for forest management and community participation."
     ],
     partners: "CARE International",
-    period: "March â€“ December 2010",
+    period: "March - December 2010",
     category: "Environmental Policy / Baseline Research",
     location: "Ghana",
     status: "Completed",
@@ -2096,8 +2096,8 @@
     image: getProjectImage("Poverty & Vulnerability Research / Impact Evaluation", "Participatory Poverty & Vulnerability Assessments", "Independent 5-year external evaluation of the Millennium Village Project."),
     description: "Independent 5-year external evaluation of the Millennium Village Project in Northern Ghana, consisting of three rounds of qualitative assessments using PRA and Reality Check approaches.",
     fullDescription: "PDA participated in an independent 5-year external evaluation of the Millennium Village Project in Northern Ghana, led by an ITAD UK consortium, using mixed methods and consisting of three rounds of qualitative assessments.",
-    snapshot: "PDA participated in an independent 5-year external evaluation of the Millennium Village Project in Northern Ghana, led by an ITAD UK consortium. The evaluation used mixed methods and consisted of three rounds of qualitative assessments using Participatory Rapid Appraisal (PRA) and Reality Check approaches. PPVA I (June 2009): A national study was conducted by a 20-person research team across 17 sites in the three northern regions and in migrant communities in southern Ghana, contributing to the 2009 World Bank Poverty Study. A national workshop in August 2009 presented the findings to development organizations in Accra. PPVA II (October 2009): The research teams revisited the same communities to share findings, invite feedback, and conduct additional research on labor-intensive public works and the government's LEAP cash transfer programme. PPVA III (February â€“ March 2010): A further intensive round of research focused on education and social protection. In June 2011, a consolidated report of all three rounds was published. Additionally, during 2010/2011, PDA collaborated with the client organizations and the Government of Ghana to write briefing papers and organize high-level national meetings for disseminating and implementing the PPVA findings.",
-    howWeWentAboutIt: "â€¢ Deployed a multi-disciplinary research team to conduct fieldwork in diverse communities.\nâ€¢ Organized workshops to share findings and validate results with community members and stakeholders.\nâ€¢ Synthesized insights into a comprehensive evaluation report and facilitated dissemination events with national policymakers.",
+    snapshot: "PDA participated in an independent 5-year external evaluation of the Millennium Village Project in Northern Ghana, led by an ITAD UK consortium. The evaluation used mixed methods and consisted of three rounds of qualitative assessments using Participatory Rapid Appraisal (PRA) and Reality Check approaches. PPVA I (June 2009): A national study was conducted by a 20-person research team across 17 sites in the three northern regions and in migrant communities in southern Ghana, contributing to the 2009 World Bank Poverty Study. A national workshop in August 2009 presented the findings to development organizations in Accra. PPVA II (October 2009): The research teams revisited the same communities to share findings, invite feedback, and conduct additional research on labor-intensive public works and the government's LEAP cash transfer programme. PPVA III (February - March 2010): A further intensive round of research focused on education and social protection. In June 2011, a consolidated report of all three rounds was published. Additionally, during 2010/2011, PDA collaborated with the client organizations and the Government of Ghana to write briefing papers and organize high-level national meetings for disseminating and implementing the PPVA findings.",
+    howWeWentAboutIt: " Deployed a multi-disciplinary research team to conduct fieldwork in diverse communities.\n Organized workshops to share findings and validate results with community members and stakeholders.\n Synthesized insights into a comprehensive evaluation report and facilitated dissemination events with national policymakers.",
     objectives: [
       "Establish baselines and monitor changes in poverty and vulnerability over the project lifecycle.",
       "Capture and analyze community coping strategies in the face of economic and social challenges.",
@@ -2119,7 +2119,7 @@
       "Enhanced stakeholder engagement across sectors through high-level dissemination meetings."
     ],
     partners: "UNICEF / World Bank / DFID",
-    period: "May 2009 â€“ December 2011",
+    period: "May 2009 - December 2011",
     category: "Poverty & Vulnerability Research / Impact Evaluation",
     location: "Ghana",
     status: "Completed",
@@ -2133,7 +2133,7 @@
     description: "Baseline study for CARE International's Agriculture and Natural Resources portfolio, focusing on the AFS and FNR programmes to establish the status of programme areas and identify capacity gaps.",
     fullDescription: "PDA conducted a baseline study for CARE International's Agriculture and Natural Resources portfolio, focusing on the AFS and FNR programmes.",
     snapshot: "PDA conducted a baseline study for CARE International's Agriculture and Natural Resources portfolio, focusing on the AFS and FNR programmes. The study established the status of programme areas and identified capacity gaps, serving as a critical reference point for future interventions and monitoring progress.",
-    howWeWentAboutIt: "â€¢ Conducted surveys, interviews, and focus group discussions in selected programme sites.\nâ€¢ Analyzed data to identify key trends and capacity gaps.\nâ€¢ Compiled findings into a baseline report to inform CARE's programming and policy advocacy.",
+    howWeWentAboutIt: " Conducted surveys, interviews, and focus group discussions in selected programme sites.\n Analyzed data to identify key trends and capacity gaps.\n Compiled findings into a baseline report to inform CARE's programming and policy advocacy.",
     objectives: [
       "Establish a comprehensive baseline for the Agriculture and Natural Resources programmes.",
       "Identify existing gaps in capacity and implementation challenges.",
@@ -2153,7 +2153,7 @@
       "Provided evidence for policy advocacy to improve agricultural and natural resource management."
     ],
     partners: "CARE International",
-    period: "November 2009 â€“ February 2010",
+    period: "November 2009 - February 2010",
     category: "Baseline Research / Social Protection",
     location: "Ghana",
     status: "Completed",
@@ -2162,12 +2162,12 @@
   {
     id: 121,
     slug: "piwa-community-radio-programme-senegal-external-review",
-    title: "PIWA Community Radio Programme (Senegal) â€“ External Review",
+    title: "PIWA Community Radio Programme (Senegal) - External Review",
     image: getProjectImage("Media & Communication / Programme Evaluation", "PIWA Community Radio Programme External Review", "External review of the PIWA Community Radio Programme in Senegal."),
     description: "External review of the PIWA Community Radio Programme in Senegal, involving desk review and semi-structured interviews with staff and representatives across four countries of operation.",
     fullDescription: "PDA conducted an external review of the PIWA Community Radio Programme in Senegal, involving a desk review and semi-structured interviews with staff from both PIWA and Free Voice.",
     snapshot: "PDA conducted an external review of the PIWA Community Radio Programme in Senegal. This involved a desk review and semi-structured interviews with staff from both PIWA and Free Voice, as well as with PIWA representatives in all four countries of operation (Mauritania, Guinea, Nigeria, and Sierra Leone). The review assessed whether all planned programme activities had been successfully implemented.",
-    howWeWentAboutIt: "â€¢ Conducted a thorough desk review of programme documents and past reports.\nâ€¢ Held semi-structured interviews with key programme stakeholders across four countries.\nâ€¢ Analyzed qualitative data to assess programme performance and compile actionable recommendations.",
+    howWeWentAboutIt: " Conducted a thorough desk review of programme documents and past reports.\n Held semi-structured interviews with key programme stakeholders across four countries.\n Analyzed qualitative data to assess programme performance and compile actionable recommendations.",
     objectives: [
       "Evaluate the effectiveness of programme implementation across multiple countries.",
       "Identify strengths, challenges, and areas for improvement in the PIWA Community Radio Programme.",
@@ -2187,7 +2187,7 @@
       "Supported the refinement of programme activities to better serve community radio initiatives."
     ],
     partners: "Free Voice",
-    period: "May â€“ June 2009",
+    period: "May - June 2009",
     category: "Media & Communication / Programme Evaluation",
     location: "Senegal (with insights from operations in Mauritania, Guinea, Nigeria, and Sierra Leone)",
     status: "Completed",
@@ -2201,7 +2201,7 @@
     description: "Baseline study on the social dimensions of climate change in Ghana, including Field Validation Survey and Participatory Scenario Development workshops to develop realistic adaptation pathways.",
     fullDescription: "This project involved a baseline study on the social dimensions of climate change in Ghana within the broader context of the Economics of Adaptation.",
     snapshot: "This project involved a baseline study on the social dimensions of climate change in Ghana within the broader context of the Economics of Adaptation. In May 2009, a Field Validation Survey was conducted in 8 selected sites across the 4 agro-ecological zones to capture people's experiences in coping with climate variability and environmental degradation. Additionally, Participatory Scenario Development (PSD) workshops were held at both national and regional levels, where diverse stakeholders developed realistic adaptation pathways for various livelihood groups and prioritized investments for short-, medium-, and long-term adaptation.",
-    howWeWentAboutIt: "â€¢ Conducted field surveys across 8 sites in Ghana's agro-ecological zones to collect data on climate adaptation practices.\nâ€¢ Facilitated PSD workshops with government officials, local experts, and representatives from the research and non-profit sectors.\nâ€¢ Synthesized findings to develop actionable adaptation pathways and inform investment priorities.",
+    howWeWentAboutIt: " Conducted field surveys across 8 sites in Ghana's agro-ecological zones to collect data on climate adaptation practices.\n Facilitated PSD workshops with government officials, local experts, and representatives from the research and non-profit sectors.\n Synthesized findings to develop actionable adaptation pathways and inform investment priorities.",
     objectives: [
       "Establish a baseline on the social dimensions of climate change in Ghana.",
       "Identify effective strategies for adapting to adverse impacts of climate change.",
@@ -2221,7 +2221,7 @@
       "Informed The World Bank's policy and investment decisions on climate change adaptation in Ghana."
     ],
     partners: "The World Bank",
-    period: "April â€“ September 2009",
+    period: "April - September 2009",
     category: "Climate Change Adaptation / Impact Assessment",
     location: "Ghana",
     status: "Completed",
@@ -2235,7 +2235,7 @@
     description: "Rapid assessment study to gather information on the potential impacts of the global economic crisis on the Ghanaian economy and identify the categories of Ghanaians most affected.",
     fullDescription: "This rapid assessment study was conducted to gather information on the potential impacts of the global economic crisis on the Ghanaian economy.",
     snapshot: "This rapid assessment study was conducted to gather information on the potential impacts of the global economic crisis on the Ghanaian economy. The study identified the categories of Ghanaians most affected by the financial downturn, providing early insights into the economic vulnerabilities resulting from the crisis.",
-    howWeWentAboutIt: "â€¢ Designed a brief research framework to capture the effects of the economic downturn.\nâ€¢ Conducted targeted interviews and data collection in key affected areas.\nâ€¢ Analyzed the data to identify the most vulnerable categories and summarized findings in a concise report.",
+    howWeWentAboutIt: " Designed a brief research framework to capture the effects of the economic downturn.\n Conducted targeted interviews and data collection in key affected areas.\n Analyzed the data to identify the most vulnerable categories and summarized findings in a concise report.",
     objectives: [
       "Assess the immediate impacts of the global economic crisis on various segments of the Ghanaian population.",
       "Identify key vulnerabilities and the coping mechanisms adopted by affected communities.",
@@ -2269,7 +2269,7 @@
     description: "Coordinated planning workshop and national research study on the effectiveness of Japanese aid in Ghana, contributing to a global synthesis report for TICAD and G8 meetings.",
     fullDescription: "PDA coordinated the planning workshop in Accra in October 2007 as part of a global EBPDN project, bringing together representatives to generate terms of reference for a national-level research study.",
     snapshot: "PDA coordinated the planning workshop in Accra in October 2007 as part of a global EBPDN project. This workshop brought together representatives from various organizations to generate the terms of reference for a national-level research study on the effectiveness of Japanese aid in Ghana. The research, undertaken between December 2007 and March 2008, was motivated by Japan's upcoming role as host and chair of the 2008 G8 meeting. The evidence generated was later integrated into a global synthesis report to influence policy outcomes at the TICAD and G8 meetings.",
-    howWeWentAboutIt: "â€¢ Organized a multi-stakeholder planning workshop in Accra in October 2007.\nâ€¢ Facilitated discussions to generate a clear term of reference for the research.\nâ€¢ Supported the integration of the Ghana study's findings into a broader global synthesis report.",
+    howWeWentAboutIt: " Organized a multi-stakeholder planning workshop in Accra in October 2007.\n Facilitated discussions to generate a clear term of reference for the research.\n Supported the integration of the Ghana study's findings into a broader global synthesis report.",
     objectives: [
       "Generate evidence on the impact and effectiveness of Japanese aid in Ghana.",
       "Develop a robust term of reference to guide the national research study.",
@@ -2279,7 +2279,7 @@
       "Planning workshop coordination in Accra",
       "Multi-stakeholder engagement",
       "Terms of reference development",
-      "National research study (December 2007 â€“ March 2008)",
+      "National research study (December 2007 - March 2008)",
       "Evidence generation on Japanese aid effectiveness",
       "Integration into global synthesis report"
     ],
@@ -2289,7 +2289,7 @@
       "Strengthened stakeholder engagement in the assessment of aid effectiveness."
     ],
     partners: "Evidence Based Policy Development Network (EBPDN), supported by the ODI RAPID programme",
-    period: "October 2007 (Planning Workshop); December 2007 â€“ March 2008 (National Research)",
+    period: "October 2007 (Planning Workshop); December 2007 - March 2008 (National Research)",
     category: "Aid Effectiveness / Policy Research",
     location: "Ghana",
     status: "Completed",
@@ -2303,7 +2303,7 @@
     description: "Baseline survey to raise awareness among stakeholders, primary schools, and communities about disaster risks, vulnerability to hazards, and appropriate coping mechanisms in the Upper East Region.",
     fullDescription: "PDA conducted a baseline survey aimed at raising awareness among stakeholders, primary schools, and communities about disaster risks, vulnerability to hazards, and appropriate coping mechanisms.",
     snapshot: "PDA conducted a baseline survey aimed at raising awareness among stakeholders, primary schools, and communities about disaster risks, vulnerability to hazards, and appropriate coping mechanisms. The survey was implemented across four districts in the Upper East Region to inform disaster prevention and risk reduction strategies.",
-    howWeWentAboutIt: "â€¢ Developed a survey instrument tailored to the disaster risk context of the Upper East Region.\nâ€¢ Conducted field surveys in four districts to gather baseline data on hazards and community responses.\nâ€¢ Analyzed survey findings to inform future disaster risk reduction initiatives.",
+    howWeWentAboutIt: " Developed a survey instrument tailored to the disaster risk context of the Upper East Region.\n Conducted field surveys in four districts to gather baseline data on hazards and community responses.\n Analyzed survey findings to inform future disaster risk reduction initiatives.",
     objectives: [
       "Assess baseline levels of risk awareness and vulnerability to hazards in target communities.",
       "Identify effective coping mechanisms and areas needing intervention in disaster risk reduction.",
@@ -2337,7 +2337,7 @@
     description: "Ghana component of a 6-country survey commissioned by DFID, identifying 50 top-level stakeholders across five groups to capture perceptions on the effectiveness of multilateral organizations.",
     fullDescription: "For a 6-country survey commissioned by DFID, PDA managed the Ghana component by identifying 50 top-level \"well informed people\" across five stakeholder groups.",
     snapshot: "For a 6-country survey commissioned by DFID, PDA managed the Ghana component by identifying 50 top-level \"well informed people\" across five stakeholder groups (government, parliament, civil service, civil society, and private sector). The survey used a structured questionnaire administered online, with the aim of capturing perceptions on the effectiveness of multilateral organizations.",
-    howWeWentAboutIt: "â€¢ Identified and recruited 50 well-informed stakeholders from government, parliament, civil service, civil society, and the private sector.\nâ€¢ Administered a structured online questionnaire to capture detailed perceptions on multilateral effectiveness.\nâ€¢ Consolidated and analyzed the data for reporting and integration with the broader 6-country survey.",
+    howWeWentAboutIt: " Identified and recruited 50 well-informed stakeholders from government, parliament, civil service, civil society, and the private sector.\n Administered a structured online questionnaire to capture detailed perceptions on multilateral effectiveness.\n Consolidated and analyzed the data for reporting and integration with the broader 6-country survey.",
     objectives: [
       "Evaluate perceptions of multilateral organisation effectiveness among key stakeholders in Ghana.",
       "Provide comparative insights across diverse sectors including government and civil society.",
@@ -2357,7 +2357,7 @@
       "Strengthened the evidence base for assessing multilateral performance in diverse contexts."
     ],
     partners: "ODI (for DFID)",
-    period: "March 2007 â€“ March 2008",
+    period: "March 2007 - March 2008",
     category: "Policy Research / Stakeholder Analysis",
     location: "Ghana",
     status: "Completed",
@@ -2368,19 +2368,19 @@
     slug: "inception-studies-ravi",
     title: "Inception Studies for RAVI",
     image: getProjectImage("Civil Society Strengthening / Policy Research", "Inception Studies for RAVI", "Two inception studies for the DFID-funded RAVI (Rights and Voice Initiative)."),
-    description: "Two inception studies for the DFID-funded RAVI (Rights and Voice Initiative), including a comprehensive directory of funding opportunities and investigation of citizenâ€“government engagement activities.",
+    description: "Two inception studies for the DFID-funded RAVI (Rights and Voice Initiative), including a comprehensive directory of funding opportunities and investigation of citizen-government engagement activities.",
     fullDescription: "PDA undertook two inception studies for the DFID-funded RAVI (Rights and Voice Initiative) during its early phase.",
-    snapshot: "PDA undertook two inception studies for the DFID-funded RAVI (Rights and Voice Initiative) during its early phase. One study resulted in a comprehensive directory of existing funding opportunities for civil society in Ghana, while the other investigated various citizenâ€“government engagement activities taking place in the country.",
-    howWeWentAboutIt: "â€¢ Organized a multi-stakeholder planning workshop in Accra to develop the research terms of reference.\nâ€¢ Conducted desk reviews and stakeholder interviews to map funding opportunities and engagement initiatives.\nâ€¢ Synthesized findings into actionable inputs for the national-level research phase.",
+    snapshot: "PDA undertook two inception studies for the DFID-funded RAVI (Rights and Voice Initiative) during its early phase. One study resulted in a comprehensive directory of existing funding opportunities for civil society in Ghana, while the other investigated various citizen-government engagement activities taking place in the country.",
+    howWeWentAboutIt: " Organized a multi-stakeholder planning workshop in Accra to develop the research terms of reference.\n Conducted desk reviews and stakeholder interviews to map funding opportunities and engagement initiatives.\n Synthesized findings into actionable inputs for the national-level research phase.",
     objectives: [
       "Compile a directory of funding opportunities available to civil society organizations in Ghana.",
-      "Examine and document existing citizenâ€“government engagement activities to inform RAVI's strategy."
+      "Examine and document existing citizen-government engagement activities to inform RAVI's strategy."
     ],
     activities: [
       "Two inception studies for RAVI",
       "Multi-stakeholder planning workshop",
       "Comprehensive directory of funding opportunities",
-      "Investigation of citizenâ€“government engagement activities",
+      "Investigation of citizen-government engagement activities",
       "Desk reviews and stakeholder interviews",
       "Research terms of reference development"
     ],
@@ -2389,7 +2389,7 @@
       "Enabled RAVI and its partners to better understand the funding landscape and citizen engagement dynamics in Ghana."
     ],
     partners: "DFID / RAVI",
-    period: "November â€“ December 2004",
+    period: "November - December 2004",
     category: "Civil Society Strengthening / Policy Research",
     location: "Ghana",
     status: "Completed",
@@ -2403,7 +2403,7 @@
     description: "Research to understand how time is valued by communities, particularly in the Northern Region of Ghana, in relation to transport decision-making as part of a broader multi-country analysis.",
     fullDescription: "PDA contributed as a researcher to a Value of Time Study aimed at understanding how time is valued by communities, particularly in the Northern Region of Ghana, in relation to transport decision-making.",
     snapshot: "PDA contributed as a researcher to a Value of Time Study aimed at understanding how time is valued by communities, particularly in the Northern Region of Ghana, in relation to transport decision-making. This study was part of a broader multi-country analysis.",
-    howWeWentAboutIt: "â€¢ Collected data through surveys and interviews within selected communities in the Northern Region of Ghana.\nâ€¢ Analyzed quantitative and qualitative data to determine the economic value of time.\nâ€¢ Compared findings across the study countries to contextualize the results.",
+    howWeWentAboutIt: " Collected data through surveys and interviews within selected communities in the Northern Region of Ghana.\n Analyzed quantitative and qualitative data to determine the economic value of time.\n Compared findings across the study countries to contextualize the results.",
     objectives: [
       "Ascertain the value placed on time by individuals in transport decision-making.",
       "Understand how time valuation affects transportation choices and overall livelihoods."
@@ -2421,7 +2421,7 @@
       "Contributed to a broader understanding of the economic implications of transport decisions in developing regions."
     ],
     partners: "IT Transport",
-    period: "March â€“ June 2004",
+    period: "March - June 2004",
     category: "Economic Research / Transport Decision-Making",
     location: "Ghana (with comparative insights from two other countries)",
     status: "Completed",
@@ -2435,7 +2435,7 @@
     description: "Comprehensive survey design to assess the knowledge, attitudes, and practices (KAP) of MOFA target groups regarding HIV/AIDS and evaluate the effectiveness of MOFA's HIV/AIDS activities.",
     fullDescription: "PDA designed a comprehensive survey aimed at assessing the knowledge, attitudes, and practices (KAP) of MOFA target groups regarding HIV/AIDS.",
     snapshot: "PDA designed a comprehensive survey aimed at assessing the knowledge, attitudes, and practices (KAP) of MOFA target groups regarding HIV/AIDS. The survey evaluated the effectiveness of MOFA's HIV/AIDS activities and identified strategies to enhance these interventions through agricultural extension agents.",
-    howWeWentAboutIt: "â€¢ Conducted a thorough desk review and consulted with MOFA staff to understand existing HIV/AIDS activities.\nâ€¢ Developed tailored data collection tools and survey instruments for target groups.\nâ€¢ Piloted and refined the survey to ensure it accurately captured the required information.",
+    howWeWentAboutIt: " Conducted a thorough desk review and consulted with MOFA staff to understand existing HIV/AIDS activities.\n Developed tailored data collection tools and survey instruments for target groups.\n Piloted and refined the survey to ensure it accurately captured the required information.",
     objectives: [
       "Assess the current state of knowledge, attitudes, and practices of MOFA staff and farmers regarding HIV/AIDS.",
       "Evaluate the effectiveness of MOFA's HIV/AIDS initiatives and identify areas for improvement.",
@@ -2464,12 +2464,12 @@
   {
     id: 130,
     slug: "hiv-aids-mapping-mainstreaming-hiv-aids-lg-prsp",
-    title: "HIV/AIDS Mapping â€“ Mainstreaming HIV/AIDS into LG-PRSP",
+    title: "HIV/AIDS Mapping - Mainstreaming HIV/AIDS into LG-PRSP",
     image: getProjectImage("Health & HIV/AIDS / Policy Integration", "HIV/AIDS Mapping Mainstreaming LG-PRSP", "Study to integrate HIV/AIDS into the GTZ/MLGRD Local Governance Poverty Reduction Support Programme."),
     description: "Study to integrate HIV/AIDS into the GTZ/MLGRD Local Governance Poverty Reduction Support Programme (LG-PRSP), mapping existing HIV/AIDS interventions across six districts.",
     fullDescription: "This study served as a first step towards integrating HIV/AIDS into the GTZ/MLGRD Local Governance Poverty Reduction Support Programme (LG-PRSP), conducted across six districts in the Ashanti and Brong Ahafo Regions.",
     snapshot: "This study served as a first step towards integrating HIV/AIDS into the GTZ/MLGRD Local Governance Poverty Reduction Support Programme (LG-PRSP). Conducted across six districts in the Ashanti and Brong Ahafo Regions, the study aimed to map existing HIV/AIDS interventions by identifying who was involved, what activities were being conducted, where, and how. Interviews were carried out with diverse stakeholders from public, private, and civil society organizationsâ€”including people living with HIV/AIDS (PLWHAs)â€”to inform further mainstreaming efforts.",
-    howWeWentAboutIt: "â€¢ Carried out extensive interviews with stakeholders from multiple sectors.\nâ€¢ Documented and analyzed existing HIV/AIDS activities to determine coverage and effectiveness.\nâ€¢ Compiled findings to support policy recommendations for better integration of HIV/AIDS into LG-PRSP.",
+    howWeWentAboutIt: " Carried out extensive interviews with stakeholders from multiple sectors.\n Documented and analyzed existing HIV/AIDS activities to determine coverage and effectiveness.\n Compiled findings to support policy recommendations for better integration of HIV/AIDS into LG-PRSP.",
     objectives: [
       "Map current HIV/AIDS interventions across key districts.",
       "Identify gaps and opportunities for integrating HIV/AIDS into broader poverty reduction efforts.",
@@ -2489,7 +2489,7 @@
       "Laid the groundwork for improved coordination between health and poverty reduction strategies."
     ],
     partners: "GTZ / Ministry of Local Government and Rural Development (MLGRD)",
-    period: "November â€“ December 2003",
+    period: "November - December 2003",
     category: "Health & HIV/AIDS / Policy Integration",
     location: "Ghana (Ashanti and Brong Ahafo Regions)",
     status: "Completed",
@@ -2503,7 +2503,7 @@
     description: "Inventory exercise to document indigenous institutionsâ€”political, social, economic, religiousâ€”around which communities are organized, highlighting institutions often overlooked by external development agents.",
     fullDescription: "As an associate of CIKOD, PDA participated in an inventory exercise to document indigenous institutionsâ€”political, social, economic, religious, etc.â€”around which communities are organized.",
     snapshot: "As an associate of CIKOD, PDA participated in an inventory exercise to document indigenous institutionsâ€”political, social, economic, religious, etc.â€”around which communities are organized. This exercise aimed to highlight institutions that external development agents often overlook, providing a basis for developing strategies to support their organizational development.",
-    howWeWentAboutIt: "â€¢ Conducted field visits and interviews to map indigenous institutions.\nâ€¢ Reviewed community structures and local governance practices.\nâ€¢ Synthesized findings into a comprehensive inventory report to guide support strategies.",
+    howWeWentAboutIt: " Conducted field visits and interviews to map indigenous institutions.\n Reviewed community structures and local governance practices.\n Synthesized findings into a comprehensive inventory report to guide support strategies.",
     objectives: [
       "Identify and document indigenous institutions within target communities.",
       "Understand the role of these institutions in local community organization.",
@@ -2523,7 +2523,7 @@
       "Contributed to a more inclusive approach in community development programming."
     ],
     partners: "Centre for Indigenous Knowledge and Organisation Development (CIKOD)",
-    period: "August â€“ September 2003",
+    period: "August - September 2003",
     category: "Community Development / Indigenous Knowledge",
     location: "Ghana",
     status: "Completed",
@@ -2537,7 +2537,7 @@
     description: "Baseline survey for the Takoradi Technical Institute HIV/AIDS Peer Education Programme, involving training in PRA methods, quantitative survey, and report compilation to support proposal submission.",
     fullDescription: "PDA coordinated a baseline survey for the Takoradi Technical Institute HIV/AIDS Peer Education Programme, involving training a research team in Participatory Rapid Appraisal (PRA) methods.",
     snapshot: "PDA coordinated a baseline survey for the Takoradi Technical Institute HIV/AIDS Peer Education Programme. The project involved training a research team in Participatory Rapid Appraisal (PRA) methods, managing a quantitative survey, and compiling a report on the baseline findings. The insights were used to support a proposal submission to the Ghana HIV/AIDS Accelerated Response Fund (GARFUND) and to refine peer educators' training and reference materials.",
-    howWeWentAboutIt: "â€¢ Trained a research team in PRA techniques to ensure robust data collection.\nâ€¢ Coordinated and managed the baseline survey process and data analysis.\nâ€¢ Compiled findings into a report and provided technical input for proposal development and training manual refinement.",
+    howWeWentAboutIt: " Trained a research team in PRA techniques to ensure robust data collection.\n Coordinated and managed the baseline survey process and data analysis.\n Compiled findings into a report and provided technical input for proposal development and training manual refinement.",
     objectives: [
       "Establish baseline data on HIV/AIDS awareness and peer education effectiveness at Takoradi Technical Institute.",
       "Identify gaps in knowledge and areas for improvement in the peer education programme.",
@@ -2557,7 +2557,7 @@
       "Enhanced the capacity of the Takoradi Technical Institute to implement effective HIV/AIDS peer education initiatives."
     ],
     partners: "Regional AIDS Programme for Africa (RAPA)",
-    period: "June â€“ July 2003",
+    period: "June - July 2003",
     category: "Health & HIV/AIDS / Baseline Research",
     location: "Ghana",
     status: "Completed",
@@ -2571,7 +2571,7 @@
     description: "Study on the formation of a civil society platform to support the Ghana Poverty Reduction Strategy, leading to the development of a concept paper for GAPVOD and its partners.",
     fullDescription: "PDA conducted a study on the formation of a civil society platform to support the Ghana Poverty Reduction Strategy.",
     snapshot: "PDA conducted a study on the formation of a civil society platform to support the Ghana Poverty Reduction Strategy. The research led to the development of a concept paper for GAPVOD and its partners, outlining strategies for enhanced civil society engagement in national poverty reduction efforts.",
-    howWeWentAboutIt: "â€¢ Conducted stakeholder interviews and a desk review of existing civil society engagement practices.\nâ€¢ Analyzed data to identify gaps and opportunities for a dedicated civil society platform.\nâ€¢ Developed and presented a comprehensive concept paper to GAPVOD and its partners.",
+    howWeWentAboutIt: " Conducted stakeholder interviews and a desk review of existing civil society engagement practices.\n Analyzed data to identify gaps and opportunities for a dedicated civil society platform.\n Developed and presented a comprehensive concept paper to GAPVOD and its partners.",
     objectives: [
       "Explore the feasibility of establishing a civil society platform to influence poverty reduction strategies.",
       "Document current practices and identify gaps in civil society engagement.",
@@ -2605,7 +2605,7 @@
     description: "Study to identify conditions necessary for improving cooperation between traditional authorities and district/sub-district institutions within Ghana's local government system.",
     fullDescription: "This study aimed to identify the conditions necessary for improving cooperation between traditional authorities and district/sub-district institutions within Ghana's local government system.",
     snapshot: "This study aimed to identify the conditions necessary for improving cooperation between traditional authorities and district/sub-district institutions within Ghana's local government system. By strengthening these relationships, the project sought to enhance effective community governance.",
-    howWeWentAboutIt: "â€¢ Stakeholder Engagement: Conducted interviews and focus group discussions with traditional leaders, district assembly representatives, and community members.\nâ€¢ Comparative Analysis: Assessed best practices from other local governance systems to identify replicable models for cooperation.\nâ€¢ Policy Alignment: Ensured that findings aligned with Ghana's decentralization framework and local governance policies.\nâ€¢ Report Development: Compiled insights into a structured report with actionable recommendations for policy implementation.",
+    howWeWentAboutIt: " Stakeholder Engagement: Conducted interviews and focus group discussions with traditional leaders, district assembly representatives, and community members.\n Comparative Analysis: Assessed best practices from other local governance systems to identify replicable models for cooperation.\n Policy Alignment: Ensured that findings aligned with Ghana's decentralization framework and local governance policies.\n Report Development: Compiled insights into a structured report with actionable recommendations for policy implementation.",
     objectives: [
       "Identify factors that influence collaboration between traditional authorities and district institutions.",
       "Assess the challenges and opportunities in integrating traditional governance structures into local government.",
@@ -2639,7 +2639,7 @@
     description: "Assessment evaluating the effectiveness of Danida's poverty reduction strategy in Ghana across key sectors including water, transport, health, and business during the 1998-2002 strategic period.",
     fullDescription: "This assessment evaluated the effectiveness of Danida's poverty reduction strategy in Ghana across key sectors, including water, transport, health, and business, during the 1998-2002 strategic period.",
     snapshot: "This assessment evaluated the effectiveness of Danida's poverty reduction strategy in Ghana across key sectors, including water, transport, health, and business, during the 1998-2002 strategic period. The study provided a comprehensive review of progress, identifying gaps and opportunities for improvement.",
-    howWeWentAboutIt: "â€¢ Stakeholder Consultations: Engaged government officials, sector experts, and community representatives to gather insights on project effectiveness.\nâ€¢ Sectoral Analysis: Conducted in-depth reviews of Danida's interventions in water, transport, health, and business sectors.\nâ€¢ Data Collection & Validation: Utilized interviews, surveys, and focus group discussions to collect primary data, which was cross-validated with secondary sources.\nâ€¢ Final Report & Presentation: Compiled findings into a structured report and presented key recommendations at a national workshop.",
+    howWeWentAboutIt: " Stakeholder Consultations: Engaged government officials, sector experts, and community representatives to gather insights on project effectiveness.\n Sectoral Analysis: Conducted in-depth reviews of Danida's interventions in water, transport, health, and business sectors.\n Data Collection & Validation: Utilized interviews, surveys, and focus group discussions to collect primary data, which was cross-validated with secondary sources.\n Final Report & Presentation: Compiled findings into a structured report and presented key recommendations at a national workshop.",
     objectives: [
       "Assess the extent to which Danida's interventions contributed to poverty reduction in Ghana.",
       "Evaluate sector-specific outcomes in water, transport, health, and business development.",
@@ -2659,7 +2659,7 @@
       "Strengthened stakeholder engagement in evaluating donor-funded programs."
     ],
     partners: "Royal Danish Embassy, Ghana",
-    period: "June â€“ August 2002",
+    period: "June - August 2002",
     category: "Policy Analysis & Advocacy",
     location: "Ghana",
     status: "Completed",
@@ -2673,7 +2673,7 @@
     description: "Review conducted as part of Christian Aid's national strategic planning process in Ghana, assessing past and ongoing initiatives to inform the organization's future strategic direction.",
     fullDescription: "This study was conducted as part of Christian Aid's national strategic planning process in Ghana, aiming to assess past and ongoing initiatives.",
     snapshot: "This study was conducted as part of Christian Aid's national strategic planning process in Ghana. The review aimed to assess past and ongoing initiatives, evaluate their effectiveness, and inform the organization's future strategic direction.",
-    howWeWentAboutIt: "â€¢ Project Evaluation: Conducted field visits to assess the implementation and impact of Christian Aid's programs.\nâ€¢ Stakeholder Interviews: Engaged beneficiaries, local partners, and government representatives to gain diverse perspectives.\nâ€¢ Comparative Analysis: Reviewed similar programs to identify best practices and lessons learned.\nâ€¢ Strategic Recommendations: Developed evidence-based recommendations for improving program design and implementation.",
+    howWeWentAboutIt: " Project Evaluation: Conducted field visits to assess the implementation and impact of Christian Aid's programs.\n Stakeholder Interviews: Engaged beneficiaries, local partners, and government representatives to gain diverse perspectives.\n Comparative Analysis: Reviewed similar programs to identify best practices and lessons learned.\n Strategic Recommendations: Developed evidence-based recommendations for improving program design and implementation.",
     objectives: [
       "Review Christian Aid's projects and programs in Ghana to assess impact and sustainability.",
       "Identify key achievements, challenges, and areas for improvement.",
@@ -2693,7 +2693,7 @@
       "Provided a framework for measuring and improving program impact."
     ],
     partners: "Christian Aid, UK",
-    period: "February â€“ June 2002",
+    period: "February - June 2002",
     category: "Community Development",
     location: "Ghana",
     status: "Completed",
@@ -2707,7 +2707,7 @@
     description: "Study exploring key issues related to marriage and child maintenance in Ghanaian communities, using participatory research approaches to understand local concerns and legal challenges.",
     fullDescription: "This study explored key issues related to marriage and child maintenance in Ghanaian communities, using participatory research approaches to understand local concerns and legal challenges.",
     snapshot: "This study explored key issues related to marriage and child maintenance in Ghanaian communities, using participatory research approaches to understand local concerns and legal challenges.",
-    howWeWentAboutIt: "â€¢ Training & Supervision: Provided capacity building for law students on PRA methodologies.\nâ€¢ Community Engagement: Conducted focus group discussions and interviews with affected individuals and stakeholders.\nâ€¢ Data Analysis: Examined patterns in responses to identify key legal and social issues.\nâ€¢ Report Development: Compiled research findings into a structured report with policy recommendations.",
+    howWeWentAboutIt: " Training & Supervision: Provided capacity building for law students on PRA methodologies.\n Community Engagement: Conducted focus group discussions and interviews with affected individuals and stakeholders.\n Data Analysis: Examined patterns in responses to identify key legal and social issues.\n Report Development: Compiled research findings into a structured report with policy recommendations.",
     objectives: [
       "Investigate community perspectives on marriage and child maintenance issues.",
       "Identify gaps in legal frameworks and customary practices.",
@@ -2741,7 +2741,7 @@
     description: "Study assessing the feasibility of establishing a national volunteer programme in Ghana, conducting extensive consultations to determine interest, potential impact, and operational framework.",
     fullDescription: "This study assessed the feasibility of establishing a national volunteer programme in Ghana, conducting extensive consultations to determine the level of interest, potential impact, and operational framework.",
     snapshot: "This study assessed the feasibility of establishing a national volunteer programme in Ghana. PDA conducted extensive consultations to determine the level of interest, potential impact, and operational framework required for a successful initiative.",
-    howWeWentAboutIt: "â€¢ Stakeholder Engagement: Conducted interviews with government agencies, NGOs, and community organizations.\nâ€¢ Community Consultations: Gathered input from individuals and institutions to gauge interest and feasibility.\nâ€¢ Analysis & Reporting: Evaluated findings and drafted a final report with key recommendations.\nâ€¢ Presentation of Findings: Shared insights with VSO and relevant stakeholders for decision-making.",
+    howWeWentAboutIt: " Stakeholder Engagement: Conducted interviews with government agencies, NGOs, and community organizations.\n Community Consultations: Gathered input from individuals and institutions to gauge interest and feasibility.\n Analysis & Reporting: Evaluated findings and drafted a final report with key recommendations.\n Presentation of Findings: Shared insights with VSO and relevant stakeholders for decision-making.",
     objectives: [
       "Assess the needs and interest in a national volunteer programme.",
       "Engage stakeholders at national, institutional, and community levels.",
@@ -2775,7 +2775,7 @@
     description: "Study examining effective strategies for implementing and monitoring poverty reduction programmes at the district level using Participatory Rural Appraisal (PRA) methods.",
     fullDescription: "This study examined effective strategies for implementing and monitoring poverty reduction programmes at the district level, using Participatory Rural Appraisal (PRA) methods.",
     snapshot: "This study examined effective strategies for implementing and monitoring poverty reduction programmes at the district level. Using Participatory Rural Appraisal (PRA) methods, the study identified best practices for improving local development initiatives.",
-    howWeWentAboutIt: "â€¢ Participatory Rural Appraisal (PRA): Engaged local communities in assessing programme effectiveness.\nâ€¢ Data Collection & Analysis: Conducted fieldwork to evaluate poverty reduction efforts.\nâ€¢ Stakeholder Consultations: Worked with district officials and development partners to gather insights.\nâ€¢ Final Report: Compiled findings into a structured document with actionable recommendations.",
+    howWeWentAboutIt: " Participatory Rural Appraisal (PRA): Engaged local communities in assessing programme effectiveness.\n Data Collection & Analysis: Conducted fieldwork to evaluate poverty reduction efforts.\n Stakeholder Consultations: Worked with district officials and development partners to gather insights.\n Final Report: Compiled findings into a structured document with actionable recommendations.",
     objectives: [
       "Analyze the effectiveness of poverty reduction programmes at the district level.",
       "Identify best practices in implementation and monitoring.",
@@ -2809,7 +2809,7 @@
     description: "National study exploring challenges and opportunities for promoting women's rights within Ghana's pluralistic legal system using Participatory Rural Appraisal (PRA) methods.",
     fullDescription: "This national study aimed to explore the challenges and opportunities for promoting women's rights within Ghana's pluralistic legal system, using Participatory Rural Appraisal (PRA) methods.",
     snapshot: "This national study aimed to explore the challenges and opportunities for promoting women's rights within Ghana's pluralistic legal system. Using Participatory Rural Appraisal (PRA) methods, the study engaged communities, legal professionals, and advocacy groups to assess the effectiveness of existing legal frameworks in protecting women's rights.",
-    howWeWentAboutIt: "â€¢ Training & Capacity Building: Equipped a team of legal professionals and activists with PRA research techniques.\nâ€¢ Community Engagement: Conducted fieldwork to gather insights from women, traditional leaders, and local authorities.\nâ€¢ Legal System Analysis: Examined the interactions between customary and formal legal frameworks.\nâ€¢ Final Report & Recommendations: Synthesized findings into a policy-oriented report for legal and advocacy stakeholders.",
+    howWeWentAboutIt: " Training & Capacity Building: Equipped a team of legal professionals and activists with PRA research techniques.\n Community Engagement: Conducted fieldwork to gather insights from women, traditional leaders, and local authorities.\n Legal System Analysis: Examined the interactions between customary and formal legal frameworks.\n Final Report & Recommendations: Synthesized findings into a policy-oriented report for legal and advocacy stakeholders.",
     objectives: [
       "Assess how Ghana's pluralistic legal system impacts women's rights.",
       "Identify barriers to justice for women in traditional and formal legal structures.",
@@ -2829,7 +2829,7 @@
       "Increased awareness among community leaders and policymakers on the importance of women's legal protection."
     ],
     partners: "GTZ Legal Pluralism Project",
-    period: "September 2000 â€“ August 2001",
+    period: "September 2000 - August 2001",
     category: "Women's Economic Empowerment",
     location: "Ghana",
     status: "Completed",

@@ -113,7 +113,7 @@ const Contact = () => {
         <img
           src={contactimage}
           alt="Contact Us"
-          className="w-full h-[400px] md:h-[500px] object-cover"
+          className="w-full h-[300px] sm:h-[350px] md:h-[450px] lg:h-[500px] object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
@@ -126,7 +126,7 @@ const Contact = () => {
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
           />
           <motion.p
-            className="text-2xl md:text-3xl text-white font-poppins mb-2"
+            className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white font-poppins mb-2"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -134,7 +134,7 @@ const Contact = () => {
             Have a project for us?
           </motion.p>
           <motion.h3
-            className="text-white text-4xl md:text-5xl font-bold font-poppins"
+            className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-poppins"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
@@ -154,7 +154,7 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold text-orange mb-6 font-poppins">{t("contact.form.title")}</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-orange mb-6 font-poppins">{t("contact.form.title")}</h2>
             <p className="text-gray-600 mb-6 font-poppins">
               Thank you for your interest in learning more about us. Your contact information will enable us to respond to all your concerns.
             </p>
@@ -283,7 +283,7 @@ const Contact = () => {
                     <div className="bg-orange p-3 rounded-full">
                       <Icon className="text-white text-xl" />
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-800 font-poppins">{office.title}</h3>
+                    <h3 className="text-xl sm:text-2xl font-bold text-gray-800 font-poppins">{office.title}</h3>
                   </div>
                   <div className="space-y-3">
                     {office.details.map((detail, idx) => (
@@ -320,7 +320,7 @@ const Contact = () => {
                 <div className="bg-red p-3 rounded-full">
                   <FaPhone className="text-white text-xl" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800 font-poppins">Contact Numbers</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-800 font-poppins">Contact Numbers</h3>
               </div>
               <div className="space-y-3">
                 <a href="tel:+233508493316" className="block text-gray-600 hover:text-orange transition-colors font-poppins">
@@ -347,7 +347,7 @@ const Contact = () => {
                 <div className="bg-orange p-3 rounded-full">
                   <FaEnvelope className="text-white text-xl" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800 font-poppins">Email</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-800 font-poppins">Email</h3>
               </div>
               <a
                 href="mailto:info@pdaghana.com"

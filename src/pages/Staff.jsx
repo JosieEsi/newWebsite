@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import {
   annabelle,
   alex,
@@ -38,6 +38,20 @@ import {
   seth,
   osei,
   lucy,
+  abu,
+  derek,
+  emelia,
+  eugene,
+  yaro,
+  harrison,
+  incoom,
+  josephine,
+  kalevor,
+  philip,
+  racheal,
+  ruth,
+  sanni,
+  tietaar,
 } from "../assets/images";
 import { FaUser, FaChevronDown, FaChevronUp, FaBriefcase, FaGraduationCap } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
@@ -45,11 +59,25 @@ import { useTranslation } from "../hooks/useTranslation";
 const Staff = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const location = useLocation();
   const [expandedStaff, setExpandedStaff] = useState(null);
 
   const toggleExpand = (index) => {
     setExpandedStaff(expandedStaff === index ? null : index);
   };
+
+  // Handle hash-based scrolling when page loads with a hash
+  useEffect(() => {
+    if (location.hash) {
+      const hash = location.hash.substring(1); // Remove the #
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 300); // Delay to ensure page is rendered
+    }
+  }, [location.hash]);
 
   // Staff organized by department
   const staffByDepartment = {
@@ -75,8 +103,6 @@ const Staff = () => {
         bio: "Before joining the PDA team as Research Manager in August 2015, Clement has been involved in a number of security-related research activities. As consultant for the African Leadership Centre he provided research and advisory services in an IDRC-funded assessment of Kenya's post-election violence and potential prospects for sustainable peace. He presented papers in a number of international conferences, the latest of which was the European Conference for African Studies (ECAS), in Paris in July 2015. He also presented a paper on the creation of collective memory in post-conflict societies at the international Summer School at the George Eckert Institute of international Textbook Research in Germany. Clement worked as a visiting scholar at the Centre of Criminology, University of Cape Town, where he was involved in archival search to appraise security sector reforms in post-apartheid South Africa. He has won a number of fellowships and scholarships. Prior to his engagement in conflict and security discourses, he assisted in other research activities, including anthropological and gender-based research at the Institute of Cross-Cultural Studies (TICSS) in Tamale. He completed a second Master of Arts at the Regional Institute for Population Studies (RIPS), University of Ghana whilst his first Master of Arts was in Conflict, Security and Development, obtained at King's College London, University of London. He is located in the Accra office.",
         profileLink: "#",
       },
-    ],
-    rel: [
       {
         name: "ALEXANDER AFRAM",
         position: "Research, Evaluation & Learning Manager",
@@ -84,6 +110,15 @@ const Staff = () => {
         bio: "Alexander Afram leads PDA Research Evaluation and Learning as the Manager. With an excellent academic foundation and over a decade working in development settings, Alex is highly skilled in policy analysis and providing technical support for program design and implementation. Alex is also experienced in training and capacity building, and design and implementation of quantitative and qualitative research. He has pioneered several research and evaluation projects and led the development of both quantitative and qualitative methodologies. Alex holds an MSc in Development Management, and a BA in Geography and Rural Development from London School of Economics and Political Science – UK, and Kwame Nkrumah University of Science and Technology – Ghana.",
         profileLink: "#",
       },
+      {
+        name: "OSEI YEBOAH ASUAMAH",
+        position: "Finance Manager",
+        image: osei,
+        bio: "Mr. Osei Yeboah Asuamah is a Chartered Accountant and a proud member of the Institute of Chartered Accountants Ghana (ICAG), with over 11 years of experience in finance and accounting. He holds an MSc in Accounting and Finance from KNUST, as well as a Bachelor of Technology in Accounting with Computing and a Higher National Diploma (HND) in Accounting both from Kumasi Technical University (KSTU). Professionally, he has served in key roles such as Director of Finance at Christian Service University, where his leadership drove transformative achievements. With a reputation as a trusted advisor and innovative leader, Mr. Asuamah is dedicated to fostering growth and sustainability in every organization he serves.",
+        profileLink: "#",
+      },
+    ],
+    rel: [
       {
         name: "CHINEBOABA ARABA AFFUL",
         position: "Senior Research Officer",
@@ -133,15 +168,15 @@ const Staff = () => {
         bio: "Lucy serves as a Senior Project Officer with the PDA Research Evaluation and Learning department. With her background in Economics, Lucy is adept at adapting economic models for development programming. Over her 6+ years of working in development contexts, she has developed a great deal of expertise in data analysis, report writing, monitoring and evaluation, training and facilitation, and catering. She has an MSc and a BA in Economics from the Kwame Nkrumah University of Science and Technology.",
         profileLink: "#",
       },
-    ],
-    finance: [
       {
-        name: "OSEI YEBOAH ASUAMAH",
-        position: "Finance Manager",
-        image: osei,
-        bio: "Mr. Osei Yeboah Asuamah is a Chartered Accountant and a proud member of the Institute of Chartered Accountants Ghana (ICAG), with over 11 years of experience in finance and accounting. He holds an MSc in Accounting and Finance from KNUST, as well as a Bachelor of Technology in Accounting with Computing and a Higher National Diploma (HND) in Accounting both from Kumasi Technical University (KSTU). Professionally, he has served in key roles such as Director of Finance at Christian Service University, where his leadership drove transformative achievements. With a reputation as a trusted advisor and innovative leader, Mr. Asuamah is dedicated to fostering growth and sustainability in every organization he serves.",
+        name: "DEBORAH EYRAM AMA KALEVOR",
+        position: "Project Officer",
+        image: kalevor,
+        bio: "Deborah Eyram Ama Kalevor is a recent graduate with a Bachelor of Science in Business Administration (Business Information Technology) and a Master of Science in Business and Data Analytics. She is passionate about leveraging her analytical and data science skills to contribute to a dynamic team as a Data Analyst. Deborah is committed to using emerging technology for innovative solutions and learning from experienced professionals. She has participated in the Ghana Statistical Service Hackathon 2023 and has proficiency in Python, R, SQL, and data visualization tools. With strong interpersonal and communication skills, she excels as a collaborative team player.",
         profileLink: "#",
       },
+    ],
+    finance: [
       {
         name: "VICTORIA AMPAH",
         position: "Senior Finance Officer",
@@ -156,61 +191,6 @@ const Staff = () => {
         bio: "Godsway serves as the Finance Officer for PDA Africa. Throughout his five years of experience in finance roles, he has developed rich expertise in financial reporting and analysis. Godsway holds a BSc Administration (Accounting) from the University of Ghana Business School.",
         profileLink: "#",
       },
-    ],
-    communications: [
-      {
-        name: "ASEDA MENSAH",
-        position: "Programmes Coordinator, Advocacy and Communications",
-        image: aseda,
-        bio: "Aseda is the Coordinator for the PDA Communications and Advocacy Department. Aseda is an experienced communicator, digital media manager, editor, event moderator, and training facilitator. She has over 6 years of experience using various tools to design, implement and lead communication- and advocacy-centred initiatives to promote meaningful social change. Aseda is a graduate of the University of Ghana with an MPhil in Marketing and a BSc in E-Commerce and Customer Management.",
-        profileLink: "#",
-      },
-      {
-        name: "GADDIEL MENSAH YAMOAH",
-        position: "Senior Project Officer, Advocacy and Communications",
-        image: gaddiel,
-        bio: "Gaddiel is a seasoned multimedia expert who combines his in-depth knowledge and experience to produce highly valued content for women empowerment, child protection, and financial inclusion. His main areas of expertise are in graphic design, video production and multimedia. With his 8+ years of experience, Gaddiel works as a Senior Project Officer with the PDA Communications and Advocacy department. He is a graduate of the Kwame Nkrumah University of Science and Technology with a BA in Communication Design.",
-        profileLink: "#",
-      },
-      {
-        name: "SETH KWADWO OPPONG",
-        position: "Senior Project Officer, Advocacy and Communications",
-        image: seth,
-        bio: "Seth is a Senior Project Officer with the PDA Communications and Advocacy department. Seth has a decade of experience working as a multimedia expert. He is highly skilled in graphic engineering, photography and videography, website management, 3D modelling, and motion graphics. He has designed several communication and promotional materials on financial inclusion and child protection. Seth graduated from the Kwame Nkrumah University of Science and Technology with a BA in Communication Design.",
-        profileLink: "#",
-      },
-    ],
-    pdaAfrica: [
-      {
-        name: "KAMIL ABDUL SALAM",
-        position: "Assistant Project Coordinator, PDA Africa",
-        image: kamil,
-        bio: "Kamil serves as an Assistant Project Coordinator for PDA Africa. Throughout his career, Kamil has developed expertise in training facilitation, field supervision, monitoring, and community mobilization.",
-        profileLink: "#",
-      },
-      {
-        name: "ANDREWS OWUSU",
-        position: "Assistant Project Officer, PDA Africa",
-        image: andrew,
-        bio: "Andrews works with PDA Africa to economically empower women and young people. He is stationed with PDA Africa as an Assistant Project Officer. Throughout his career, Andrews has developed expertise in training facilitation, field supervision, monitoring, and community mobilization. He holds a BSc in Organizational Development from the College for Community and Organisational Development, Sunyani.",
-        profileLink: "#",
-      },
-      {
-        name: "PATRICK ASIHENE DWAMENA",
-        position: "Senior Project Officer",
-        image: patrick,
-        bio: "Patrick is a Senior Project Officer with PDA Africa team and brings over 16 years of experience leading community-based development initiatives. He supervises projects in Ghana, Cameroon, and Côte d'Ivoire. He has played a key role in shaping PDA's financial inclusion initiatives at the community level. His professional strengths include training, facilitation, report writing, icebreaking, and data analysis. Patrick holds a Higher National Diploma (HND) in Journalism and Communication from the Institute of Business Management and Journalism, Kumasi.",
-        profileLink: "#",
-      },
-      {
-        name: "DAVID ESHUN",
-        position: "Assistant Project Coordinator, PDA Africa",
-        image: david,
-        bio: "David serves as an Assistant Project Coordinator for PDA Africa. David has 14 years of experience leading the implementation of several community-level initiatives in Ghana and Cote d'Ivoire. He leverages his many years of experience and skills in project design and coordination, facilitation of gender action and learning systems training, data analysis, design of training manuals, and monitoring and evaluation to deliver excellent project implementation. David is an economist with an MSc in Economics and a BSc in Natural Resources Management from the Kwame Nkrumah University of Science and Technology.",
-        profileLink: "#",
-      },
-    ],
-    administration: [
       {
         name: "STELLA TAKYI",
         position: "Secretarial Support Personnel",
@@ -246,6 +226,87 @@ const Staff = () => {
         bio: "Ken joined PDA in 2018 as a logistics assistant. He manages program logistics and provides general administrative and programmatic support to PDA staff primarily in Accra. With several years of experience as a driver, he also assists in community entry during PDA field research and plays an important role in providing any necessary background support.",
         profileLink: "#",
       },
+      {
+        name: "RUTH MENSAH",
+        position: "Admin and Accounts Officer",
+        image: ruth,
+        bio: "Ruth is an Administrative and Accounts Officer in PDA's Accra office. She holds a Bachelor of Commerce (Accounting) from University of Cape Coast. With approximately six years of professional experience across educational institutions and consultancy firms, Ruth has served in a broad range of roles that have strengthened her administrative, financial, and organizational competencies. A proactive leader recognized for her confidence, collaborative working style, and professionalism, she brings on board strong skills in team coordination and nurturing partner relationships. At PDA, she coordinates and oversees administrative and logistical functions while providing accounting support for daily operations at the Accra office. Her work ensures that internal systems run smoothly, enabling organizational productivity and operational effectiveness.",
+        profileLink: "#",
+      },
+    ],
+    communications: [
+      {
+        name: "ASEDA MENSAH",
+        position: "Programmes Coordinator, Advocacy and Communications",
+        image: aseda,
+        bio: "Aseda is the Coordinator for the PDA Communications and Advocacy Department. Aseda is an experienced communicator, digital media manager, editor, event moderator, and training facilitator. She has over 6 years of experience using various tools to design, implement and lead communication- and advocacy-centred initiatives to promote meaningful social change. Aseda is a graduate of the University of Ghana with an MPhil in Marketing and a BSc in E-Commerce and Customer Management.",
+        profileLink: "#",
+      },
+      {
+        name: "GADDIEL MENSAH YAMOAH",
+        position: "Senior Project Officer, Advocacy and Communications",
+        image: gaddiel,
+        bio: "Gaddiel is a seasoned multimedia expert who combines his in-depth knowledge and experience to produce highly valued content for women empowerment, child protection, and financial inclusion. His main areas of expertise are in graphic design, video production and multimedia. With his 8+ years of experience, Gaddiel works as a Senior Project Officer with the PDA Communications and Advocacy department. He is a graduate of the Kwame Nkrumah University of Science and Technology with a BA in Communication Design.",
+        profileLink: "#",
+      },
+      {
+        name: "SETH KWADWO OPPONG",
+        position: "Senior Project Officer, Advocacy and Communications",
+        image: seth,
+        bio: "Seth is a Senior Project Officer with the PDA Communications and Advocacy department. Seth has a decade of experience working as a multimedia expert. He is highly skilled in graphic engineering, photography and videography, website management, 3D modelling, and motion graphics. He has designed several communication and promotional materials on financial inclusion and child protection. Seth graduated from the Kwame Nkrumah University of Science and Technology with a BA in Communication Design.",
+        profileLink: "#",
+      },
+      {
+        name: "JOSEPHINE ESI KPODO",
+        position: "Project Officer",
+        image: josephine,
+        bio: "Josephine Esi Kpodo is a biomedical engineer who is passionate about using technology to drive improvements in various fields, particularly in healthcare and development. Spurred on by this passion, she pursued software engineering and has gained proficiency in programming languages such as HTML, CSS, JavaScript, TypeScript and React. As the graduate intern for website programming and management at Participatory Development Associates, Josephine utilizes her technical skills to create and manage websites that align with the organization's strategic themes. Her strong analytical and creative abilities enable her to develop innovative solutions that enhance user experiences and support the organization's initiatives, positioning her to excel in her role.",
+        profileLink: "#",
+      },
+      {
+        name: "DEREK AMPOFO NKANSAH",
+        position: "Project Officer",
+        image: derek,
+        bio: "Derek Ampofo Nkansah is a graduate with a Diploma in Information Technology, passionate about technology development, creative graphics design, and multimedia. He also work part-time as a music studio manager, skilled in various Digital Audio Workstations (DAWs) audio recording setups and also Graphics design. With strong interpersonal and collaborative skills, He excels in team environments and is dedicated to building and supporting his community. His goal is to leverage his skills to create innovative solutions and foster positive change.",
+        profileLink: "#",
+      },
+    ],
+    pdaAfrica: [
+       {
+        name: "DAVID ESHUN",
+        position: "Project Coordinator, PDA Africa",
+        image: david,
+        bio: "David serves as a Project Coordinator for PDA Africa. David has 14 years of experience leading the implementation of several community-level initiatives in Ghana and Cote d'Ivoire. He leverages his many years of experience and skills in project design and coordination, facilitation of gender action and learning systems training, data analysis, design of training manuals, and monitoring and evaluation to deliver excellent project implementation. David is an economist with an MSc in Economics and a BSc in Natural Resources Management from the Kwame Nkrumah University of Science and Technology.",
+        profileLink: "#",
+      },
+      {
+        name: "KAMIL ABDUL SALAM",
+        position: "Assistant Project Coordinator, PDA Africa",
+        image: kamil,
+        bio: "Kamil serves as an Assistant Project Coordinator for PDA Africa. Throughout his career, Kamil has developed expertise in training facilitation, field supervision, monitoring, and community mobilization.",
+        profileLink: "#",
+      },
+      {
+        name: "ANDREWS OWUSU",
+        position: "Assistant Project Officer, PDA Africa",
+        image: andrew,
+        bio: "Andrews works with PDA Africa to economically empower women and young people. He is stationed with PDA Africa as an Assistant Project Officer. Throughout his career, Andrews has developed expertise in training facilitation, field supervision, monitoring, and community mobilization. He holds a BSc in Organizational Development from the College for Community and Organisational Development, Sunyani.",
+        profileLink: "#",
+      },
+      {
+        name: "PATRICK ASIHENE DWAMENA",
+        position: "Senior Project Officer",
+        image: patrick,
+        bio: "Patrick is a Senior Project Officer with PDA Africa team and brings over 16 years of experience leading community-based development initiatives. He supervises projects in Ghana, Cameroon, and Côte d'Ivoire. He has played a key role in shaping PDA's financial inclusion initiatives at the community level. His professional strengths include training, facilitation, report writing, icebreaking, and data analysis. Patrick holds a Higher National Diploma (HND) in Journalism and Communication from the Institute of Business Management and Journalism, Kumasi.",
+        profileLink: "#",
+      },
+      {
+        name: "Louis Nyar Tietaar",
+        position: "Project Officer, PDA Africa",
+        image: tietaar,
+        bio: "Louis is a data analyst with a strong foundation in Excel and a growing expertise in machine learning and data analytics. He holds a Bachelor’s degree in Accounting from Kwame Nkrumah University of Science and Technology and a Data Analytics certification from Azubi Africa. Louis is passionate about using data to generate insights, support decision-making, and build practical, data-driven solutions while continuously developing his skills in analytics and AI technologies.",
+        profileLink: "#",
+      },
     ],
     fieldOfficers: [
       { name: "LOUIS AHOIN MENSAH", position: "Field Officer", image: louis },
@@ -258,6 +319,15 @@ const Staff = () => {
         position: "Field Officer",
         image: eunice,
       },
+      { name: "PHILIP QUAICOE", position: "Field Officer", image: philip },
+      { name: "EUNICE YARO", position: "Field Officer", image: yaro },
+      { name: "HARRISSON ADU", position: "Field Officer", image: harrison },
+      { name: "EUGENE ASAMOAH BOAKYE", position: "Field Officer", image: eugene },
+      { name: "RACHEL KANJAMBUDA BLESSING", position: "Field Officer", image: racheal },
+      { name: "EMELIA ANAWINE", position: "Field Officer", image: emelia },
+      { name: "ABU MUSAH", position: "Field Officer", image: abu },
+      { name: "ISSIFU SANI", position: "Field Officer", image: sanni },
+      { name: "SAMUEL INCOOM JUNIOR", position: "Field Officer", image: incoom },
     ],
   };
 
@@ -368,7 +438,8 @@ const Staff = () => {
 
   const DepartmentSection = ({ title, staff, departmentKey, icon: Icon }) => (
     <motion.div
-      className="mb-16"
+      id={departmentKey}
+      className="mb-16 scroll-mt-24"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -416,12 +487,12 @@ const Staff = () => {
       >
         <img
           src={allstaff}
-          className="w-full h-[400px] md:h-[500px] object-cover"
+          className="w-full h-[300px] sm:h-[350px] md:h-[450px] lg:h-[500px] object-cover"
           alt="PDA Staff"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         <motion.h1
-          className="font-poppins font-bold text-4xl md:text-6xl text-white text-center absolute bottom-10 left-0 right-0 px-4"
+          className="font-poppins font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white text-center absolute bottom-8 sm:bottom-10 left-0 right-0 px-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
@@ -462,20 +533,20 @@ const Staff = () => {
           icon={FaGraduationCap}
         />
 
-        {/* Finance & Administration */}
-        <DepartmentSection
-          title={t("staff.finance")}
-          staff={staffByDepartment.finance}
-          departmentKey="finance"
-          icon={FaBriefcase}
-        />
-
         {/* Communications & Advocacy */}
         <DepartmentSection
           title={t("staff.communications")}
           staff={staffByDepartment.communications}
           departmentKey="communications"
           icon={FaUser}
+        />
+
+        {/* Finance & Administration */}
+        <DepartmentSection
+          title={t("staff.finance")}
+          staff={staffByDepartment.finance}
+          departmentKey="finance"
+          icon={FaBriefcase}
         />
 
         {/* PDA Africa */}
@@ -486,17 +557,10 @@ const Staff = () => {
           icon={FaUser}
         />
 
-        {/* Administration */}
-        <DepartmentSection
-          title={t("staff.administration")}
-          staff={staffByDepartment.administration}
-          departmentKey="administration"
-          icon={FaBriefcase}
-        />
-
         {/* Field Officers */}
         <motion.div
-          className="mb-16"
+          id="fieldOfficers"
+          className="mb-16 scroll-mt-24"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
