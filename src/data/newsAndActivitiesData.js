@@ -1,5 +1,19 @@
 // News and Activities data from PDA website
 // Complete content - no external links needed as this site replaces the live site
+import { dpc, fvr, kswa, 
+  agri,
+  childhoodliteracy,
+  chocoa,
+  court,
+  davidetg,
+  edemgroup,
+  etgtraining,
+  mou,
+  organizational,
+  toony,
+  wuscevent,
+  webinar,
+ } from "../assets/images";
 
 export const newsAndActivitiesData = [
   {
@@ -16,7 +30,7 @@ export const newsAndActivitiesData = [
       "Through interactive radio programs broadcast in local languages, farmers gain access to expert knowledge, share experiences with peers, and participate in discussions that shape their agricultural practices and community development initiatives.",
       "The Farmers' Voice Radio Academy represents PDA's commitment to using innovative communication channels to bridge the gap between knowledge and practice, ensuring that development solutions are accessible, relevant, and driven by the communities they serve."
     ],
-    image: "https://pdaghana.com/wp-content/uploads/2025/12/farmers-voice-radio-academy.jpg",
+    image: fvr,
     category: "Community Development",
     location: "Ghana",
     additionalInfo: [
@@ -41,7 +55,7 @@ export const newsAndActivitiesData = [
       "Participants included representatives from government agencies, civil society organizations, community leaders, and child protection advocates who shared experiences, best practices, and strategies for protecting children in mining-affected areas.",
       "The workshop outcomes included the development of action plans for enhanced monitoring, community awareness programs, and strengthened collaboration between stakeholders to prevent child exploitation in mining contexts."
     ],
-    image: "https://pdaghana.com/wp-content/uploads/2025/12/8th-child-protection-workshop.jpg",
+    image: kswa,
     category: "Child Protection",
     location: "Accra & Bechem, Ghana",
     additionalInfo: [
@@ -66,7 +80,7 @@ export const newsAndActivitiesData = [
       "Staff members learned about best practices for handling personal information, maintaining confidentiality in research and development work, and implementing robust data protection measures across all PDA operations.",
       "This initiative reflects PDA's commitment to ethical data management and ensuring that the trust placed in us by communities and partners is maintained through rigorous data protection standards."
     ],
-    image: "https://pdaghana.com/wp-content/uploads/2025/06/data-protection-training.jpg",
+    image: dpc,
     category: "Training",
     location: "Ghana",
     additionalInfo: [
@@ -91,7 +105,7 @@ export const newsAndActivitiesData = [
       "PDA's approach to early childhood literacy focuses on creating culturally relevant, contextually appropriate learning materials that reflect the experiences and languages of Ghanaian children.",
       "Through partnerships with schools, communities, and educational institutions, PDA works to strengthen foundational literacy programs that not only improve educational outcomes but also enhance children's ability to protect themselves and participate meaningfully in their communities."
     ],
-    image: "https://pdaghana.com/wp-content/uploads/2025/03/early-childhood-literacy.jpg",
+    image: childhoodliteracy,
     category: "Education",
     location: "Ghana",
     additionalInfo: [
@@ -116,7 +130,7 @@ export const newsAndActivitiesData = [
       "The MOU establishes a framework for knowledge exchange, capacity building, and joint initiatives that integrate diversity and inclusion principles into emergency management practices.",
       "This partnership represents a significant step forward in ensuring that disaster management approaches in Ghana and beyond are truly inclusive and responsive to the needs of all community members, regardless of their background, abilities, or circumstances."
     ],
-    image: "https://pdaghana.com/wp-content/uploads/2025/01/pda-mou-i-diem.jpg",
+    image: mou,
     category: "Partnerships",
     location: "Ghana",
     additionalInfo: [
@@ -142,7 +156,7 @@ export const newsAndActivitiesData = [
       "The workshop provided a platform for dialogue between evaluation practitioners from different regions, fostering understanding of how decolonization in evaluation can lead to more authentic, relevant, and impactful assessment of development interventions.",
       "This participation reflects PDA's commitment to advancing evaluation practices that are rooted in local expertise, respect diverse knowledge systems, and contribute to more equitable and effective development outcomes."
     ],
-    image: "https://pdaghana.com/wp-content/uploads/2024/11/edem-agbe-african-led-evaluation.jpg",
+    image: edemgroup,
     category: "Research & Evaluation",
     location: "Bonn, Germany",
     additionalInfo: [
@@ -168,7 +182,7 @@ export const newsAndActivitiesData = [
       "The initiative focuses on creating spaces for meaningful citizen participation, improving access to parliamentary information, and strengthening mechanisms for citizen feedback and engagement with parliamentary work.",
       "PDA's involvement in the Citizen's Bureau aligns with our broader mission of empowering communities and ensuring that governance processes are inclusive, transparent, and responsive to the needs and aspirations of all citizens."
     ],
-    image: "https://pdaghana.com/wp-content/uploads/2024/04/citizens-bureau-parliamentary-democracy.jpg",
+    image: court,
     category: "Governance",
     location: "Ghana",
     additionalInfo: [
@@ -194,7 +208,7 @@ export const newsAndActivitiesData = [
       "Through workshops, mentoring, and ongoing technical assistance, PDA helps partner organizations develop robust systems and practices that enhance their ability to work with communities in protecting natural resources and promoting sustainable development.",
       "This initiative reflects PDA's commitment to strengthening the broader ecosystem of development organizations, recognizing that strong, capable organizations are essential for meaningful and sustainable community development."
     ],
-    image: "https://pdaghana.com/wp-content/uploads/2024/04/organizational-development-support.jpg",
+    image: organizational,
     category: "Capacity Building",
     location: "Ghana",
     additionalInfo: [
@@ -221,7 +235,7 @@ export const newsAndActivitiesData = [
       "This partnership demonstrates how collaboration between social enterprises and development organizations can create innovative approaches to addressing complex social challenges, combining business commitment to ethical practices with development expertise in community engagement and social change.",
       "Together, PDA and Tony's Chocolonely are working towards a future where cocoa production is not only economically viable but also socially responsible, ensuring that children are protected and communities thrive."
     ],
-    image: "https://pdaghana.com/wp-content/uploads/2024/04/tonys-chocolonely-pda.jpg",
+    image: toony,
     category: "Child Protection",
     location: "Ghana",
     additionalInfo: [
@@ -232,3 +246,151 @@ export const newsAndActivitiesData = [
     ]
   }
 ];
+
+// New additions from PDA site (2026)
+newsAndActivitiesData.push(
+  {
+    id: 10,
+    slug: "gals-child-methodology-training-etg-uganda",
+    type: "news",
+    date: "March 9, 2026",
+    title: "PDA Delivers GALS + CHILD Methodology Training for ETG Uganda",
+    description:
+      "PDA is implementing a Training of Trainers on the Gender Action Learning System (GALS) + CHILD methodology for ETG Uganda to strengthen gender equity, dialogue and child protection in coffee communities.",
+    fullContent: [
+      "PDA is building the capacity of ETG Uganda field staff through a five‑day Training of Trainers, followed by field mentorship in the Greater Masaka Region.",
+      "The programme covers core GALS tools such as Soulmate Visioning, Vision Journey, Gender Balance Tree, Gender Diamond and Leadership Map, alongside CHILD flashcards for child protection dialogue.",
+      "Field supervision supports correct tool application and strengthens facilitation skills, embedding GALS + CHILD within community training processes."
+    ],
+    image: davidetg,
+    category: "Capacity Building",
+    location: "Uganda",
+    sourceUrl: "https://pdaghana.com/pda-delivers-gals-child-methodology-training-for-etg-uganda/"
+  },
+  {
+    id: 11,
+    slug: "africa-australia-climate-responsive-agriculture-event",
+    type: "news",
+    date: "March 5, 2026",
+    title: "PDA Participates in Africa–Australia Partnership for Climate Responsive Agriculture Event",
+    description:
+      "PDA’s REL team joined stakeholders at an ACIAR and Australian High Commission event in Accra highlighting a six‑year partnership to strengthen climate‑responsive agriculture across Africa.",
+    fullContent: [
+      "The A$76.4m partnership, launched in 2024, aims to improve resilience and food security via collaborative research and capacity development.",
+      "The event gathered government, research and development partners and reaffirmed PDA’s commitment to evidence‑driven programming."
+    ],
+    image: agri,
+    category: "Agriculture & Climate",
+    location: "Accra, Ghana",
+    sourceUrl: "https://pdaghana.com/pda-participates-in-africa-australia-partnership-for-climate-responsive-agriculture-event/"
+  },
+  {
+    id: 12,
+    slug: "protecting-people-protecting-data-webinar",
+    type: "news",
+    date: "February 13, 2026",
+    title:
+      "Protecting people by protecting data: Practical Lessons from PDA’s Work in Ethical Research and MEL",
+    description:
+      "Invitation to a practical, field‑tested webinar on responsible data use in development programs, covering risk awareness, governance, and adoptable tools.",
+    fullContent: [
+      "The session shares PDA’s approach to integrating privacy, consent and security practices across MERL and programming.",
+      "Attendees gain tools, checklists and workflows suitable for resource‑constrained environments."
+    ],
+    image: webinar,
+    category: "Webinar",
+    location: "Online",
+    sourceUrl:
+      "https://pdaghana.com/protecting-people-by-protecting-data-practical-lessons-from-pdas-work-in-ethical-research-and-mel/"
+  },
+  {
+    id: 13,
+    slug: "international-development-day-celebration",
+    type: "news",
+    date: "February 6, 2026",
+    title: "International Development Day Celebration",
+    description:
+      "PDA joined partners to showcase program outcomes and partnership‑driven approaches that advance development impact.",
+    fullContent: [
+      "The event featured partner presentations and a PDA video on the Young Female Entrepreneurs in Businesses for Growth (YoFeB‑4G) Project.",
+      "Closing remarks encouraged partners to prepare for the reopening of the Partner Innovation Fund."
+    ],
+    image: wuscevent,
+    category: "Events",
+    location: "Ghana",
+    sourceUrl: "https://pdaghana.com/international-development-day-celebration/"
+  },
+  {
+    id: 14,
+    slug: "pda-at-amsterdam-chocoa-week-2026",
+    type: "news",
+    date: "February 2026",
+    title: "PDA at Amsterdam Chocoa Week 2026",
+    description:
+      "PDA participated in Amsterdam Chocoa Week 2026, engaging cocoa sector stakeholders on sustainability, ethics and community outcomes.",
+    fullContent: [
+      "Engagements focused on responsible value chains, child protection and community‑centred approaches in cocoa.",
+      "PDA shared learning from field programmes and explored collaboration opportunities across the cocoa ecosystem."
+    ],
+    image: chocoa,
+    category: "Cocoa & Sustainability",
+    location: "Amsterdam, Netherlands",
+    sourceUrl: "https://pdaghana.com/pda-at-amsterdam-chocoa-week-2026/"
+  }
+);
+
+// Sort by most recent date first for the News & Activities page.
+// Supports formats like "March 9, 2026" and "February 2026".
+const parseNewsDate = (dateStr) => {
+  if (!dateStr || typeof dateStr !== "string") return 0;
+
+  const str = dateStr.trim();
+  const monthMap = {
+    january: 0,
+    february: 1,
+    march: 2,
+    april: 3,
+    may: 4,
+    june: 5,
+    july: 6,
+    august: 7,
+    september: 8,
+    october: 9,
+    november: 10,
+    december: 11,
+  };
+
+  // Example: "March 9, 2026"
+  const fullMatch = str.match(/^([A-Za-z]+)\s+(\d{1,2}),\s*(\d{4})$/);
+  if (fullMatch) {
+    const month = monthMap[fullMatch[1].toLowerCase()];
+    const day = Number(fullMatch[2]);
+    const year = Number(fullMatch[3]);
+    if (Number.isFinite(month) && Number.isFinite(day) && Number.isFinite(year)) {
+      return new Date(year, month, day).getTime();
+    }
+  }
+
+  // Example: "February 2026"
+  const monthYearMatch = str.match(/^([A-Za-z]+)\s+(\d{4})$/);
+  if (monthYearMatch) {
+    const month = monthMap[monthYearMatch[1].toLowerCase()];
+    const year = Number(monthYearMatch[2]);
+    if (Number.isFinite(month) && Number.isFinite(year)) {
+      return new Date(year, month, 1).getTime();
+    }
+  }
+
+  const parsed = new Date(str).getTime();
+  return Number.isFinite(parsed) ? parsed : 0;
+};
+
+newsAndActivitiesData.sort((a, b) => {
+  const aTime = parseNewsDate(a.date);
+  const bTime = parseNewsDate(b.date);
+  const diff = bTime - aTime;
+  if (diff !== 0) return diff;
+
+  // Stable-ish fallback for items with the same parsed date.
+  return (b.id ?? 0) - (a.id ?? 0);
+});

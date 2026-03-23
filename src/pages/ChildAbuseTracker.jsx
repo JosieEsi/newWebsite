@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { childabuse, abusecase } from "../assets/images";
+import { abusecase } from "../assets/images";
 import Button from "../components/Button";
 import { FaExclamationTriangle, FaCalendarAlt, FaArrowRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
@@ -96,16 +96,14 @@ const ChildAbuseTracker = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
-        <img src={childabuse} alt="Child Abuse Tracker" className="w-full h-[400px] md:h-[500px] object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-        <motion.h1
-          className="font-poppins font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white text-center absolute bottom-8 sm:bottom-10 left-0 right-0 px-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-        >
-          {t("childAbuseTracker.title")}
-        </motion.h1>
+        <iframe
+          src="https://stopviolenceagainstchildren.ushahidi.io/views/map"
+          width="100%"
+          height="1000"
+          frameBorder="0"
+          scrolling="yes"
+          title="Child Abuse Tracker Map"
+        />
       </motion.div>
 
       {/* Introduction Section */}
@@ -197,14 +195,6 @@ const ChildAbuseTracker = () => {
                         {t("childAbuseTracker.readMore")}
                         <FaArrowRight className="text-xs" />
                       </button>
-                      <a
-                        href={report.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-orange font-semibold text-sm hover:text-red transition-colors"
-                      >
-                        {t("childAbuseTracker.viewFullReport")}
-                      </a>
                     </div>
                   </>
                 )}

@@ -1,7 +1,7 @@
 import React, { useMemo, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
-import { whoweare } from "../assets/images";
+import { allstaff } from "../assets/images";
 import { peak, dart } from "../assets/icons";
 import { FaLightbulb, FaNetworkWired, FaHandshake, FaAward, FaGlobe, FaUsers, FaQuoteLeft, FaCheckCircle } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
@@ -76,7 +76,7 @@ const WhoWeAre = () => {
         transition={{ duration: 0.6 }}
       >
         <img 
-          src={whoweare} 
+          src={allstaff} 
           className="w-full h-[350px] sm:h-[400px] md:h-[500px] lg:h-[550px] object-cover" 
           alt="Who We Are"
           loading="lazy"
@@ -131,7 +131,7 @@ const WhoWeAre = () => {
                   
                 </motion.div>
                 
-                <div className="relative z-10 pt-16 md:pt-24">
+                <div className="relative z-10 pt-0">
                 <motion.span
               className="inline-block px-6 py-2 bg-orange/10 text-orange rounded-full text-sm font-semibold mb-4"
               initial={{ opacity: 0, scale: 0.8 }}

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
   annabelle,
@@ -53,18 +53,15 @@ import {
   sanni,
   tietaar,
 } from "../assets/images";
-import { FaUser, FaChevronDown, FaChevronUp, FaBriefcase, FaGraduationCap } from "react-icons/fa";
+import { FaUser, FaBriefcase, FaGraduationCap, FaTimes } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
 
 const Staff = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
-  const [expandedStaff, setExpandedStaff] = useState(null);
-
-  const toggleExpand = (index) => {
-    setExpandedStaff(expandedStaff === index ? null : index);
-  };
+  const [selectedStaff, setSelectedStaff] = useState(null);
+  const scrollPositionRef = useRef(0);
 
   // Handle hash-based scrolling when page loads with a hash
   useEffect(() => {
@@ -78,6 +75,31 @@ const Staff = () => {
       }, 300); // Delay to ensure page is rendered
     }
   }, [location.hash]);
+
+  useEffect(() => {
+    if (!selectedStaff) return undefined;
+
+    // Preserve current position and lock background scroll while modal is open.
+    scrollPositionRef.current = window.scrollY;
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollPositionRef.current}px`;
+    document.body.style.width = "100%";
+    document.body.style.overflowY = "scroll";
+
+    return () => {
+      // Restore body styles and return user to exact previous position on close.
+      const top = document.body.style.top;
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      document.body.style.overflowY = "";
+
+      const restoreY = top
+        ? Math.abs(parseInt(top, 10)) || scrollPositionRef.current
+        : scrollPositionRef.current;
+      window.scrollTo({ top: restoreY, behavior: "auto" });
+    };
+  }, [selectedStaff]);
 
   // Staff organized by department
   const staffByDepartment = {
@@ -331,8 +353,7 @@ const Staff = () => {
     ],
   };
 
-  const StaffCard = ({ staff, index, department }) => {
-    const isExpanded = expandedStaff === `${department}-${index}`;
+  const StaffCard = ({ staff, index }) => {
     const hasImage = staff.image !== null;
 
     return (
@@ -384,47 +405,18 @@ const Staff = () => {
               </div>
               {staff.bio && (
                 <>
-                  <motion.div
-                    className="overflow-hidden"
-                    initial={false}
-                    animate={{
-                      maxHeight: isExpanded ? "1000px" : "120px",
-                    }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <p className="font-poppins text-sm md:text-base text-gray-600 leading-relaxed">
-                      {staff.bio}
-                    </p>
-                  </motion.div>
+                  <p className="font-poppins text-sm md:text-base text-gray-600 leading-relaxed line-clamp-3">
+                    {staff.bio}
+                  </p>
                   {staff.bio.length > 150 && (
                     <motion.button
-                      onClick={() => {
-                        if (staff.profileLink && staff.profileLink !== "#") {
-                          navigate(staff.profileLink);
-                        } else {
-                          toggleExpand(`${department}-${index}`);
-                        }
-                      }}
+                      type="button"
+                      onClick={() => setSelectedStaff(staff)}
                       className="mt-4 flex items-center gap-2 text-orange font-semibold text-sm hover:underline transition-all duration-300"
                       whileHover={{ x: 5 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      {staff.profileLink && staff.profileLink !== "#" ? (
-                        <>
-                          <span>{t("common.readMore")}</span>
-                          <FaChevronDown />
-                        </>
-                      ) : isExpanded ? (
-                        <>
-                          <span>{t("common.readLess")}</span>
-                          <FaChevronUp />
-                        </>
-                      ) : (
-                        <>
-                          <span>{t("common.readMore")}</span>
-                          <FaChevronDown />
-                        </>
-                      )}
+                      <span>{t("common.readMore")}</span>
                     </motion.button>
                   )}
                 </>
@@ -466,7 +458,6 @@ const Staff = () => {
             key={index}
             staff={member}
             index={index}
-            department={departmentKey}
           />
         ))}
       </div>
@@ -627,6 +618,73 @@ const Staff = () => {
           </div>
         </motion.div>
       </div>
+
+      <AnimatePresence>
+        {selectedStaff && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedStaff(null)}
+          >
+            <motion.div
+              className="w-full max-w-3xl max-h-[85vh] overflow-y-auto bg-white rounded-2xl shadow-2xl p-6 md:p-8"
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex items-start justify-between gap-4 mb-4">
+                <div className="flex items-start gap-4">
+                  {selectedStaff.image ? (
+                    <div className="h-20 w-20 rounded-full overflow-hidden border-4 border-orange/30 flex-shrink-0">
+                      <img
+                        src={selectedStaff.image}
+                        alt={selectedStaff.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ) : (
+                    <div className="h-20 w-20 rounded-full bg-gradient-to-br from-orange/20 to-red/20 flex items-center justify-center border-4 border-orange/30 flex-shrink-0">
+                      <span className="text-orange text-2xl font-bold">
+                        {selectedStaff.name.charAt(0)}
+                      </span>
+                    </div>
+                  )}
+                  <div>
+                  <h3 className="font-poppins font-bold text-2xl text-ash">{selectedStaff.name}</h3>
+                  <p className="font-poppins text-orange font-semibold">{selectedStaff.position}</p>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setSelectedStaff(null)}
+                  className="text-gray-500 hover:text-gray-700 transition-colors"
+                  aria-label="Close bio popup"
+                >
+                  <FaTimes className="text-xl" />
+                </button>
+              </div>
+              <p className="font-poppins text-gray-700 leading-relaxed">{selectedStaff.bio}</p>
+              {selectedStaff.profileLink && selectedStaff.profileLink !== "#" && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    const link = selectedStaff.profileLink;
+                    setSelectedStaff(null);
+                    navigate(link);
+                  }}
+                  className="mt-6 text-orange font-semibold hover:underline"
+                >
+                  View full profile
+                </button>
+              )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

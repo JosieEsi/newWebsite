@@ -6,6 +6,15 @@ import { useNavigate } from "react-router-dom";
 import { FaSearch, FaFilter, FaCalendarAlt, FaUsers, FaGlobe, FaArchive } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
 
+const FEATURED_PROJECT_SLUGS = [
+  "digital-economy-programs-young-africa-works-ghana",
+  "ghana-community-led-development-collaborative",
+  "ghana-netherlands-seed-partnership-gnsp",
+  "global-plastic-action-partnership",
+  "happy-program",
+  "absa-young-africa-works-program",
+];
+
 const ProjectsPage = () => {
   const { t, language } = useTranslation();
   const navigate = useNavigate();
@@ -198,7 +207,7 @@ const ProjectsPage = () => {
 
   // Filter projects based on search, category, date, partner, and country
   const filteredProjects = useMemo(() => {
-    return projectsToSearch.filter((project) => {
+    const filtered = projectsToSearch.filter((project) => {
       // Get translated project fields
       const projectTitle = getProjectField(project, "title");
       const projectDescription = getProjectField(project, "description");
@@ -249,6 +258,19 @@ const ProjectsPage = () => {
         selectedCountry.toLowerCase().includes(project.location.toLowerCase());
 
       return matchesSearch && matchesCategory && matchesDate && matchesPartner && matchesCountry;
+    });
+
+    // Keep newly added featured projects at the top while preserving default order for others.
+    return filtered.sort((a, b) => {
+      const aIndex = FEATURED_PROJECT_SLUGS.indexOf(a.slug);
+      const bIndex = FEATURED_PROJECT_SLUGS.indexOf(b.slug);
+      const aFeatured = aIndex !== -1;
+      const bFeatured = bIndex !== -1;
+
+      if (aFeatured && bFeatured) return aIndex - bIndex;
+      if (aFeatured) return -1;
+      if (bFeatured) return 1;
+      return 0;
     });
   }, [searchQuery, selectedCategory, selectedDate, selectedPartner, selectedCountry, allValue, language, projectsToSearch, getProjectField, mapCategoryToFilter]);
 

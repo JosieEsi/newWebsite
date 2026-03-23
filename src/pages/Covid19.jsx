@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { covid } from "../assets/images";
 import Button from "../components/Button";
 import { FaDownload, FaFilePdf } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
@@ -47,16 +46,14 @@ const Covid19 = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
-        <img src={covid} alt="COVID-19 Series" className="w-full h-[400px] md:h-[500px] object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-        <motion.h1
-          className="font-poppins font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white text-center absolute bottom-8 sm:bottom-10 left-0 right-0 px-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-        >
-          {t("covid19.title")}
-        </motion.h1>
+        <iframe
+          src="https://app.powerbi.com/view?r=eyJrIjoiNGJmMDIzYTctMjAwZS00OTE2LWExNTUtNTU0ZmU0OGE4Yjg2IiwidCI6IjkyZWE1NDJhLWU1YjAtNDhmZi05ODg0LTQ5OGEwN2Y2ZjEwNiJ9&pageName=ReportSection"
+          width="100%"
+          height="800"
+          frameBorder="0"
+          allowFullScreen
+          title="COVID-19 Dashboard"
+        />
       </motion.div>
 
       {/* Publications List */}

@@ -1,16 +1,37 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { pic, micro, vid } from "../assets/icons";
-import { publication, glasses } from "../assets/images";
+import { publication, glasses, indigenous, realimpact, education } from "../assets/images";
 import Button from "../components/Button";
 import BookSlider from "../components/BookSlider";
 import FilterableTable from "../components/FilterableTable";
 import NewsletterForm from "../components/NewsletterForm";
-import { FaMicrophone, FaImage, FaVideo, FaDownload } from "react-icons/fa";
+import { FaMicrophone, FaImage, FaVideo, FaDownload, FaArrowRight } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
 
 const Publications = () => {
   const { t } = useTranslation();
+  const newsletterItems = [
+    {
+      title: "From Research to Real Impact: Our Latest Milestones and Opportunities",
+      date: "September 2025",
+      image: realimpact,
+      url: "https://info.mailer.pdaghana.com/emails/webview/1470346/156993448141916027",
+    },
+    {
+      title: "Indigenous Knowledge Systems in Evaluation Practice",
+      date: "July 2025",
+      image: indigenous,
+      url: "https://info.mailer.pdaghana.com/emails/webview/1470346/164329918169089334",
+    },
+    {
+      title: "See How Education Is Transforming Lives",
+      date: "May 2025",
+      image: education,
+      url: "https://info.mailer.pdaghana.com/emails/webview/1470346/153556296073741665",
+    },
+  ];
+
   return (
     <section
       id="publications"
@@ -164,6 +185,56 @@ const Publications = () => {
         transition={{ duration: 0.6 }}
       >
         <FilterableTable />
+      </motion.div>
+
+      {/* Newsletters Gallery */}
+      <motion.div
+        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="font-bold text-2xl md:text-3xl text-gray-900">Newsletters</h2>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {newsletterItems.map((item, index) => (
+            <motion.a
+                  key={item.url}
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.08 }}
+              whileHover={{ y: -4 }}
+            >
+              <div className="relative overflow-hidden rounded-xl shadow-lg">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+                <div className="absolute top-4 right-4 text-right text-white">
+                  <p className="font-bold text-3xl leading-none tracking-wide">NEWS</p>
+                  <p className="font-semibold text-xl">{item.date}</p>
+                </div>
+                <div className="absolute left-4 right-4 bottom-4">
+                  <h3 className="text-white text-xl font-semibold leading-snug">
+                    {item.title}
+                  </h3>
+                </div>
+                <div className="absolute left-0 bottom-0 bg-orange p-3">
+                  <FaArrowRight className="text-white text-xl" />
+                </div>
+              </div>
+            </motion.a>
+          ))}
+        </div>
       </motion.div>
 
       {/* Newsletter Section - Fixed spacing */}

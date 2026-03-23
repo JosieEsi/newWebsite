@@ -9,6 +9,7 @@ const OurImpact = () => {
   const { t } = useTranslation();
   const location = useLocation();
   const [activePillar, setActivePillar] = useState("policies");
+  const evidenceResearchSectionId = "impact-evidence-research";
 
   // Handle hash navigation on page load
   useEffect(() => {
@@ -293,15 +294,29 @@ const OurImpact = () => {
                     <p className="text-gray-700 leading-relaxed mb-6">
                       {item.description}
                     </p>
-                    <motion.div
-                      className={`inline-flex items-center gap-2 font-semibold ${
+                    <motion.button
+                      type="button"
+                      onClick={() => {
+                        const el = document.getElementById(evidenceResearchSectionId);
+                        if (!el) return;
+
+                        // Scroll to the section with a stable offset (sticky navigation height)
+                        // so it doesn't appear to jump upward.
+                        const headerOffset = 110;
+                        const targetTop =
+                          el.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({ top: Math.max(0, targetTop), behavior: "smooth" });
+                      }}
+                      className={`mt-2 inline-flex items-center gap-2 font-semibold ${
                         activePillarData.color === "orange" ? "text-orange" : "text-red"
                       }`}
                       whileHover={{ x: 5 }}
+                      whileTap={{ scale: 0.98 }}
                     >
                       <span>{t("ourImpact.learnMore")}</span>
                       <FaArrowRight />
-                    </motion.div>
+                    </motion.button>
                   </div>
 
                   {/* Decorative Element */}
@@ -393,7 +408,10 @@ const OurImpact = () => {
       </section>
 
       {/* Evidence & Research Section */}
-      <section className="w-full px-4 sm:px-6 lg:px-8 py-16 md:py-24 bg-white">
+      <section
+        id={evidenceResearchSectionId}
+        className="w-full px-4 sm:px-6 lg:px-8 py-16 md:py-24 bg-white"
+      >
         <div className="max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-12"
@@ -446,7 +464,7 @@ const OurImpact = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="w-full px-4 sm:px-6 lg:px-8 py-16 md:py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-16 md:py-24 bg-gradient-to-br from-orange via-red to-orange text-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

@@ -4,7 +4,23 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { FaSearch, FaFilter, FaCalendarAlt, FaUsers, FaGlobe, FaArchive } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
-import { strategic } from "../assets/images";
+import {
+  rand1,
+  rand2,
+  rand3,
+  rand4,
+  rand5,
+  rand6,
+  rand7,
+  rand8,
+  rand9,
+  rand10,
+  rand11,
+  rand12,
+  rand13,
+  rand14,
+  rand15,
+} from "../assets/images";
 
 const ArchivesPage = () => {
   const { t, language } = useTranslation();
@@ -64,6 +80,36 @@ const ArchivesPage = () => {
       }
     });
     return Array.from(countries).sort();
+  }, []);
+
+  // Randomized archive images (stable for the current page load)
+  const randomizedArchiveImages = useMemo(() => {
+    const pool = [
+      rand1,
+      rand2,
+      rand3,
+      rand4,
+      rand5,
+      rand6,
+      rand7,
+      rand8,
+      rand9,
+      rand10,
+      rand11,
+      rand12,
+      rand13,
+      rand14,
+      rand15,
+    ];
+
+    const shuffled = [...pool].sort(() => Math.random() - 0.5);
+    const byProjectId = {};
+
+    archivedProjects.forEach((project, index) => {
+      byProjectId[project.id] = shuffled[index % shuffled.length];
+    });
+
+    return byProjectId;
   }, []);
 
   // Categories list - translated based on current language
@@ -376,7 +422,7 @@ const ArchivesPage = () => {
                   {/* Project Image */}
                   <div className="relative h-48 overflow-hidden">
                     <img
-                      src={project.image || strategic}
+                      src={randomizedArchiveImages[project.id]}
                       alt={projectTitle}
                       className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                     />

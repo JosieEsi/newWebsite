@@ -625,11 +625,14 @@ const reports = [
 
 const FilterableTable = () => {
   const { t } = useTranslation();
+  const INITIAL_VISIBLE_COUNT = 12;
+  const LOAD_MORE_STEP = 12;
   const [filters, setFilters] = useState({
     type: "",
     date: "",
     topic: "",
   });
+  const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE_COUNT);
 
   // Helper function to translate report types
   const translateType = (type) => {
@@ -651,10 +654,12 @@ const FilterableTable = () => {
 
   const handleFilterChange = (e) => {
     setFilters({ ...filters, [e.target.name]: e.target.value });
+    setVisibleCount(INITIAL_VISIBLE_COUNT);
   };
 
   const clearFilters = () => {
     setFilters({ type: "", date: "", topic: "" });
+    setVisibleCount(INITIAL_VISIBLE_COUNT);
   };
 
   const filteredReports = reports.filter(
@@ -663,6 +668,8 @@ const FilterableTable = () => {
       (filters.date === "" || report.date === filters.date) &&
       (filters.topic === "" || report.topic === filters.topic)
   );
+  const visibleReports = filteredReports.slice(0, visibleCount);
+  const hasMoreReports = visibleCount < filteredReports.length;
 
   return (
     <div className="max-w-4xl mx-auto p-4">
@@ -727,7 +734,7 @@ const FilterableTable = () => {
             <p>{t("publications.noReportsFound")}</p>
           </div>
         ) : (
-          filteredReports.map((report, index) => (
+          visibleReports.map((report, index) => (
             <motion.div
               key={index}
               className={`p-4 border-b border-gray-200 last:border-b-0 ${
@@ -771,6 +778,20 @@ const FilterableTable = () => {
           ))
         )}
       </div>
+
+      {hasMoreReports && (
+        <div className="mt-6 text-center">
+          <motion.button
+            type="button"
+            onClick={() => setVisibleCount((prev) => prev + LOAD_MORE_STEP)}
+            className="px-6 py-3 bg-orange text-white font-semibold rounded-lg hover:bg-orange/90 transition-colors duration-300"
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            Load More
+          </motion.button>
+        </div>
+      )}
     </div>
   );
 };

@@ -72,7 +72,7 @@ export const navLinks = [
   { href: "/child-abuse-tracker", label: "Child Abuse Tracker" },
   { href: "/covid-19", label: "COVID 19" },
   { href: "/#partners", label: "Partners" },
-  { href: "/#events", label: "Events" },
+  { href: "/events", label: "Events" },
 ];
 
 export const navigation = [
@@ -211,9 +211,9 @@ export const footerLinks = [
   {
     title: "Impact",
     links: [
-      { name: "Impact Stories", link: "/" },
-      { name: "Documentaries", link: "/" },
-      { name: "Case Studies", link: "/" },
+      { name: "Policy Change", link: "/our-impact#policies" },
+      { name: "Practice Change", link: "/our-impact#practices" },
+      { name: "System Change", link: "/our-impact#systems" },
     ],
   },
 ];

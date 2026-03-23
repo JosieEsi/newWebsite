@@ -187,6 +187,45 @@ import dzato from "./Dzato.jpg";
  import ruth from "./Ruth.jpg";
  import sanni from "./Sanni.jpg";
  import tietaar from "./Tietaar.jpg";
+ import celia from "./Celia.jpg";
+ import liz from "./Liz.jpg";
+ import korboe from "./Korboe.jpg";
+ import chals from "./chals.jpg";
+ import webinar from "./webinar.jpg"
+ import absa from "./absa.jpg";
+import gcled from "./GCLED.jpg";
+import gpap from "./gpap.jpg";
+import gnsp from "./gnsp.png";
+ import rep from "./rep.jpg";
+import happy from "./happy.jpg";
+ import de from "./de.jpg";
+ import swims from "./swims.jpg";
+ import dpc from "./dpc.jpg";
+ import yofeb from "./yofeb.jpg";
+ import syh from "./syh.jpg";
+ import fow from "./fow.jpg";
+ import bdi from "./bdi.jpg";
+ import kswa from "./8kswa.jpg";
+ import kswb from "./8kswb.jpg";
+ import etg from "./etg.jpg";
+ import flexcorp from "./Flexcorp.jpg";
+ import nana from "./Nana.jpg";
+ import agri from "./AGRI.jpg";
+ import childhoodliteracy from "./childhood-literacy.jpg";
+ import chocoa from "./Chocoa-Conference.jpg";
+ import court from "./court.jpg";
+ import davidetg from "./davidETG.jpg";
+ import edemgroup from "./edem-group.png";
+ import etgtraining from "./etgtraining.jpg";
+ import mou from "./MOU.jpg";
+ import organizational from "./organizational.jpg";
+ import toony from "./Toony-Chocoloni.jpg";
+ import wuscevent from "./wusc-event.jpg";
+ import education from "./education.jpg";
+ import indigenous from "./indigenous.jpg";
+ import realimpact from "./realimpact.jpg";
+import youngafricanworks from "./Youngafricanworks.jpg";
+
 
 
 export {
@@ -367,4 +406,42 @@ export {
   ruth,
   sanni,
   tietaar,
+  liz,
+  chals,
+  korboe,
+  celia,
+  webinar,
+  absa,
+  gcled,
+  gpap,
+  gnsp,
+  rep,
+  happy,
+  de,
+  swims,
+  dpc,
+  yofeb,
+  syh,
+  fow,
+  bdi,
+  kswa,
+  kswb,
+  etg,
+  flexcorp,
+  nana,
+  agri,
+  childhoodliteracy,
+  chocoa,
+  court,
+  davidetg,
+  edemgroup,
+  etgtraining,
+  mou,
+  organizational,
+  toony,
+  wuscevent,
+  education,
+  indigenous,
+  realimpact,
+  youngafricanworks,
 };

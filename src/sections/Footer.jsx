@@ -54,9 +54,9 @@ const Footer = () => {
       title: t("footer.impact"),
       links: baseFooterLinks[4].links.map(link => {
         const nameMap = {
-          "Impact Stories": t("footer.links.impactStories"),
-          "Documentaries": t("footer.documentaries"),
-          "Case Studies": t("footer.caseStudies"),
+          "Policy Change": t("ourImpact.policies.title"),
+          "Practice Change": t("ourImpact.practices.title"),
+          "System Change": t("ourImpact.systems.title"),
         };
         return { ...link, name: nameMap[link.name] || link.name };
       }),

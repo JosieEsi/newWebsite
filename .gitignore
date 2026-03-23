@@ -26,3 +26,6 @@ dist-ssr
 # Large files
 public/assets/documents/download.zip
 *.zip
+
+src/assets/images/Downloads/
+

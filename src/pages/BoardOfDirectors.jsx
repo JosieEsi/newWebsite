@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { tony, eleanor, akosua, edem, annabelle, alex, clement, osei, allstaff } from "../assets/images";
+import { tony, eleanor, akosua, edem, annabelle, alex, clement, osei, allstaff, celia, flexcorp, nana } from "../assets/images";
 import { FaCrown, FaUserTie, FaBuilding, FaCoins, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
 
@@ -22,7 +22,7 @@ const BoardOfDirectors = () => {
     },
     {
       name: "Celia Marshall",
-      image: tony, // Placeholder - needs actual image from live site
+      image: celia, 
       position: "Vice Chairperson",
       shortBio: "Co-founder of PDA with broad development experience spanning over 25 years in Ghana.",
       fullBio: "Celia is a co-founder of PDA and worked as a staff member for over twelve years – seven as a Co-Director and five as Senior Consultant. She is now a free-lance social development consultant, but continues to contribute to PDA as a board member. Celia brings broad development experience to the PDA Board, having lived and worked in Ghana for over 25 years, taking up roles of facilitator, consultant, manager, trainer, researcher and OD practitioner. She has also worked with a wide range of both civil society and government organisations, and in the fields of education, community development, governance, fund-management, human rights, communication, health, roads, HIV/AIDS, disability. She is passionate about finding ways of realising equality and justice and especially enjoys facilitating learning processes and undertaking qualitative research using participatory approaches. Celia holds an MSc in Community Organisation for Rural Development (Manchester UK, 1989), a Post-Graduate Certificate in Education, (Bath UK, 1984) and a BA (Hons) in Cultural Studies (Portsmouth UK 1983).",
@@ -31,7 +31,7 @@ const BoardOfDirectors = () => {
     },
     {
       name: "Flexcorp Consult Ltd",
-      image: eleanor, // Placeholder - needs company logo
+      image: flexcorp, 
       position: "Company Secretary",
       shortBio: "Private limited liability company providing corporate services.",
       fullBio: "Flexcorp Consult Limited is a private limited liability company incorporated under the Ghana Companies Act, 2019 (Act 992). The company provides a range of corporate services, including company formation, pathfinder services, company secretarial services, corporate compliance and regulatory services, professional instruction and training, corporate governance advisory, and immigration solutions. Flexcorp serves both local and multinational entities across various sectors, including banking, insurance, oil & gas, mining, manufacturing, telecommunications, energy and utilities, and NGOs. The company delivers services designed to meet the specific requirements of each sector, ensuring compliance and regulatory adherence.",
@@ -40,7 +40,7 @@ const BoardOfDirectors = () => {
     },
     {
       name: "Nana Kwasi Agyepong",
-      image: akosua, // Placeholder - needs actual image from live site
+      image: nana, 
       position: "Company Treasurer",
       shortBio: "Experienced financial administrator with over 30 years of expertise in microfinance.",
       fullBio: "Nana Kwasi Agyepong is an experienced financial administrator, trainer, and governance professional with over 30 years of expertise in microfinance and co-operative development, particularly within financial co-operatives. He is an International Credit Union Development Educator (ICUDE) 2017, recognized in Madison, USA. Nana is the Board Treasurer of Participatory Development Associates (PDA) and PDA Agri Business and Social Enterprise (PASE) Ltd, Board Chair of Beneficial Microfinance Company Ltd, and Director of MFS Consulting. Nana's career in the cooperative sector began in 1991 with the Ghana Cooperative Credit Unions Association (CUA), where he held several positions, including Zonal Manager for the Ashanti and Brong Ahafo regions, and Technical Services Manager for the African Credit Unions Revitalisation Program with the World Council of Credit Unions. He was also the former General Manager and Group CEO of CUA and served as Technical Advisor for African Credit Unions (ACCOSCA) from 2016 to 2019. In addition to his work with PDA and microfinance institutions, Nana has been a lecturer at various institutions, including ICSA Study School, the Institute of Professional Studies, and Jeff Wooller College, London. He also has experience as a Sage Accounts trainer and reseller in Ghana. From 2002 to 2007, he worked as the Finance and Administration Manager at the London Borough of Lewisham, overseeing the Surestart project. He has been the Principal Management Consultant and Executive Director of Microfinance Solutions Consulting since 2007, providing consultancy services to credit unions and microfinance institutions. Nana is also a founding Director of Co-operative Governance Africa and a member of the Co-operative Credit Union Supervisory Agency under the Co-operative Credit Unions Legislative Instrument (L.I. 2225). His vast experience in financial administration, governance, and cooperative development continues to influence the sector positively.",

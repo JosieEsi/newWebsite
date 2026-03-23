@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ethical, tony, akosua, eleanor } from "../assets/images";
+import { ethical, tony, akosua, eleanor, lucy, chals, korboe, celia, liz } from "../assets/images";
 import { arrow, line, line2, paper } from "../assets/icons";
 import Button from "../components/Button";
 import { FaUser, FaDownload, FaChevronDown, FaChevronUp } from "react-icons/fa";
@@ -32,31 +32,31 @@ const EthicalReviewCommittee = () => {
     {
       name: "CELIA MARSHALL",
       role: "MEMBER",
-      image: null,
+      image: celia,
       bio: "Celia Marshall has led and been part of a variety of research initiatives in Ghana over the last 25 years, mostly involving qualitative methods and focused on hearing from the most marginalised voices. She has led many studies with teams of up to 40 researchers and guided their related design, analysis, and dissemination processes, all with an eye on ethical considerations. National studies she has been part of have included those for the Government of Ghana in partnership with UNICEF, DFID, and the World Bank, and with a thematic focus on poverty, wellbeing, social and child protection, education, health, and transport."
     },
     {
       name: "DR. LIZ ANDERSON",
       role: "MEMBER",
-      image: null,
+      image: liz,
       bio: "Liz Anderson has worked in the UK Higher Education sector for over 20 years and been involved in teaching and research in the fields of health/social care with a community focus and clinical education linked to service improvement. She brings a dual perspective to ethical research governance, having both prepared and reviewed numerous applications for ethics committees. Liz played a pivotal role in the development of the University of Bristol's BSc in Global Health, curating diverse international viewpoints to shape a programme rooted in global collaboration and cultural awareness. Her current work with the PDA Ethical Review Committee continues this global commitment, using her expertise to support researchers in Ghana."
     },
     {
       name: "DR. DAVID KORBOE",
       role: "MEMBER",
-      image: null,
+      image: korboe,
       bio: "David Korboe is a social development researcher and M&E consultant and has worked in Ghana, India, Mozambique, Sierra Leone, South Africa, and the United Kingdom. He is an advocate of ethical practice in all spheres of life and is passionate about participatory processes and collective impact."
     },
     {
       name: "CHALS WONTEWE",
       role: "MEMBER",
-      image: null,
+      image: chals,
       bio: "Chals Wontewe is a teacher, civil servant and international development practitioner with many years of field experience with a number of International NGOs including CUSO of Canada, VSO, CRS, ActionAid, Oxfam (both GB and OI) and IBIS in Ghana, Nigeria, Sierra Leone, Liberia, Senegal, and the DRC, serving senior positions. Over the past 5 years, he has been into full-time M&E consultancy and has been involved in projects with Oxfam, DFID, Ghana Trade and Livelihoods Coalition, among others. Chals' work and research interest cut across agriculture, health, and poverty."
     },
     {
       name: "LUCY OFORI-DAVIS",
       role: "SECRETARY",
-      image: null,
+      image: lucy,
       bio: "Lucy Ofori-Davis is a researcher, monitoring and evaluation practitioner with over 5 years' experience in social research, impact assessment, evaluations, and project management. She is currently a MEL Specialist with the Research, Evaluation, and Learning (REL) Unit in PDA, with a strong understanding of ethical dimensions in the research industry. Lucy's work in PDA cuts across multiple sectors including agriculture, education, health and financial inclusion. Lucy serves as the Secretary to the ERC, where she coordinates committee operations, including liaising between prospective applicants/researchers (including PDA) and the Committee."
     }
   ];

@@ -15,7 +15,7 @@ const Teams = () => {
       image: africateam1,
       description:
         "PDA Africa handles the design, implementation and management of community-led projects and programmes both within PDA and on behalf of partners. Our team works directly with communities across Sub-Saharan Africa to drive sustainable development initiatives.",
-      memberCount: 4,
+      memberCount: 20,
       keyAreas: [
         "Financial inclusion and VSLA programs",
         "Child Protection & Labor Remediation",
@@ -54,7 +54,7 @@ const Teams = () => {
       image: acuteam,
       description:
         "The Advocacy and Communications Unit (ACU) handles PDA's social development initiatives, advocacy projects, and also liaises with other units within the organization. We amplify voices and share knowledge to drive positive change.",
-      memberCount: 3,
+      memberCount: 5,
       keyAreas: [
         "Digital media management",
         "Event moderation and facilitation",

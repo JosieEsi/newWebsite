@@ -25,6 +25,12 @@ import {
   nyomodul,
   obuasi,
   yfutures,
+  absa,
+  gcled,
+  gnsp,
+  happy,
+  gpap,
+  youngafricanworks,
   kodu,
   nyonk,
   crp,
@@ -1108,7 +1114,7 @@ export const projects = [
   id: 35,
   slug: "absa-young-africa-works-program",
   title: "Absa Young Africa Works Program",
-  image: yfutures,
+    image: absa,
   description: "Empowering young people across Africa with skills, employment, and entrepreneurship opportunities.",
   fullDescription: "The Absa Young Africa Works Program, in partnership with the Mastercard Foundation, aims to create employment opportunities for young people across Africa through skills training, entrepreneurship support, and job placement services.",
   snapshot: "The Absa Young Africa Works Program is a pan-African initiative designed to address youth unemployment by providing comprehensive skills training, entrepreneurship support, and job placement services. The program focuses on creating sustainable employment opportunities and economic empowerment for young people across the continent.",
@@ -1143,7 +1149,7 @@ export const projects = [
   id: 36,
   slug: "happy-program",
   title: "HAPPY Program",
-  image: child,
+    image: happy,
   description: "A program focused on health, agriculture, and prosperity for youth and communities.",
   fullDescription: "The HAPPY Program (Health, Agriculture, and Prosperity for Youth) is a comprehensive initiative that addresses health, agricultural development, and economic prosperity for young people and their communities.",
   snapshot: "The HAPPY Program integrates health, agriculture, and prosperity initiatives to create holistic development outcomes for youth and communities. The program addresses multiple dimensions of wellbeing including health, food security, and economic empowerment.",
@@ -1178,7 +1184,7 @@ export const projects = [
   id: 37,
   slug: "global-plastic-action-partnership",
   title: "Global Plastic Action Partnership",
-  image: strategic,
+    image: gpap,
   description: "Addressing plastic pollution and promoting sustainable waste management practices.",
   fullDescription: "The Global Plastic Action Partnership (GPAP) is an initiative focused on addressing plastic pollution through sustainable waste management, circular economy approaches, and community engagement.",
   snapshot: "The Global Plastic Action Partnership works to combat plastic pollution by promoting sustainable waste management practices, supporting circular economy initiatives, and engaging communities in plastic reduction and recycling efforts. The program addresses one of the most pressing environmental challenges of our time.",
@@ -1213,7 +1219,7 @@ export const projects = [
   id: 38,
   slug: "ghana-netherlands-seed-partnership-gnsp",
   title: "Ghana-Netherlands Seed Partnership (GNSP)",
-  image: farmer,
+    image: gnsp,
   description: "Strengthening seed systems and agricultural productivity through international partnership.",
   fullDescription: "The Ghana-Netherlands Seed Partnership (GNSP) aims to strengthen seed systems, improve agricultural productivity, and enhance food security through collaboration between Ghana and the Netherlands.",
   snapshot: "The Ghana-Netherlands Seed Partnership (GNSP) focuses on improving seed systems, enhancing agricultural productivity, and strengthening food security through technical cooperation, capacity building, and knowledge exchange between Ghana and the Netherlands. The partnership addresses critical challenges in agricultural development and seed quality.",
@@ -1243,7 +1249,83 @@ export const projects = [
   location: "Ghana",
   status: "Ongoing",
   color: "red",
-}
+},
+{
+  id: 39,
+  slug: "digital-economy-programs-young-africa-works-ghana",
+  title: "Digital Economy Programs – Young Africa Works (Ghana)",
+  image: youngafricanworks,
+  description: "Digital skills, startup incubation, SME acceleration, internships, and job placement support under the Young Africa Works Strategy.",
+  fullDescription:
+    "Under its Young Africa Works Strategy, the Mastercard Foundation aims to enable young people (15–35), particularly young women (70% target), to access dignified and fulfilling work (DFW) by 2030. In Ghana’s Digital Economy Sector, the Foundation partnered with four innovation organizations to deliver targeted programs combining digital skills training, startup incubation, SME acceleration, internships, catalytic funding, and job placement support.",
+  snapshot:
+    "In Ghana’s Digital Economy Sector, the Foundation partnered with innovation organizations to deliver digital skills training, startup incubation, SME acceleration, internships, catalytic funding, and job placement support.",
+  howWeWentAboutIt:
+    "PDA led the Digital Economy (DE) Thematic Review in Ghana with remote technical input from Ipsos Nigeria. Our role included designing and implementing a mixed-methods evaluation approach; leading nationwide quantitative and qualitative data collection; conducting enterprise sustainability and ecosystem analysis; producing evidence-based impact stories grounded in beneficiary voices; and facilitating a stakeholder sensemaking workshop to validate findings.",
+  objectives: [
+    "Examine how the programs contributed to youth transitions into employment and entrepreneurship",
+    "Assess alignment with Ghana’s national development priorities and the Young Africa Works strategy",
+    "Analyze sustainability of youth-led enterprises and systemic barriers within the digital economy ecosystem",
+    "Apply a Gender Equity and Social Inclusion (GESI) lens to assess inclusiveness and equity outcomes",
+    "Generate actionable learning to strengthen future program design and implementation",
+  ],
+  activities: [
+    "Conduct nationwide structured surveys with 1,051 young people and 225 enterprise owners across all 16 regions",
+    "Conduct in-depth interviews and key informant engagements with youth, enterprise owners, household members, community leaders, implementing partners, and ecosystem stakeholders",
+    "Synthesize findings into program-level and cross-cutting reports, validated through a stakeholder sensemaking workshop"
+  ],
+  outcomes: [
+    "Evidence generated on youth employment transitions and enterprise sustainability",
+    "Actionable learning to strengthen future program design and implementation",
+    "Validated findings through stakeholder engagement"
+  ],
+  partners:
+    "Mastercard Foundation; Kosmos Innovation Centre; Meltwater Entrepreneurial School of Technology; Soronko Academy; Industry Immersion Africa; Ipsos Nigeria",
+  period: "April 2025 – December 2025",
+  category:
+    "Employment; Women’s Economic Empowerment; Education & Literacy; Evidence Generation (MERL); Youth Welfare",
+  location: "Ghana",
+  status: "Ongoing",
+  color: "orange",
+},
+{
+  id: 40,
+  slug: "ghana-community-led-development-collaborative",
+  title: "Ghana Community-Led Development Collaborative",
+  image: gcled,
+  description:
+    "Strengthening community-driven approaches to education and literacy, with participatory learning and evaluation to influence practice and policy.",
+  fullDescription:
+    "The Ghana Community-Led Development (CLD) Collaborative is a multi-partner initiative aimed at strengthening community-driven approaches to education and literacy. Rooted in the belief that sustainable change happens when communities drive their own development, the Collaborative works to ensure that Community-Led Development is increasingly adopted, resourced, and legitimized within education planning and delivery.",
+  snapshot:
+    "The Collaborative supports local organizations, communities, and government actors to center community voices in designing solutions that address children’s educational needs, generating evidence to influence both practice and policy.",
+  howWeWentAboutIt:
+    "PDA serves as the Participatory Research (PR) and Learning Partner in Ghana, designing and implementing a robust Learning & Evaluation (L&E) framework that integrates participatory methodologies, strengthens outcome monitoring (OM), facilitates Participatory Learning and Action (PLA) processes, and synthesizes evidence to support advocacy for Community-Led Development approaches.",
+  objectives: [
+    "Promote community-driven approaches that place communities at the center of education solutions",
+    "Strengthen the capacity of local actors to design, lead, advocate for, and sustain initiatives addressing children’s educational needs",
+    "Foster cross-learning among local organizations to deepen effective community-driven strategies",
+    "Advocate for policy and practice changes that recognize and invest in communities as central to equitable, quality education",
+    "Document, analyze, and share lessons from community-led initiatives to support adaptation and scaling"
+  ],
+  activities: [
+    "Participate in the inaugural three-day onboarding workshop in Accra to align on vision, principles, and shared learning priorities",
+    "Participate in a 10-day intensive training on advancing community-led wellbeing (delivered by Tostan in Thiès, Senegal)",
+    "Develop and finalize a comprehensive Learning & Evaluation framework integrating learning across community, collaborative partner, and overall collaborative levels"
+  ],
+  outcomes: [
+    "Evidence generated from participatory learning and evaluation to support advocacy for CLD",
+    "Strengthened learning and adaptive capacity across partners and communities"
+  ],
+  partners: "mc2h Foundation; Global Fund for Children",
+  period: "2026 – Present",
+  category:
+    "Education & Literacy; Community Development; Evidence Generation (MERL); Policy Analysis & Advocacy",
+  location: "Ghana",
+  status: "Ongoing",
+  color: "red",
+},
+
 
   // Continue adding projects 20-100 below
   // Visit pdaghana.com/projects/ for complete list and exact content

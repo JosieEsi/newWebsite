@@ -25,15 +25,17 @@ import Nav from "./components/Nav";
 import PDAAFRICA from "./pages/PDAAFRICA";
 import { Outlet, useLocation } from "react-router-dom";
 import PDAAFRICAMenu from "./components/PDAAFRICAMenu";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ScrollToTop from "./components/ScrollToTop";
 import CookieConsent from "./components/CookieConsent";
+import MailingListPopup from "./components/MailingListPopup";
 
 
 const App = () => {
   const location = useLocation();
+  const [showMailingListPopup, setShowMailingListPopup] = useState(false);
 
   useEffect(() => {
     if (location.hash) {
@@ -43,6 +45,22 @@ const App = () => {
       }
     }
   }, [location]);
+
+  useEffect(() => {
+    const hasDismissed = sessionStorage.getItem("mailing-list-popup-dismissed");
+    if (hasDismissed) return;
+
+    const timer = window.setTimeout(() => {
+      setShowMailingListPopup(true);
+    }, 60000);
+
+    return () => window.clearTimeout(timer);
+  }, [location.pathname]);
+
+  const closeMailingListPopup = () => {
+    setShowMailingListPopup(false);
+    sessionStorage.setItem("mailing-list-popup-dismissed", "true");
+  };
   // console.log("React App Loaded");
 
   return (
@@ -136,6 +154,10 @@ const App = () => {
       
       {/* Cookie Consent Banner */}
       <CookieConsent />
+      <MailingListPopup
+        isOpen={showMailingListPopup}
+        onClose={closeMailingListPopup}
+      />
     </main>
   );
 };

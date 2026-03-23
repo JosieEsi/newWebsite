@@ -42,6 +42,7 @@ import NewsAndActivities from "./pages/NewsAndActivities.jsx";
 import NewsDetail from "./pages/NewsDetail.jsx";
 import Photos from "./pages/Photos.jsx";
 import Videos from "./pages/Videos.jsx";
+import Events from "./pages/Events.jsx";
 
 
 const router = createBrowserRouter([
@@ -200,6 +201,10 @@ const router = createBrowserRouter([
       {
         path: "/videos",
         element: <Videos />,
+      },
+      {
+        path: "/events",
+        element: <Events />,
       },
       {
         path: "*", // Catch-all route for 404 errors

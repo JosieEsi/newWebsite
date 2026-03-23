@@ -14,9 +14,32 @@ const CurrentProjects = () => {
 
   // Filter current projects (Active and Ongoing) and limit to 6
   const currentProjects = useMemo(() => {
-    return projects.filter(project =>
-      project.status === "Active" || project.status === "Ongoing"
-    ).slice(0, 6);
+    const featuredSlugs = [
+      "digital-economy-programs-young-africa-works-ghana",
+      "ghana-community-led-development-collaborative",
+      "absa-young-africa-works-program",
+      "global-plastic-action-partnership",
+      "happy-program",
+      "ghana-netherlands-seed-partnership-gnsp",
+    ];
+
+    // Keep the Home "current projects" carousel deterministic by showing these featured projects first.
+    const featuredProjects = projects.filter(
+      (project) =>
+        featuredSlugs.includes(project.slug) &&
+        (project.status === "Active" || project.status === "Ongoing")
+    );
+
+    if (featuredProjects.length >= featuredSlugs.length) {
+      const ordered = featuredSlugs
+        .map((slug) => featuredProjects.find((p) => p.slug === slug))
+        .filter(Boolean);
+      return ordered.slice(0, 6);
+    }
+
+    return projects
+      .filter((project) => project.status === "Active" || project.status === "Ongoing")
+      .slice(0, 6);
   }, []);
 
   const handleProjectClick = (project) => {
