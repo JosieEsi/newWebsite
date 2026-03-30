@@ -151,6 +151,8 @@ export const en = {
   // What We Do Page
   whatWeDo: {
     title: "Strategic Objectives",
+    objectivesSectionSubtitle:
+      "These objectives set our direction as an organisation: growing our recognised advisory and research footprint across Africa, strengthening partnerships with communities and institutions, keeping people and ethics at the centre of everything we do, investing in staff wellbeing and development, and building financial resilience over the long term.",
     services: {
       research: {
         title: "Research & Evidence Generation",
@@ -237,6 +239,10 @@ export const en = {
     physicalAddress: "Physical Address",
     postalAddress: "Postal Address",
     gpsCode: "GPS Code",
+    mapTitle: "Our locations",
+    mapSubtitle:
+      "Explore our Accra and Kumasi offices on the map. Zoom and pan to see each marker; click a pin for the full address.",
+    mapOpenInMaps: "Open in Google Maps",
     units: {
       rel: "Research, Evaluation & Learning (REL)",
       advocacy: "Advocacy",

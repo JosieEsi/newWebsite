@@ -327,12 +327,12 @@ const ProjectsPage = () => {
       };
     } else {
       return {
-        bg: "bg-red",
-        hoverBg: "hover:bg-red/90",
-        text: "text-red",
-        border: "border-red",
-        gradient: "from-red/20 to-red/5",
-        shadow: "rgba(247, 81, 35, 0.4)",
+        bg: "bg-orange",
+        hoverBg: "hover:bg-orange/90",
+        text: "text-orange",
+        border: "border-orange",
+        gradient: "from-orange/25 to-orange/5",
+        shadow: "rgba(248, 154, 35, 0.45)",
       };
     }
   };
@@ -344,7 +344,7 @@ const ProjectsPage = () => {
     >
       {/* Page Header */}
       <motion.div
-        className="text-center mb-12 mt-20 px-6"
+        className="text-center mb-8 mt-20 px-6"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -356,12 +356,12 @@ const ProjectsPage = () => {
           Empowering communities across Sub-Saharan Africa through innovative
           development initiatives
         </p>
-        <div className="w-24 h-1 bg-gradient-to-r from-orange to-red mx-auto mt-6 rounded-full"></div>
+        <div className="w-24 h-1 bg-gradient-to-r from-orange to-orange/85 mx-auto mt-6 rounded-full"></div>
       </motion.div>
 
       {/* Filters Section */}
       <motion.div
-        className="max-w-7xl mx-auto px-6 lg:px-20 mb-12"
+        className="max-w-7xl mx-auto px-6 lg:px-20 mb-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.5 }}
@@ -715,7 +715,7 @@ const ProjectsPage = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8, duration: 0.6 }}
       >
-        <div className="bg-gradient-to-r from-orange to-red text-white rounded-2xl p-8 max-w-4xl mx-auto shadow-2xl">
+        <div className="bg-gradient-to-r from-orange to-orange/90 text-white rounded-2xl p-8 max-w-4xl mx-auto shadow-2xl">
           <h2 className="font-poppins font-bold text-3xl mb-4">
             Interested in Our Projects?
           </h2>

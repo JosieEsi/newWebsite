@@ -61,7 +61,7 @@ const OurImpact = () => {
       title: t("ourImpact.practices.title"),
       subtitle: t("ourImpact.practices.subtitle"),
       description: t("ourImpact.practices.description"),
-      color: "red",
+      color: "orange",
       evidence: [
         {
           title: t("ourImpact.practices.evidence1.title"),
@@ -152,7 +152,7 @@ const OurImpact = () => {
       <section className="w-full px-4 sm:px-6 lg:px-8 py-16 md:py-24 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-5xl mx-auto">
           <motion.div
-            className="text-center mb-12"
+            className="text-center mb-8"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -161,7 +161,7 @@ const OurImpact = () => {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               {t("ourImpact.introTitle")}
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-orange to-red mx-auto mb-8"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-orange to-orange/85 mx-auto mb-8"></div>
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
               {t("ourImpact.introDescription")}
             </p>
@@ -187,8 +187,8 @@ const OurImpact = () => {
                   className={`group relative flex-1 flex flex-col md:flex-row items-center justify-center gap-4 p-6 md:p-8 rounded-2xl transition-all duration-300 ${
                     isActive
                       ? pillar.color === "orange"
-                        ? "bg-gradient-to-br from-orange to-red text-white shadow-2xl scale-105"
-                        : "bg-gradient-to-br from-red to-orange text-white shadow-2xl scale-105"
+                        ? "bg-gradient-to-br from-orange to-orange/85 text-white shadow-2xl scale-105"
+                        : "bg-gradient-to-br from-orange/80 to-orange text-white shadow-2xl scale-105"
                       : "bg-gray-50 hover:bg-gray-100 text-gray-700 hover:shadow-lg"
                   }`}
                   whileHover={{ scale: isActive ? 1.05 : 1.02 }}
@@ -201,7 +201,7 @@ const OurImpact = () => {
                     animate={isActive ? { rotate: [0, 5, -5, 0] } : {}}
                     transition={{ duration: 0.5 }}
                   >
-                    <Icon className={`text-3xl md:text-4xl ${isActive ? "text-white" : pillar.color === "orange" ? "text-orange" : "text-red"}`} />
+                    <Icon className={`text-3xl md:text-4xl ${isActive ? "text-white" : pillar.color === "orange" ? "text-orange" : "text-orange/90"}`} />
                   </motion.div>
                   <div className="text-center md:text-left">
                     <h3 className={`font-bold text-lg md:text-xl mb-1 ${isActive ? "text-white" : "text-gray-900"}`}>
@@ -236,7 +236,7 @@ const OurImpact = () => {
             transition={{ duration: 0.6 }}
           >
             {/* Pillar Header */}
-            <div className="text-center mb-12">
+            <div className="text-center mb-8">
               <motion.div
                 className="inline-block mb-6"
                 initial={{ scale: 0 }}
@@ -245,8 +245,8 @@ const OurImpact = () => {
               >
                 <div className={`p-6 rounded-2xl inline-block ${
                   activePillarData.color === "orange"
-                    ? "bg-gradient-to-br from-orange to-red"
-                    : "bg-gradient-to-br from-red to-orange"
+                    ? "bg-gradient-to-br from-orange to-orange/85"
+                    : "bg-gradient-to-br from-orange/80 to-orange"
                 }`}>
                   <activePillarData.icon className="text-white text-5xl md:text-6xl" />
                 </div>
@@ -274,15 +274,15 @@ const OurImpact = () => {
                   {/* Gradient Accent */}
                   <div className={`absolute top-0 left-0 w-full h-1 ${
                     activePillarData.color === "orange"
-                      ? "bg-gradient-to-r from-orange to-red"
-                      : "bg-gradient-to-r from-red to-orange"
+                      ? "bg-gradient-to-r from-orange to-orange/85"
+                      : "bg-gradient-to-r from-orange/80 to-orange"
                   }`} />
                   
                   {/* Metric Badge */}
                   <div className={`absolute top-6 right-6 px-4 py-2 rounded-full text-white text-sm font-bold shadow-lg ${
                     activePillarData.color === "orange"
-                      ? "bg-gradient-to-r from-orange to-red"
-                      : "bg-gradient-to-r from-red to-orange"
+                      ? "bg-gradient-to-r from-orange to-orange/85"
+                      : "bg-gradient-to-r from-orange/80 to-orange"
                   }`}>
                     {item.metric}
                   </div>
@@ -309,7 +309,7 @@ const OurImpact = () => {
                         window.scrollTo({ top: Math.max(0, targetTop), behavior: "smooth" });
                       }}
                       className={`mt-2 inline-flex items-center gap-2 font-semibold ${
-                        activePillarData.color === "orange" ? "text-orange" : "text-red"
+                        activePillarData.color === "orange" ? "text-orange" : "text-orange/90"
                       }`}
                       whileHover={{ x: 5 }}
                       whileTap={{ scale: 0.98 }}
@@ -323,7 +323,7 @@ const OurImpact = () => {
                   <div className={`absolute bottom-0 right-0 w-32 h-32 rounded-tl-full opacity-50 ${
                     activePillarData.color === "orange"
                       ? "bg-gradient-to-tl from-orange/5 to-transparent"
-                      : "bg-gradient-to-tl from-red/5 to-transparent"
+                      : "bg-gradient-to-tl from-orange/5 to-transparent"
                   }`} />
                 </motion.div>
               ))}
@@ -333,7 +333,7 @@ const OurImpact = () => {
       </section>
 
       {/* Impact Metrics Section */}
-      <section className="w-full px-4 sm:px-6 lg:px-8 py-16 md:py-24 bg-gradient-to-br from-orange via-red to-orange text-white relative overflow-hidden">
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-16 md:py-24 bg-gradient-to-br from-orange via-orange to-orange/90 text-white relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 opacity-10">
           {[...Array(20)].map((_, i) => (
@@ -359,7 +359,7 @@ const OurImpact = () => {
 
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
-            className="text-center mb-12"
+            className="text-center mb-8"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -414,7 +414,7 @@ const OurImpact = () => {
       >
         <div className="max-w-7xl mx-auto">
           <motion.div
-            className="text-center mb-12"
+            className="text-center mb-8"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -446,7 +446,7 @@ const OurImpact = () => {
                   whileHover={{ y: -5 }}
                 >
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="p-4 bg-gradient-to-br from-orange to-red rounded-xl text-white">
+                    <div className="p-4 bg-gradient-to-br from-orange to-orange/85 rounded-xl text-white">
                       <Icon className="text-2xl" />
                     </div>
                     <h3 className="text-xl md:text-2xl font-bold text-gray-900">
@@ -464,7 +464,7 @@ const OurImpact = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="w-full px-4 sm:px-6 lg:px-8 py-16 md:py-24 bg-gradient-to-br from-orange via-red to-orange text-white">
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-16 md:py-24 bg-gradient-to-br from-orange via-orange to-orange/90 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -481,7 +481,7 @@ const OurImpact = () => {
             </p>
             <motion.a
               href="/contact"
-              className="inline-block px-8 py-4 bg-gradient-to-r from-orange to-red rounded-xl font-semibold text-lg shadow-2xl hover:shadow-orange/50 transition-all duration-300"
+              className="inline-block px-8 py-4 bg-gradient-to-r from-orange to-orange/85 rounded-xl font-semibold text-lg shadow-2xl hover:shadow-orange/50 transition-all duration-300"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >

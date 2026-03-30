@@ -31,7 +31,7 @@ const Updates = () => {
       className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 group"
       aria-label="Next"
     >
-      <FaChevronRight className="text-orange group-hover:text-red transition-colors text-xl" />
+      <FaChevronRight className="text-orange group-hover:text-orange/80 transition-colors text-xl" />
     </button>
   );
 
@@ -42,7 +42,7 @@ const Updates = () => {
       className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 group"
       aria-label="Previous"
     >
-      <FaChevronLeft className="text-orange group-hover:text-red transition-colors text-xl" />
+      <FaChevronLeft className="text-orange group-hover:text-orange/80 transition-colors text-xl" />
     </button>
   );
 
@@ -63,7 +63,7 @@ const Updates = () => {
     <section id="updates" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Section Header - Consistent Style */}
       <motion.div
-        className="text-center mb-12 md:mb-16"
+        className="text-center mb-8 md:mb-10"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -87,7 +87,7 @@ const Updates = () => {
             Updates & Events
           </motion.h2>
           <motion.div
-            className="h-1 bg-red flex-1 max-w-16 sm:max-w-24 md:max-w-32"
+            className="h-1 bg-orange flex-1 max-w-16 sm:max-w-24 md:max-w-32"
             initial={{ width: 0 }}
             whileInView={{ width: "100%" }}
             viewport={{ once: true }}

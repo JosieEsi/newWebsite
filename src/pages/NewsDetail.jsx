@@ -18,7 +18,7 @@ const NewsDetail = () => {
         <h1 className="text-3xl font-bold text-gray-800 mb-4">{t("common.notFound")}</h1>
         <button
           onClick={() => navigate("/news-and-activities")}
-          className="px-6 py-3 bg-orange text-white rounded-lg font-semibold hover:bg-red transition-colors"
+          className="px-6 py-3 bg-orange text-white rounded-lg font-semibold hover:bg-orange/90 transition-colors"
         >
           {t("common.backToNews")}
         </button>
@@ -114,7 +114,7 @@ const NewsDetail = () => {
         {/* Additional Info */}
         {item.additionalInfo && (
           <motion.div
-            className="mt-12 bg-gradient-to-br from-orange/10 to-red/10 rounded-xl p-8 border-l-4 border-orange"
+            className="mt-12 bg-gradient-to-br from-orange/10 to-orange/10 rounded-xl p-8 border-l-4 border-orange"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -140,7 +140,7 @@ const NewsDetail = () => {
         >
           <motion.button
             onClick={() => navigate("/news-and-activities")}
-            className="px-8 py-4 bg-orange text-white rounded-lg font-semibold hover:bg-red transition-colors flex items-center gap-2"
+            className="px-8 py-4 bg-orange text-white rounded-lg font-semibold hover:bg-orange/90 transition-colors flex items-center gap-2"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

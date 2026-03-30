@@ -65,7 +65,7 @@ const Events = () => {
           {/* Featured Badge */}
           {event.featured && (
             <div className="absolute bottom-4 left-4">
-              <span className="px-4 py-2 bg-red text-white rounded-lg text-sm font-semibold">
+              <span className="px-4 py-2 bg-orange text-white rounded-lg text-sm font-semibold">
                 Featured Event
               </span>
             </div>
@@ -110,7 +110,7 @@ const Events = () => {
             href={event.registrationUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-full bg-gradient-to-r from-orange to-red text-white font-bold py-4 px-6 rounded-lg text-center hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3"
+            className="block w-full bg-gradient-to-r from-orange to-orange/85 text-white font-bold py-4 px-6 rounded-lg text-center hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -152,7 +152,7 @@ const Events = () => {
 
       {/* Introduction */}
       <motion.div
-        className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 mb-12 text-center"
+        className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 mb-8 text-center"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -197,7 +197,7 @@ const Events = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <div className="bg-gradient-to-br from-orange/10 to-red/10 rounded-xl p-8 md:p-12">
+        <div className="bg-gradient-to-br from-orange/10 to-orange/10 rounded-xl p-8 md:p-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
               className="text-center"

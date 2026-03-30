@@ -6,7 +6,7 @@ import Tab from "../components/Tab";
 const ProjectStatus = () => {
   return (
     <section className="py-16 bg-gray-100">
-      <h2 className="font-poppins font-semibold text-3xl text-center text-red mb-8">
+      <h2 className="font-poppins font-semibold text-3xl text-center text-orange mb-8">
         Project Status
       </h2>
 

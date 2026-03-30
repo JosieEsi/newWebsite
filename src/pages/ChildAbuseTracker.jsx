@@ -114,9 +114,9 @@ const ChildAbuseTracker = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <div className="bg-gradient-to-r from-red/10 to-orange/10 rounded-2xl p-8 md:p-10 border-l-4 border-red">
+        <div className="bg-gradient-to-r from-orange/10 to-orange/10 rounded-2xl p-8 md:p-10 border-l-4 border-orange">
           <div className="flex items-start gap-4 mb-4">
-            <FaExclamationTriangle className="text-red text-4xl flex-shrink-0 mt-1" />
+            <FaExclamationTriangle className="text-orange text-4xl flex-shrink-0 mt-1" />
             <div>
               <h2 className="font-bold text-2xl md:text-3xl mb-4 text-gray-800">
                 {t("childAbuseTracker.aboutTitle")}
@@ -137,7 +137,7 @@ const ChildAbuseTracker = () => {
 
       {/* Reports Section */}
       <motion.div
-        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16"
+        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -177,7 +177,7 @@ const ChildAbuseTracker = () => {
                     </p>
                     <button
                       onClick={() => setExpandedReport(null)}
-                      className="text-orange font-semibold text-sm hover:text-red transition-colors"
+                      className="text-orange font-semibold text-sm hover:text-orange/80 transition-colors"
                     >
                       {t("childAbuseTracker.readLess")}
                     </button>
@@ -190,7 +190,7 @@ const ChildAbuseTracker = () => {
                     <div className="flex items-center justify-between">
                       <button
                         onClick={() => setExpandedReport(index)}
-                        className="text-orange font-semibold text-sm hover:text-red transition-colors flex items-center gap-2"
+                        className="text-orange font-semibold text-sm hover:text-orange/80 transition-colors flex items-center gap-2"
                       >
                         {t("childAbuseTracker.readMore")}
                         <FaArrowRight className="text-xs" />

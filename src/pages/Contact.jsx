@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { contactimage, communication } from "../assets/images";
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaFax, FaDownload } from "react-icons/fa";
 import Button from "../components/Button";
+import ContactOfficesMap, { contactOfficeLocations } from "../components/ContactOfficesMap";
 import { useTranslation } from "../hooks/useTranslation";
 
 const Contact = () => {
@@ -317,7 +318,7 @@ const Contact = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="bg-red p-3 rounded-full">
+                <div className="bg-orange p-3 rounded-full">
                   <FaPhone className="text-white text-xl" />
                 </div>
                 <h3 className="text-xl sm:text-2xl font-bold text-gray-800 font-poppins">Contact Numbers</h3>
@@ -359,7 +360,7 @@ const Contact = () => {
 
             {/* Unit Contacts */}
             <motion.div
-              className="bg-gradient-to-br from-orange/10 to-red/10 rounded-2xl shadow-xl p-6 md:p-8"
+              className="bg-gradient-to-br from-orange/10 to-orange/10 rounded-2xl shadow-xl p-6 md:p-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -383,6 +384,37 @@ const Contact = () => {
             </motion.div>
           </motion.div>
         </div>
+
+        {/* Interactive office map */}
+        <motion.div
+          className="mt-16 md:mt-24"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 font-poppins text-center mb-3">
+            {t("contact.mapTitle")}
+          </h2>
+          <p className="text-center text-gray-600 font-poppins text-sm sm:text-base max-w-2xl mx-auto mb-5 px-2">
+            {t("contact.mapSubtitle")}
+          </p>
+          <ContactOfficesMap t={t} />
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-6">
+            {contactOfficeLocations.map((office) => (
+              <a
+                key={office.id}
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${office.address}, Ghana`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-orange font-semibold font-poppins text-sm hover:underline inline-flex items-center gap-1"
+              >
+                {t(office.titleKey)}
+                <span className="text-gray-500 font-normal">— {t("contact.mapOpenInMaps")}</span>
+              </a>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );

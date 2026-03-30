@@ -226,7 +226,29 @@ import happy from "./happy.jpg";
  import realimpact from "./realimpact.jpg";
 import youngafricanworks from "./Youngafricanworks.jpg";
 
-
+import afrikids from "./afrikids.jpg";
+import bbiga from "./bbiga.jpg";
+import ecomgals from "./ecomgals.jpg";
+import ecomncp from "./ecomncp.jpg";
+import enroutecd from "./enroutecd.jpg";
+import fivsla from "./fivsla.jpg";
+import iapcd from "./iapcd.jpg";
+import iapghana from "./iapghana.jpg";
+import iapic from "./iapic.jpg";
+import impactmars from "./impactmars.jpg";
+import music from "./music.png";
+import oldhero from "./oldhero.png";
+import partners from "./partners.png";
+import pdaafricalogo from "./pdaafricalogo.png";
+import picture5 from "./Picture5.jpg";
+import podpicJpg from "./podpic.jpg";
+import stcla from "./stcla.jpg";
+import sucdenvsla from "./sucdenvsla.jpg";
+import tonytree from "./tonytree.jpg";
+import unhcr from "./unhcr.jpg";
+import wcwork from "./wcwork.jpg";
+import yfi from "./yfi.jpg";
+import edemnewJpg from "./Edemnew.jpg";
 
 export {
   image1,
@@ -444,4 +466,27 @@ export {
   indigenous,
   realimpact,
   youngafricanworks,
+  afrikids,
+  bbiga,
+  ecomgals,
+  ecomncp,
+  enroutecd,
+  fivsla,
+  iapcd,
+  iapghana,
+  iapic,
+  impactmars,
+  music,
+  oldhero,
+  partners,
+  pdaafricalogo,
+  picture5,
+  podpicJpg,
+  stcla,
+  sucdenvsla,
+  tonytree,
+  unhcr,
+  wcwork,
+  yfi,
+  edemnewJpg,
 };

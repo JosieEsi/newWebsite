@@ -75,7 +75,7 @@ const CookieConsent = () => {
                 </p>
                 <a
                   href="/privacy-policy"
-                  className="text-orange hover:text-red text-sm font-semibold mt-2 inline-block underline"
+                  className="text-orange hover:text-orange/80 text-sm font-semibold mt-2 inline-block underline"
                 >
                   {t("cookieConsent.learnMore")}
                 </a>
@@ -102,7 +102,7 @@ const CookieConsent = () => {
                 </motion.button>
                 <motion.button
                   onClick={handleAccept}
-                  className="px-6 py-3 bg-orange text-white rounded-lg font-semibold hover:bg-red transition-colors font-poppins whitespace-nowrap"
+                  className="px-6 py-3 bg-orange text-white rounded-lg font-semibold hover:bg-orange/90 transition-colors font-poppins whitespace-nowrap"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >

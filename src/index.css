@@ -5,6 +5,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Leaflet: keep map tiles/icons usable with Tailwind preflight */
+.leaflet-container img.leaflet-tile,
+.leaflet-container .leaflet-marker-icon,
+.leaflet-container .leaflet-marker-shadow {
+  max-width: none !important;
+}
+
 * {
   margin: 0;
   padding: 0;

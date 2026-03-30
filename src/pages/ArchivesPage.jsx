@@ -245,7 +245,7 @@ const ArchivesPage = () => {
   return (
     <section className="max-container w-full min-h-screen bg-gray-50 py-20 pt-32">
       {/* Header */}
-      <div className="text-center mb-12 px-6">
+      <div className="text-center mb-8 px-6">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -275,7 +275,7 @@ const ArchivesPage = () => {
         >
           <button
             onClick={() => navigate("/our-projects")}
-            className="text-orange hover:text-red font-semibold font-poppins transition-colors"
+            className="text-orange hover:text-orange/80 font-semibold font-poppins transition-colors"
           >
             {language === "fr" ? "← Voir les projets actuels" : "← View Current Projects"}
           </button>

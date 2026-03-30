@@ -73,7 +73,7 @@ const NewsAndActivities = () => {
 
       {/* News Grid */}
       <motion.div
-        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16"
+        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -125,7 +125,7 @@ const NewsAndActivities = () => {
                 </p>
                 <motion.button
                   onClick={() => navigate(`/news-and-activities/${item.slug}`)}
-                  className="text-orange font-semibold text-sm hover:text-red transition-colors flex items-center gap-2"
+                  className="text-orange font-semibold text-sm hover:text-orange/80 transition-colors flex items-center gap-2"
                   whileHover={{ x: 5 }}
                 >
                   {t("common.readMore")}
@@ -139,7 +139,7 @@ const NewsAndActivities = () => {
 
       {/* Media Section */}
       <motion.div
-        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16"
+        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -149,7 +149,7 @@ const NewsAndActivities = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <motion.a
             href="/videos"
-            className="bg-gradient-to-br from-red to-orange rounded-xl p-8 text-white text-center hover:shadow-xl transition-all duration-300"
+            className="bg-gradient-to-br from-orange/80 to-orange rounded-xl p-8 text-white text-center hover:shadow-xl transition-all duration-300"
             whileHover={{ scale: 1.05, y: -5 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -159,7 +159,7 @@ const NewsAndActivities = () => {
           </motion.a>
           <motion.a
             href="/photos"
-            className="bg-gradient-to-br from-orange to-red rounded-xl p-8 text-white text-center hover:shadow-xl transition-all duration-300"
+            className="bg-gradient-to-br from-orange to-orange/85 rounded-xl p-8 text-white text-center hover:shadow-xl transition-all duration-300"
             whileHover={{ scale: 1.05, y: -5 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -169,7 +169,7 @@ const NewsAndActivities = () => {
           </motion.a>
           <motion.a
             href="/publications"
-            className="bg-gradient-to-br from-red to-orange rounded-xl p-8 text-white text-center hover:shadow-xl transition-all duration-300"
+            className="bg-gradient-to-br from-orange/80 to-orange rounded-xl p-8 text-white text-center hover:shadow-xl transition-all duration-300"
             whileHover={{ scale: 1.05, y: -5 }}
             whileTap={{ scale: 0.95 }}
           >

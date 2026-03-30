@@ -8,8 +8,8 @@ const ErrorFallback = () => {
   console.error(error); // Logs the error for debugging
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-red-50 text-center">
-      <h1 className="text-4xl font-bold text-red-600">{t("error.somethingWentWrong")}</h1>
+    <div className="flex flex-col items-center justify-center h-screen bg-orange/5 text-center">
+      <h1 className="text-4xl font-bold text-orange">{t("error.somethingWentWrong")}</h1>
       <p className="text-lg text-gray-700 mt-4">
         {t("error.errorMessage")}
       </p>

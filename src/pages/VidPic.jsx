@@ -137,13 +137,13 @@ const VidPic = () => {
       {/* Videos Section */}
       {activeTab === "videos" && (
         <motion.section
-          className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16"
+          className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
           {/* Main Video */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
             <motion.div
               className="lg:col-span-2"
               initial={{ opacity: 0, x: -20 }}
@@ -245,7 +245,7 @@ const VidPic = () => {
       {/* Pictures Section */}
       {activeTab === "pictures" && (
         <motion.section
-          className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16"
+          className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}

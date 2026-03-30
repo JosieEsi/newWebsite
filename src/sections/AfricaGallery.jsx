@@ -40,7 +40,7 @@
 
 //   return (
 //     <section className="max-container justify-center max-sm:mx-5" id="gallery">
-//       <h2 className="text-red font-bold text-xl text-center mb-5 font-poppins">
+//       <h2 className="text-orange font-bold text-xl text-center mb-5 font-poppins">
 //         Gallery
 //       </h2>
 //       <div className="flex justify-center w-full">
@@ -220,7 +220,7 @@ const AfricaGallery = () => {
 
   return (
     <section className="max-container justify-center max-sm:mx-5 " id="gallery">
-      <h2 className="text-red font-bold text-xl text-center mb-5 font-poppins">
+      <h2 className="text-orange font-bold text-xl text-center mb-5 font-poppins">
         Gallery
       </h2>
       <div className="flex justify-center w-full">

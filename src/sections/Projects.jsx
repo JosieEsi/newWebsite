@@ -16,7 +16,7 @@
 
 //   return (
 //     <section id="projects" className="max-container w-full ">
-//       <h2 className="text-red font-bold text-xl text-center mb-5 font-poppins">
+//       <h2 className="text-orange font-bold text-xl text-center mb-5 font-poppins">
 //         Projects
 //       </h2>
 //       <div className="flex justify-center w-full">
@@ -34,7 +34,7 @@
 //         ))}
 //       </div>
 //       <div className="flex justify-center mt-10">
-//         <button className="bg-orange text-white py-4 px-6 rounded-lg hover:bg-red text-lg font-poppins">
+//         <button className="bg-orange text-white py-4 px-6 rounded-lg hover:bg-orange/90 text-lg font-poppins">
 //           DASHBOARD
 //         </button>
 //       </div>
@@ -69,7 +69,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="max-container mx-auto px-4 py-8">
-      <h2 className="text-red font-bold text-xl text-center mb-5 font-poppins">
+      <h2 className="text-orange font-bold text-xl text-center mb-5 font-poppins">
         Projects
       </h2>
       <div className="flex justify-center w-full mb-5">
@@ -88,7 +88,7 @@ const Projects = () => {
       </div>
       {/* <div className="flex justify-center">
         <button
-          className="bg-orange text-white py-4 px-6 rounded-lg hover:bg-red text-lg font-poppins"
+          className="bg-orange text-white py-4 px-6 rounded-lg hover:bg-orange/90 text-lg font-poppins"
           onClick={handleDashboardClick} // Handle button click
         >
           DASHBOARD

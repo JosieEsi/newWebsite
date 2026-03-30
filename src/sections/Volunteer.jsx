@@ -18,7 +18,7 @@
 //   return (
 //     <section id="get-involved" className="max-container w-full">
 //       <div className="flex flex-col justify-center w-full ">
-//         <h2 className="text-red font-bold text-xl text-center mb-5 font-poppins">
+//         <h2 className="text-orange font-bold text-xl text-center mb-5 font-poppins">
 //           Get Involved
 //         </h2>
 //         <h3 className="text-4xl leading-[68px]  font-poppins font-bold mb-5 items-center text-center">
@@ -41,7 +41,7 @@
 //           <div className="bg-white p-8 rounded-lg max-w-lg w-full relative">
 //             <button
 //               onClick={handleClose}
-//               className="absolute top-4 right-4 text-red-500"
+//               className="absolute top-4 right-4 text-orange"
 //             >
 //               <img src={close} alt="close" height={20} width={20} />
 //             </button>
@@ -110,7 +110,7 @@
 //   return (
 //     <section id="get-involved" className="max-container w-full">
 //       <div className="flex flex-col justify-center w-full">
-//         <h2 className="text-red font-bold text-xl text-center mb-5 font-poppins">
+//         <h2 className="text-orange font-bold text-xl text-center mb-5 font-poppins">
 //           Get Involved
 //         </h2>
 //         <h3 className="text-4xl leading-[68px] font-poppins font-bold mb-5 text-center">
@@ -133,7 +133,7 @@
 //           <div className="bg-white p-8 rounded-lg max-w-lg w-full relative">
 //             <button
 //               onClick={handleClose}
-//               className="absolute top-4 right-4 text-red-500"
+//               className="absolute top-4 right-4 text-orange"
 //             >
 //               <img src={close} alt="close" height={20} width={20} />
 //             </button>
@@ -158,7 +158,7 @@
 //           <div className="bg-white p-8 rounded-lg max-w-lg w-full relative">
 //             <button
 //               onClick={handleClose}
-//               className="absolute top-4 right-4 text-red-500"
+//               className="absolute top-4 right-4 text-orange"
 //             >
 //               <img src={close} alt="close" height={20} width={20} />
 //             </button>
@@ -238,7 +238,7 @@
 //   return (
 //     <section id="get-involved" className="max-container w-full">
 //       <div className="flex flex-col justify-center w-full">
-//         <h2 className="text-red font-bold text-xl text-center mb-5 font-poppins">
+//         <h2 className="text-orange font-bold text-xl text-center mb-5 font-poppins">
 //           Get Involved
 //         </h2>
 //         <h3 className="text-4xl leading-[68px] font-poppins font-bold mb-5 text-center">
@@ -261,7 +261,7 @@
 //           <div className="bg-white p-8 rounded-lg max-w-lg w-full relative">
 //             <button
 //               onClick={handleClose}
-//               className="absolute top-4 right-4 text-red-500"
+//               className="absolute top-4 right-4 text-orange"
 //             >
 //               <img src={close} alt="close" height={20} width={20} />
 //             </button>
@@ -304,7 +304,7 @@
 //           <div className="bg-white p-8 rounded-lg max-w-lg w-full relative">
 //             <button
 //               onClick={handleClose}
-//               className="absolute top-4 right-4 text-red-500"
+//               className="absolute top-4 right-4 text-orange"
 //             >
 //               <img src={close} alt="close" height={20} width={20} />
 //             </button>
@@ -362,7 +362,7 @@
 //   return (
 //     <section id="get-involved" className="max-container w-full">
 //       <div className="flex flex-col justify-center w-full ">
-//         <h2 className="text-red font-bold text-xl text-center mb-5 font-poppins">
+//         <h2 className="text-orange font-bold text-xl text-center mb-5 font-poppins">
 //           Get Involved
 //         </h2>
 //         <h3 className="text-4xl leading-[68px] font-poppins font-bold mb-5 items-center text-center">
@@ -385,7 +385,7 @@
 //           <div className="bg-white p-8 rounded-lg max-w-lg w-full relative">
 //             <button
 //               onClick={handleClose}
-//               className="absolute top-4 right-4 text-red-500"
+//               className="absolute top-4 right-4 text-orange"
 //             >
 //               <img src={close} alt="close" height={20} width={20} />
 //             </button>
@@ -440,7 +440,7 @@
 //   return (
 //     <section id="get-involved" className="max-container w-full">
 //       <div className="flex flex-col justify-center w-full ">
-//         <h2 className="text-red font-bold text-xl text-center mb-5 font-poppins">
+//         <h2 className="text-orange font-bold text-xl text-center mb-5 font-poppins">
 //           Get Involved
 //         </h2>
 //         <h3 className="text-4xl leading-[68px] font-poppins font-bold mb-5 items-center text-center">
@@ -463,7 +463,7 @@
 //           <div className="bg-white p-8 rounded-lg max-w-lg w-full relative">
 //             <button
 //               onClick={handleClose}
-//               className="absolute top-4 right-4 text-red-500"
+//               className="absolute top-4 right-4 text-orange"
 //             >
 //               <img src={close} alt="close" height={20} width={20} />
 //             </button>
@@ -514,7 +514,7 @@ const Volunteer = () => {
   return (
     <section id="get-involved" className="max-container w-full">
       <div className="flex flex-col justify-center w-full ">
-        <h2 className="text-red font-bold text-xl text-center mb-5 font-poppins">
+        <h2 className="text-orange font-bold text-xl text-center mb-5 font-poppins">
           Get Involved
         </h2>
         <h3 className="text-4xl leading-[68px] font-poppins font-bold mb-5 items-center text-center">
@@ -537,7 +537,7 @@ const Volunteer = () => {
           <div className="bg-white p-8 rounded-lg max-w-lg w-full relative">
             <button
               onClick={handleClose}
-              className="absolute top-4 right-4 text-red-500"
+              className="absolute top-4 right-4 text-orange"
             >
               <img src={close} alt="close" height={20} width={20} />
             </button>
@@ -563,7 +563,7 @@ const Volunteer = () => {
           <div className="bg-white p-8 rounded-lg max-w-lg w-full relative">
             <button
               onClick={handleClose}
-              className="absolute top-4 right-4 text-red-500 "
+              className="absolute top-4 right-4 text-orange "
             >
               <img src={close} alt="close" height={20} width={20} />
             </button>

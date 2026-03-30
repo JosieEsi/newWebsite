@@ -113,12 +113,12 @@ const PrivacyPolicy = () => {
 
       {/* Contact Section */}
       <motion.div
-        className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16"
+        className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-10"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        <div className="bg-gradient-to-br from-orange/10 to-red/10 rounded-xl p-8 border-l-4 border-orange">
+        <div className="bg-gradient-to-br from-orange/10 to-orange/10 rounded-xl p-8 border-l-4 border-orange">
           <h2 className="font-bold text-2xl text-gray-800 mb-4">{t("privacyPolicy.contact.title")}</h2>
           <p className="text-gray-700 mb-6">{t("privacyPolicy.contact.description")}</p>
           <div className="space-y-3">

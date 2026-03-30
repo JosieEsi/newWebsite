@@ -8,7 +8,7 @@ const Aboutafrica = () => {
       id="about-us"
       className="max-container items-center justify-center gap-6 w-full flex max-sm:flex-col max-sm:mt-20 flex-col lg:grid"
     >
-      <h2 className="text-red font-bold text-xl text-center mb-5">About Us</h2>
+      <h2 className="text-orange font-bold text-xl text-center mb-5">About Us</h2>
       <div className="flex flex-row gap-20 justify-between flex-wrap max-sm:flex-col max-md:flex-col">
         <div className="flex flex-1 flex-col lg:justify-center ">
           <h2 className="font-poppins capitalize text-4xl lg:max-w-lg font-bold">

@@ -161,13 +161,13 @@ const Units = () => {
     {
       icon: globe,
       name: "PDA Africa",
-      bgColor: "bg-red",
+      bgColor: "bg-orange",
       link: "/pdaafrica",
     },
     {
       icon: research,
       name: "PDA Research, Evaluation & Learning",
-      bgColor: "bg-red",
+      bgColor: "bg-orange",
       link: "/teams",
     },
     {

@@ -151,6 +151,8 @@ export const fr = {
   // What We Do Page
   whatWeDo: {
     title: "Objectifs Stratégiques",
+    objectivesSectionSubtitle:
+      "Ces objectifs définissent notre trajectoire : élargir notre présence reconnue en conseil, recherche et évaluation en Afrique, renforcer les partenariats avec les communautés et les institutions, placer les personnes et l’éthique au centre de notre action, investir dans le bien-être et le développement du personnel, et assurer la résilience financière sur le long terme.",
     services: {
       research: {
         title: "Recherche et Génération de Preuves",
@@ -237,6 +239,10 @@ export const fr = {
     physicalAddress: "Adresse Physique",
     postalAddress: "Adresse Postale",
     gpsCode: "Code GPS",
+    mapTitle: "Nos emplacements",
+    mapSubtitle:
+      "Découvrez nos bureaux d’Accra et de Kumasi sur la carte. Zoomez et déplacez la vue ; cliquez sur un repère pour l’adresse complète.",
+    mapOpenInMaps: "Ouvrir dans Google Maps",
     units: {
       rel: "Recherche, Évaluation et Apprentissage (REL)",
       advocacy: "Plaidoyer",

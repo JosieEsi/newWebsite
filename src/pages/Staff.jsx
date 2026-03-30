@@ -52,6 +52,7 @@ import {
   ruth,
   sanni,
   tietaar,
+  ernest,
 } from "../assets/images";
 import { FaUser, FaBriefcase, FaGraduationCap, FaTimes } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
@@ -152,7 +153,7 @@ const Staff = () => {
         name: "PRINCE AMOAKO",
         position: "Research and Data Analyst",
         image: prince,
-        bio: "Prince Amoako is an eminent economist with many years of professional and practical experience in research and data analysis. He is well known for his impactful contributions to data-driven decision-making and policy formulations in Ghana. With expertise in quantitative and qualitative data analyses, and a deep understanding of the socio-cultural and economic context of Ghana, Prince has built a reputation for influencing economic and health policies in the country. Prince has worked with many local and international institutions such as Ghana Statistical Service, Ghana Enterprise Authority, and Ferrelly and Mitchell, contributing to areas such as research, data monitoring, financial literacy, and monitoring and evaluation. He holds a master’s degree in Economics and is currently awaiting his PhD Viva in Economics at Kwame Nkrumah University of Science and Technology (KNUST). Prince is also a Chartered Financial Economist. His PhD research focused on mobile phone renewal options and enrolment in and renewal of NHIS membership, as well as delayed desired job employment of trained nurses and job satisfaction. His academic work has been presented in both local and international conferences and contributed to the development of the National Health Insurance Scheme’s (NHIS) mobile app for registration of NHIS membership in Ghana. His specialization includes quantitative data analysis and health economics, using relevant software tools to translate complex data into actionable policies. Prince is also an educator with many years of teaching experience at all levels of education (basic, secondary, and tertiary). He is an advocate for emotional intelligence and is passionate about social development and youth empowerment. His quality leadership style, professionalism, and commitment to excellence continue to position him as a respected personality in Ghana’s research and policy landscape.",
+        bio: "Prince Amoako is an eminent economist with many years of professional and practical experience in research and data analysis. Prince Amoako is well known for his impactful contributions to data-driven decision-making and policy formulations in Ghana. With expertise in quantitative and qualitative data analyses, and a deep understanding of socio-cultural and economic context of Ghana, Prince Amoako has built reputation for influencing economic, and health policies in Ghana. Prince Amoako has worked with many local and international institutions such as Ghana Statistical Service, Ghana Enterprise Authority, and Ferrelly and Michell, contributing to areas such as research, data monitoring, financial literacy and monitoring and evaluation. Prince Amoako holds a master’s degree in economics and is currently awaiting his PhD Viva in Economics at Kwame Nkrumah University of Science and Technology (KNUST). Prince Amoako is also a Chartered Financial Economist. His PhD research focused on Mobile Phone Renewal Option and Enrolment in and Renewal of NHIS membership, as well as Delayed Desired Job Employment of Trained Nurses and Job Satisfaction. His academic works have been presented in both local and international conferences and contributed to the development of National Health Insurance Scheme’s (NHIS) mobile app for registration of NHIS membership in Ghana. His specialization includes quantitative data analysis and health economics. Prince Amoako uses relevant software tools to translate complex data into actionable policies. Prince Amoako is also an educator with many years of teaching experience at all levels of education (basic, secondary and tertiary). Prince Amoako is an advocate for emotional intelligence and passionate about social development and youth empowerment. His quality leadership style, professionalism and commitment to excellence continue to position him as a respected personality in Ghana’s research and policy landscape.",
         profileLink: "#",
       },
       {
@@ -167,6 +168,13 @@ const Staff = () => {
         position: "Senior Project Officer",
         image: ignatius,
         bio: "Ignatius is a Senior Project Officer with the PDA Research Evaluation and Learning department. Throughout his 5 years of experience, Ignatius uses his programming skills to develop innovative solutions for development management. With his postgraduate degree in Mathematical Sciences from the African Institute for Mathematical Sciences and the University of Cape Coast, Ignatius is particularly skilled in machine learning, data analysis, database management, GUI development, and Python programming.",
+        profileLink: "#",
+      },
+      {
+        name: "ERNEST ADU OWUSU",
+        position: "Senior Project Officer",
+        image: ernest,
+        bio: "As a Senior Project Officer with the PDA Research Evaluation and Learning department, Ernest has developed competencies in data management analysis and visualization, questionnaire design and scripting, proposal and methodology development, monitoring and evaluation, and project management and coordination. With 7 years of working experience, Ernest has successfully led several field activities, training and reporting. He holds an MPhil in Economics and a BA in Economics (Major) with Information Studies from the University of Ghana.",
         profileLink: "#",
       },
       {
@@ -208,9 +216,9 @@ const Staff = () => {
       },
       {
         name: "GODSWAY DZATO",
-        position: "Assistant Finance and Administrative Officer",
+        position: "Senior Finance Officer",
         image: dzato,
-        bio: "Godsway serves as the Finance Officer for PDA Africa. Throughout his five years of experience in finance roles, he has developed rich expertise in financial reporting and analysis. Godsway holds a BSc Administration (Accounting) from the University of Ghana Business School.",
+        bio: "Godsway serves as the Snr Finance Officer for PDA Africa. Throughout his five years of experience in finance roles, he has developed rich expertise in financial reporting and analysis. Godsway holds a BSc Administration (Accounting) from the University of Ghana Business School.",
         profileLink: "#",
       },
       {
@@ -222,30 +230,30 @@ const Staff = () => {
       },
       {
         name: "BREH JIMAH",
-        position: "Assistant Administrative Officer",
+        position: "Administrative and Logistics Officer",
         image: breh,
-        bio: "Jimah worked with PDA for about six years as a Logistics Assistant from June, 2007 to 2012 before taking a leave. He re-joined the team again on June 1st 2015. He currently provides logistical support for administrative and programmes staff. He also sees to the records of movement, maintenance and road-worthiness of the vehicles in the Kumasi office.",
+        bio: "Jimah worked with PDA for about six years as an Administrative and Logistics officer from June, 2007 to 2012 before taking a leave. He re-joined the team again on June 1st 2015. He currently provides logistical support for administrative and programmes staff. He also sees to the records of movement, maintenance and road-worthiness of the vehicles in the Kumasi office.",
         profileLink: "#",
       },
       {
         name: "CHARLES KWADWO ANOKYE",
-        position: "Assistant Administrative Officer",
+        position: "Administrative and Logistics Officer",
         image: charles,
         bio: "Charles has over 2 decades of experience as a logistics person and a professional driver. Here at PDA, Charles plays key roles in the Finance and Administration department as a Logistics and Administration Officer. He is skilled in driving, performing inventory roles, administration, and community mobilisation. He is also experienced in using Microsoft Office Word and Excel to prepare financial retirement and take inventories. He is a Junior High School graduate.",
         profileLink: "#",
       },
       {
         name: "ZINGLE BELAUNE PATRICIA",
-        position: "Assistant Administrative Officer",
+        position: "HR and Administrative Officer",
         image: patricia,
-        bio: "Patricia brings on board her 13 years of experience to lead PDA's administrative wing as the HR and Administrative Officer. She is an astute member of the Chartered Institute of Human Resources (CIHR), and also holds a bachelor's degree in Management Studies from the University of Cape Coast. Patricia is competent in facilitating training sessions, data collection, general administrative and logistics, and customer relation management.",
+        bio: "Patricia brings on board her 13 years of experience to lead PDA's administrative wing as the HR and Administrative Officer. She is an astute member of the Chartered Institute of Human Resources Management (CIHRM), and also holds a bachelor’s degree in Management Studies from the University of Cape Coast. Patricia is competent in facilitating training sessions, data collection, general administrative and logistics, and customer relation management.",
         profileLink: "#",
       },
       {
         name: "KENNEDY ANKOMAH BOADU",
-        position: "Logistics Assistant",
+        position: "Assistant Logistics Officer",
         image: ken,
-        bio: "Ken joined PDA in 2018 as a logistics assistant. He manages program logistics and provides general administrative and programmatic support to PDA staff primarily in Accra. With several years of experience as a driver, he also assists in community entry during PDA field research and plays an important role in providing any necessary background support.",
+        bio: "Ken joined PDA in 2018 as an Assistant Logistics Officer. He manages program logistics and provides general administrative and programmatic support to PDA staff primarily in Accra. With several years of experience as a driver, he also assists in community entry during PDA field research and plays an important role in providing any necessary background support.",
         profileLink: "#",
       },
       {
@@ -298,26 +306,26 @@ const Staff = () => {
         name: "DAVID ESHUN",
         position: "Project Coordinator, PDA Africa",
         image: david,
-        bio: "David serves as a Project Coordinator for PDA Africa. David has 14 years of experience leading the implementation of several community-level initiatives in Ghana and Cote d'Ivoire. He leverages his many years of experience and skills in project design and coordination, facilitation of gender action and learning systems training, data analysis, design of training manuals, and monitoring and evaluation to deliver excellent project implementation. David is an economist with an MSc in Economics and a BSc in Natural Resources Management from the Kwame Nkrumah University of Science and Technology.",
+        bio: "David serves as an Assistant Project Coordinator for PDA Africa. David has 14 years of experience leading the implementation of several community-level initiatives in Ghana and Cote d'Ivoire. He leverages his many years of experience and skills in project design and coordination, facilitation of gender action and learning systems training, data analysis, design of training manuals, and monitoring and evaluation to deliver excellent project implementation. David is an economist with an MSc in Economics and a BSc in Natural Resources Management from the Kwame Nkrumah University of Science and Technology.",
         profileLink: "#",
       },
       {
         name: "KAMIL ABDUL SALAM",
-        position: "Assistant Project Coordinator, PDA Africa",
+        position: "Project Coordinator, PDA Africa",
         image: kamil,
-        bio: "Kamil serves as an Assistant Project Coordinator for PDA Africa. Throughout his career, Kamil has developed expertise in training facilitation, field supervision, monitoring, and community mobilization.",
+        bio: "Kamil is a Project Coordinator with PDA Africa, leading the Child Labor Remediation project. As an experienced development professional with expertise in designing and implementing community development interventions, Kamil has led numerous projects in Community Action Planning (CAP), Community Health and Wellbeing, Sustainable Development Projects, Social Mobilization and Organisation and Partnership Development with Community and State Institutions. He loves to share his opinions and experiences on social and economic development blogs on human and social development. He holds a Master of Science in Development Policy Planning and a Bachelor of Science in Planning from the Kwame Nkrumah University of Science and Technology.",
         profileLink: "#",
       },
       {
-        name: "ANDREWS OWUSU",
+        name: "ANDREWS ANIAH ADUNMOLEGA",
         position: "Assistant Project Officer, PDA Africa",
         image: andrew,
-        bio: "Andrews works with PDA Africa to economically empower women and young people. He is stationed with PDA Africa as an Assistant Project Officer. Throughout his career, Andrews has developed expertise in training facilitation, field supervision, monitoring, and community mobilization. He holds a BSc in Organizational Development from the College for Community and Organisational Development, Sunyani.",
+        bio: "Andrew has over 14 years of experience in community development and leading initiatives that seek to economically empower women and young people. He is stationed with PDA Africa as an Assistant Project Officer. Throughout his career, Andrew has developed expertise in training facilitation, field supervision, monitoring, and community mobilization. He holds a BSc in Organizational Development from the College for Community and Organisational Development, Sunyani.",
         profileLink: "#",
       },
       {
         name: "PATRICK ASIHENE DWAMENA",
-        position: "Senior Project Officer",
+        position: "Senior Project Officer, PDA Africa",
         image: patrick,
         bio: "Patrick is a Senior Project Officer with PDA Africa team and brings over 16 years of experience leading community-based development initiatives. He supervises projects in Ghana, Cameroon, and Côte d'Ivoire. He has played a key role in shaping PDA's financial inclusion initiatives at the community level. His professional strengths include training, facilitation, report writing, icebreaking, and data analysis. Patrick holds a Higher National Diploma (HND) in Journalism and Communication from the Institute of Business Management and Journalism, Kumasi.",
         profileLink: "#",
@@ -345,7 +353,7 @@ const Staff = () => {
       { name: "EUNICE YARO", position: "Field Officer", image: yaro },
       { name: "HARRISSON ADU", position: "Field Officer", image: harrison },
       { name: "EUGENE ASAMOAH BOAKYE", position: "Field Officer", image: eugene },
-      { name: "RACHEL KANJAMBUDA BLESSING", position: "Field Officer", image: racheal },
+      { name: "RACHEL KANJAMBUDIA BLESSING", position: "Field Officer", image: racheal },
       { name: "EMELIA ANAWINE", position: "Field Officer", image: emelia },
       { name: "ABU MUSAH", position: "Field Officer", image: abu },
       { name: "ISSIFU SANI", position: "Field Officer", image: sanni },
@@ -358,7 +366,7 @@ const Staff = () => {
 
     return (
       <motion.div
-        className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-l-4 border-orange group cursor-pointer"
+        className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-l-4 border-gray-300 group cursor-pointer"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -379,13 +387,10 @@ const Staff = () => {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
-                <div className="absolute -bottom-2 -right-2 bg-orange rounded-full w-8 h-8 flex items-center justify-center shadow-lg">
-                  <FaUser className="text-white text-sm" />
-                </div>
               </motion.div>
             ) : (
               <motion.div
-                className="h-32 w-32 rounded-full bg-gradient-to-br from-orange/20 to-red/20 flex items-center justify-center flex-shrink-0 border-4 border-orange/30 group-hover:border-orange transition-colors duration-300"
+                className="h-32 w-32 rounded-full bg-gradient-to-br from-orange/20 to-orange/10 flex items-center justify-center flex-shrink-0 border-4 border-orange/30 group-hover:border-orange transition-colors duration-300"
                 whileHover={{ scale: 1.1 }}
               >
                 <span className="text-orange text-5xl font-bold">
@@ -397,12 +402,9 @@ const Staff = () => {
               <h3 className="font-poppins font-bold text-xl md:text-2xl text-ash mb-2 group-hover:text-orange transition-colors duration-300">
                 {staff.name}
               </h3>
-              <div className="flex items-center justify-center lg:justify-start gap-2 mb-4">
-                <FaBriefcase className="text-orange text-sm" />
-                <p className="font-poppins text-base md:text-lg text-orange font-semibold">
-                  {staff.position}
-                </p>
-              </div>
+              <p className="font-poppins text-base md:text-lg text-orange font-semibold mb-4 text-center lg:text-left">
+                {staff.position}
+              </p>
               {staff.bio && (
                 <>
                   <p className="font-poppins text-sm md:text-base text-gray-600 leading-relaxed line-clamp-3">
@@ -431,13 +433,13 @@ const Staff = () => {
   const DepartmentSection = ({ title, staff, departmentKey, icon: Icon }) => (
     <motion.div
       id={departmentKey}
-      className="mb-16 scroll-mt-24"
+      className="mb-10 scroll-mt-24"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      <div className="flex items-center gap-4 mb-8 pb-4 border-b-4 border-orange">
+      <div className="flex items-center gap-4 mb-5 pb-3 border-b-4 border-orange">
         {Icon && (
           <motion.div
             className="bg-orange rounded-full p-3"
@@ -450,7 +452,6 @@ const Staff = () => {
         <h2 className="font-poppins font-bold text-3xl md:text-4xl text-ash">
           {title}
         </h2>
-        <span className="text-gray-400 text-lg">({staff.length})</span>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {staff.map((member, index) => (
@@ -494,7 +495,7 @@ const Staff = () => {
 
       {/* Introduction */}
       <motion.div
-        className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 mb-16 text-center"
+        className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 mb-10 text-center"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -551,26 +552,16 @@ const Staff = () => {
         {/* Field Officers */}
         <motion.div
           id="fieldOfficers"
-          className="mb-16 scroll-mt-24"
+          className="mb-10 scroll-mt-24"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="flex items-center gap-4 mb-8 pb-4 border-b-4 border-orange">
-            <motion.div
-              className="bg-orange rounded-full p-3"
-              whileHover={{ rotate: 360 }}
-              transition={{ duration: 0.6 }}
-            >
-              <FaUser className="text-white text-2xl" />
-            </motion.div>
+          <div className="flex items-center gap-4 mb-5 pb-3 border-b-4 border-orange">
             <h2 className="font-poppins font-bold text-3xl md:text-4xl text-ash">
               {t("staff.fieldOfficers")}
             </h2>
-            <span className="text-gray-400 text-lg">
-              ({staffByDepartment.fieldOfficers.length})
-            </span>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {staffByDepartment.fieldOfficers.map((officer, index) => {
@@ -578,7 +569,7 @@ const Staff = () => {
               return (
                 <motion.div
                   key={index}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 text-center border-l-4 border-orange group cursor-pointer"
+                  className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 text-center border-l-4 border-gray-300 group cursor-pointer"
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
@@ -598,7 +589,7 @@ const Staff = () => {
                     </motion.div>
                   ) : (
                     <motion.div
-                      className="h-24 w-24 rounded-full bg-gradient-to-br from-orange/20 to-red/20 flex items-center justify-center mx-auto mb-4 border-4 border-orange/30 group-hover:border-orange transition-colors duration-300"
+                      className="h-24 w-24 rounded-full bg-gradient-to-br from-orange/20 to-orange/10 flex items-center justify-center mx-auto mb-4 border-4 border-orange/30 group-hover:border-orange transition-colors duration-300"
                       whileHover={{ scale: 1.1, rotate: 5 }}
                     >
                       <span className="text-orange text-3xl font-bold">
@@ -647,7 +638,7 @@ const Staff = () => {
                       />
                     </div>
                   ) : (
-                    <div className="h-20 w-20 rounded-full bg-gradient-to-br from-orange/20 to-red/20 flex items-center justify-center border-4 border-orange/30 flex-shrink-0">
+                    <div className="h-20 w-20 rounded-full bg-gradient-to-br from-orange/20 to-orange/10 flex items-center justify-center border-4 border-orange/30 flex-shrink-0">
                       <span className="text-orange text-2xl font-bold">
                         {selectedStaff.name.charAt(0)}
                       </span>

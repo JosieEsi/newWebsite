@@ -39,16 +39,11 @@ const Expertise = () => {
         We work in a wide range of areas including:
       </p>
 
-      {/* Content */}
-      <div className="relative mt-16 max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-10">
-        
-        {/* Icon */}
-        <div className="absolute -left-6 top-1/2 -translate-y-1/2 hidden lg:flex bg-orange w-28 h-28 rounded-full items-center justify-center shadow-lg">
-          <img src={bulb} alt="Expertise" className="w-16 h-16" />
-        </div>
-
+      {/* Content: left | centered icon | right */}
+      <div className="mt-16 max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] gap-6 lg:gap-4 items-stretch">
         {/* LEFT – Black panel */}
-        <div className="bg-black text-white w-full lg:w-1/2 rounded-l-[90px] rounded-r-xl px-10 py-12 shadow-xl">
+        <div className="bg-black text-white w-full rounded-l-[90px] rounded-r-xl px-10 py-12 shadow-xl lg:rounded-l-[90px] lg:rounded-r-xl">
           <ul className="space-y-3 text-sm leading-relaxed">
             {leftExpertise.map((item, index) => (
               <li key={index} className="flex items-start gap-3">
@@ -59,8 +54,14 @@ const Expertise = () => {
           </ul>
         </div>
 
+        <div className="flex justify-center items-center py-4 lg:py-0 lg:self-stretch">
+          <div className="flex bg-orange w-28 h-28 rounded-full items-center justify-center shadow-lg shrink-0">
+            <img src={bulb} alt="Expertise" className="w-16 h-16" />
+          </div>
+        </div>
+
         {/* RIGHT – Light panel */}
-        <div className="bg-gray-200 w-full lg:w-1/2 rounded-r-[90px] rounded-l-xl px-10 py-12 shadow-xl">
+        <div className="bg-gray-200 w-full rounded-r-[90px] rounded-l-xl px-10 py-12 shadow-xl lg:rounded-r-[90px] lg:rounded-l-xl">
           <ul className="space-y-4 text-sm text-gray-800 leading-relaxed">
             {rightExpertise.map((item, index) => (
               <li key={index} className="flex items-start gap-3">
@@ -74,6 +75,7 @@ const Expertise = () => {
           <div className="mt-8">
             <Button label="More Projects >>>" />
           </div>
+        </div>
         </div>
       </div>
     </section>

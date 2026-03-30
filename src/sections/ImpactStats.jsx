@@ -41,7 +41,7 @@ const CountUpNumber = ({ end, suffix, delay = 0, color, isInView }) => {
   }, [isInView, end, delay]);
 
   return (
-    <span className={`${color === "orange" ? "text-orange" : "text-red"}`}>
+    <span className={`${color === "orange" ? "text-orange" : "text-orange/90"}`}>
       {count.toLocaleString()}{suffix}
     </span>
   );
@@ -58,12 +58,12 @@ const ImpactStats = () => {
       description: "Individuals directly impacted by our programs",
     },
     {
-      icon: FaGlobe,
-      number: 8,
+      icon: FaAward,
+      number: 100,
       suffix: "+",
-      label: "Countries",
+      label: "Projects",
       color: "red",
-      description: "Active operations across Sub-Saharan Africa",
+      description: "Successful projects completed",
     },
     {
       icon: FaHandshake,
@@ -74,12 +74,12 @@ const ImpactStats = () => {
       description: "Collaborative partnerships worldwide",
     },
     {
-      icon: FaAward,
-      number: 100,
+      icon: FaGlobe,
+      number: 8,
       suffix: "+",
-      label: "Projects",
+      label: "Countries",
       color: "red",
-      description: "Successful projects completed",
+      description: "Active operations across Sub-Saharan Africa",
     },
   ];
 
@@ -88,7 +88,7 @@ const ImpactStats = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header - Consistent Style */}
         <motion.div
-          className="text-center mb-12 md:mb-16"
+          className="text-center mb-8 md:mb-10"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -112,7 +112,7 @@ const ImpactStats = () => {
               Our Impact
             </motion.h2>
             <motion.div
-              className="h-1 bg-red flex-1 max-w-16 sm:max-w-24 md:max-w-32"
+              className="h-1 bg-orange flex-1 max-w-16 sm:max-w-24 md:max-w-32"
               initial={{ width: 0 }}
               whileInView={{ width: "100%" }}
               viewport={{ once: true }}
@@ -140,7 +140,7 @@ const ImpactStats = () => {
               >
                 <motion.div
                   className={`w-16 h-16 rounded-full flex items-center justify-center mb-6 ${
-                    stat.color === "orange" ? "bg-orange/10 text-orange" : "bg-red/10 text-red"
+                    stat.color === "orange" ? "bg-orange/10 text-orange" : "bg-orange/10 text-orange/90"
                   } group-hover:scale-110 transition-transform duration-300`}
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}

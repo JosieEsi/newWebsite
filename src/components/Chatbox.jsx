@@ -77,7 +77,7 @@ const Chatbox = () => {
                 className={`mt-1 p-3 text-sm rounded-lg ${
                   msg.user === "me"
                     ? "bg-orange text-white"
-                    : "bg-red text-white"
+                    : "bg-orange/85 text-white"
                 }`}
               >
                 {msg.text}

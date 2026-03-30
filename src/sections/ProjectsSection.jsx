@@ -28,7 +28,7 @@ const ProjectsSection = () => {
 
   return (
     <section className="bg-gray-100 py-20">
-      <h2 className="text-3xl font-bold text-orange text-center mb-12">
+      <h2 className="text-3xl font-bold text-orange text-center mb-8">
         Our Projects
       </h2>
 

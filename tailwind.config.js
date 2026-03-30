@@ -22,6 +22,7 @@ export default {
         orange: "#F89A23",
         red: "#F75123",
         ash: "#393636",
+        grey: "#878787",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

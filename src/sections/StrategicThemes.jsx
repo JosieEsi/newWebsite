@@ -20,7 +20,7 @@ const themes = [
 const StrategicThemes = () => {
   return (
     <section className="py-24 bg-gray-100">
-      <h2 className="text-center text-3xl font-bold text-orange mb-14">
+      <h2 className="text-center text-3xl font-bold text-orange mb-8">
         Strategic Themes
       </h2>
 

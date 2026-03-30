@@ -31,7 +31,7 @@ const Work = () => {
               alt="Map"
               className="object-contain w-full max-w-full h-auto shadow-2xl rounded-2xl"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-orange/10 to-red/10 rounded-2xl -z-10 blur-xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-orange/10 to-orange/10 rounded-2xl -z-10 blur-xl"></div>
           </motion.div>
         </motion.div>
         
@@ -43,8 +43,8 @@ const Work = () => {
           transition={{ duration: 0.6 }}
         >
           {/* Section Header - Consistent Style */}
-          <div className="mb-8">
-            <div className="flex items-center gap-4 mb-6">
+          <div className="mb-5">
+            <div className="flex items-center gap-4 mb-4">
               <motion.div
                 className="h-1 bg-orange flex-1"
                 initial={{ width: 0 }}
@@ -62,7 +62,7 @@ const Work = () => {
                 {t("work.whereWeWork")}
               </motion.h2>
               <motion.div
-                className="h-1 bg-red flex-1"
+                className="h-1 bg-orange flex-1"
                 initial={{ width: 0 }}
                 whileInView={{ width: "100%" }}
                 viewport={{ once: true }}

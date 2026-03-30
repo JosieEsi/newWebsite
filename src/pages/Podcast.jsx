@@ -57,7 +57,7 @@ const Podcast = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <div className="bg-gradient-to-r from-orange to-red rounded-2xl p-6 md:p-8 shadow-xl">
+        <div className="bg-gradient-to-r from-orange to-orange/85 rounded-2xl p-6 md:p-8 shadow-xl">
           <div className="flex flex-col md:flex-row items-center gap-6">
             <motion.img
               src={micro}
@@ -117,7 +117,7 @@ const Podcast = () => {
 
       {/* Episodes List */}
       <motion.div
-        className="w-full max-w-6xl mx-auto mb-12 px-4 sm:px-6 lg:px-8"
+        className="w-full max-w-6xl mx-auto mb-8 px-4 sm:px-6 lg:px-8"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -127,7 +127,7 @@ const Podcast = () => {
         
         {/* Coming Soon Section */}
         <motion.div
-          className="bg-gradient-to-br from-orange/10 via-red/10 to-orange/5 rounded-2xl p-12 md:p-16 shadow-lg border-2 border-dashed border-orange/30"
+          className="bg-gradient-to-br from-orange/10 via-orange/10 to-orange/5 rounded-2xl p-12 md:p-16 shadow-lg border-2 border-dashed border-orange/30"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -176,7 +176,7 @@ const Podcast = () => {
 
       {/* Newsletter Section */}
       <motion.div
-        className="w-full max-w-6xl mx-auto mb-12 px-4 sm:px-6 lg:px-8"
+        className="w-full max-w-6xl mx-auto mb-8 px-4 sm:px-6 lg:px-8"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}

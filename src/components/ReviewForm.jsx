@@ -55,7 +55,7 @@ const ReviewForm = ({ closeModal }) => {
     <div className="flex flex-col space-y-4 font-poppins">
       {/* Show thank you message after form submission */}
       {submitted ? (
-        <div className="mt-4 p-3 rounded-lg bg-red text-white text-center font-poppins">
+        <div className="mt-4 p-3 rounded-lg bg-orange text-white text-center font-poppins">
           Thank you for submitting your review!
         </div>
       ) : (
@@ -141,7 +141,7 @@ const ReviewForm = ({ closeModal }) => {
 
           <button
             type="submit"
-            className="bg-orange text-white py-2 px-4 rounded-lg hover:bg-red font-poppins"
+            className="bg-orange text-white py-2 px-4 rounded-lg hover:bg-orange/90 font-poppins"
             disabled={isSubmitting}
           >
             {isSubmitting ? "Submitting..." : "Submit Review"}

@@ -237,7 +237,7 @@ const CCLP = () => {
 
       {/* Project Components Section */}
       <div className="pt-5 bg-gray-100">
-        <h2 className="font-poppins font-semibold text-2xl text-center text-red mb-8 justify-center">
+        <h2 className="font-poppins font-semibold text-2xl text-center text-orange mb-8 justify-center">
           Project Objectives
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -279,7 +279,7 @@ const CCLP = () => {
 
       {/* Project Goals Section */}
       <div className="py-12 bg-white">
-        <h2 className="font-poppins font-semibold text-2xl text-center text-red mb-8">
+        <h2 className="font-poppins font-semibold text-2xl text-center text-orange mb-8">
           Rationale for Reading Festival & Competitions
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -315,7 +315,7 @@ const CCLP = () => {
 
       {/* Reading Competition Flow Section */}
       <div className="py-12  bg-white">
-        <h2 className="font-poppins font-semibold text-3xl text-center text-red mb-8 mx-auto">
+        <h2 className="font-poppins font-semibold text-3xl text-center text-orange mb-8 mx-auto">
           Reading Festival & Competitions Structure
         </h2>
         <div className="max-w-5xl mx-auto">
@@ -337,7 +337,7 @@ const CCLP = () => {
 
       {/* Success Stories Slider */}
       <section className="py-16 px-8 text-center bg-gray-100">
-        <h2 className="text-3xl font-bold text-red">Stories of Change</h2>
+        <h2 className="text-3xl font-bold text-orange">Stories of Change</h2>
         <p className="mt-6 text-gray-700">
           Read about the real impact of our project on the lives of children and
           families.

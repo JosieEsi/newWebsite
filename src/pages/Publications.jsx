@@ -73,7 +73,7 @@ const Publications = () => {
         <div className="flex flex-wrap justify-center gap-6">
           <motion.a
             href="/podcast-and-vodcast"
-            className="w-20 h-20 bg-red rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"
+            className="w-20 h-20 bg-orange rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"
             whileHover={{ scale: 1.1, rotate: 5 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -81,7 +81,7 @@ const Publications = () => {
           </motion.a>
           <motion.a
             href="/photos"
-            className="w-20 h-20 bg-red rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"
+            className="w-20 h-20 bg-orange rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"
             whileHover={{ scale: 1.1, rotate: 5 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -89,7 +89,7 @@ const Publications = () => {
           </motion.a>
           <motion.a
             href="/videos"
-            className="w-20 h-20 bg-red rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"
+            className="w-20 h-20 bg-orange rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"
             whileHover={{ scale: 1.1, rotate: 5 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -100,7 +100,7 @@ const Publications = () => {
 
       {/* Featured Publication */}
       <motion.div
-        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-16"
+        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-10"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -108,7 +108,7 @@ const Publications = () => {
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <motion.div
-            className="bg-gradient-to-br from-orange to-red rounded-2xl p-6 shadow-xl"
+            className="bg-gradient-to-br from-orange to-orange/85 rounded-2xl p-6 shadow-xl"
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
@@ -178,7 +178,7 @@ const Publications = () => {
 
       {/* Filterable Table */}
       <motion.div
-        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12"
+        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -189,7 +189,7 @@ const Publications = () => {
 
       {/* Newsletters Gallery */}
       <motion.div
-        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16"
+        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -239,7 +239,7 @@ const Publications = () => {
 
       {/* Newsletter Section - Fixed spacing */}
       <motion.div
-        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 mt-8"
+        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 mt-8"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}

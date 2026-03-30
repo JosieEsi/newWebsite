@@ -33,7 +33,7 @@ const WhatWeDo = () => {
       icon: FaSearch,
       title: t("whatWeDo.services.research.title"),
       description: t("whatWeDo.services.research.description"),
-      color: "from-orange to-red",
+      color: "from-orange to-orange/85",
       bgColor: "bg-orange/10",
       iconColor: "text-orange",
     },
@@ -41,15 +41,15 @@ const WhatWeDo = () => {
       icon: FaChartBar,
       title: t("whatWeDo.services.impact.title"),
       description: t("whatWeDo.services.impact.description"),
-      color: "from-red to-orange",
-      bgColor: "bg-red/10",
-      iconColor: "text-red",
+      color: "from-orange/80 to-orange",
+      bgColor: "bg-orange/10",
+      iconColor: "text-orange",
     },
     {
       icon: FaBook,
       title: t("whatWeDo.services.synthesis.title"),
       description: t("whatWeDo.services.synthesis.description"),
-      color: "from-orange to-red",
+      color: "from-orange to-orange/85",
       bgColor: "bg-orange/10",
       iconColor: "text-orange",
     },
@@ -57,9 +57,9 @@ const WhatWeDo = () => {
       icon: FaUsersCog,
       title: t("whatWeDo.services.learning.title"),
       description: t("whatWeDo.services.learning.description"),
-      color: "from-red to-orange",
-      bgColor: "bg-red/10",
-      iconColor: "text-red",
+      color: "from-orange/80 to-orange",
+      bgColor: "bg-orange/10",
+      iconColor: "text-orange",
     },
   ], [t]);
 
@@ -69,35 +69,35 @@ const WhatWeDo = () => {
       title: t("whatWeDo.objectives.international.title"),
       description: t("whatWeDo.objectives.international.description"),
       icon: FaGlobe,
-      color: "from-orange to-red",
+      color: "from-orange to-orange/85",
     },
     {
       number: "02",
       title: t("whatWeDo.objectives.partnership.title"),
       description: t("whatWeDo.objectives.partnership.description"),
       icon: FaHandshake,
-      color: "from-red to-orange",
+      color: "from-orange/80 to-orange",
     },
     {
       number: "03",
       title: t("whatWeDo.objectives.peopleCentered.title"),
       description: t("whatWeDo.objectives.peopleCentered.description"),
       icon: FaUsers,
-      color: "from-orange to-red",
+      color: "from-orange to-orange/85",
     },
     {
       number: "04",
       title: t("whatWeDo.objectives.staffWelfare.title"),
       description: t("whatWeDo.objectives.staffWelfare.description"),
       icon: FaUsers,
-      color: "from-red to-orange",
+      color: "from-orange/80 to-orange",
     },
     {
       number: "05",
       title: t("whatWeDo.objectives.financial.title"),
       description: t("whatWeDo.objectives.financial.description"),
       icon: FaDollarSign,
-      color: "from-orange to-red",
+      color: "from-orange to-orange/85",
     },
   ], [t]);
 
@@ -122,7 +122,7 @@ const WhatWeDo = () => {
       className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 group"
       aria-label="Previous"
     >
-      <FaChevronLeft className="text-orange group-hover:text-red transition-colors" />
+      <FaChevronLeft className="text-orange group-hover:text-orange/80 transition-colors" />
     </button>
   );
 
@@ -132,7 +132,7 @@ const WhatWeDo = () => {
       className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 group"
       aria-label="Next"
     >
-      <FaChevronRight className="text-orange group-hover:text-red transition-colors" />
+      <FaChevronRight className="text-orange group-hover:text-orange/80 transition-colors" />
     </button>
   );
 
@@ -198,7 +198,7 @@ const WhatWeDo = () => {
           }}
         />
         <motion.div
-          className="absolute bottom-20 left-20 w-40 h-40 bg-red/20 rounded-full blur-3xl"
+          className="absolute bottom-20 left-20 w-40 h-40 bg-orange/20 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -226,7 +226,7 @@ const WhatWeDo = () => {
               What We Do
             </motion.h1>
             <motion.div
-              className="w-32 h-1 bg-gradient-to-r from-orange to-red mx-auto rounded-full"
+              className="w-32 h-1 bg-gradient-to-r from-orange to-orange/85 mx-auto rounded-full"
               initial={{ width: 0 }}
               animate={{ width: 128 }}
               transition={{ delay: 0.8, duration: 0.6 }}
@@ -239,14 +239,14 @@ const WhatWeDo = () => {
       <section className="w-full px-4 sm:px-6 lg:px-8 py-20 md:py-28 bg-gradient-to-b from-white via-gray-50/50 to-white">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            className="text-center mb-16"
+            className="text-center mb-10"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             <motion.h2
-              className="text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange to-red mb-4"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange to-orange/85 mb-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -255,7 +255,7 @@ const WhatWeDo = () => {
               Our Core Services
             </motion.h2>
             <motion.div
-              className="w-24 h-1 bg-gradient-to-r from-orange to-red mx-auto rounded-full"
+              className="w-24 h-1 bg-gradient-to-r from-orange to-orange/85 mx-auto rounded-full"
               initial={{ width: 0 }}
               whileInView={{ width: 96 }}
               viewport={{ once: true }}
@@ -292,12 +292,12 @@ const WhatWeDo = () => {
                   >
                     <Icon className={`text-4xl ${service.iconColor}`} />
                     <motion.div
-                      className="absolute inset-0 bg-gradient-to-br from-orange/20 to-red/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                      className="absolute inset-0 bg-gradient-to-br from-orange/20 to-orange/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                     />
                   </motion.div>
 
                   {/* Content */}
-                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-orange group-hover:to-red transition-all duration-500">
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-orange group-hover:to-orange/85 transition-all duration-500">
                     {service.title}
                   </h3>
                   <p className="text-gray-600 text-base md:text-lg leading-relaxed">
@@ -322,11 +322,11 @@ const WhatWeDo = () => {
       <section className="w-full px-4 sm:px-6 lg:px-8 py-20 md:py-28 bg-gradient-to-br from-gray-50 via-orange/5 to-gray-50 relative overflow-hidden">
         {/* Background Decoration */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-orange/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-red/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange/5 rounded-full blur-3xl"></div>
 
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
-            className="text-center mb-16"
+            className="text-center mb-10"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -342,7 +342,7 @@ const WhatWeDo = () => {
               </h2>
             </motion.div>
             <motion.div
-              className="w-24 h-1 bg-gradient-to-r from-orange to-red mx-auto rounded-full"
+              className="w-24 h-1 bg-gradient-to-r from-orange to-orange/85 mx-auto rounded-full"
               initial={{ width: 0 }}
               whileInView={{ width: 96 }}
               viewport={{ once: true }}
@@ -414,14 +414,14 @@ const WhatWeDo = () => {
         className="w-full px-4 sm:px-6 lg:px-8 py-20 md:py-28 bg-gradient-to-b from-white to-gray-50"
       >
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-10"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           <motion.h2
-            className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange to-red mb-4"
+            className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange to-orange/85 mb-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -429,8 +429,17 @@ const WhatWeDo = () => {
           >
             {t("whatWeDo.title")}
           </motion.h2>
+          <motion.p
+            className="mt-5 max-w-3xl mx-auto text-base md:text-lg text-gray-600 leading-relaxed font-poppins px-2"
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.25, duration: 0.5 }}
+          >
+            {t("whatWeDo.objectivesSectionSubtitle")}
+          </motion.p>
           <motion.div
-            className="w-24 h-1 bg-gradient-to-r from-orange to-red mx-auto rounded-full"
+            className="w-24 h-1 bg-gradient-to-r from-orange to-orange/85 mx-auto rounded-full mt-8"
             initial={{ width: 0 }}
             whileInView={{ width: 96 }}
             viewport={{ once: true }}
@@ -531,12 +540,12 @@ const WhatWeDo = () => {
         {/* Background Decoration */}
         <div className="absolute top-0 left-0 w-full h-full opacity-5">
           <div className="absolute top-20 left-20 w-64 h-64 bg-orange rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-64 h-64 bg-red rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-64 h-64 bg-orange/35 rounded-full blur-3xl"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
-            className="text-center mb-16"
+            className="text-center mb-10"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -547,13 +556,13 @@ const WhatWeDo = () => {
               whileHover={{ scale: 1.1 }}
             >
               <motion.div
-                className="bg-gradient-to-br from-orange to-red rounded-full p-4 shadow-xl"
+                className="bg-gradient-to-br from-orange to-orange/85 rounded-full p-4 shadow-xl"
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.6 }}
               >
                 <img src={clipboard} alt="Projects" className="w-8 h-8" />
               </motion.div>
-              <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange to-red">
+              <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange to-orange/85">
                 Current Projects
               </h2>
             </motion.div>
@@ -573,7 +582,7 @@ const WhatWeDo = () => {
               {currentProjects.map((project, index) => {
                 const colors = project.color === "orange" 
                   ? { bg: "bg-orange", text: "text-orange", border: "border-orange" }
-                  : { bg: "bg-red", text: "text-red", border: "border-red" };
+                  : { bg: "bg-orange", text: "text-orange", border: "border-orange" };
                 
                 return (
                   <div key={project.id} className="px-3">
@@ -653,29 +662,17 @@ const WhatWeDo = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-orange text-center mb-3">
             {t("whatWeDo.expertise")}
           </h2>
-          <p className="text-center mt-3 text-gray-600 text-lg mb-12">
+          <p className="text-center mt-3 text-gray-600 text-lg mb-8">
             {t("whatWeDo.expertiseSubtitle")}
           </p>
         </motion.div>
 
-        {/* Content */}
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Icon */}
-          <motion.div
-            className="absolute -left-6 top-1/2 -translate-y-1/2 hidden lg:flex bg-orange w-28 h-28 rounded-full items-center justify-center shadow-xl z-10"
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3, type: "spring", stiffness: 200 }}
-            whileHover={{ rotate: 360, scale: 1.1 }}
-          >
-            <img src={bulb} alt="Expertise" className="w-16 h-16" />
-          </motion.div>
-
-          <div className="flex flex-col lg:flex-row items-stretch gap-6 lg:gap-8">
+        {/* Content: left column | centered icon | right column */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] gap-6 lg:gap-4 items-stretch">
             {/* LEFT – Black panel */}
             <motion.div
-              className="bg-gradient-to-br from-gray-900 to-black text-white w-full lg:w-1/2 rounded-2xl lg:rounded-l-[90px] lg:rounded-r-xl px-6 md:px-10 py-12 shadow-2xl"
+              className="bg-gradient-to-br from-gray-900 to-black text-white w-full rounded-2xl lg:rounded-l-[90px] lg:rounded-r-xl px-6 md:px-10 py-12 shadow-2xl"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -700,9 +697,23 @@ const WhatWeDo = () => {
               </ul>
             </motion.div>
 
+            {/* Icon – vertically centered between the two columns */}
+            <div className="flex justify-center items-center py-4 lg:py-0 lg:self-stretch">
+              <motion.div
+                className="flex bg-orange w-24 h-24 sm:w-28 sm:h-28 shrink-0 rounded-full items-center justify-center shadow-xl z-10"
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3, type: "spring", stiffness: 200 }}
+                whileHover={{ rotate: 360, scale: 1.1 }}
+              >
+                <img src={bulb} alt="Expertise" className="w-14 h-14 sm:w-16 sm:h-16" />
+              </motion.div>
+            </div>
+
             {/* RIGHT – Light panel */}
             <motion.div
-              className="bg-gradient-to-br from-gray-100 to-gray-200 w-full lg:w-1/2 rounded-2xl lg:rounded-r-[90px] lg:rounded-l-xl px-6 md:px-10 py-12 shadow-2xl"
+              className="bg-gradient-to-br from-gray-100 to-gray-200 w-full rounded-2xl lg:rounded-r-[90px] lg:rounded-l-xl px-6 md:px-10 py-12 shadow-2xl"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}

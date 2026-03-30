@@ -53,7 +53,7 @@ const MailingListPopup = ({ isOpen, onClose }) => {
             <button
               type="button"
               onClick={onClose}
-              className="absolute right-3 top-3 p-2 text-gray-500 hover:text-red transition-colors"
+              className="absolute right-3 top-3 p-2 text-gray-500 hover:text-orange/80 transition-colors"
               aria-label="Close subscription popup"
             >
               <FaTimes />

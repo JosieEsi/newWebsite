@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaSearch, FaChartBar, FaBook, FaUsersCog, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
 import { Link } from "react-router-dom";
 
@@ -12,7 +12,6 @@ const WhatWeDoSlider = () => {
   const services = useMemo(() => [
     {
       number: "01",
-      icon: FaSearch,
       title: t("whatWeDo.services.research.title"),
       description: t("whatWeDo.services.research.description"),
       accent: "orange",
@@ -20,15 +19,13 @@ const WhatWeDoSlider = () => {
     },
     {
       number: "02",
-      icon: FaChartBar,
       title: t("whatWeDo.services.impact.title"),
       description: t("whatWeDo.services.impact.description"),
-      accent: "red",
+      accent: "orange",
       position: "right",
     },
     {
       number: "03",
-      icon: FaBook,
       title: t("whatWeDo.services.synthesis.title"),
       description: t("whatWeDo.services.synthesis.description"),
       accent: "orange",
@@ -36,10 +33,9 @@ const WhatWeDoSlider = () => {
     },
     {
       number: "04",
-      icon: FaUsersCog,
       title: t("whatWeDo.services.learning.title"),
       description: t("whatWeDo.services.learning.description"),
-      accent: "red",
+      accent: "orange",
       position: "right",
     },
   ], [t]);
@@ -81,7 +77,6 @@ const WhatWeDoSlider = () => {
   }, [services.length]);
 
   const currentService = services[currentIndex];
-  const Icon = currentService.icon;
   const isEven = currentIndex % 2 === 0;
 
   return (
@@ -102,7 +97,7 @@ const WhatWeDoSlider = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header - Minimalist */}
         <motion.div
-          className="mb-16 md:mb-24"
+          className="mb-10 md:mb-14"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -126,7 +121,7 @@ const WhatWeDoSlider = () => {
               What We Do
             </motion.h2>
             <motion.div
-              className="h-1 bg-red flex-1 max-w-16 sm:max-w-24 md:max-w-32"
+              className="h-1 bg-orange flex-1 max-w-16 sm:max-w-24 md:max-w-32"
               initial={{ width: 0 }}
               whileInView={{ width: "100%" }}
               viewport={{ once: true }}
@@ -154,7 +149,7 @@ const WhatWeDoSlider = () => {
               {/* Large Number Background */}
               <motion.div
               className={`relative w-full md:w-2/5 h-[250px] sm:h-[300px] md:h-[500px] flex items-center justify-center overflow-hidden ${
-                currentService.accent === "orange" ? "bg-orange/5" : "bg-red/5"
+                currentService.accent === "orange" ? "bg-orange/5" : "bg-orange/8"
               }`}
                 style={{
                   clipPath: isEven 
@@ -168,7 +163,7 @@ const WhatWeDoSlider = () => {
                 {/* Diagonal Accent Line */}
                 <motion.div
                   className={`absolute inset-0 ${
-                    currentService.accent === "orange" ? "bg-orange" : "bg-red"
+                    currentService.accent === "orange" ? "bg-orange" : "bg-orange/90"
                   }`}
                   style={{
                     clipPath: isEven
@@ -187,25 +182,15 @@ const WhatWeDoSlider = () => {
                   animate={{ scale: 1, rotate: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
                 >
-                  <span className={`text-[120px] sm:text-[180px] md:text-[280px] lg:text-[380px] font-black ${
-                    currentService.accent === "orange" ? "text-orange/10" : "text-red/10"
-                  } leading-none select-none`}>
+                  <span
+                    className={`text-[120px] sm:text-[180px] md:text-[280px] lg:text-[380px] font-black leading-none select-none tracking-tight ${
+                      currentService.accent === "orange"
+                        ? "text-orange/35 sm:text-orange/40"
+                        : "text-orange/40 sm:text-orange/45"
+                    }`}
+                  >
                     {currentService.number}
                   </span>
-                </motion.div>
-
-                {/* Icon Overlay */}
-                <motion.div
-                  className={`absolute top-4 sm:top-8 ${isEven ? 'right-4 sm:right-8' : 'left-4 sm:left-8'} z-20`}
-                  initial={{ scale: 0, rotate: -180 }}
-                  animate={{ scale: 1, rotate: 0 }}
-                  transition={{ duration: 0.6, delay: 0.5, type: "spring" }}
-                >
-                  <div className={`w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center ${
-                    currentService.accent === "orange" ? "bg-orange" : "bg-red"
-                  } shadow-2xl`}>
-                    <Icon className="text-white text-2xl sm:text-3xl" />
-                  </div>
                 </motion.div>
               </motion.div>
 
@@ -220,7 +205,7 @@ const WhatWeDoSlider = () => {
                 <div className="relative">
                   <motion.h3
                     className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 ${
-                      currentService.accent === "orange" ? "text-orange" : "text-red"
+                      currentService.accent === "orange" ? "text-orange" : "text-orange/90"
                     }`}
                     initial={{ letterSpacing: "0.2em", opacity: 0 }}
                     animate={{ letterSpacing: "0em", opacity: 1 }}
@@ -230,7 +215,7 @@ const WhatWeDoSlider = () => {
                   </motion.h3>
                   <motion.div
                     className={`h-1 ${
-                      currentService.accent === "orange" ? "bg-orange" : "bg-red"
+                      currentService.accent === "orange" ? "bg-orange" : "bg-orange/90"
                     }`}
                     initial={{ width: 0 }}
                     animate={{ width: "100%" }}
@@ -256,10 +241,10 @@ const WhatWeDoSlider = () => {
                   transition={{ duration: 0.6, delay: 0.8 }}
                 >
                   <div className={`h-0.5 w-16 ${
-                    currentService.accent === "orange" ? "bg-orange" : "bg-red"
+                    currentService.accent === "orange" ? "bg-orange" : "bg-orange/90"
                   }`} />
-                  <span className={`text-sm font-semibold uppercase tracking-wider ${
-                    currentService.accent === "orange" ? "text-orange" : "text-red"
+                  <span className={`text-sm font-bold uppercase tracking-wider ${
+                    currentService.accent === "orange" ? "text-orange" : "text-orange/90"
                   }`}>
                     Service {currentService.number}
                   </span>
@@ -278,10 +263,10 @@ const WhatWeDoSlider = () => {
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-2 sm:right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white/90 hover:bg-white border-2 border-gray-200 hover:border-red flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 group"
+            className="absolute right-2 sm:right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white/90 hover:bg-white border-2 border-gray-200 hover:border-orange flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 group"
             aria-label="Next"
           >
-            <FaChevronRight className="text-gray-600 group-hover:text-red transition-colors text-base sm:text-lg md:text-xl" />
+            <FaChevronRight className="text-gray-600 group-hover:text-orange/80 transition-colors text-base sm:text-lg md:text-xl" />
           </button>
 
           {/* Dots Indicator */}
@@ -297,7 +282,7 @@ const WhatWeDoSlider = () => {
                   index === currentIndex
                     ? services[index].accent === "orange"
                       ? "bg-orange w-8"
-                      : "bg-red w-8"
+                      : "bg-orange/90 w-8"
                     : "bg-gray-300 hover:bg-gray-400"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}

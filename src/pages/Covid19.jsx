@@ -58,7 +58,7 @@ const Covid19 = () => {
 
       {/* Publications List */}
       <motion.div
-        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-16"
+        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-10"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -125,13 +125,13 @@ const Covid19 = () => {
 
       {/* Info Section */}
       <motion.div
-        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16"
+        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <div className="bg-gradient-to-r from-orange/10 to-red/10 rounded-2xl p-8 md:p-10 border-l-4 border-orange">
+        <div className="bg-gradient-to-r from-orange/10 to-orange/10 rounded-2xl p-8 md:p-10 border-l-4 border-orange">
           <h2 className="font-bold text-2xl md:text-3xl mb-4 text-gray-800">
             {t("covid19.aboutTitle")}
           </h2>

@@ -59,13 +59,13 @@ const Videos = () => {
 
       {/* Main Video Section */}
       <motion.section
-        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-16"
+        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
         {/* Main Video - Centered with Title on Right */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8 items-center">
           <motion.div
             className="lg:col-span-2 order-2 lg:order-1"
             initial={{ opacity: 0, x: -20 }}
@@ -94,7 +94,7 @@ const Videos = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="bg-gradient-to-br from-orange to-red rounded-xl p-6 shadow-xl">
+            <div className="bg-gradient-to-br from-orange to-orange/85 rounded-xl p-6 shadow-xl">
               <h2 className="text-xl md:text-2xl font-bold text-white mb-4 leading-tight">
                 {videos[0].title}
               </h2>

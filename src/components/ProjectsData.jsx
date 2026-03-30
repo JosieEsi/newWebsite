@@ -73,6 +73,23 @@ import {
   image2,
   mission,
   africateam,
+  iapghana,
+  bbiga,
+  tonytree,
+  iapcd,
+  picture5,
+  ecomgals,
+  fivsla,
+  iapic,
+  sucdenvsla,
+  enroutecd,
+  ecomncp,
+  wcwork,
+  yfi,
+  impactmars,
+  unhcr,
+  afrikids,
+  stcla,
 } from "../assets/images";
 
 export const projects = [
@@ -94,13 +111,13 @@ export const projects = [
     category: "Research & Evaluation",
     location: "Ghana",
     status: "Completed",
-    color: "red",
+    color: "orange",
   },
   {
     id: 2,
     slug: "nestle-income-accelerator-programme-iap-2-ghana",
     title: "Nestlé Income Accelerator Programme (IAP) 2 [Ghana]",
-    image: vsla,
+    image: iapghana,
     description: "Supporting enhanced cocoa incomes in Ghana through micro-enterprise capacity building.",
     fullDescription: "Working with Nestlé to enhance cocoa farmer incomes through income diversification, VSLA group formation, and micro-enterprise development.",
     snapshot: "In Ghana, the programme still has the overall goal of improving the livelihoods of cocoa-farming families, while advancing regenerative agriculture practices. Specifically, however, there are four pillars (the promotion of school enrolment; pruning; agroforestry; and income diversification). PDA is engaged for the pillar of income diversification, through the formation of VSLA groups for selected program beneficiaries and the restructuring of existing VSLA groups which have IAP beneficiaries.",
@@ -135,7 +152,7 @@ export const projects = [
     id: 3,
     slug: "beyond-beans-cocoa-farmer-census-and-market-analysis-for-igas",
     title: "Beyond Beans Cocoa Farmer Census and Market Analysis for IGAs",
-    image: farmer,
+    image: bbiga,
     description: "Collecting data to assess cocoa farmers' income generating activities.",
     fullDescription: "Comprehensive census and market analysis of cocoa farmers' income-generating activities (IGAs).",
     snapshot: "Participatory Development Associates (PDA) is supporting Beyond Beans in conducting a Cocoa Farmer Census and Market Analysis in the Ashanti Region of Ghana. The census is designed to identify the Income Generating Activities (IGAs) that farmers are currently engaged in or would like to pursue, while also uncovering the challenges they face—particularly beyond financial constraints, such as technical and capacity support needs. This information will feed into a market analysis of the most prominent IGAs, helping Beyond Beans assess their viability, profitability, and potential for cocoa farmers.", // COPY EXACT TEXT FROM LIVE SITE
@@ -157,13 +174,13 @@ export const projects = [
     category: "Cocoa Sector",
     location: "Ghana",
     status: "Ongoing",
-    color: "red",
+    color: "orange",
   },
   {
     id: 4,
     slug: "tonys-chocolonely-tree-tagging-survey-in-ghana-and-cote-divoire",
     title: "Tony's Chocolonely Tree Tagging Survey in Ghana and Cote d'Ivoire",
-    image: farmer,
+    image: tonytree,
     description: "Survey and data collection for tree tagging initiatives in cocoa communities.",
     fullDescription: "Collaborating with Tony's Chocolonely to conduct comprehensive tree tagging surveys in Ghana and Côte d'Ivoire.",
     snapshot: "Participatory Development Associates (PDA) is partnering with Tony’s Chocolonely to implement a Tree Tagging Survey in the Eastern and Ahafo Regions of Ghana, aimed at tagging all the trees of farmers within Tony’s supply chain. This initiative will provide accurate data to support traceability, sustainability efforts, and long-term farmer development.", // COPY EXACT TEXT FROM LIVE SITE
@@ -189,7 +206,7 @@ export const projects = [
     id: 5,
     slug: "nestle-income-accelerator-programme-iap-2-cote-divoire",
     title: "Nestlé Income Accelerator Programme (IAP) 2 [Côte D'Ivoire]",
-    image: vsla,
+    image: iapcd,
     description: "Income diversification programs for cocoa-farming families in Côte d'Ivoire.",
     fullDescription: "Extending the successful IAP model to Côte d'Ivoire, focusing on improving livelihoods of cocoa-farming families.",
     snapshot: "The Nestlé Income Accelerator Programme (IAP) is an initiative aimed at improving the livelihoods of cocoa-farming families in Côte D’Ivoire while advancing regenerative agriculture practices. In collaboration with Beyond Beans, PDA has been instrumental in forming 87 Village Savings and Loans Association (VSLA) groups. Seven field officers actively facilitate project activities, including financial literacy and gender empowerment training, leveraging the Gender Action Learning Systems (GALS) methodology to ensure inclusivity and impact.", // COPY EXACT TEXT FROM LIVE SITE
@@ -216,13 +233,13 @@ export const projects = [
     category: "Agriculture & Finance",
     location: "Côte d'Ivoire",
     status: "Ongoing",
-    color: "red",
+    color: "orange",
   },
   {
     id: 6,
     slug: "tonys-chocolonely-farmer-survey-in-ghana-and-cote-divoire",
     title: "Tony's Chocolonely Farmer Survey in Ghana and Cote d'Ivoire",
-    image: farmer,
+    image: picture5,
     description: "Comprehensive farmer survey to assess conditions and needs in cocoa communities.",
     fullDescription: "Conducting detailed surveys with cocoa farmers in Ghana and Côte d'Ivoire to understand their challenges, needs, and opportunities.",
     snapshot: "Participatory Development Associates (PDA) is supporting Tony’s Chocolonely in conducting a farmer survey across Ghana and Côte d’Ivoire, engaging 1,303 cocoa farmers. The survey seeks to better understand the living conditions of cocoa farmers and address critical issues such as poverty and child labor within the cocoa supply chain. Insights from the survey will guide Tony’s in refining its sourcing approach and investing more effectively in community development initiatives.", // COPY EXACT TEXT FROM LIVE SITE
@@ -281,7 +298,7 @@ export const projects = [
     category: "Education & Child Literacy",
     location: "Ghana",
     status: "Ongoing",
-    color: "red",
+    color: "orange",
    // detailLink: "/pdaafrica/cocoa-communities-library-project",
   },
   {
@@ -343,13 +360,13 @@ export const projects = [
     category: "Women's Economic Empowerment",
     location: "Ghana",
     status: "Ongoing",
-    color: "red",
+    color: "orange",
   },
   {
     id: 10,
     slug: "new-ecom-vsla-gals-project",
     title: "New ECOM VSLA GALS Project",
-    image: vslagals,
+    image: ecomgals,
     description: "Economic and social empowerment through VSLA and GALS training for cocoa farmers.",
     fullDescription: "A financial inclusion and gender empowerment project aimed at building the economic and social capacities of cocoa farmers.",
     snapshot: "The VSLA-GALS project is a financial inclusion and gender empowerment project which is aimed at building the economic and social capacities of cocoa farmers in selected communities, Ofoase and Abenase in the Eastern Region, Dunkwa in the Central Region, Asankaragua in the Western North Region, Offinso in the Ashanti Region and Papase in Oti Region through Village Savings and Loans Association (VSLA) groups. The project is being implemented by Participatory Development Associates (PDA) in partnership with Lindt & Sprüngli Farming Program and ECOM.",
@@ -384,16 +401,29 @@ export const projects = [
     id: 11,
     slug: "financial-inclusion-and-vslas",
     title: "Financial Inclusion and VSLAs",
-    image: vsla,
+    image: fivsla,
     description: "Mobilizing, forming and training VSLA groups in communities for financial inclusion.",
     fullDescription: "Our Financial Inclusion program focuses on mobilizing, forming, and training Village Savings and Loans Association (VSLA) groups.",
-    snapshot: "", // COPY EXACT TEXT FROM LIVE SITE
-    howWeWentAboutIt: "", // COPY EXACT TEXT FROM LIVE SITE
-    objectives: [], // COPY EXACT OBJECTIVES FROM LIVE SITE
-    activities: [], // COPY EXACT ACTIVITIES FROM LIVE SITE
-    outcomes: [], // COPY EXACT OUTCOMES FROM LIVE SITE
-    partners: "", // COPY EXACT PARTNERS FROM LIVE SITE
-    period: "", // COPY EXACT PERIOD FROM LIVE SITE
+    snapshot: "PDA has a proven track record of partnering with communities and other development organizations to implement large-scale development interventions in promoting ethical and transparent commodity supply chains and communities over the last 21 years. The team is made up of experienced community facilitators, child labor and protection experts, field trainers, evaluators, and associates with several years of practice in the field. Through community mobilization, sensitization and facilitation, as well as project management, smallholder farmer capacity building and financial inclusion, our impact has reached across many communities in Ghana and Cote D’Ivoire particularly.",
+    howWeWentAboutIt: "PDA adopts a unique integrated VSLA (VSLA+) model as a self-facilitated platform to plug in sustainable development interventions. Our diverse and customizable VSLA+ modules and components allow for specific interventions to be co-designed with our partners for the greatest impact in target communities.",
+    objectives: [
+      "Promote ethical and transparent commodity supply chains and communities",
+      "Strengthen smallholder farmer capacity and financial inclusion",
+      "Co-design context-specific VSLA+ interventions for target communities",
+      "Expand impact across communities in Ghana and Côte d’Ivoire"
+    ],
+    activities: [
+      "Community mobilization, sensitization, and facilitation",
+      "Project management and field implementation",
+      "Smallholder farmer capacity building",
+      "Deployment of integrated VSLA+ modules with partners"
+    ],
+    outcomes: [
+      "Financial inclusion interventions implemented across many communities in Ghana and Côte d’Ivoire",
+      "Sustainable development interventions delivered through the VSLA+ platform"
+    ],
+    partners: "Various development organizations and community partners",
+    period: "Last 21 years",
     category: "Financial Inclusion",
     location: "Ghana, Côte d'Ivoire, Cameroon",
     status: "Ongoing",
@@ -407,17 +437,36 @@ export const projects = [
     image: ncrp,
     description: "Remediating identified child labour cases in the supply chain of Barry Callebaut (Nyonkopa).",
     fullDescription: "This project focuses on identifying and remediating child labour cases in the cocoa supply chain.",
-    snapshot: "", // COPY EXACT TEXT FROM LIVE SITE
-    howWeWentAboutIt: "", // COPY EXACT TEXT FROM LIVE SITE
-    objectives: [], // COPY EXACT OBJECTIVES FROM LIVE SITE
-    activities: [], // COPY EXACT ACTIVITIES FROM LIVE SITE
-    outcomes: [], // COPY EXACT OUTCOMES FROM LIVE SITE
+    snapshot: "Participatory Development Associates (PDA), in partnership with Right to Play and Nyonkopa, is implementing the Child Labor Remediation and Referral Systems initiative to strengthen child protection structures across Ghana’s cocoa-growing regions. The project focuses on improving referral systems, strengthening case management, and providing remediation support to safeguard vulnerable children and address child labor sustainably.",
+    howWeWentAboutIt: "A major milestone in 2025 was the large-scale referral of 6,078 child protection cases to the Department of Social Welfare across 58 districts in seven cocoa-growing regions. In Quarter 4 (October–December), efforts focused on reinforcing case management systems in line with government policies and procedures. Standard Operating Procedures (SOPs) were strengthened, and additional cases were formally documented within the Social Welfare Information Management System (SWIMS) to ensure proper tracking, follow-up, and accountability. PDA also trained 58 case managers on SWIMS, revitalized District Child Protection Committees (DCPCs), and strengthened 30 Community Child Protection Committees (CCPCs) in child labor-prone areas.",
+    objectives: [
+      "Strengthen child protection structures across cocoa-growing regions",
+      "Improve referral systems and case management for vulnerable children",
+      "Provide remediation support to address child labor sustainably",
+      "Build institutional and community capacity for child protection response"
+    ],
+    activities: [
+      "Referral of child protection cases to the Department of Social Welfare across cocoa-growing districts",
+      "Reinforcement of case management systems and SOPs",
+      "Documentation of cases in SWIMS for tracking and follow-up",
+      "Training of case managers on SWIMS",
+      "Revitalization of District Child Protection Committees (DCPCs)",
+      "Strengthening of Community Child Protection Committees (CCPCs)",
+      "Enrollment of vulnerable children into vocational training"
+    ],
+    outcomes: [
+      "6,078 child protection cases referred across 58 districts in seven cocoa-growing regions",
+      "8,689 beneficiaries reached across 68 districts in Ashanti, Eastern, Bono East, Ahafo, Central, Western, and Western North regions",
+      "58 case managers trained on SWIMS",
+      "30 Community Child Protection Committees strengthened",
+      "154 children enrolled in vocational training, with about 69% of identified vulnerable children transitioning into skills development programs"
+    ],
     partners: "Barry Callebaut (Nyonkopa)", // COPY EXACT PARTNERS FROM LIVE SITE
-    period: "", // COPY EXACT PERIOD FROM LIVE SITE
+    period: "2025 –",
     category: "Child Protection",
     location: "Ghana",
     status: "Ongoing",
-    color: "red",
+    color: "orange",
     detailLink: "/pdaafrica/nyonkopa-child-labour-remediation",
   },
 { id: 13,
@@ -426,12 +475,28 @@ export const projects = [
     image: fvr, 
     description: "Empowering Ghana's cocoa farmers through participatory local language radio.", 
     fullDescription: "We are working to empower 100,000 smallholder cocoa farmers in Ghana by raising under-represented voices.", 
-    snapshot: "", // COPY EXACT TEXT FROM LIVE SITE 
-    howWeWentAboutIt: "", // COPY EXACT TEXT FROM LIVE SITE 
-    objectives: [], // COPY EXACT OBJECTIVES FROM LIVE SITE 
-    activities: [], // COPY EXACT ACTIVITIES FROM LIVE SITE
-    outcomes: [], // COPY EXACT OUTCOMES FROM LIVE SITE 
-    partners: "", // COPY EXACT PARTNERS FROM LIVE SITE 
+    snapshot: "We are working to empower 100,000 smallholder cocoa farmers in Ghana by raising under-represented voices and connecting farmers with the knowledge they need to build resilient, inclusive and thriving cocoa communities through the power of participatory local-language FM radio.",
+    howWeWentAboutIt: "The Farmers’ Voice Radio Academy is a free training program for cocoa cooperatives, equipping them with the skills to design, produce, and broadcast engaging local-language FM radio programs tailored to the needs of cocoa farmers. The academy includes two in-person training workshops, individual coaching and technical support, networking through a community of practice, and a small grants competition for graduates ready to launch their programs.",
+    objectives: [
+      "Empower 100,000 smallholder cocoa farmers in Ghana through participatory local-language radio",
+      "Raise under-represented voices in cocoa communities",
+      "Equip cooperatives to design, produce, and broadcast farmer-centered radio programs",
+      "Improve access to agricultural, livelihood, and rights information for excluded groups"
+    ],
+    activities: [
+      "Two in-person training workshops for participating cooperatives",
+      "Individual coaching and technical support for radio content design and production",
+      "Networking and community-of-practice learning",
+      "Small grants competition for academy graduates to launch programs",
+      "Broadcast planning for relevant local FM stations in cocoa-growing communities"
+    ],
+    outcomes: [
+      "Cooperatives gain capacity to produce and manage local-language radio program series",
+      "Improved communication and engagement with cocoa producers, including women and tenant farmers",
+      "Greater farmer access to information on good agricultural practices, quality processing, agroforestry, sustainability, and alternative incomes",
+      "Increased awareness of women’s and children’s rights and child labor risks in rural communities"
+    ],
+    partners: "Farmers’ Voice Radio; PDA Africa",
     period: "2026", // COPY EXACT PERIOD FROM LIVE SITE 
     category: "Communication & Empowerment", 
     location: "Ghana", 
@@ -443,7 +508,7 @@ export const projects = [
     id: 14,
     slug: "nestle-income-accelerator-programme-cote-divoire",
     title: "Nestle Income Accelerator Programme [Cote D'Ivoire]",
-    image: vsla,
+    image: iapic,
     description: "Improving the livelihoods of cocoa-farming families through VSLA groups and Gender Action Learning Systems (GALS) training.",
     fullDescription: "The Nestlé Income Accelerator Program (IAP) aims to improve the livelihoods of cocoa-farming families, while advancing regenerative agriculture practices. PDA, in partnership with Beyond Beans, formed 77 VSLA groups under the project in Ivory Coast.",
     snapshot: "The Nestlé Income Accelerator Program (IAP) aims to improve the livelihoods of cocoa-farming families, while advancing regenerative agriculture practices. PDA, in partnership with Beyond Beans, formed 77 VSLA groups under the project in Ivory Coast. Between January to March 2024, 17 of the VSLA groups had their share outs and completed Gender Action Learning Systems (GALS) training for their members.",
@@ -478,7 +543,7 @@ export const projects = [
     id: 15,
     slug: "sucden-vsla-programme",
     title: "SUCDEN VSLA Programme",
-    image: vsla,
+    image: sucdenvsla,
     description: "Addressing cocoa sector challenges, improving women's earning capacity, and promoting financial literacy in Ghana.",
     fullDescription: "The Women's Empowerment, Access to Finance and Income Generation in Ghana project is aimed at addressing the primary challenges facing the cocoa sector in Ghana including low income, low productivity, lack of access to financial services and low financial literacy — which are all some of the root causes of child labour.",
     snapshot: "The Women's Empowerment, Access to Finance and Income Generation in Ghana project is aimed at addressing the primary challenges facing the cocoa sector in Ghana including low income, low productivity, lack of access to financial services and low financial literacy — which are all some of the root causes of child labour. The project is being implemented in Akontombra, Fosukrom and Adabokrom cocoa districts in the Western North region of Ghana in partnership with Sucden and Kuapa Kokoo Farmers' Union (KKFU).",
@@ -507,13 +572,13 @@ export const projects = [
     category: "Women's Economic Empowerment",
     location: "Western North Region, Ghana (Akontombra, Fosukrom, Adabokrom districts)",
     status: "Ongoing",
-    color: "red",
+    color: "orange",
   },
   {
     id: 16,
     slug: "enroute-project-cote-divoire",
     title: "Enroute Project [Cote D'Ivoire]",
-    image: vsla,
+    image: enroutecd,
     description: "Testing interventions for supporting farmers' living income and implementing VSLA-CHILD and Empowering Better Decisions (EBD) trainings.",
     fullDescription: "The Enroute Project seeks to identify the most cost-effective ways to support farmers to earn a living income. The project is testing three interventions: Cash transfer only, Cash transfer and services, Only services.",
     snapshot: "The Enroute Project seeks to identify the most cost-effective ways to support farmers to earn a living income. The project is testing three interventions: Cash transfer only, Cash transfer and services, Only services. Under these three interventions, PDA is working with selected household members from the cash transfer only group, to train them on a series of sessions dubbed Empowering Better Decisions. PDA is also implementing the VSLA-CHILD methodology for the remaining two groups of intervention areas.",
@@ -537,8 +602,8 @@ export const projects = [
       "Testing of three intervention models",
       "Data collection on cost-effectiveness of interventions"
     ],
-    partners: "", // ADD EXACT PARTNERS FROM LIVE SITE
-    period: "", // ADD EXACT PERIOD FROM LIVE SITE
+    partners: "Beyond Beans",
+    period: "2024 –",
     category: "Research & Finance",
     location: "Côte d'Ivoire",
     status: "Ongoing",
@@ -548,7 +613,7 @@ export const projects = [
     id: 17,
     slug: "ecom-ncp-vsla-gals-programme",
     title: "ECOM/NCP VSLA-GALS Programme",
-    image: vsla,
+    image: ecomncp,
     description: "Building economic and social capacities of cocoa farmers in Ghana, focusing on financial inclusion and gender empowerment.",
     fullDescription: "The ECOM/NCP VSLA-GALS project is a financial inclusion and gender empowerment project which is aimed at building the economic and social capacities of cocoa farmers in selected communities in the Eastern and Central Region of Ghana through Village Savings and Loans Association (VSLA) groups.",
     snapshot: "The ECOM/NCP VSLA-GALS project is a financial inclusion and gender empowerment project which is aimed at building the economic and social capacities of cocoa farmers in selected communities in the Eastern and Central Region of Ghana through Village Savings and Loans Association (VSLA) groups. The project is being implemented by Participatory Development Associates (PDA) in partnership with Nestle Cocoa Plan (NCP) and ECOM.",
@@ -623,7 +688,7 @@ export const projects = [
     category: "Education and Literacy",
     location: "Ghana",
     status: "Ongoing",
-    color: "red",
+    color: "orange",
   },
   
   // Continue adding ALL remaining projects from live site (projects 19-100)
@@ -633,7 +698,7 @@ export const projects = [
     id: 19,
     slug: "we-can-work-inclusive-development-youth-disabilities",
     title: "We Can Work - Inclusive Development for Youth with Disabilities",
-    image: dpw,
+    image: wcwork,
     description: "Promoting inclusive development and economic opportunities for youth with disabilities across Ghana, Nigeria, and Senegal.",
     fullDescription: "A regional program that promotes inclusive development and economic opportunities for youth with disabilities. The program provides skills training, employment support, and advocates for inclusive policies and practices.",
     snapshot: "We Can Work is a program that promotes inclusive development and economic opportunities for youth with disabilities across Ghana, Nigeria, and Senegal. The program aims to break down barriers and create pathways for youth with disabilities to access education, skills training, employment, and entrepreneurship opportunities.",
@@ -662,7 +727,7 @@ export const projects = [
     category: "Inclusive Development",
     location: "Ghana, Nigeria, Senegal",
     status: "Ongoing",
-    color: "red",
+    color: "orange",
   },
   {
   id: 20,
@@ -704,7 +769,7 @@ export const projects = [
   id: 21,
   slug: "youth-forward-initiative-learning-partnership-ghana",
   title: "Youth Forward Initiative (YFI) Programme Learning Partnership in Ghana",
-  image: rand2,
+  image: yfi,
   description:
     "Learning partnership to assess youth employment and skills development interventions.",
   fullDescription:
@@ -732,7 +797,7 @@ export const projects = [
   category: "Youth Development; Research and Learning",
   location: "Ghana",
   status: "Completed",
-  color: "red",
+  color: "orange",
 },
 {
   id: 22,
@@ -773,7 +838,7 @@ export const projects = [
   id: 25,
   slug: "impact-project-mars-partnership",
   title: "iMPACT Project (Mars Partnership)",
-  image: rand11,
+  image: impactmars,
   description:
     "Supporting monitoring, learning, and impact assessment in cocoa communities.",
   fullDescription:
@@ -801,13 +866,13 @@ export const projects = [
   category: "Monitoring & Evaluation; Cocoa Sector",
   location: "Ghana",
   status: "Completed",
-  color: "red",
+  color: "orange",
 },
 {
   id: 26,
   slug: "unhcr-protection-risks-livelihood-options-assessment",
   title: "UNHCR Protection Risks and Livelihood Options Assessment",
-  image: rand12,
+  image: unhcr,
   description:
     "Assessment of protection risks and livelihood opportunities for displaced populations.",
   fullDescription:
@@ -841,7 +906,7 @@ export const projects = [
   id: 27,
   slug: "interburns-community-burns-survey",
   title: "Interburns Community Burns Survey",
-  image: nyomodul,
+  image: rand13,
   description:
     "Community-level survey on burn injuries and prevention strategies.",
   fullDescription:
@@ -869,13 +934,13 @@ export const projects = [
   category: "Health Research; Community Development",
   location: "Ghana",
   status: "Completed",
-  color: "red",
+  color: "orange",
 },
 {
   id: 28,
   slug: "district-level-needs-assessment-afrikids",
   title: "District Level Needs Assessment for AfriKids in Northern Ghana",
-  image: competition,
+  image: afrikids,
   description:
     "District-level assessment to inform child-focused development interventions.",
   fullDescription:
@@ -909,7 +974,7 @@ export const projects = [
   id: 29,
   slug: "short-term-community-livelihoods-assessments",
   title: "Short-Term Community and Livelihoods Assessments",
-  image: rand14,
+  image: stcla,
   description:
     "Rapid assessments to inform programme design and decision-making.",
   fullDescription:
@@ -937,7 +1002,7 @@ export const projects = [
   category: "Community Development; Research",
   location: "Ghana",
   status: "Completed",
-  color: "red",
+  color: "orange",
 },
 {
   id: 30,
@@ -970,146 +1035,7 @@ export const projects = [
   status: "Ongoing",
   color: "orange",
 },
-{
-  id: 31,
-  slug: "scaling-jobs-for-women-through-technology-sjfwt-soronko-academy",
-  title: "Scaling Jobs for Women Through Technology (SJFWT) - Soronko Academy",
-  image: female,
-  description: "Empowering women through technology training and job placement programs.",
-  fullDescription: "A program focused on scaling employment opportunities for women through technology skills training and capacity building in partnership with Soronko Academy.",
-  snapshot: "The Scaling Jobs for Women Through Technology (SJFWT) project, in partnership with Soronko Academy, aims to increase employment opportunities for women by providing technology skills training, mentorship, and job placement support. The program focuses on bridging the gender gap in the technology sector and empowering women with digital skills for economic independence.",
-  howWeWentAboutIt: "PDA collaborates with Soronko Academy to deliver comprehensive technology training programs, including coding, digital literacy, and entrepreneurship skills. The project includes mentorship programs, networking opportunities, and direct job placement support to ensure sustainable employment outcomes for women participants.",
-  objectives: [
-    "Increase women's participation in the technology sector",
-    "Provide technology skills training and capacity building",
-    "Support job placement and career advancement for women",
-    "Bridge the gender gap in technology employment"
-  ],
-  activities: [
-    "Technology skills training programs",
-    "Mentorship and career guidance",
-    "Job placement and internship support",
-    "Networking events and industry connections",
-    "Entrepreneurship training for tech startups"
-  ],
-  outcomes: [
-    "Increased number of women trained in technology skills",
-    "Improved job placement rates for program participants",
-    "Enhanced career advancement opportunities for women",
-    "Strengthened partnerships with technology companies"
-  ],
-  partners: "Soronko Academy",
-  period: "2024 – Present",
-  category: "Women's Economic Empowerment; Technology & Skills Development",
-  location: "Ghana",
-  status: "Ongoing",
-  color: "orange",
-},
-{
-  id: 32,
-  slug: "scaling-mest-programs",
-  title: "Scaling MEST Programs",
-  image: strategic,
-  description: "Supporting the scaling of MEST (Meltwater Entrepreneurial School of Technology) programs across Africa.",
-  fullDescription: "A collaborative initiative to scale MEST's technology entrepreneurship training programs, supporting young entrepreneurs across Africa with skills, mentorship, and startup support.",
-  snapshot: "The Scaling MEST Programs initiative focuses on expanding the reach and impact of MEST's technology entrepreneurship training across Africa. The program provides comprehensive training in technology, business development, and entrepreneurship to young African innovators, supporting them to build scalable tech startups.",
-  howWeWentAboutIt: "PDA works with MEST to scale their programs through strategic partnerships, curriculum development, and program delivery. The initiative includes training programs, mentorship, seed funding support, and networking opportunities to help young entrepreneurs launch and grow their technology businesses.",
-  objectives: [
-    "Scale MEST technology entrepreneurship programs across Africa",
-    "Support young tech entrepreneurs with training and mentorship",
-    "Facilitate startup development and growth",
-    "Build a strong ecosystem for technology entrepreneurship"
-  ],
-  activities: [
-    "Entrepreneurship training programs",
-    "Mentorship and coaching",
-    "Startup incubation and acceleration",
-    "Seed funding and investment support",
-    "Networking and ecosystem building"
-  ],
-  outcomes: [
-    "Increased number of trained technology entrepreneurs",
-    "More tech startups launched and scaled",
-    "Enhanced entrepreneurship ecosystem",
-    "Improved access to funding and resources"
-  ],
-  partners: "MEST (Meltwater Entrepreneurial School of Technology)",
-  period: "2024 – Present",
-  category: "Technology & Entrepreneurship; Youth Development",
-  location: "Ghana, Nigeria, Kenya, South Africa",
-  status: "Ongoing",
-  color: "red",
-},
-{
-  id: 33,
-  slug: "initiative-for-youth-in-agricultural-transformation-iyat",
-  title: "Initiative for Youth in Agricultural Transformation (IYAT)",
-  image: farmer,
-  description: "Empowering youth to transform agriculture through innovation and modern farming practices.",
-  fullDescription: "The Initiative for Youth in Agricultural Transformation (IYAT) aims to engage and empower young people in agriculture, providing them with modern farming techniques, agribusiness skills, and opportunities to transform the agricultural sector.",
-  snapshot: "The Initiative for Youth in Agricultural Transformation (IYAT) is designed to attract and retain young people in agriculture by providing training in modern farming techniques, agribusiness development, and agricultural innovation. The program addresses the aging farmer population and the need to make agriculture attractive to the next generation.",
-  howWeWentAboutIt: "PDA implements the IYAT program through comprehensive training modules covering modern agricultural practices, agribusiness management, value chain development, and technology integration. The program includes mentorship, access to land and resources, and market linkages to support youth-led agricultural enterprises.",
-  objectives: [
-    "Attract and retain youth in agriculture",
-    "Provide modern agricultural training and skills",
-    "Support youth-led agribusiness development",
-    "Transform agriculture through innovation and technology"
-  ],
-  activities: [
-    "Agricultural training programs",
-    "Agribusiness development support",
-    "Access to land and farming resources",
-    "Market linkages and value chain development",
-    "Technology integration in agriculture"
-  ],
-  outcomes: [
-    "Increased youth participation in agriculture",
-    "More youth-led agribusinesses established",
-    "Improved agricultural productivity and innovation",
-    "Enhanced food security and rural development"
-  ],
-  partners: "",
-  period: "2024 – Present",
-  category: "Agriculture & Youth Development",
-  location: "Ghana",
-  status: "Ongoing",
-  color: "orange",
-},
-{
-  id: 34,
-  slug: "ghana1000-initiative",
-  title: "Ghana1000 Initiative",
-  image: business,
-  description: "A large-scale initiative to create employment and economic opportunities across Ghana.",
-  fullDescription: "The Ghana1000 Initiative is a comprehensive program aimed at creating significant employment opportunities and driving economic transformation across Ghana through skills development, entrepreneurship support, and job creation.",
-  snapshot: "The Ghana1000 Initiative is a large-scale program designed to create employment opportunities and drive economic growth across Ghana. The initiative focuses on skills development, entrepreneurship support, job creation, and economic empowerment to transform livelihoods and communities.",
-  howWeWentAboutIt: "PDA implements the Ghana1000 Initiative through a multi-faceted approach including skills training programs, entrepreneurship development, job placement services, and economic empowerment initiatives. The program works with various sectors including agriculture, technology, manufacturing, and services to create diverse employment opportunities.",
-  objectives: [
-    "Create significant employment opportunities",
-    "Develop skills and capacity for economic participation",
-    "Support entrepreneurship and business development",
-    "Drive economic transformation and growth"
-  ],
-  activities: [
-    "Skills training and capacity building",
-    "Entrepreneurship development programs",
-    "Job placement and employment support",
-    "Business incubation and acceleration",
-    "Economic empowerment initiatives"
-  ],
-  outcomes: [
-    "Increased employment opportunities across sectors",
-    "Enhanced skills and capacity among participants",
-    "More businesses established and scaled",
-    "Improved economic outcomes for communities"
-  ],
-  partners: "",
-  period: "2024 – Present",
-  category: "Economic Development; Employment & Skills",
-  location: "Ghana",
-  status: "Ongoing",
-  color: "red",
-},
+
 {
   id: 35,
   slug: "absa-young-africa-works-program",
@@ -1173,12 +1099,12 @@ export const projects = [
     "Increased economic opportunities",
     "Strengthened community resilience"
   ],
-  partners: "",
+  partners: "Agri-Impact Limited; Mastercard Foundation;",
   period: "2024 – Present",
   category: "Health & Agriculture; Community Development",
   location: "Ghana",
   status: "Ongoing",
-  color: "red",
+  color: "orange",
 },
 {
   id: 37,
@@ -1248,7 +1174,7 @@ export const projects = [
   category: "Agriculture & Food Security; International Partnership",
   location: "Ghana",
   status: "Ongoing",
-  color: "red",
+  color: "orange",
 },
 {
   id: 39,
@@ -1323,7 +1249,7 @@ export const projects = [
     "Education & Literacy; Community Development; Evidence Generation (MERL); Policy Analysis & Advocacy",
   location: "Ghana",
   status: "Ongoing",
-  color: "red",
+  color: "orange",
 },
 
 

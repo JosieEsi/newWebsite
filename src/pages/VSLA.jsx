@@ -113,7 +113,7 @@ const VSLA = () => {
 
         <div className="py-16 bg-white ">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4 text-red">Who We Are</h2>
+            <h2 className="text-3xl font-bold mb-4 text-orange">Who We Are</h2>
             <p className="text-base text-gray-700">
               PDA has a proven track record of partnering with communities and
               other development organizations.
@@ -137,7 +137,7 @@ const VSLA = () => {
 
         <div className="py-10 bg-gray-100 px-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4 text-red">
+            <h2 className="text-3xl font-bold mb-4 text-orange">
               Our VSLA+ Model
             </h2>
             <p className="text-base text-gray-700 mb-8">
@@ -165,7 +165,7 @@ const VSLA = () => {
 
         <div className="py-6 mx-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4 text-red">
+            <h2 className="text-3xl font-bold mb-4 text-orange">
               Our Impact and Partnerships
             </h2>
             <p className="text-lg text-gray-700">
@@ -206,7 +206,7 @@ const VSLA = () => {
 
         <div className="py-16 bg-gray-100">
           <div className="max-w-5xl max-md:max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4 text-red">Our Projects</h2>
+            <h2 className="text-3xl font-bold mb-4 text-orange">Our Projects</h2>
             <div className="vslacard grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16 md:gap-16 max-sm:px-20 md:px-14">
               <ProjectCard
                 title="Nestle Income Accelerator Programme [Cote D’Ivoire]"
@@ -258,7 +258,7 @@ const VSLA = () => {
         </div>
         {/* Success Stories Slider */}
         <section className="py-16 px-8 bg-white text-center">
-          <h2 className="text-3xl font-bold text-red">Stories of Change</h2>
+          <h2 className="text-3xl font-bold text-orange">Stories of Change</h2>
           <p className="mt-6 text-gray-700">
             Read about the real impact of our project on the lives of children
             and families.

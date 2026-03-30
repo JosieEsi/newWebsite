@@ -282,7 +282,7 @@ const Nyonkopa = () => {
 
       {/* Project Overview and Objectives */}
       <section className="py-16 px-8 text-center bg-white">
-        <h2 className="text-3xl font-bold text-red">About the Project</h2>
+        <h2 className="text-3xl font-bold text-orange">About the Project</h2>
         <p className="mt-6 text-gray-700">
           The Nyonkopa Child Labor Remediation Project is a 2-year initiative
           between Barry-Callebaut and Participatory Development Associates
@@ -307,7 +307,7 @@ const Nyonkopa = () => {
 
       {/* Objectives and Goals Section */}
       <section className="py-16 px-8 bg-gray-100">
-        <h2 className="text-3xl font-bold text-center text-red">
+        <h2 className="text-3xl font-bold text-center text-orange">
           Project Objectives
         </h2>
         <div className="mt-8 flex flex-wrap justify-center gap-12">
@@ -341,7 +341,7 @@ const Nyonkopa = () => {
 
       {/* Module */}
       <section className="py-16 px-8 bg-white text-center">
-        <h2 className="text-3xl font-bold text-red">Project Module</h2>
+        <h2 className="text-3xl font-bold text-orange">Project Module</h2>
         <p className="mt-6 text-gray-700">
           PDA uses a four-level broad child labour remediation model that uses
           an integrated participatory approach and facilitation methodologies.
@@ -357,7 +357,7 @@ const Nyonkopa = () => {
 
       {/* Map Section */}
       <section className="py-16 px-8 bg-white text-center">
-        <h2 className="text-3xl font-bold text-red">Project Coverage</h2>
+        <h2 className="text-3xl font-bold text-orange">Project Coverage</h2>
         <p className="mt-6 text-gray-700">
           The project operates across six Nyonkopa administrative sectors: Akim
           Oda, Assin Fosu, Asante Bekwai, Kasapin, Goaso, and Juaboso.
@@ -380,7 +380,7 @@ const Nyonkopa = () => {
 
       {/* Success Stories Slider */}
       <section className="py-16 px-8 bg-gray-100 text-center">
-        <h2 className="text-3xl font-bold text-red">Stories of Change</h2>
+        <h2 className="text-3xl font-bold text-orange">Stories of Change</h2>
         <p className="mt-6 text-gray-700">
           Read about the real impact of our project on the lives of children and
           families.
@@ -389,7 +389,7 @@ const Nyonkopa = () => {
       </section>
       <section>
         <div className="flex justify-center align-middle p-3">
-          <h1 className="font-poppins text-3xl font-bold text-red">
+          <h1 className="font-poppins text-3xl font-bold text-orange">
             Child Abuse Tracker
           </h1>
         </div>
@@ -403,7 +403,7 @@ const Nyonkopa = () => {
       {/* Get Involved Section */}
 
       {/* <section className="py-16 px-8 bg-white text-center">
-        <h2 className="text-3xl font-bold text-red">Get Involved</h2>
+        <h2 className="text-3xl font-bold text-orange">Get Involved</h2>
         <p className="mt-6 text-gray-700">
           Support the Nyonkopa Child Labor Remediation Project by partnering
           with us or offering assistance.

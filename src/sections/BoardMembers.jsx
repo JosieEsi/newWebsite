@@ -39,7 +39,7 @@ const BoardMembers = () => {
   return (
     <section className="w-full bg-gray-50 py-24">
       {/* Title */}
-      <h2 className="text-center font-poppins font-bold text-4xl text-ash mb-16">
+      <h2 className="text-center font-poppins font-bold text-4xl text-ash mb-10">
         BOARD MEMBERS
       </h2>
 

@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ethical, tony, akosua, eleanor, lucy, chals, korboe, celia, liz } from "../assets/images";
-import { arrow, line, line2, paper } from "../assets/icons";
 import Button from "../components/Button";
-import { FaUser, FaDownload, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
 
 const EthicalReviewCommittee = () => {
@@ -87,7 +85,7 @@ const EthicalReviewCommittee = () => {
 
       {/* Committee Members */}
       <motion.div
-        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-16"
+        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-10"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -97,7 +95,7 @@ const EthicalReviewCommittee = () => {
           {committeeMembers.map((member, index) => (
             <motion.div
               key={index}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border-l-4 border-orange"
+              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border-l-4 border-gray-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -107,23 +105,18 @@ const EthicalReviewCommittee = () => {
               <div className="p-6">
                 <div className="flex flex-col items-center mb-4">
                   <motion.div
-                    className="relative mb-4"
+                    className="mb-4"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
                     {member.image ? (
-                      <>
-                        <img
-                          src={member.image}
-                          alt={member.name}
-                          className="h-32 w-32 rounded-full object-cover border-4 border-orange shadow-lg"
-                        />
-                        <div className="absolute -bottom-2 -right-2 bg-orange rounded-full p-2">
-                          <FaUser className="text-white text-sm" />
-                        </div>
-                      </>
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="h-32 w-32 rounded-full object-cover border-4 border-orange/30 shadow-lg"
+                      />
                     ) : (
-                      <div className="h-32 w-32 rounded-full bg-gradient-to-br from-orange/20 to-red/20 flex items-center justify-center border-4 border-orange shadow-lg">
+                      <div className="h-32 w-32 rounded-full bg-gradient-to-br from-orange/20 to-orange/10 flex items-center justify-center border-4 border-orange/30 shadow-lg">
                         <span className="text-orange text-4xl font-bold">
                           {member.name.charAt(0)}
                         </span>
@@ -133,7 +126,7 @@ const EthicalReviewCommittee = () => {
                   <h1 className="font-poppins text-lg font-bold text-center mb-2">
                     {member.name}
                   </h1>
-                  <div className="w-12 h-0.5 bg-orange mb-2"></div>
+                  <div className="w-12 h-0.5 bg-gray-300 mb-2"></div>
                   <h2 className="font-poppins text-sm font-semibold text-orange mb-4">
                     {member.role}
                   </h2>
@@ -151,19 +144,17 @@ const EthicalReviewCommittee = () => {
                     </p>
                     <button
                       onClick={() => setExpandedBio(null)}
-                      className="flex items-center gap-2 text-orange font-semibold text-sm hover:text-red transition-colors"
+                      className="text-orange font-semibold text-sm hover:text-orange/80 transition-colors"
                     >
-                      <span>{t("common.readLess")}</span>
-                      <FaChevronUp />
+                      {t("common.readLess")}
                     </button>
                   </motion.div>
                 ) : (
                   <button
                     onClick={() => setExpandedBio(index)}
-                    className="flex items-center gap-2 text-orange font-semibold text-sm hover:text-red transition-colors w-full justify-center"
+                    className="text-orange font-semibold text-sm hover:text-orange/80 transition-colors w-full text-center"
                   >
-                    <span>{t("common.readMore")}</span>
-                    <FaChevronDown />
+                    {t("common.readMore")}
                   </button>
                 )}
               </div>
@@ -174,7 +165,7 @@ const EthicalReviewCommittee = () => {
 
       {/* Overview and Documents Section */}
       <motion.div
-        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20"
+        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -183,7 +174,7 @@ const EthicalReviewCommittee = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           <div className="lg:col-span-2">
             <motion.h1
-              className="font-poppins font-bold text-3xl md:text-4xl mb-6 text-gray-800"
+              className="font-poppins font-bold text-3xl md:text-4xl mb-4 text-gray-800"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -267,10 +258,7 @@ const EthicalReviewCommittee = () => {
                   whileHover={{ scale: 1.02, y: -3 }}
                 >
                   <div className="flex items-center gap-4">
-                    <div className="bg-orange/10 rounded-lg p-3">
-                      <FaDownload className="text-orange text-xl" />
-                    </div>
-                    <div className="flex-grow">
+                    <div className="flex-grow min-w-0">
                       <p className="font-poppins text-sm font-semibold text-gray-800">
                         {doc.title}
                       </p>

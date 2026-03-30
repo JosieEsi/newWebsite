@@ -110,7 +110,7 @@ const Menu = ({ onLinkClick }) => {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pb-4 md:pb-5 border-b border-gray-200">
             <motion.button
               onClick={() => setIsSearchOpen(true)}
-              className="flex-1 bg-orange hover:bg-red text-white rounded-lg px-5 py-3.5 md:px-6 md:py-4 font-poppins font-semibold text-sm md:text-base lg:text-lg flex items-center justify-center gap-2 transition-all duration-300 shadow-md hover:shadow-lg"
+              className="flex-1 bg-orange hover:bg-orange/90 text-white rounded-lg px-5 py-3.5 md:px-6 md:py-4 font-poppins font-semibold text-sm md:text-base lg:text-lg flex items-center justify-center gap-2 transition-all duration-300 shadow-md hover:shadow-lg"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -269,7 +269,7 @@ const Menu = ({ onLinkClick }) => {
         {/* Desktop Layout */}
         <div className="hidden lg:flex lg:flex-row justify-between w-full gap-6 xl:gap-8 2xl:gap-10">
           {/* Main Navigation Links */}
-          <div className="flex flex-col text-red gap-5 lg:gap-6 xl:gap-8 font-semibold text-base lg:text-lg xl:text-xl font-poppins min-w-[220px] xl:min-w-[240px]">
+          <div className="flex flex-col text-orange gap-5 lg:gap-6 xl:gap-8 font-semibold text-base lg:text-lg xl:text-xl font-poppins min-w-[220px] xl:min-w-[240px]">
             {navLinks.filter(section => !section.isSubOrg).map((section) => (
               section.external ? (
                 <motion.a
@@ -385,7 +385,7 @@ const Menu = ({ onLinkClick }) => {
             <div className="min-w-0 xl:min-w-[140px] flex flex-col gap-3">
               <motion.button
                 onClick={() => setIsSearchOpen(true)}
-                className="w-full bg-orange hover:bg-red text-white rounded-lg px-4 py-3 font-poppins font-semibold text-xs lg:text-sm xl:text-base flex items-center justify-center gap-2 transition-all duration-300 shadow-md hover:shadow-lg"
+                className="w-full bg-orange hover:bg-orange/90 text-white rounded-lg px-4 py-3 font-poppins font-semibold text-xs lg:text-sm xl:text-base flex items-center justify-center gap-2 transition-all duration-300 shadow-md hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >

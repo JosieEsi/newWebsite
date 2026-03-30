@@ -35,7 +35,7 @@ const WhoWeAre = () => {
       title: t("whoWeAre.coreValuesItems.collaboration.title"),
       description: t("whoWeAre.coreValuesItems.collaboration.description"),
       icon: FaHandshake,
-      color: "red",
+      color: "orange",
     },
     {
       title: t("whoWeAre.coreValuesItems.credibility.title"),
@@ -47,7 +47,7 @@ const WhoWeAre = () => {
       title: t("whoWeAre.coreValuesItems.inclusivity.title"),
       description: t("whoWeAre.coreValuesItems.inclusivity.description"),
       icon: FaGlobe,
-      color: "red",
+      color: "orange",
     },
     {
       title: t("whoWeAre.coreValuesItems.respect.title"),
@@ -59,7 +59,7 @@ const WhoWeAre = () => {
       title: t("whoWeAre.coreValuesItems.transparency.title"),
       description: t("whoWeAre.coreValuesItems.transparency.description"),
       icon: FaNetworkWired,
-      color: "red",
+      color: "orange",
     },
   ], [t]);
 
@@ -98,7 +98,7 @@ const WhoWeAre = () => {
               {t("whoWeAre.title")}
             </motion.h1>
             <motion.div
-              className="w-32 h-1 bg-gradient-to-r from-orange to-red mx-auto rounded-full"
+              className="w-32 h-1 bg-gradient-to-r from-orange to-orange/85 mx-auto rounded-full"
               initial={{ width: 0 }}
               animate={{ width: 128 }}
               transition={{ delay: 0.8, duration: 0.6 }}
@@ -172,7 +172,7 @@ const WhoWeAre = () => {
               transition={{ duration: 0.8 }}
             >
               <motion.div
-                className="relative bg-gradient-to-br from-orange via-red to-orange rounded-3xl p-8 md:p-10 lg:p-12 text-white shadow-2xl overflow-hidden"
+                className="relative bg-gradient-to-br from-orange via-orange/95 to-orange/90 rounded-3xl p-8 md:p-10 lg:p-12 text-white shadow-2xl overflow-hidden"
                 whileHover={{ scale: 1.02, y: -5 }}
                 transition={{ duration: 0.3 }}
               >
@@ -267,7 +267,7 @@ const WhoWeAre = () => {
             <motion.div
               key={i}
               className={`absolute rounded-full blur-3xl ${
-                i % 2 === 0 ? "bg-orange/5" : "bg-red/5"
+                i % 2 === 0 ? "bg-orange/5" : "bg-orange/10"
               }`}
               style={{
                 width: `${200 + (i % 3) * 100}px`,
@@ -294,7 +294,7 @@ const WhoWeAre = () => {
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Section Header */}
           <motion.div
-            className="mb-16 md:mb-24"
+            className="mb-10 md:mb-14"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -318,7 +318,7 @@ const WhoWeAre = () => {
                 Vision & Mission
               </motion.h2>
               <motion.div
-                className="h-1 bg-red flex-1 max-w-16 sm:max-w-24 md:max-w-32"
+                className="h-1 bg-orange flex-1 max-w-16 sm:max-w-24 md:max-w-32"
                 initial={{ width: 0 }}
                 whileInView={{ width: "100%" }}
                 viewport={{ once: true }}
@@ -339,7 +339,7 @@ const WhoWeAre = () => {
               whileHover={{ y: -10, shadow: "2xl" }}
             >
               {/* Gradient Accent */}
-              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange to-red"></div>
+              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange to-orange/85"></div>
               
               {/* Floating Icon */}
               <motion.div
@@ -370,7 +370,19 @@ const WhoWeAre = () => {
                     whileHover={{ rotate: 360, scale: 1.1 }}
                     transition={{ duration: 0.6 }}
                   >
-                    <img src={peak} alt="Vision" className="h-12 w-12" />
+                    <div
+                      className="h-12 w-12 isolate"
+                      style={{
+                        filter: "brightness(0) invert(1)",
+                        WebkitFilter: "brightness(0) invert(1)",
+                      }}
+                    >
+                      <img
+                        src={peak}
+                        alt="Vision"
+                        className="h-full w-full object-contain block"
+                      />
+                    </div>
                   </motion.div>
                   <h3 className="text-3xl md:text-4xl font-bold text-gray-900">
                     {t("whoWeAre.vision")}
@@ -402,7 +414,7 @@ const WhoWeAre = () => {
               whileHover={{ y: -10, shadow: "2xl" }}
             >
               {/* Gradient Accent */}
-              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-red to-orange"></div>
+              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange/90 to-orange"></div>
               
               {/* Floating Icon */}
               <motion.div
@@ -429,11 +441,23 @@ const WhoWeAre = () => {
                   transition={{ delay: 0.2 }}
                 >
                   <motion.div
-                    className="p-4 bg-gradient-to-br from-red to-red/80 rounded-2xl shadow-lg"
+                    className="p-4 bg-gradient-to-br from-orange to-orange/80 rounded-2xl shadow-lg"
                     whileHover={{ rotate: -360, scale: 1.1 }}
                     transition={{ duration: 0.6 }}
                   >
-                    <img src={dart} alt="Mission" className="h-12 w-12" />
+                    <div
+                      className="h-12 w-12 isolate"
+                      style={{
+                        filter: "brightness(0) invert(1)",
+                        WebkitFilter: "brightness(0) invert(1)",
+                      }}
+                    >
+                      <img
+                        src={dart}
+                        alt="Mission"
+                        className="h-full w-full object-contain block max-w-none"
+                      />
+                    </div>
                   </motion.div>
                   <h3 className="text-3xl md:text-4xl font-bold text-gray-900">
                     {t("whoWeAre.mission")}
@@ -460,7 +484,7 @@ const WhoWeAre = () => {
               </div>
 
               {/* Corner Decoration */}
-              <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-red/10 to-transparent rounded-tr-full"></div>
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-orange/10 to-transparent rounded-tr-full"></div>
             </motion.div>
           </div>
         </div>
@@ -491,7 +515,7 @@ const WhoWeAre = () => {
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Section Header */}
           <motion.div
-            className="mb-16 md:mb-24"
+            className="mb-10 md:mb-14"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -515,7 +539,7 @@ const WhoWeAre = () => {
                 {t("whoWeAre.coreValues")}
               </motion.h2>
               <motion.div
-                className="h-1 bg-red flex-1 max-w-16 sm:max-w-24 md:max-w-32"
+                className="h-1 bg-orange flex-1 max-w-16 sm:max-w-24 md:max-w-32"
                 initial={{ width: 0 }}
                 whileInView={{ width: "100%" }}
                 viewport={{ once: true }}
@@ -549,8 +573,8 @@ const WhoWeAre = () => {
                   {/* Top Accent Line */}
                   <div className={`absolute top-0 left-0 w-full h-1 ${
                     value.color === "orange"
-                      ? "bg-gradient-to-r from-orange to-red"
-                      : "bg-gradient-to-r from-red to-orange"
+                      ? "bg-gradient-to-r from-orange to-orange/85"
+                      : "bg-gradient-to-r from-orange/80 to-orange"
                   }`}></div>
 
                   {/* Icon */}
@@ -558,13 +582,13 @@ const WhoWeAre = () => {
                     className={`mb-6 p-4 rounded-xl w-fit ${
                       value.color === "orange"
                         ? "bg-gradient-to-br from-orange/10 to-orange/5"
-                        : "bg-gradient-to-br from-red/10 to-red/5"
+                        : "bg-gradient-to-br from-orange/10 to-orange/5"
                     }`}
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ duration: 0.3 }}
                   >
                     <Icon className={`text-3xl md:text-4xl ${
-                      value.color === "orange" ? "text-orange" : "text-red"
+                      value.color === "orange" ? "text-orange" : "text-orange/90"
                     }`} />
                   </motion.div>
 
@@ -572,7 +596,7 @@ const WhoWeAre = () => {
                   <h3 className={`text-xl md:text-2xl font-bold text-gray-900 mb-3 transition-colors ${
                     value.color === "orange"
                       ? "group-hover:text-orange"
-                      : "group-hover:text-red"
+                      : "group-hover:text-orange/90"
                   }`}>
                     {value.title}
                   </h3>
@@ -585,7 +609,7 @@ const WhoWeAre = () => {
                   <div className={`absolute bottom-0 right-0 w-24 h-24 rounded-tl-full ${
                     value.color === "orange"
                       ? "bg-gradient-to-tl from-orange/5 to-transparent"
-                      : "bg-gradient-to-tl from-red/5 to-transparent"
+                      : "bg-gradient-to-tl from-orange/5 to-transparent"
                   }`}></div>
                 </motion.div>
               );

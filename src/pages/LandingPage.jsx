@@ -31,7 +31,7 @@ const newsData = [
     description:
       "Dolorem pariatur reiciendis. Mollitia necessitatibus ut sequi et maiores.",
     image: "your-image-url-2.jpg",
-    color: "bg-red",
+    color: "bg-orange",
   },
   {
     category: "Investments",
@@ -46,7 +46,7 @@ const newsData = [
     title: "Business news for students",
     description: "Provident praesentium et nemo dolorem vel totam.",
     image: "your-image-url-4.jpg",
-    color: "bg-red",
+    color: "bg-orange",
   },
   {
     category: "Stock Market",
@@ -60,7 +60,7 @@ const newsData = [
     title: "Startups to watch out for in 2022",
     description: "Inventore ut. Corporis a harum et aut deleniti assumenda.",
     image: "your-image-url-6.jpg",
-    color: "bg-red",
+    color: "bg-orange",
   },
 ];
 
@@ -413,7 +413,7 @@ const LandingPage = () => {
                 rows="4"
                 className="border-b border-gray-300 w-full py-2 focus:outline-none focus:border-orange"
               ></textarea>
-              <button className="bg-orange text-white px-6 py-2 font-semibold rounded hover:bg-red">
+              <button className="bg-orange text-white px-6 py-2 font-semibold rounded hover:bg-orange/90">
                 SEND MESSAGE
               </button>
             </form>

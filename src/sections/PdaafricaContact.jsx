@@ -139,7 +139,7 @@
 //             ></textarea>
 //             <button
 //               type="submit"
-//               className="p-3 rounded-lg bg-orange text-white font-bold hover:bg-red"
+//               className="p-3 rounded-lg bg-orange text-white font-bold hover:bg-orange/90"
 //             >
 //               Submit Now
 //             </button>
@@ -280,7 +280,7 @@
 //             ></textarea>
 //             <button
 //               type="submit"
-//               className="p-3 rounded-lg bg-orange text-white font-bold hover:bg-red"
+//               className="p-3 rounded-lg bg-orange text-white font-bold hover:bg-orange/90"
 //             >
 //               Submit Now
 //             </button>
@@ -357,7 +357,7 @@ const Contacts = () => {
       className="max-container py-2 flex flex-wrap min-h-screen justify-center gap-14 max-sm:gap-2"
     >
       <div className="w-full flex justify-center flex-col">
-        <h2 className="text-red font-bold text-xl text-center mb-5">
+        <h2 className="text-orange font-bold text-xl text-center mb-5">
           Contact Us
         </h2>
         <h3 className="font-poppins text-4xl font-bold text-black leading-tight mb-5 text-center">
@@ -421,7 +421,7 @@ const Contacts = () => {
             ></textarea>
             <button
               type="submit"
-              className="p-3 rounded-lg bg-orange text-white font-bold hover:bg-red"
+              className="p-3 rounded-lg bg-orange text-white font-bold hover:bg-orange/90"
             >
               Submit Now
             </button>
@@ -429,7 +429,7 @@ const Contacts = () => {
 
           {/* Show thank you message after form submission */}
           {submitted && (
-            <div className="mt-4 p-3 rounded-lg bg-red text-white text-center font-poppins">
+            <div className="mt-4 p-3 rounded-lg bg-orange text-white text-center font-poppins">
               Thank you for submitting your query, we will be in touch soon!
             </div>
           )}

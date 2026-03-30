@@ -6,7 +6,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const CTASection = () => {
   return (
-    <section className="w-full py-20 md:py-32 bg-gradient-to-r from-orange via-red to-orange relative overflow-hidden">
+    <section className="w-full py-20 md:py-32 bg-gradient-to-r from-orange via-orange/95 to-orange relative overflow-hidden">
       {/* Animated Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full" style={{

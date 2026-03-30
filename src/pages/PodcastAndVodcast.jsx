@@ -72,7 +72,7 @@ const PodcastAndVodcast = () => {
             onClick={() => setActiveTab("podcast")}
             className={`px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 ${
               activeTab === "podcast"
-                ? "bg-gradient-to-r from-orange to-red text-white shadow-lg scale-105"
+                ? "bg-gradient-to-r from-orange to-orange/85 text-white shadow-lg scale-105"
                 : "bg-white text-gray-700 hover:bg-gray-100 shadow-md"
             }`}
             whileHover={{ scale: activeTab === "podcast" ? 1.05 : 1.02 }}
@@ -84,7 +84,7 @@ const PodcastAndVodcast = () => {
             onClick={() => setActiveTab("vodcast")}
             className={`px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 ${
               activeTab === "vodcast"
-                ? "bg-gradient-to-r from-orange to-red text-white shadow-lg scale-105"
+                ? "bg-gradient-to-r from-orange to-orange/85 text-white shadow-lg scale-105"
                 : "bg-white text-gray-700 hover:bg-gray-100 shadow-md"
             }`}
             whileHover={{ scale: activeTab === "vodcast" ? 1.05 : 1.02 }}
@@ -111,7 +111,7 @@ const PodcastAndVodcast = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-gradient-to-r from-orange to-red rounded-2xl p-6 md:p-8 shadow-xl">
+            <div className="bg-gradient-to-r from-orange to-orange/85 rounded-2xl p-6 md:p-8 shadow-xl">
               <div className="flex flex-col md:flex-row items-center gap-6">
                 <motion.img
                   src={micro}
@@ -171,7 +171,7 @@ const PodcastAndVodcast = () => {
 
           {/* Episodes List */}
           <motion.div
-            className="w-full max-w-6xl mx-auto mb-12 px-4 sm:px-6 lg:px-8"
+            className="w-full max-w-6xl mx-auto mb-8 px-4 sm:px-6 lg:px-8"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -181,7 +181,7 @@ const PodcastAndVodcast = () => {
             
             {/* Coming Soon Section */}
             <motion.div
-              className="bg-gradient-to-br from-orange/10 via-red/10 to-orange/5 rounded-2xl p-12 md:p-16 shadow-lg border-2 border-dashed border-orange/30"
+              className="bg-gradient-to-br from-orange/10 via-orange/10 to-orange/5 rounded-2xl p-12 md:p-16 shadow-lg border-2 border-dashed border-orange/30"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -246,7 +246,7 @@ const PodcastAndVodcast = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-gradient-to-r from-orange to-red rounded-2xl p-6 md:p-8 shadow-xl">
+            <div className="bg-gradient-to-r from-orange to-orange/85 rounded-2xl p-6 md:p-8 shadow-xl">
               <div className="flex flex-col md:flex-row items-center gap-6">
                 <motion.div
                   className="w-20 h-20 md:w-24 md:h-24 bg-white rounded-full flex items-center justify-center"
@@ -307,7 +307,7 @@ const PodcastAndVodcast = () => {
 
           {/* Episodes List */}
           <motion.div
-            className="w-full max-w-6xl mx-auto mb-12 px-4 sm:px-6 lg:px-8"
+            className="w-full max-w-6xl mx-auto mb-8 px-4 sm:px-6 lg:px-8"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -317,7 +317,7 @@ const PodcastAndVodcast = () => {
             
             {/* Coming Soon Section */}
             <motion.div
-              className="bg-gradient-to-br from-orange/10 via-red/10 to-orange/5 rounded-2xl p-12 md:p-16 shadow-lg border-2 border-dashed border-orange/30"
+              className="bg-gradient-to-br from-orange/10 via-orange/10 to-orange/5 rounded-2xl p-12 md:p-16 shadow-lg border-2 border-dashed border-orange/30"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -368,7 +368,7 @@ const PodcastAndVodcast = () => {
 
       {/* Newsletter Section */}
       <motion.div
-        className="w-full max-w-6xl mx-auto mb-12 px-4 sm:px-6 lg:px-8"
+        className="w-full max-w-6xl mx-auto mb-8 px-4 sm:px-6 lg:px-8"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}

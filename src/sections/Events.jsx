@@ -99,7 +99,7 @@ const Events = () => {
         transition={{ duration: 0.6 }}
       >
         <motion.h3
-          className="font-poppins font-bold text-3xl text-red mb-6"
+          className="font-poppins font-bold text-3xl text-orange mb-6"
           whileHover={{ scale: 1.05 }}
         >
           {t("events.upcomingEvents")}
@@ -134,7 +134,7 @@ const Events = () => {
                 <p className="font-poppins group-hover:text-orange transition-colors duration-300">
                   {event.title}
                 </p>
-                <p className="font-poppins text-red">{event.location}</p>
+                <p className="font-poppins text-orange">{event.location}</p>
               </div>
             </motion.div>
           ))}
@@ -154,7 +154,7 @@ const Events = () => {
               e.preventDefault();
               navigate("/news-and-activities");
             }}
-            className="px-8 py-4 bg-red text-white rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 inline-block font-poppins"
+            className="px-8 py-4 bg-orange text-white rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 inline-block font-poppins"
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -218,7 +218,7 @@ export default Events;
 //       className="max-container items-center justify-center flex flex-col lg:flex-row lg:px-10 py-10"
 //     >
 //       <div className="flex flex-1 flex-col justify-center items-center mb-10 lg:mb-0 lg:pr-10">
-//         <h3 className="font-poppins font-bold text-3xl text-red mb-6">
+//         <h3 className="font-poppins font-bold text-3xl text-orange mb-6">
 //           Upcoming Events
 //         </h3>
 

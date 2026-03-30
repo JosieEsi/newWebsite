@@ -80,7 +80,7 @@ const PartnersPage = () => {
 
       {/* Partners Grid */}
       <motion.div
-        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16"
+        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -120,7 +120,7 @@ const PartnersPage = () => {
 
       {/* Partner Testimonials Section */}
       <motion.div
-        className="w-full bg-gradient-to-br from-orange/10 via-red/5 to-orange/10 py-16"
+        className="w-full bg-gradient-to-br from-orange/10 via-orange/5 to-orange/10 py-16"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -128,7 +128,7 @@ const PartnersPage = () => {
       >
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2
-            className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12"
+            className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}

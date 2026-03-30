@@ -57,7 +57,7 @@ const CurrentProjects = () => {
       className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 group"
       aria-label="Next"
     >
-      <FaChevronRight className="text-orange group-hover:text-red transition-colors text-xl" />
+      <FaChevronRight className="text-orange group-hover:text-orange/80 transition-colors text-xl" />
     </button>
   );
 
@@ -68,7 +68,7 @@ const CurrentProjects = () => {
       className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 group"
       aria-label="Previous"
     >
-      <FaChevronLeft className="text-orange group-hover:text-red transition-colors text-xl" />
+      <FaChevronLeft className="text-orange group-hover:text-orange/80 transition-colors text-xl" />
     </button>
   );
 
@@ -103,13 +103,13 @@ const CurrentProjects = () => {
       {/* Background Decoration */}
       <div className="absolute top-0 left-0 w-full h-full opacity-5">
         <div className="absolute top-20 left-20 w-64 h-64 bg-orange rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-64 h-64 bg-red rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-64 h-64 bg-orange/35 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header - Consistent Style */}
         <motion.div
-          className="text-center mb-12 md:mb-16"
+          className="text-center mb-8 md:mb-10"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -133,7 +133,7 @@ const CurrentProjects = () => {
               Current Projects
             </motion.h2>
             <motion.div
-              className="h-1 bg-red flex-1 max-w-16 sm:max-w-24 md:max-w-32"
+              className="h-1 bg-orange flex-1 max-w-16 sm:max-w-24 md:max-w-32"
               initial={{ width: 0 }}
               whileInView={{ width: "100%" }}
               viewport={{ once: true }}
@@ -156,7 +156,7 @@ const CurrentProjects = () => {
             {currentProjects.map((project, index) => {
               const colors = project.color === "orange"
                 ? { bg: "bg-orange", text: "text-orange", border: "border-orange" }
-                : { bg: "bg-red", text: "text-red", border: "border-red" };
+                : { bg: "bg-orange", text: "text-orange", border: "border-orange" };
 
               return (
                 <div key={project.id} className="px-3">

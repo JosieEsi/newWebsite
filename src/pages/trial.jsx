@@ -1,5 +1,5 @@
 <section className="py-12 ">
-<h2 className="font-poppins font-semibold text-2xl text-center text-red mb-8">
+<h2 className="font-poppins font-semibold text-2xl text-center text-orange mb-8">
   Project Status
 </h2>
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

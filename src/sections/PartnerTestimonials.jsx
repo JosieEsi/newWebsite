@@ -46,11 +46,11 @@ const PartnerTestimonials = () => {
   };
 
   return (
-    <section className="w-full py-16 md:py-24 bg-gradient-to-br from-orange/10 via-red/5 to-orange/10 relative overflow-hidden">
+    <section className="w-full py-16 md:py-24 bg-gradient-to-br from-orange/10 via-orange/5 to-orange/10 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header - Consistent Style */}
         <motion.div
-          className="text-center mb-12 md:mb-16"
+          className="text-center mb-8 md:mb-10"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -74,7 +74,7 @@ const PartnerTestimonials = () => {
               Partner Testimonials
             </motion.h2>
             <motion.div
-              className="h-1 bg-red flex-1 max-w-32"
+              className="h-1 bg-orange flex-1 max-w-32"
               initial={{ width: 0 }}
               whileInView={{ width: "100%" }}
               viewport={{ once: true }}
@@ -156,7 +156,7 @@ const PartnerTestimonials = () => {
           </button>
           <button
             onClick={nextTestimonial}
-            className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white hover:bg-red border-2 border-gray-200 hover:border-red flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 group"
+            className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white hover:bg-orange/15 border-2 border-gray-200 hover:border-orange flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 group"
             aria-label="Next"
           >
             <FaChevronRight className="text-gray-600 group-hover:text-white transition-colors" />

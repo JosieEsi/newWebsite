@@ -53,7 +53,7 @@ const ProjectDetail = () => {
     return (
       <section className="max-container w-full min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-red mb-4">{currentLanguage === "fr" ? "Projet Non Trouvé" : "Project Not Found"}</h1>
+          <h1 className="text-4xl font-bold text-orange mb-4">{currentLanguage === "fr" ? "Projet Non Trouvé" : "Project Not Found"}</h1>
           <p className="text-gray-600 mb-8">{currentLanguage === "fr" ? "Le projet que vous recherchez n'existe pas." : "The project you're looking for doesn't exist."}</p>
           <button
             onClick={() => navigate("/our-projects")}
@@ -75,9 +75,9 @@ const ProjectDetail = () => {
       };
     } else {
       return {
-        bg: "bg-red",
-        text: "text-red",
-        border: "border-red",
+        bg: "bg-orange",
+        text: "text-orange",
+        border: "border-orange",
       };
     }
   };
@@ -197,7 +197,7 @@ const ProjectDetail = () => {
           {/* Project Snapshot */}
           {project.snapshot && (
             <motion.div
-              className="mb-12"
+              className="mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
@@ -220,7 +220,7 @@ const ProjectDetail = () => {
           {/* How We Went About It */}
           {project.howWeWentAboutIt && (
             <motion.div
-              className="mb-12"
+              className="mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
@@ -243,7 +243,7 @@ const ProjectDetail = () => {
           {/* Key Objectives */}
           {project.objectives && project.objectives.length > 0 && (
             <motion.div
-              className="mb-12"
+              className="mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
@@ -264,7 +264,7 @@ const ProjectDetail = () => {
           {/* Key Activities */}
           {project.activities && project.activities.length > 0 && (
             <motion.div
-              className="mb-12"
+              className="mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
@@ -285,7 +285,7 @@ const ProjectDetail = () => {
           {/* Expected Outcomes */}
           {project.outcomes && project.outcomes.length > 0 && (
             <motion.div
-              className="mb-12"
+              className="mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
@@ -312,7 +312,7 @@ const ProjectDetail = () => {
             return (
               <motion.div
                 key={index}
-                className="mb-12"
+                className="mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.9 + index * 0.1 }}
